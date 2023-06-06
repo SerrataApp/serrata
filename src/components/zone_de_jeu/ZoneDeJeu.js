@@ -39,8 +39,10 @@ export default function ZoneDeJeu() {
   useEffect(() => {
     if(drapeauxRestants.length!==0) {
       setDrapeauActuel(drapeauxRestants[Math.floor(Math.random() * drapeauxRestants.length)]);
+    } else {
+      ctxResultats.finir();
     }
-  }, [drapeauxRestants])
+  }, [drapeauxRestants, ctxResultats])
 
   return (
     <div className="flex gap-2">
