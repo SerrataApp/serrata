@@ -3,7 +3,7 @@ import PetitDrapeau from "./PetitDrapeau";
 
 export default function ListeDrapeaux() {
     return (
-    <div>
+    <div className="flex flex-wrap">
       {drapeaux.map(drapeau => {
         return (
           <PetitDrapeau key={drapeau.nom} drapeau={drapeau}/>

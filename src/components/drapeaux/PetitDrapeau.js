@@ -3,16 +3,15 @@ import { useState } from "react";
 export default function PetitDrapeau(props) {
   const [estTrouve, setEstTrouve] = useState(false);
 
-  let style = "";
+  let style = "h-3/4 ";
   if(!estTrouve) {
-    style = "opacity-50";
+    style += "opacity-50";
   }
 
   return (
-    <div>
-      <img src={props.drapeau.img} alt={props.drapeau.nom} className=" opacity-50"/>
-      {estTrouve && <span>{props.drapeau.nom}</span>}
-      
+    <div className="h-24 w-40 border border-black flex flex-col items-center">
+      <img src={props.drapeau.img} alt={props.drapeau.nom} className={style}/>
+      {!estTrouve && <span className="">{props.drapeau.nom}</span>}
     </div>
   );
 }

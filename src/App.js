@@ -4,7 +4,7 @@ import Input from './components/elements/Input';
 function App() {
   return (
     <>
-      <h1 className=' underline'>Drapeaux Europe</h1>
+      <h1 className='underline'>Drapeaux Europe</h1>
       <Input/>
       <ListeDrapeaux/>
     </>
