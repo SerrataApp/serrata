@@ -24,25 +24,29 @@ export default function ZoneDeJeu() {
       setDrapeauxRestants(drapeauxRestants.filter(pays => {
         return pays.nom !== drapeauActuel.nom;
       }));
+      changerDrapeau();
       retour = true;
     } else {
-      ctxResultats.enleverPourcents((1/(ctxDrapeauxUtilises.drapeauxUtilises.length+1))*100);
-      console.log(ctxDrapeauxUtilises.drapeauxUtilises.length);
+      ctxResultats.enleverPourcents(Math.floor((1/(ctxDrapeauxUtilises.drapeauxUtilises.length+1))*100));
     }
     return retour;
   }
 
-  function passer() {
-    setDrapeauActuel(drapeauxRestants[Math.floor(Math.random() * drapeauxRestants.length)]);
-  }
-
-  useEffect(() => {
+  function changerDrapeau() {
     if(drapeauxRestants.length!==0) {
       setDrapeauActuel(drapeauxRestants[Math.floor(Math.random() * drapeauxRestants.length)]);
     } else {
       ctxResultats.finir();
     }
-  }, [drapeauxRestants, ctxResultats])
+  }
+
+  function passer() {
+    changerDrapeau();
+  }
+
+  useEffect(() => {
+    changerDrapeau();
+  }, [])
 
   return (
     <div className="flex gap-2">
