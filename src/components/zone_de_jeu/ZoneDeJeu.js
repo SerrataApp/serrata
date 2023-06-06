@@ -27,16 +27,20 @@ export default function ZoneDeJeu() {
     return retour;
   }
 
+  function passer() {
+    setDrapeauActuel(drapeauxRestants[Math.floor(Math.random() * drapeauxRestants.length)]);
+  }
+
   useEffect(() => {
     if(drapeauxRestants.length!==0) {
-      setDrapeauActuel(drapeauxRestants[Math.floor(Math.random() * drapeauxRestants.length)])
+      setDrapeauActuel(drapeauxRestants[Math.floor(Math.random() * drapeauxRestants.length)]);
     }
   }, [drapeauxRestants])
 
   return (
     <div className="flex gap-2">
       <img src={drapeauActuel.img} alt={drapeauActuel.nom} className="border"/>
-      <ZoneDentree onEnvoi={validationDrapeau}/>
+      <ZoneDentree onEnvoi={validationDrapeau} onSkip={passer}/>
     </div>
   );
 }

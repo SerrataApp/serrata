@@ -11,6 +11,11 @@ export default function ZoneDentree(props) {
     }
   }
 
+  function passer() {
+    props.onSkip();
+    inputRef.current.focus();
+  }
+
   useEffect(() => {
     inputRef.current.focus();
   }, []);
@@ -19,6 +24,7 @@ export default function ZoneDentree(props) {
     <form onSubmit={envoyerRep} className="flex flex-col gap-2">
       <input type="text" className="border" ref={inputRef}/>
       <input type="submit" className="border" value="Envoyer"/>
+      <button className="border" onClick={passer}>Passer</button>
     </form>
   );
 }
