@@ -1,30 +1,40 @@
-import { useState } from "react";
+import { useState, useContext, useEffect } from "react";
 import { drapeaux } from "../../utils/ImportDrapeaux";
 import ZoneDentree from "./ZoneDentree";
+import DrapeauxUtilisesContext from "../store/drapeaux-utilises-context";
 
 export default function ZoneDeJeu() {
-  const [drapeauActuel, setDrapeauActuel] = useState(drapeaux[10]);
-  const [drapeauxUtilises, setDrapeauxUtilises] = useState([]);
+  const [drapeauActuel, setDrapeauActuel] = useState(drapeaux[Math.floor(Math.random() * drapeaux.length)]);
+  const [drapeauxRestants, setDrapeauxRestants] = useState([...drapeaux]);
+
+  const ctx = useContext(DrapeauxUtilisesContext);
 
   function nettoyerChaine(chaine) {
     const chaineNettoyee = chaine.replace(/[^a-zA-Z]/g, '');
     return chaineNettoyee;
   }
 
-  function changementDrapeau(drapeauEntre) {
+  function validationDrapeau(drapeauEntre) {
     console.log(nettoyerChaine(drapeauEntre));
     let retour = false;
     if(nettoyerChaine(drapeauEntre).toLowerCase()===drapeauActuel.nom) {
-      setDrapeauActuel(drapeaux[11]);
+      ctx.ajouterDrapeau(drapeauActuel);
+      setDrapeauxRestants(drapeauxRestants.filter(pays => {
+        return pays.nom !== drapeauActuel.nom;
+      }));
       retour = true;
     }
     return retour;
   }
 
+  useEffect(() => {
+    setDrapeauActuel(drapeauxRestants[Math.floor(Math.random() * drapeauxRestants.length)])
+  }, [drapeauxRestants])
+
   return (
     <div className="flex gap-2">
       <img src={drapeauActuel.img}/>
-      <ZoneDentree onEnvoi={changementDrapeau}/>
+      <ZoneDentree onEnvoi={validationDrapeau}/>
     </div>
   );
 }
