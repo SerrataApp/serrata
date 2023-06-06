@@ -16,7 +16,7 @@ export default function PetitDrapeau(props) {
     console.log(estDansContext);
   }, [ctx.drapeauxUtilises, props.drapeau.nom])
 
-  let style = "h-3/4 ";
+  let style = "border h-3/4 ";
   if(!estTrouve) {
     style += "opacity-50";
   }
