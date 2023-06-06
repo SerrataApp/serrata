@@ -1,16 +1,12 @@
-export default function ListeDrapeaux() {
-  const importAll = (r) => r.keys().map(r);
-  const images = importAll(require.context('../../img/drapeaux', false, /\.(png)$/));
+import { drapeaux } from "../../utils/ImportDrapeaux";
+import PetitDrapeau from "./PetitDrapeau";
 
-  return (
+export default function ListeDrapeaux() {
+    return (
     <div>
-      {images.map((image, index) => {
-        const fileName = image.split('/').pop().split('.')[0].split('_').join(' ');
+      {drapeaux.map(drapeau => {
         return (
-          <div key={index}>
-            <img src={`data:image/png;base64,${image}`} alt={`Image ${index + 1}`} />
-            <p>{fileName}</p>
-          </div>
+          <PetitDrapeau key={drapeau.nom} drapeau={drapeau}/>
         );
       })}
     </div>
