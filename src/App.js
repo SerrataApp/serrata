@@ -1,13 +1,13 @@
 import ListeDrapeaux from './components/drapeaux/ListeDrapeaux';
-import Input from './components/elements/Input';
+import ZoneDeJeu from './components/zone_de_jeu/ZoneDeJeu';
 
 function App() {
   return (
-    <>
+    <div className='flex flex-col items-center gap-10'>
       <h1 className='underline'>Drapeaux Europe</h1>
-      <Input/>
+      <ZoneDeJeu/>
       <ListeDrapeaux/>
-    </>
+    </div>
   );
 }
 

@@ -9,9 +9,9 @@ export default function PetitDrapeau(props) {
   }
 
   return (
-    <div className="h-24 w-40 border border-black flex flex-col items-center">
+    <div className="h-24 w-40 border-black flex flex-col items-center">
       <img src={props.drapeau.img} alt={props.drapeau.nom} className={style}/>
-      {!estTrouve && <span className="">{props.drapeau.nom}</span>}
+      {estTrouve && <span className="">{props.drapeau.nom}</span>}
     </div>
   );
 }
