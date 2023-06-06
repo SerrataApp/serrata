@@ -15,6 +15,7 @@ export default function Chrono() {
 
     if(ctx.estFini) {
       clearInterval(interval);
+      ctx.definirTemps(temps);
     }
 
     return () => {
