@@ -1,6 +1,6 @@
 import Chrono from "./Chrono";
 import Compteur from "./Compteur";
-import Pourcents from "./Pourcents";
+import Pourcents from "./Erreurs";
 
 export default function Informations() {
   return (

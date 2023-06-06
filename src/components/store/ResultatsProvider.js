@@ -3,16 +3,16 @@ import { useReducer } from "react";
 import ResultatsContext from "./resultats-context";
 
 const resultatsParDefaut = {
-  pourcentage: 100,
+  erreurs: 0,
   temps: 0,
   estFini: false
 }
 
 function ResultatsReducer(state, action) {
-  if(action.type==="ENLEVER_POURCENTS") {
+  if(action.type==="AJOUTER_ERREUR") {
     return {
       ...state,
-      pourcentage: state.pourcentage - action.pourcents
+      erreurs: state.erreurs + 1
     }
   }
   if(action.type==="DEFINIR_TEMPS") {
@@ -32,8 +32,8 @@ function ResultatsReducer(state, action) {
 export default function ResultatsProvider(props) {
   const [resultatsState, dispatchResultats] = useReducer(ResultatsReducer, resultatsParDefaut);
 
-  function enleverPourcents(pourcents) {
-    dispatchResultats({type: "ENLEVER_POURCENTS", pourcents: pourcents});
+  function ajouterErreur() {
+    dispatchResultats({type: "AJOUTER_ERREUR"});
   }
 
   function definirTemps(temps) {
@@ -45,10 +45,10 @@ export default function ResultatsProvider(props) {
   }
 
   const resultatsContext = {
-    pourcentage: resultatsState.pourcentage,
+    erreurs: resultatsState.erreurs,
     temps: resultatsState.temps,
     estFini: resultatsState.estFini,
-    enleverPourcents,
+    ajouterErreur,
     definirTemps,
     finir
   }

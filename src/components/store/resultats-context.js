@@ -1,10 +1,10 @@
 import { createContext } from "react"
 
 const ResultatsContext = createContext({
-  pourcentage: 100,
+  erreurs: 0,
   temps: 0,
   estFini: false,
-  enleverPourcents: pourcents => {},
+  ajouterErreur: () => {},
   definirTemps: temps => {},
   finir: () => {}
 })

@@ -27,7 +27,7 @@ export default function ZoneDeJeu() {
       changerDrapeau();
       retour = true;
     } else {
-      ctxResultats.enleverPourcents(Math.floor((1/(ctxDrapeauxUtilises.drapeauxUtilises.length+1))*100));
+      ctxResultats.ajouterErreur();
     }
     return retour;
   }
