@@ -3,8 +3,6 @@ import ZoneDeJeu from './components/zone_de_jeu/ZoneDeJeu';
 import DrapeauxUtilisesProvider from './components/store/DrapeauxUtilisesProvider';
 import Informations from './components/informations/Informations';
 import ResultatsProvider from './components/store/ResultatsProvider';
-import ResultatsContext from './components/store/resultats-context';
-import { useContext, useEffect, useState } from 'react';
 import Resultats from './components/Modal/Resultats';
 
 function App() {
