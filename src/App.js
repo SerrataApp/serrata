@@ -1,24 +1,16 @@
-import logo from './logo.svg';
-import './App.css';
+import ListeDrapeaux from './components/drapeaux/ListeDrapeaux';
+import ZoneDeJeu from './components/zone_de_jeu/ZoneDeJeu';
+import DrapeauxUtilisesProvider from './components/store/DrapeauxUtilisesProvider';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <DrapeauxUtilisesProvider>
+      <div className='flex flex-col items-center gap-10'>
+        <h1 className='underline'>Drapeaux Europe</h1>
+        <ZoneDeJeu/>
+        <ListeDrapeaux/>
+      </div>
+    </DrapeauxUtilisesProvider>
   );
 }
 
