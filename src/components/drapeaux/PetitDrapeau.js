@@ -1,7 +1,20 @@
-import { useState } from "react";
+import { useEffect, useState, useContext } from "react";
+import DrapeauxUtilisesContext from "../store/drapeaux-utilises-context";
 
 export default function PetitDrapeau(props) {
   const [estTrouve, setEstTrouve] = useState(false);
+
+  const ctx = useContext(DrapeauxUtilisesContext);
+
+  useEffect(() => {
+    const estDansContext = ctx.drapeauxUtilises.some(pays => {
+      return pays === props.drapeau.nom;
+    })
+    if(estDansContext) {
+      setEstTrouve(true);
+    }
+    console.log(estDansContext);
+  }, [ctx.drapeauxUtilises, props.drapeau.nom])
 
   let style = "h-3/4 ";
   if(!estTrouve) {
