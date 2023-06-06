@@ -4,7 +4,7 @@ import ZoneDentree from "./ZoneDentree";
 import DrapeauxUtilisesContext from "../store/drapeaux-utilises-context";
 import ResultatsContext from "../store/resultats-context";
 
-export default function ZoneDeJeu() {
+export default function ZoneDeJeu(props) {
   const [drapeauActuel, setDrapeauActuel] = useState(drapeaux[Math.floor(Math.random() * drapeaux.length)]);
   const [drapeauxRestants, setDrapeauxRestants] = useState([...drapeaux]);
 
@@ -35,6 +35,7 @@ export default function ZoneDeJeu() {
       setDrapeauActuel(drapeauxRestants[Math.floor(Math.random() * drapeauxRestants.length)]);
     } else {
       ctxResultats.finir();
+      props.onTermine();
     }
   }
 
