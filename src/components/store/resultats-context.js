@@ -4,7 +4,7 @@ const ResultatsContext = createContext({
   pourcentage: 100,
   temps: 0,
   estFini: false,
-  enleverPourcent: pourcents => {},
+  enleverPourcents: pourcents => {},
   definirTemps: temps => {},
   finir: () => {}
 })
