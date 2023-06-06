@@ -28,7 +28,9 @@ export default function ZoneDeJeu() {
   }
 
   useEffect(() => {
-    setDrapeauActuel(drapeauxRestants[Math.floor(Math.random() * drapeauxRestants.length)])
+    if(drapeauxRestants.length!==0) {
+      setDrapeauActuel(drapeauxRestants[Math.floor(Math.random() * drapeauxRestants.length)])
+    }
   }, [drapeauxRestants])
 
   return (

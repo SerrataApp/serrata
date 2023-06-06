@@ -18,6 +18,7 @@ import hongrie from "../img/drapeaux/hongrie.png";
 import irlande from "../img/drapeaux/irlande.png";
 import islande from "../img/drapeaux/islande.png";
 import italie from "../img/drapeaux/italie.png";
+import kosovo from "../img/drapeaux/kosovo.png";
 import lettonie from "../img/drapeaux/lettonie.png";
 import liechtenstein from "../img/drapeaux/liechtenstein.png";
 import lituanie from "../img/drapeaux/lituanie.png";
@@ -65,6 +66,7 @@ const drapeaux = [
   { nom: "irlande", img: irlande },
   { nom: "islande", img: islande },
   { nom: "italie", img: italie },
+  { nom: "kosovo", img: kosovo},
   { nom: "lettonie", img: lettonie },
   { nom: "liechtenstein", img: liechtenstein },
   { nom: "lituanie", img: lituanie },
