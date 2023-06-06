@@ -2,7 +2,7 @@ import { useReducer } from "react";
 
 import ResultatsContext from "./resultats-context";
 
-const ResultatsParDefaut = {
+const resultatsParDefaut = {
   pourcentage: 100,
   temps: 0,
   estFini: false
@@ -30,7 +30,7 @@ function ResultatsReducer(state, action) {
 }
 
 export default function ResultatsProvider(props) {
-  const [resultatsState, dispatchResultats] = useReducer(ResultatsReducer);
+  const [resultatsState, dispatchResultats] = useReducer(ResultatsReducer, resultatsParDefaut);
 
   function enleverPourcents(pourcents) {
     dispatchResultats({type: "ENLEVER_POURCENTS", pourcents: pourcents});
@@ -54,7 +54,7 @@ export default function ResultatsProvider(props) {
   }
 
   return (
-    <ResultatsContext.Provider value={ResultatsContext}>
+    <ResultatsContext.Provider value={resultatsContext}>
       {props.children}
     </ResultatsContext.Provider>
   )
