@@ -5,7 +5,6 @@ export default function ZoneDentree(props) {
 
   function envoyerRep(event) {
     event.preventDefault();
-    console.log(drapeauEntre);
     const juste = props.onEnvoi(inputRef.current.value);
     if(juste) {
       inputRef.current.value = "";
@@ -17,11 +16,9 @@ export default function ZoneDentree(props) {
   }, []);
 
   return (
-    <div className="flex flex-col gap-2">
-      <form onSubmit={envoyerRep}>
-        <input type="text" className="border" onChange={ecritDrapeauHandler} ref={inputRef}/>
-        <input type="submit" className="border" value="Envoyer"/>
-      </form>
-    </div>
+    <form onSubmit={envoyerRep} className="flex flex-col gap-2">
+      <input type="text" className="border" ref={inputRef}/>
+      <input type="submit" className="border" value="Envoyer"/>
+    </form>
   );
 }
