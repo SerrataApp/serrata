@@ -14,7 +14,7 @@ export default function ZoneDeJeu() {
   function changementDrapeau(drapeauEntre) {
     console.log(nettoyerChaine(drapeauEntre));
     let retour = false;
-    if(nettoyerChaine(drapeauEntre)===drapeauActuel.nom) {
+    if(nettoyerChaine(drapeauEntre).toLowerCase()===drapeauActuel.nom) {
       setDrapeauActuel(drapeaux[11]);
       retour = true;
     }
