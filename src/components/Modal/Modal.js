@@ -6,8 +6,8 @@ export default function Modal(props) {
 
   return (
     <React.Fragment>
-      {ReactDom.createPortal(<div className="fixed w-full h-screen bg-black opacity-75 z-20 flex items-center justify-center" onClick={props.onClose}></div>, portalElement)}
-      {ReactDom.createPortal(<div className="bg-white z-30">{props.children}</div>, portalElement)}
+      {ReactDom.createPortal(<div className="fixed w-full h-screen bg-black opacity-75 z-10" onClick={props.onClose}></div>, portalElement)}
+      {ReactDom.createPortal(<div className="fixed bg-white p-4 rounded w-5/12 z-20 inset-0 mx-auto my-auto h-fit">{props.children}</div>, portalElement)}
     </React.Fragment>
   );
 };
