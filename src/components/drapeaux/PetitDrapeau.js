@@ -13,7 +13,6 @@ export default function PetitDrapeau(props) {
     if(estDansContext) {
       setEstTrouve(true);
     }
-    console.log(estDansContext);
   }, [ctx.drapeauxUtilises, props.drapeau.nom])
 
   let style = "border h-3/4 ";

@@ -17,14 +17,12 @@ export default function ZoneDeJeu() {
   }
 
   function validationDrapeau(drapeauEntre) {
-    console.log(nettoyerChaine(drapeauEntre));
     let retour = false;
     if(nettoyerChaine(drapeauEntre).toLowerCase()===nettoyerChaine(drapeauActuel.nom).toLowerCase()) {
       ctxDrapeauxUtilises.ajouterDrapeau(drapeauActuel);
       setDrapeauxRestants(drapeauxRestants.filter(pays => {
         return pays.nom !== drapeauActuel.nom;
       }));
-      changerDrapeau();
       retour = true;
     } else {
       ctxResultats.ajouterErreur();
@@ -46,7 +44,7 @@ export default function ZoneDeJeu() {
 
   useEffect(() => {
     changerDrapeau();
-  }, [])
+  }, [drapeauxRestants.length])
 
   return (
     <div className="flex gap-2">
