@@ -17,7 +17,7 @@ export default function ZoneDeJeu() {
   function validationDrapeau(drapeauEntre) {
     console.log(nettoyerChaine(drapeauEntre));
     let retour = false;
-    if(nettoyerChaine(drapeauEntre).toLowerCase()===drapeauActuel.nom) {
+    if(nettoyerChaine(drapeauEntre).toLowerCase()===nettoyerChaine(drapeauActuel.nom).toLowerCase()) {
       ctx.ajouterDrapeau(drapeauActuel);
       setDrapeauxRestants(drapeauxRestants.filter(pays => {
         return pays.nom !== drapeauActuel.nom;
