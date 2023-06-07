@@ -12,7 +12,8 @@ export default function ZoneDeJeu(props) {
   const ctxResultats = useContext(ResultatsContext);
 
   function nettoyerChaine(chaine) {
-    const chaineNettoyee = chaine.replace(/[^a-zA-Z]/g, '');
+    const chaineSansAccents = chaine.normalize("NFD").replace(/[\u0300-\u036f]/g, "");
+    const chaineNettoyee = chaineSansAccents.replace(/[^a-zA-Z]/g, '');
     return chaineNettoyee;
   }
 
