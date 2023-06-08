@@ -1,12 +1,11 @@
 import { useState, useContext, useEffect } from "react";
-import { drapeaux } from "../../utils/ImportDrapeaux";
 import ZoneDentree from "./ZoneDentree";
 import DrapeauxUtilisesContext from "../store/drapeaux-utilises-context";
 import ResultatsContext from "../store/resultats-context";
 
 export default function ZoneDeJeu(props) {
-  const [drapeauActuel, setDrapeauActuel] = useState(drapeaux[Math.floor(Math.random() * drapeaux.length)]);
-  const [drapeauxRestants, setDrapeauxRestants] = useState([...drapeaux]);
+  const [drapeauActuel, setDrapeauActuel] = useState(props.drapeaux[Math.floor(Math.random() * props.drapeaux.length)]);
+  const [drapeauxRestants, setDrapeauxRestants] = useState([...props.drapeaux]);
 
   const ctxDrapeauxUtilises = useContext(DrapeauxUtilisesContext);
   const ctxResultats = useContext(ResultatsContext);
@@ -47,6 +46,10 @@ export default function ZoneDeJeu(props) {
   useEffect(() => {
     changerDrapeau();
   }, [drapeauxRestants.length])
+
+  useEffect(() => {
+    setDrapeauxRestants([...props.drapeaux])
+  }, [props.drapeaux])
 
   return (
     <div className="flex gap-2">

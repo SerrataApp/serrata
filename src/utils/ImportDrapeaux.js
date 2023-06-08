@@ -242,7 +242,7 @@ const drapeauxEurope = [
   { nom: "Vatican", img: vatican }
 ];
 
-const drapeaux = [
+const drapeauxONU = [
   { nom: "Afrique du Sud", img: afriquedusud },
   { nom: "Albanie", img: albanie },
   { nom: "Algérie", img: algerie },
@@ -438,4 +438,4 @@ const drapeaux = [
 ]
 
 export {drapeauxEurope};
-export {drapeaux};
+export {drapeauxONU};

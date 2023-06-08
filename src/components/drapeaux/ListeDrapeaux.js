@@ -1,10 +1,9 @@
-import { drapeaux } from "../../utils/ImportDrapeaux";
 import PetitDrapeau from "./PetitDrapeau";
 
-export default function ListeDrapeaux() {
+export default function ListeDrapeaux(props) {
     return (
     <div className="flex flex-wrap">
-      {drapeaux.map(drapeau => {
+      {props.drapeaux.map(drapeau => {
         return (
           <PetitDrapeau key={drapeau.nom} drapeau={drapeau}/>
         );

@@ -1,13 +1,12 @@
 import { useContext } from "react";
 import DrapeauxUtilisesContext from "../store/drapeaux-utilises-context";
-import { drapeaux } from "../../utils/ImportDrapeaux";
 
-export default function Compteur() {
+export default function Compteur(props) {
   const ctx = useContext(DrapeauxUtilisesContext);
 
   return (
     <span>
-      {ctx.drapeauxUtilises.length}/{drapeaux.length}
+      {ctx.drapeauxUtilises.length}/{props.longueur}
     </span>
   );
 }
