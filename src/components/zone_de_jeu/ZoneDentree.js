@@ -13,6 +13,7 @@ export default function ZoneDentree(props) {
 
   function passer(event) {
     event.preventDefault();
+    inputRef.current.value = "";
     props.onSkip();
     inputRef.current.focus();
   }
