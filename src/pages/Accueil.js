@@ -3,7 +3,7 @@ export default function Accueil() {
     <div className="w-screen h-screen flex justify-center items-center flex-col">
       <h1>Choisir mode</h1>
       <a href="/europe" className="border p-3">Europe</a>
-      <a href="/onu" className="border p-3">onu</a>
+      <a href="/onu" className="border p-3">ONU</a>
     </div>
   );
 }

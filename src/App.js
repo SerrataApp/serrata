@@ -1,6 +1,6 @@
 import DrapeauxUtilisesProvider from './components/store/DrapeauxUtilisesProvider';
 import ResultatsProvider from './components/store/ResultatsProvider';
-import { Routes, Route, Navigate, BrowserRouter } from 'react-router-dom';
+import { Routes, Route, BrowserRouter } from 'react-router-dom';
 import Accueil from "./pages/Accueil";
 import Jeu from "./pages/Jeu";
 import { drapeauxEurope, drapeauxONU } from "./utils/ImportDrapeaux";
