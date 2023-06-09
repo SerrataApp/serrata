@@ -25,7 +25,10 @@ export default function Jeu(props) {
     <>
       {resultatsAffiches && <Resultats onClose={relancer}/>}
       <div className='flex flex-col items-center gap-10'>
-        <h1>Drapeaux {drapeaux.length===46 ? "Europe" : "ONU"}</h1>
+        <div className='text-center'>
+          <a href="/" className='underline'>Retour Accueil</a>
+          <h1>Drapeaux {drapeaux.length===46 ? "Europe" : "ONU"}</h1>
+        </div>
         <Informations longueur={drapeaux.length}/>
         <ZoneDeJeu drapeaux={drapeaux} onTermine={afficherResultats}/>
         <ListeDrapeaux drapeaux={drapeaux}/>
