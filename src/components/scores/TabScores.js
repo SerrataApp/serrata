@@ -30,10 +30,21 @@ export default function TabScores(props) {
     );
   }
 
+  const listeScores = scores.map(score => {
+    return (
+      <tr>
+        <td className="p-1 border">{score.joueur}</td>
+        <td className="p-1 border">{score.temps}</td>
+        <td className="p-1 border">{score.erreurs}</td>
+      </tr>
+    );
+  })
+
   return (
     <div>
       <h2>{props.categorie==="onu" ? "ONU" : "Europe"}</h2>
-      <table>
+      <table className="border text-center">
+        {listeScores}
       </table>
     </div>
   );
