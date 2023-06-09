@@ -28,10 +28,10 @@ export default function EnvoyerScore(props) {
 
   return (
     <>
-      {visible && <form className="flex flex-col" onSubmit={submitScore}>
+      {visible && <form className="flex flex-col w-5/6 mx-auto" onSubmit={submitScore}>
         <label for="nom">Votre nom</label>
         <input type="text" id="nom" className="border" ref={inputRef}/>
-        <input type="submit" value="Envoyer"/>
+        <input type="submit" value="Envoyer" className="hover:cursor-pointer"/>
       </form>}
     </>
   );
