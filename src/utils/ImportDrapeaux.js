@@ -15,11 +15,11 @@ import bahamas from "../img/drapeaux/bahamas.png";
 import bahrein from "../img/drapeaux/bahrein.png";
 import bangladesh from "../img/drapeaux/bangladesh.png";
 import barbade from "../img/drapeaux/barbade.png";
-import belarus from "../img/drapeaux/belarus.png";
 import belgique from "../img/drapeaux/belgique.png";
 import belize from "../img/drapeaux/belize.png";
 import benin from "../img/drapeaux/benin.png";
 import bhoutan from "../img/drapeaux/bhoutan.png";
+import bielorussie from "../img/drapeaux/bielorussie.png";
 import birmanie from "../img/drapeaux/birmanie.png";
 import bolivie from "../img/drapeaux/bolivie.png";
 import bosnieherzegovine from "../img/drapeaux/bosnieherzegovine.png";
@@ -193,249 +193,444 @@ import yemen from "../img/drapeaux/yemen.png";
 import zambie from "../img/drapeaux/zambie.png";
 import zimbabwe from "../img/drapeaux/zimbabwe.png";
 
-const drapeauxEurope = [
-  { nom: "Albanie", img: albanie },
-  { nom: "Allemagne", img: allemagne },
-  { nom: "Andorre", img: andorre },
-  { nom: "Autriche", img: autriche },
-  { nom: "Belgique", img: belgique },
-  { nom: "Belarus", img: belarus },
-  { nom: "Bosnie-Herzégovine", img: bosnieherzegovine },
-  { nom: "Bulgarie", img: bulgarie },
-  { nom: "Chypre", img: chypre },
-  { nom: "Croatie", img: croatie },
-  { nom: "Danemark", img: danemark },
-  { nom: "Espagne", img: espagne },
-  { nom: "Estonie", img: estonie },
-  { nom: "Finlande", img: finlande },
-  { nom: "France", img: france },
-  { nom: "Grèce", img: grece },
-  { nom: "Hongrie", img: hongrie },
-  { nom: "Irlande", img: irlande },
-  { nom: "Islande", img: islande },
-  { nom: "Italie", img: italie },
-  { nom: "Kosovo", img: kosovo},
-  { nom: "Lettonie", img: lettonie },
-  { nom: "Liechtenstein", img: liechtenstein },
-  { nom: "Lituanie", img: lituanie },
-  { nom: "Luxembourg", img: luxembourg },
-  { nom: "Macédoine du Nord", img: macedoinedunord },
-  { nom: "Malte", img: malte },
-  { nom: "Moldavie", img: moldavie },
-  { nom: "Monaco", img: monaco },
-  { nom: "Monténégro", img: montenegro },
-  { nom: "Norvège", img: norvege },
-  { nom: "Pays-Bas", img: paysbas },
-  { nom: "Pologne", img: pologne },
-  { nom: "Portugal", img: portugal },
-  { nom: "Tchéquie", img: tchequie },
-  { nom: "Roumanie", img: roumanie },
-  { nom: "Royaume-Uni", img: royaumeuni },
-  { nom: "Russie", img: russie },
-  { nom: "Saint-Marin", img: saintmarin },
-  { nom: "Serbie", img: serbie },
-  { nom: "Slovaquie", img: slovaquie },
-  { nom: "Slovénie", img: slovenie },
-  { nom: "Suède", img: suede },
-  { nom: "Suisse", img: suisse },
-  { nom: "Ukraine", img: ukraine },
-  { nom: "Vatican", img: vatican }
-];
+afriquedusud = { noms: ["Afrique du Sud"], img: afriquedusud };
+albanie = { noms: ["Albanie"], img: albanie };
+algerie = { noms: ["Algérie"], img: algerie };
+allemagne = { noms: ["Allemagne"], img: allemagne };
+andorre = { noms: ["Andorre"], img: andorre };
+angola = { noms: ["Angola"], img: angola };
+antiguaetbarbuda = { noms: ["Antigua-et-Barbuda"], img: antiguaetbarbuda };
+arabiesaoudite = { noms: ["Arabie saoudite"], img: arabiesaoudite };
+argentine = { noms: ["Argentine"], img: argentine };
+armenie = { noms: ["Arménie"], img: armenie };
+australie = { noms: ["Australie"], img: australie };
+autriche = { noms: ["Autriche"], img: autriche };
+azerbaidjan = { noms: ["Azerbaïdjan"], img: azerbaidjan };
+bahamas = { noms: ["Bahamas"], img: bahamas };
+bahrein = { noms: ["Bahreïn"], img: bahrein };
+bangladesh = { noms: ["Bangladesh"], img: bangladesh };
+barbade = { noms: ["Barbade"], img: barbade };
+belgique = { noms: ["Belgique"], img: belgique };
+belize = { noms: ["Belize"], img: belize };
+benin = { noms: ["Bénin"], img: benin };
+bhoutan = { noms: ["Bhoutan"], img: bhoutan };
+bielorussie = { noms: ["Biélorussie", "Bélarus"], img: bielorussie };
+birmanie = { noms: ["Birmanie", "Myanmar"], img: birmanie };
+bolivie = { noms: ["Bolivie"], img: bolivie };
+bosnieherzegovine = { noms: ["Bosnie-Herzégovine"], img: bosnieherzegovine };
+botswana = { noms: ["Botswana"], img: botswana };
+bresil = { noms: ["Brésil"], img: bresil };
+brunei = { noms: ["Brunei"], img: brunei };
+bulgarie = { noms: ["Bulgarie"], img: bulgarie };
+burkinafaso = { noms: ["Burkina Faso"], img: burkinafaso };
+burundi = { noms: ["Burundi"], img: burundi };
+cambodge = { noms: ["Cambodge"], img: cambodge };
+cameroun = { noms: ["Cameroun"], img: cameroun };
+canada = { noms: ["Canada"], img: canada };
+capvert = { noms: ["Cap-Vert"], img: capvert };
+chili = { noms: ["Chili"], img: chili };
+chine = { noms: ["Chine"], img: chine };
+chypre = { noms: ["Chypre"], img: chypre };
+colombie = { noms: ["Colombie"], img: colombie };
+comores = { noms: ["Comores"], img: comores };
+congo = { noms: ["Congo"], img: congo };
+coreedunord = { noms: ["Corée du Nord"], img: coreedunord };
+coreedusud = { noms: ["Corée du Sud"], img: coreedusud };
+costarica = { noms: ["Costa Rica"], img: costarica };
+cotedivoire = { noms: ["Côte d'Ivoire"], img: cotedivoire };
+croatie = { noms: ["Croatie"], img: croatie };
+cuba = { noms: ["Cuba"], img: cuba };
+danemark = { noms: ["Danemark"], img: danemark };
+djibouti = { noms: ["Djibouti"], img: djibouti };
+dominique = { noms: ["Dominique"], img: dominique };
+equateur = { noms: ["Équateur"], img: equateur };
+egypte = { noms: ["Égypte"], img: egypte };
+emiratsarabesunis = { noms: ["Émirats arabes unis", "eau"], img: emiratsarabesunis };
+erythree = { noms: ["Érythrée"], img: erythree };
+espagne = { noms: ["Espagne"], img: espagne };
+estonie = { noms: ["Estonie"], img: estonie };
+eswatini = { noms: ["Eswatini"], img: eswatini };
+etatsunis = { noms: ["États-Unis", "usa"], img: etatsunis };
+ethiopie = { noms: ["Éthiopie"], img: ethiopie };
+fidji = { noms: ["Fidji"], img: fidji };
+finlande = { noms: ["Finlande"], img: finlande };
+france = { noms: ["France"], img: france };
+gabon = { noms: ["Gabon"], img: gabon };
+gambie = { noms: ["Gambie"], img: gambie };
+georgie = { noms: ["Géorgie"], img: georgie };
+ghana = { noms: ["Ghana"], img: ghana };
+grece = { noms: ["Grèce"], img: grece };
+grenade = { noms: ["Grenade"], img: grenade };
+guatemala = { noms: ["Guatemala"], img: guatemala };
+guinee = { noms: ["Guinée"], img: guinee };
+guineebissau = { noms: ["Guinée-Bissau"], img: guineebissau };
+guineeequatoriale = { noms: ["Guinée équatoriale"], img: guineeequatoriale };
+guyana = { noms: ["Guyana"], img: guyana };
+haiti = { noms: ["Haïti"], img: haiti };
+honduras = { noms: ["Honduras"], img: honduras };
+hongrie = { noms: ["Hongrie"], img: hongrie };
+ilesmarshall = { noms: ["Iles Marshall"], img: ilesmarshall };
+ilessalomon = { noms: ["Iles Salomon"], img: ilessalomon };
+inde = { noms: ["Inde"], img: inde };
+indonesie = { noms: ["Indonésie"], img: indonesie };
+irak = { noms: ["Irak"], img: irak };
+iran = { noms: ["Iran"], img: iran };
+irlande = { noms: ["Irlande"], img: irlande };
+islande = { noms: ["Islande"], img: islande };
+israel = { noms: ["Israël"], img: israel };
+italie = { noms: ["Italie"], img: italie };
+jamaique = { noms: ["Jamaïque"], img: jamaique };
+japon = { noms: ["Japon"], img: japon };
+jordanie = { noms: ["Jordanie"], img: jordanie };
+kazakhstan = { noms: ["Kazakhstan"], img: kazakhstan };
+kenya = { noms: ["Kenya"], img: kenya };
+kirghizistan = { noms: ["Kirghizistan"], img: kirghizistan };
+kiribati = { noms: ["Kiribati"], img: kiribati };
+kosovo = { noms: ["Kosovo"], img: kosovo};
+koweit = { noms: ["Koweït"], img: koweit };
+laos = { noms: ["Laos"], img: laos };
+lesotho = { noms: ["Lesotho"], img: lesotho };
+lettonie = { noms: ["Lettonie"], img: lettonie };
+liban = { noms: ["Liban"], img: liban };
+liberia = { noms: ["Liberia"], img: liberia };
+libye = { noms: ["Libye"], img: libye };
+liechtenstein = { noms: ["Liechtenstein"], img: liechtenstein };
+lituanie = { noms: ["Lituanie"], img: lituanie };
+luxembourg = { noms: ["Luxembourg"], img: luxembourg };
+macedoinedunord = { noms: ["Macédoine du Nord"], img: macedoinedunord };
+madagascar = { noms: ["Madagascar"], img: madagascar };
+malaisie = { noms: ["Malaisie"], img: malaisie };
+malawi = { noms: ["Malawi"], img: malawi };
+maldives = { noms: ["Maldives"], img: maldives };
+mali = { noms: ["Mali"], img: mali };
+malte = { noms: ["Malte"], img: malte };
+maroc = { noms: ["Maroc"], img: maroc };
+maurice = { noms: ["Maurice"], img: maurice };
+mauritanie = { noms: ["Mauritanie"], img: mauritanie };
+mexique = { noms: ["Mexique"], img: mexique };
+micronesie = { noms: ["Micronésie"], img: micronesie };
+moldavie = { noms: ["Moldavie"], img: moldavie };
+monaco = { noms: ["Monaco"], img: monaco };
+mongolie = { noms: ["Mongolie"], img: mongolie };
+montenegro = { noms: ["Monténégro"], img: montenegro };
+mozambique = { noms: ["Mozambique"], img: mozambique };
+namibie = { noms: ["Namibie"], img: namibie };
+nauru = { noms: ["Nauru"], img: nauru };
+nepal = { noms: ["Népal"], img: nepal };
+nicaragua = { noms: ["Nicaragua"], img: nicaragua };
+niger = { noms: ["Niger"], img: niger };
+nigeria = { noms: ["Nigeria"], img: nigeria };
+norvege = { noms: ["Norvège"], img: norvege };
+nouvellezelande = { noms: ["Nouvelle-Zélande"], img: nouvellezelande };
+oman = { noms: ["Oman"], img: oman };
+ouganda = { noms: ["Ouganda"], img: ouganda };
+ouzbekistan = { noms: ["Ouzbékistan"], img: ouzbekistan };
+pakistan = { noms: ["Pakistan"], img: pakistan };
+palaos = { noms: ["Palaos"], img: palaos };
+panama = { noms: ["Panama"], img: panama };
+papouasienouvelleguinee = { noms: ["Papouasie-Nouvelle-Guinée"], img: papouasienouvelleguinee };
+paraguay = { noms: ["Paraguay"], img: paraguay };
+paysbas = { noms: ["Pays-Bas"], img: paysbas };
+perou = { noms: ["Pérou"], img: perou };
+philippines = { noms: ["Philippines"], img: philippines };
+pologne = { noms: ["Pologne"], img: pologne };
+portugal = { noms: ["Portugal"], img: portugal };
+qatar = { noms: ["Qatar"], img: qatar };
+republiquecentrafricaine = { noms: ["République centrafricaine", "rca"], img: republiquecentrafricaine };
+republiquedemocratiqueducongo = { noms: ["République démocratique du Congo", "rdc"], img: republiquedemocratiqueducongo };
+republiquedominicaine = { noms: ["République dominicaine"], img: republiquedominicaine };
+roumanie = { noms: ["Roumanie"], img: roumanie };
+royaumeuni = { noms: ["Royaume-Uni"], img: royaumeuni };
+russie = { noms: ["Russie"], img: russie };
+rwanda = { noms: ["Rwanda"], img: rwanda };
+saintchristopheetnieves = { noms: ["Saint-Christophe-et-Niévès"], img: saintchristopheetnieves };
+saintmarin = { noms: ["Saint-Marin"], img: saintmarin };
+saintvincentetlesgrenadines = { noms: ["Saint-Vincent-et-les Grenadines"], img: saintvincentetlesgrenadines };
+saintelucie = { noms: ["Sainte-Lucie"], img: saintelucie };
+salvador = { noms: ["Salvador"], img: salvador };
+samoa = { noms: ["Samoa"], img: samoa };
+saotomeetprincipe = { noms: ["São Tomé-et-Príncipe"], img: saotomeetprincipe };
+senegal = { noms: ["Sénégal"], img: senegal };
+serbie = { noms: ["Serbie"], img: serbie };
+seychelles = { noms: ["Seychelles"], img: seychelles };
+sierraleone = { noms: ["Sierra Leone"], img: sierraleone };
+singapour = { noms: ["Singapour"], img: singapour };
+slovaquie = { noms: ["Slovaquie"], img: slovaquie };
+slovenie = { noms: ["Slovénie"], img: slovenie };
+somalie = { noms: ["Somalie"], img: somalie };
+soudan = { noms: ["Soudan"], img: soudan };
+soudandusud = { noms: ["Soudan du Sud"], img: soudandusud };
+srilanka = { noms: ["Sri Lanka"], img: srilanka };
+suede = { noms: ["Suède"], img: suede };
+suisse = { noms: ["Suisse"], img: suisse };
+suriname = { noms: ["Suriname"], img: suriname };
+syrie = { noms: ["Syrie"], img: syrie };
+tadjikistan = { noms: ["Tadjikistan"], img: tadjikistan };
+tanzanie = { noms: ["Tanzanie"], img: tanzanie };
+tchad = { noms: ["Tchad"], img: tchad };
+tchequie = { noms: ["Tchéquie", "République tchèque"], img: tchequie };
+thailande = { noms: ["Thaïlande"], img: thailande };
+timororiental = { noms: ["Timor oriental"], img: timororiental };
+togo = { noms: ["Togo"], img: togo };
+tonga = { noms: ["Tonga"], img: tonga };
+triniteettobago = { noms: ["Trinité-et-Tobago"], img: triniteettobago };
+tunisie = { noms: ["Tunisie"], img: tunisie };
+turkmenistan = { noms: ["Turkménistan"], img: turkmenistan };
+turquie = { noms: ["Turquie"], img: turquie };
+tuvalu = { noms: ["Tuvalu"], img: tuvalu };
+ukraine = { noms: ["Ukraine"], img: ukraine };
+uruguay = { noms: ["Uruguay"], img: uruguay };
+vanuatu = { noms: ["Vanuatu"], img: vanuatu };
+vatican = { noms: ["Vatican"], img: vatican };
+venezuela = { noms: ["Venezuela"], img: venezuela };
+vietnam = { noms: ["Vietnam"], img: vietnam };
+yemen = { noms: ["Yémen"], img: yemen };
+zambie = { noms: ["Zambie"], img: zambie };
+zimbabwe = { noms: ["Zimbabwe"], img: zimbabwe };
 
 const drapeauxONU = [
-  { nom: "Afrique du Sud", img: afriquedusud },
-  { nom: "Albanie", img: albanie },
-  { nom: "Algérie", img: algerie },
-  { nom: "Allemagne", img: allemagne },
-  { nom: "Andorre", img: andorre },
-  { nom: "Angola", img: angola },
-  { nom: "Antigua-et-Barbuda", img: antiguaetbarbuda },
-  { nom: "Arabie saoudite", img: arabiesaoudite },
-  { nom: "Argentine", img: argentine },
-  { nom: "Arménie", img: armenie },
-  { nom: "Australie", img: australie },
-  { nom: "Autriche", img: autriche },
-  { nom: "Azerbaïdjan", img: azerbaidjan },
-  { nom: "Bahamas", img: bahamas },
-  { nom: "Bahreïn", img: bahrein },
-  { nom: "Bangladesh", img: bangladesh },
-  { nom: "Barbade", img: barbade },
-  { nom: "Belgique", img: belgique },
-  { nom: "Belize", img: belize },
-  { nom: "Bénin", img: benin },
-  { nom: "Bhoutan", img: bhoutan },
-  { nom: "Belarus", img: belarus },
-  { nom: "Birmanie", img: birmanie },
-  { nom: "Bolivie", img: bolivie },
-  { nom: "Bosnie-Herzégovine", img: bosnieherzegovine },
-  { nom: "Botswana", img: botswana },
-  { nom: "Brésil", img: bresil },
-  { nom: "Brunéi", img: brunei },
-  { nom: "Bulgarie", img: bulgarie },
-  { nom: "Burkina Faso", img: burkinafaso },
-  { nom: "Burundi", img: burundi },
-  { nom: "Cambodge", img: cambodge },
-  { nom: "Cameroun", img: cameroun },
-  { nom: "Canada", img: canada },
-  { nom: "Cap-Vert", img: capvert },
-  { nom: "Chili", img: chili },
-  { nom: "Chine", img: chine },
-  { nom: "Chypre", img: chypre },
-  { nom: "Colombie", img: colombie },
-  { nom: "Comores", img: comores },
-  { nom: "Congo", img: congo },
-  { nom: "Corée du Nord", img: coreedunord },
-  { nom: "Corée du Sud", img: coreedusud },
-  { nom: "Costa Rica", img: costarica },
-  { nom: "Côte d'Ivoire", img: cotedivoire },
-  { nom: "Croatie", img: croatie },
-  { nom: "Cuba", img: cuba },
-  { nom: "Danemark", img: danemark },
-  { nom: "Djibouti", img: djibouti },
-  { nom: "Dominique", img: dominique },
-  { nom: "Équateur", img: equateur },
-  { nom: "Égypte", img: egypte },
-  { nom: "Émirats arabes unis", img: emiratsarabesunis },
-  { nom: "Érythrée", img: erythree },
-  { nom: "Espagne", img: espagne },
-  { nom: "Estonie", img: estonie },
-  { nom: "Eswatini", img: eswatini },
-  { nom: "États-Unis", img: etatsunis },
-  { nom: "Éthiopie", img: ethiopie },
-  { nom: "Fidji", img: fidji },
-  { nom: "Finlande", img: finlande },
-  { nom: "France", img: france },
-  { nom: "Gabon", img: gabon },
-  { nom: "Gambie", img: gambie },
-  { nom: "Géorgie", img: georgie },
-  { nom: "Ghana", img: ghana },
-  { nom: "Grèce", img: grece },
-  { nom: "Grenade", img: grenade },
-  { nom: "Guatemala", img: guatemala },
-  { nom: "Guinée", img: guinee },
-  { nom: "Guinée-Bissau", img: guineebissau },
-  { nom: "Guinée équatoriale", img: guineeequatoriale },
-  { nom: "Guyana", img: guyana },
-  { nom: "Haïti", img: haiti },
-  { nom: "Honduras", img: honduras },
-  { nom: "Hongrie", img: hongrie },
-  { nom: "Iles Marshall", img: ilesmarshall },
-  { nom: "Iles Salomon", img: ilessalomon },
-  { nom: "Inde", img: inde },
-  { nom: "Indonésie", img: indonesie },
-  { nom: "Irak", img: irak },
-  { nom: "Iran", img: iran },
-  { nom: "Irlande", img: irlande },
-  { nom: "Islande", img: islande },
-  { nom: "Israël", img: israel },
-  { nom: "Italie", img: italie },
-  { nom: "Jamaïque", img: jamaique },
-  { nom: "Japon", img: japon },
-  { nom: "Jordanie", img: jordanie },
-  { nom: "Kazakhstan", img: kazakhstan },
-  { nom: "Kenya", img: kenya },
-  { nom: "Kirghizistan", img: kirghizistan },
-  { nom: "Kiribati", img: kiribati },
-  { nom: "Koweït", img: koweit },
-  { nom: "Laos", img: laos },
-  { nom: "Lesotho", img: lesotho },
-  { nom: "Lettonie", img: lettonie },
-  { nom: "Liban", img: liban },
-  { nom: "Liberia", img: liberia },
-  { nom: "Libye", img: libye },
-  { nom: "Liechtenstein", img: liechtenstein },
-  { nom: "Lituanie", img: lituanie },
-  { nom: "Luxembourg", img: luxembourg },
-  { nom: "Macédoine du Nord", img: macedoinedunord },
-  { nom: "Madagascar", img: madagascar },
-  { nom: "Malaisie", img: malaisie },
-  { nom: "Malawi", img: malawi },
-  { nom: "Maldives", img: maldives },
-  { nom: "Mali", img: mali },
-  { nom: "Malte", img: malte },
-  { nom: "Maroc", img: maroc },
-  { nom: "Maurice", img: maurice },
-  { nom: "Mauritanie", img: mauritanie },
-  { nom: "Mexique", img: mexique },
-  { nom: "Micronésie", img: micronesie },
-  { nom: "Moldavie", img: moldavie },
-  { nom: "Monaco", img: monaco },
-  { nom: "Mongolie", img: mongolie },
-  { nom: "Monténégro", img: montenegro },
-  { nom: "Mozambique", img: mozambique },
-  { nom: "Namibie", img: namibie },
-  { nom: "Nauru", img: nauru },
-  { nom: "Népal", img: nepal },
-  { nom: "Nicaragua", img: nicaragua },
-  { nom: "Niger", img: niger },
-  { nom: "Nigeria", img: nigeria },
-  { nom: "Norvège", img: norvege },
-  { nom: "Nouvelle-Zélande", img: nouvellezelande },
-  { nom: "Oman", img: oman },
-  { nom: "Ouganda", img: ouganda },
-  { nom: "Ouzbékistan", img: ouzbekistan },
-  { nom: "Pakistan", img: pakistan },
-  { nom: "Palaos", img: palaos },
-  { nom: "Panama", img: panama },
-  { nom: "Papouasie-Nouvelle-Guinée", img: papouasienouvelleguinee },
-  { nom: "Paraguay", img: paraguay },
-  { nom: "Pays-Bas", img: paysbas },
-  { nom: "Pérou", img: perou },
-  { nom: "Philippines", img: philippines },
-  { nom: "Pologne", img: pologne },
-  { nom: "Portugal", img: portugal },
-  { nom: "Qatar", img: qatar },
-  { nom: "République centrafricaine", img: republiquecentrafricaine },
-  { nom: "République démocratique du Congo", img: republiquedemocratiqueducongo },
-  { nom: "République dominicaine", img: republiquedominicaine },
-  { nom: "Roumanie", img: roumanie },
-  { nom: "Royaume-Uni", img: royaumeuni },
-  { nom: "Russie", img: russie },
-  { nom: "Rwanda", img: rwanda },
-  { nom: "Saint-Christophe-et-Niévès", img: saintchristopheetnieves },
-  { nom: "Saint-Marin", img: saintmarin },
-  { nom: "Saint-Vincent-et-les Grenadines", img: saintvincentetlesgrenadines },
-  { nom: "Sainte-Lucie", img: saintelucie },
-  { nom: "Salvador", img: salvador },
-  { nom: "Samoa", img: samoa },
-  { nom: "São Tomé-et-Príncipe", img: saotomeetprincipe },
-  { nom: "Sénégal", img: senegal },
-  { nom: "Serbie", img: serbie },
-  { nom: "Seychelles", img: seychelles },
-  { nom: "Sierra Leone", img: sierraleone },
-  { nom: "Singapour", img: singapour },
-  { nom: "Slovaquie", img: slovaquie },
-  { nom: "Slovénie", img: slovenie },
-  { nom: "Somalie", img: somalie },
-  { nom: "Soudan", img: soudan },
-  { nom: "Soudan du Sud", img: soudandusud },
-  { nom: "Sri Lanka", img: srilanka },
-  { nom: "Suède", img: suede },
-  { nom: "Suisse", img: suisse },
-  { nom: "Suriname", img: suriname },
-  { nom: "Syrie", img: syrie },
-  { nom: "Tadjikistan", img: tadjikistan },
-  { nom: "Tanzanie", img: tanzanie },
-  { nom: "Tchad", img: tchad },
-  { nom: "Tchéquie", img: tchequie },
-  { nom: "Thaïlande", img: thailande },
-  { nom: "Timor oriental", img: timororiental },
-  { nom: "Togo", img: togo },
-  { nom: "Tonga", img: tonga },
-  { nom: "Trinité-et-Tobago", img: triniteettobago },
-  { nom: "Tunisie", img: tunisie },
-  { nom: "Turkménistan", img: turkmenistan },
-  { nom: "Turquie", img: turquie },
-  { nom: "Tuvalu", img: tuvalu },
-  { nom: "Ukraine", img: ukraine },
-  { nom: "Uruguay", img: uruguay },
-  { nom: "Vanuatu", img: vanuatu },
-  { nom: "Venezuela", img: venezuela },
-  { nom: "Vietnam", img: vietnam },
-  { nom: "Yémen", img: yemen },
-  { nom: "Zambie", img: zambie },
-  { nom: "Zimbabwe", img: zimbabwe }
+  afriquedusud,
+  albanie,
+  algerie,
+  allemagne,
+  andorre,
+  angola,
+  antiguaetbarbuda,
+  arabiesaoudite,
+  argentine,
+  armenie,
+  australie,
+  autriche,
+  azerbaidjan,
+  bahamas,
+  bahrein,
+  bangladesh,
+  barbade,
+  belgique,
+  belize,
+  benin,
+  bhoutan,
+  bielorussie,
+  birmanie,
+  bolivie,
+  bosnieherzegovine,
+  botswana,
+  bresil,
+  brunei,
+  bulgarie,
+  burkinafaso,
+  burundi,
+  cambodge,
+  cameroun,
+  canada,
+  capvert,
+  chili,
+  chine,
+  chypre,
+  colombie,
+  comores,
+  congo,
+  coreedunord,
+  coreedusud,
+  costarica,
+  cotedivoire,
+  croatie,
+  cuba,
+  danemark,
+  djibouti,
+  dominique,
+  equateur,
+  egypte,
+  emiratsarabesunis,
+  erythree,
+  espagne,
+  estonie,
+  eswatini,
+  etatsunis,
+  ethiopie,
+  fidji,
+  finlande,
+  france,
+  gabon,
+  gambie,
+  georgie,
+  ghana,
+  grece,
+  grenade,
+  guatemala,
+  guinee,
+  guineebissau,
+  guineeequatoriale,
+  guyana,
+  haiti,
+  honduras,
+  hongrie,
+  ilesmarshall,
+  ilessalomon,
+  inde,
+  indonesie,
+  irak,
+  iran,
+  irlande,
+  islande,
+  israel,
+  italie,
+  jamaique,
+  japon,
+  jordanie,
+  kazakhstan,
+  kenya,
+  kirghizistan,
+  kiribati,
+  koweit,
+  laos,
+  lesotho,
+  lettonie,
+  liban,
+  liberia,
+  libye,
+  liechtenstein,
+  lituanie,
+  luxembourg,
+  macedoinedunord,
+  madagascar,
+  malaisie,
+  malawi,
+  maldives,
+  mali,
+  malte,
+  maroc,
+  maurice,
+  mauritanie,
+  mexique,
+  micronesie,
+  moldavie,
+  monaco,
+  mongolie,
+  montenegro,
+  mozambique,
+  namibie,
+  nauru,
+  nepal,
+  nicaragua,
+  niger,
+  nigeria,
+  norvege,
+  nouvellezelande,
+  oman,
+  ouganda,
+  ouzbekistan,
+  pakistan,
+  palaos,
+  panama,
+  papouasienouvelleguinee,
+  paraguay,
+  paysbas,
+  perou,
+  philippines,
+  pologne,
+  portugal,
+  qatar,
+  republiquecentrafricaine,
+  republiquedemocratiqueducongo,
+  republiquedominicaine,
+  roumanie,
+  royaumeuni,
+  russie,
+  rwanda,
+  saintchristopheetnieves,
+  saintmarin,
+  saintvincentetlesgrenadines,
+  saintelucie,
+  salvador,
+  samoa,
+  saotomeetprincipe,
+  senegal,
+  serbie,
+  seychelles,
+  sierraleone,
+  singapour,
+  slovaquie,
+  slovenie,
+  somalie,
+  soudan,
+  soudandusud,
+  srilanka,
+  suede,
+  suisse,
+  suriname,
+  syrie,
+  tadjikistan,
+  tanzanie,
+  tchad,
+  tchequie,
+  thailande,
+  timororiental,
+  togo,
+  tonga,
+  triniteettobago,
+  tunisie,
+  turkmenistan,
+  turquie,
+  tuvalu,
+  ukraine,
+  uruguay,
+  vanuatu,
+  venezuela,
+  vietnam,
+  yemen,
+  zambie,
+  zimbabwe
 ]
+
+const drapeauxEurope = [
+  albanie,
+  allemagne,
+  andorre,
+  autriche,
+  belgique,
+  bielorussie,
+  bosnieherzegovine,
+  bulgarie,
+  chypre,
+  croatie,
+  danemark,
+  espagne,
+  estonie,
+  finlande,
+  france,
+  grece,
+  hongrie,
+  irlande,
+  islande,
+  italie,
+  kosovo,
+  lettonie,
+  liechtenstein,
+  lituanie,
+  luxembourg,
+  macedoinedunord,
+  malte,
+  moldavie,
+  monaco,
+  montenegro,
+  norvege,
+  paysbas,
+  pologne,
+  portugal,
+  tchequie,
+  roumanie,
+  royaumeuni,
+  russie,
+  saintmarin,
+  serbie,
+  slovaquie,
+  slovenie,
+  suede,
+  suisse,
+  ukraine,
+  vatican
+];
 
 export {drapeauxEurope};
 export {drapeauxONU};

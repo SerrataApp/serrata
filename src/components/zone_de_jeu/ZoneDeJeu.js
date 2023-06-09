@@ -18,13 +18,19 @@ export default function ZoneDeJeu(props) {
 
   function validationDrapeau(drapeauEntre) {
     let retour = false;
-    if(nettoyerChaine(drapeauEntre).toLowerCase()===nettoyerChaine(drapeauActuel.nom).toLowerCase()) {
-      ctxDrapeauxUtilises.ajouterDrapeau(drapeauActuel);
-      setDrapeauxRestants(drapeauxRestants.filter(pays => {
-        return pays.nom !== drapeauActuel.nom;
-      }));
-      retour = true;
-    } else {
+    const nbNoms = drapeauActuel.noms.length;
+    let i = 0;
+    while(i<nbNoms && retour===false) {
+      if(nettoyerChaine(drapeauEntre).toLowerCase()===nettoyerChaine(drapeauActuel.noms[i]).toLowerCase()) {
+        ctxDrapeauxUtilises.ajouterDrapeau(drapeauActuel);
+        setDrapeauxRestants(drapeauxRestants.filter(pays => {
+          return pays.noms[0] !== drapeauActuel.noms[0];
+        }));
+        retour = true;
+      }
+      i++;
+    }
+    if(retour===false) {
       ctxResultats.ajouterErreur();
     }
     return retour;
@@ -53,8 +59,8 @@ export default function ZoneDeJeu(props) {
 
   return (
     <div className="flex gap-2">
-      <img src={drapeauActuel.img} alt={drapeauActuel.nom} className="border"/>
-      <ZoneDentree onEnvoi={validationDrapeau} onSkip={passer} nomDrapeau={drapeauActuel.nom}/>
+      <img src={drapeauActuel.img} alt={drapeauActuel.noms[0]} className="border"/>
+      <ZoneDentree onEnvoi={validationDrapeau} onSkip={passer} nomDrapeau={drapeauActuel.noms[0]}/>
     </div>
   );
 }

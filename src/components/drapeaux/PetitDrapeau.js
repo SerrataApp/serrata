@@ -8,12 +8,12 @@ export default function PetitDrapeau(props) {
 
   useEffect(() => {
     const estDansContext = ctx.drapeauxUtilises.some(pays => {
-      return pays === props.drapeau.nom;
+      return pays === props.drapeau.noms[0];
     })
     if(estDansContext) {
       setEstTrouve(true);
     }
-  }, [ctx.drapeauxUtilises, props.drapeau.nom])
+  }, [ctx.drapeauxUtilises, props.drapeau.noms])
 
   let style = "border h-3/4 ";
   if(!estTrouve) {
@@ -22,8 +22,8 @@ export default function PetitDrapeau(props) {
 
   return (
     <div className="h-24 w-40 border-black flex flex-col items-center mb-4">
-      <img src={props.drapeau.img} alt={props.drapeau.nom} className={style}/>
-      {estTrouve && <span className="">{props.drapeau.nom}</span>}
+      <img src={props.drapeau.img} alt={props.drapeau.noms[0]} className={style}/>
+      {estTrouve && <span className="">{props.drapeau.noms[0]}</span>}
     </div>
   );
 }
