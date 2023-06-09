@@ -264,7 +264,7 @@ const drapeauxONU = [
   { nom: "Belize", img: belize },
   { nom: "Bénin", img: benin },
   { nom: "Bhoutan", img: bhoutan },
-  { nom: "Biélorussie", img: belarus },
+  { nom: "Belarus", img: belarus },
   { nom: "Birmanie", img: birmanie },
   { nom: "Bolivie", img: bolivie },
   { nom: "Bosnie-Herzégovine", img: bosnieherzegovine },
