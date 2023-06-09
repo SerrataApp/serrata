@@ -23,6 +23,9 @@ export default function Resultats(props) {
         <span className="text-3xl">
           {ctx.erreurs} {ctx.erreurs>1 ? "erreurs" : "erreur"}
         </span>
+        <span className="text-3xl">
+          {ctx.indices} {ctx.indices>1 ? "indices" : "indice"}
+        </span>
         <button className="border py-4" onClick={props.onClose}>Fermer</button>
       </div>
     </Modal>

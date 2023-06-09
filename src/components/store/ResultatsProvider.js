@@ -4,6 +4,7 @@ import ResultatsContext from "./resultats-context";
 
 const resultatsParDefaut = {
   erreurs: 0,
+  indices: 0,
   temps: 0,
   estFini: false
 }
@@ -13,6 +14,12 @@ function ResultatsReducer(state, action) {
     return {
       ...state,
       erreurs: state.erreurs + 1
+    }
+  }
+  if(action.type==="AJOUTER_INDICE") {
+    return {
+      ...state,
+      indices: state.indices + 1
     }
   }
   if(action.type==="DEFINIR_TEMPS") {
@@ -36,6 +43,10 @@ export default function ResultatsProvider(props) {
     dispatchResultats({type: "AJOUTER_ERREUR"});
   }
 
+  function ajouterIndice() {
+    dispatchResultats({type: "AJOUTER_INDICE"});
+  }
+
   function definirTemps(temps) {
     dispatchResultats({type: "DEFINIR_TEMPS", temps: temps});
   }
@@ -46,9 +57,11 @@ export default function ResultatsProvider(props) {
 
   const resultatsContext = {
     erreurs: resultatsState.erreurs,
+    indices: resultatsState.indices,
     temps: resultatsState.temps,
     estFini: resultatsState.estFini,
     ajouterErreur,
+    ajouterIndice,
     definirTemps,
     finir
   }

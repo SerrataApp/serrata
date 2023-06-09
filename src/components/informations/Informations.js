@@ -1,6 +1,7 @@
 import Chrono from "./Chrono";
 import Compteur from "./Compteur";
 import Pourcents from "./Erreurs";
+import Indices from "./Indices";
 
 export default function Informations(props) {
   return (
@@ -8,6 +9,7 @@ export default function Informations(props) {
       <Chrono/>
       <Compteur longueur={props.longueur}/>
       <Pourcents/>
+      <Indices/>
     </div>
   );
 }
