@@ -31,10 +31,12 @@ export default function TabScores(props) {
 
   const listeScores = scores.map(score => {
     if((runParfaite && score.erreurs===0) || !runParfaite) {
+      const minutes = Math.floor(score.temps/60);
+      const secondes = score.temps%60;
       return (
         <tr key={score.temps+score.joueur}>
           <td className="p-1 border">{score.joueur}</td>
-          <td className="p-1 border">{score.temps}</td>
+          <td className="p-1 border">{minutes < 10 ? "0" + minutes : minutes}:{secondes < 10 ? "0" + secondes : secondes}</td>
           <td className="p-1 border">{score.erreurs}</td>
         </tr>
       );
