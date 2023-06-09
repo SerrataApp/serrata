@@ -3,10 +3,13 @@ import TabScores from "../components/scores/TabScores";
 export default function Scores() {
   return (
     <>
-      <h1 className="text-center underline">Scores</h1>
+      <div className="text-center">
+        <a href="/" className='underline'>Retour Accueil</a>
+        <h1>Scores</h1>
+      </div>
       <div className="flex justify-around">
-        <TabScores categorie="onu"/>
-        <TabScores categorie="europe"/>
+        <TabScores categorie="onu" key="scores_onu"/>
+        <TabScores categorie="europe" key="scores_europe"/>
       </div>
     </>
   );

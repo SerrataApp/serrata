@@ -32,7 +32,7 @@ export default function TabScores(props) {
   const listeScores = scores.map(score => {
     if((runParfaite && score.erreurs===0) || !runParfaite) {
       return (
-        <tr>
+        <tr key={score.temps+score.joueur}>
           <td className="p-1 border">{score.joueur}</td>
           <td className="p-1 border">{score.temps}</td>
           <td className="p-1 border">{score.erreurs}</td>
@@ -59,16 +59,20 @@ export default function TabScores(props) {
         <h2 className="text-center">{props.categorie==="onu" ? "ONU" : "Europe"}</h2>
         <div>
           <input type="checkbox" onChange={toggleRunParfaite} id={`perfect_${props.categorie}`}/>
-          <label for={`perfect_${props.categorie}`} className="ml-1 select-none">0 erreur</label>
+          <label htmlFor={`perfect_${props.categorie}`} className="ml-1 select-none">0 erreur</label>
         </div>
       </div>
       <table className="border text-center">
-        <tr>
-          <th className="p-1 border">Joueur</th>
-          <th className="p-1 border">Temps</th>
-          <th className="p-1 border">Erreurs</th>
-        </tr>
-        {listeScores}
+        <thead>
+          <tr>
+            <th className="p-1 border">Joueur</th>
+            <th className="p-1 border">Temps</th>
+            <th className="p-1 border">Erreurs</th>
+          </tr>
+        </thead>
+        <tbody>
+          {listeScores}
+        </tbody>
       </table>
     </div>
   );

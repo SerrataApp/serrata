@@ -4,6 +4,7 @@ export default function Accueil() {
       <h1>Choisir mode</h1>
       <a href="/europe" className="border p-3">Europe</a>
       <a href="/onu" className="border p-3">ONU</a>
+      <a href="/scores" className="border p-3">Scores</a>
     </div>
   );
 }
