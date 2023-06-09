@@ -54,7 +54,7 @@ export default function ZoneDeJeu(props) {
   return (
     <div className="flex gap-2">
       <img src={drapeauActuel.img} alt={drapeauActuel.nom} className="border"/>
-      <ZoneDentree onEnvoi={validationDrapeau} onSkip={passer}/>
+      <ZoneDentree onEnvoi={validationDrapeau} onSkip={passer} nomDrapeau={drapeauActuel.nom}/>
     </div>
   );
 }
