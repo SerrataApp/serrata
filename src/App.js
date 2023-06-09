@@ -4,6 +4,7 @@ import { Routes, Route, BrowserRouter } from 'react-router-dom';
 import Accueil from "./pages/Accueil";
 import Jeu from "./pages/Jeu";
 import { drapeauxEurope, drapeauxONU } from "./utils/ImportDrapeaux";
+import Scores from './pages/Scores';
 
 export default function App() {
   return (
@@ -11,9 +12,10 @@ export default function App() {
       <DrapeauxUtilisesProvider>
         <BrowserRouter>
           <Routes>
-            <Route exact path="/" element={<Accueil />} />
-            <Route exact path="/europe" element={<Jeu drapeaux={drapeauxEurope} />} />
-            <Route exact path="/onu" element={<Jeu drapeaux={drapeauxONU} />} />
+            <Route path="/" element={<Accueil />} />
+            <Route path="/europe" element={<Jeu drapeaux={drapeauxEurope}/>} />
+            <Route path="/onu" element={<Jeu drapeaux={drapeauxONU}/>} />
+            <Route path="/scores" element={<Scores/>} />
           </Routes>
         </BrowserRouter>
       </DrapeauxUtilisesProvider>
