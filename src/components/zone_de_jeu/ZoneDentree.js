@@ -1,9 +1,12 @@
-import { useRef, useEffect, useState } from "react";
+import { useRef, useEffect, useState, useContext } from "react";
+import ResultatsContext from "../store/resultats-context";
 
 export default function ZoneDentree(props) {
   const inputRef = useRef(null);
   const [texteIndice, setTexteIndice] = useState("");
   const [compteurIndice, setCompteurIndice] = useState(0);
+
+  const ctx = useContext(ResultatsContext);
 
   function envoyerRep(event) {
     event.preventDefault();
@@ -20,6 +23,8 @@ export default function ZoneDentree(props) {
     inputRef.current.value = "";
     props.onSkip();
     inputRef.current.focus();
+    setTexteIndice("");
+    setCompteurIndice(0);
   }
 
   function indice(event) {
@@ -35,9 +40,9 @@ export default function ZoneDentree(props) {
       }
       setCompteurIndice(compteurIndice+1);
       setTexteIndice(chaine);
-    } else {
-      console.log("nzrignirzg");
+      ctx.ajouterIndice();
     }
+    inputRef.current.focus();
   }
 
   useEffect(() => {

@@ -61,6 +61,7 @@ export default function ResultatsProvider(props) {
     temps: resultatsState.temps,
     estFini: resultatsState.estFini,
     ajouterErreur,
+    ajouterIndice,
     definirTemps,
     finir
   }
