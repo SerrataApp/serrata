@@ -1,6 +1,7 @@
-import Modal from "./Modal";
+import Modal from "../Modal/Modal";
 import ResultatsContext from "../store/resultats-context";
 import { useContext, useEffect, useState } from "react";
+import EnvoyerScore from "./EnvoyerScore";
 
 export default function Resultats(props) {
   const [minutes, setMinutes] = useState(0);
@@ -26,6 +27,7 @@ export default function Resultats(props) {
         <span className="text-3xl">
           {ctx.indices} {ctx.indices>1 ? "indices" : "indice"}
         </span>
+        <EnvoyerScore/>
         <button className="border py-4" onClick={props.onClose}>Fermer</button>
       </div>
     </Modal>

@@ -3,7 +3,7 @@ import { useEffect, useState } from 'react';
 import ListeDrapeaux from '../components/drapeaux/ListeDrapeaux';
 import ZoneDeJeu from '../components/zone_de_jeu/ZoneDeJeu';
 import Informations from '../components/informations/Informations';
-import Resultats from '../components/Modal/Resultats';
+import Resultats from '../components/resultats/Resultats';
 
 export default function Jeu(props) {
   const [resultatsAffiches, setResultatsAffiches] = useState(false);
