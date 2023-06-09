@@ -42,10 +42,17 @@ export default function TabScores(props) {
 
   return (
     <div>
-      <h2>{props.categorie==="onu" ? "ONU" : "Europe"}</h2>
-      <table className="border text-center">
+      <h2 className="text-center">{props.categorie==="onu" ? "ONU" : "Europe"}</h2>
+      {isLoading && <p>Chargement</p>}
+      {!isLoading && <input type="checkbox"/>}
+      {!isLoading && <table className="border text-center">
+        <tr>
+          <th className="p-1 border">Joueur</th>
+          <th className="p-1 border">Temps</th>
+          <th className="p-1 border">Erreurs</th>
+        </tr>
         {listeScores}
-      </table>
+      </table>}
     </div>
   );
 }
