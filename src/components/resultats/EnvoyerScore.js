@@ -6,7 +6,7 @@ export default function EnvoyerScore(props) {
 
   function submitScore(event) {
     event.preventDefault();
-    fetch(`http://109.12.118.42:8080/add_score_${props.categorie}`, {
+    fetch(`http://api.biblioinfo.live:8080/add_score_${props.categorie}`, {
       method: 'POST',
       headers: {
         'Accept': 'application/json',

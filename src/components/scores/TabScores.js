@@ -9,7 +9,7 @@ export default function TabScores(props) {
   useEffect(() => {
     const fetchScores = async () => {
       setIsLoading(true);
-      const response = await fetch(`http://109.12.118.42:8080/scores_${props.categorie}`);
+      const response = await fetch(`http://api.biblioinfo.live:8080/scores_${props.categorie}`);
 
       if(!response.ok) {
         throw new Error("Something went wrong");
