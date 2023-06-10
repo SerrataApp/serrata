@@ -1,8 +1,8 @@
 {
   "rewrites": [
     {
-      "source": "/(.*)",
-      "destination": "http://api.biblioinfo.live:8080/$1"
+      "source": "/api/(.*)",
+      "destination": "http://api.biblioinfo.live:8080/api/$1"
     }
   ],
   "headers": [
