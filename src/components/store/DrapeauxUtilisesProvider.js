@@ -8,7 +8,7 @@ const drapeauxUtilisesParDefaut = {
 
 function DrapeauxUtilisesReducer(state, action) {
   if(action.type==="AJOUTER_DRAPEAU") {
-    const updatedDrapeauxUtilises = [...state.drapeauxUtilises, action.drapeau.nom];
+    const updatedDrapeauxUtilises = [...state.drapeauxUtilises, action.drapeau.nom[0]];
     return {
       ...state,
       drapeauxUtilises: updatedDrapeauxUtilises
@@ -27,6 +27,7 @@ export default function DrapeauxUtilisesProvider(props) {
   const [drapeauxUtilisesState, dispatchDrapeauxUtilises] = useReducer(DrapeauxUtilisesReducer, drapeauxUtilisesParDefaut);
 
   function ajouterDrapeau(drapeau) {
+    console.log(drapeau);
     dispatchDrapeauxUtilises({type: "AJOUTER_DRAPEAU", drapeau: drapeau});
   }
 
