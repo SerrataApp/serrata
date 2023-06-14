@@ -8,7 +8,7 @@ const drapeauxUtilisesParDefaut = {
 
 function DrapeauxUtilisesReducer(state, action) {
   if(action.type==="AJOUTER_DRAPEAU") {
-    const updatedDrapeauxUtilises = [...state.drapeauxUtilises, action.drapeau.nom[0]];
+    const updatedDrapeauxUtilises = [...state.drapeauxUtilises, action.drapeau.nom];
     return {
       ...state,
       drapeauxUtilises: updatedDrapeauxUtilises
