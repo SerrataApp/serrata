@@ -14,7 +14,7 @@ export default function App() {
           <Routes>
             <Route path="/" element={<Accueil />} />
             <Route path="/europe" element={<Jeu drapeaux={drapeauxEurope} titre="Europe"/>} />
-            <Route path="/onu" element={<Jeu drapeaux={drapeauxONU}/>} titre="ONU"/>
+            <Route path="/onu" element={<Jeu drapeaux={drapeauxONU} titre="ONU"/>}/>
             <Route path="/afrique" element={<Jeu drapeaux={drapeauxAfrique} titre="Afrique"/>} />
             <Route path="/scores" element={<Scores/>} />
           </Routes>
