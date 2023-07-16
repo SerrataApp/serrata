@@ -5,7 +5,7 @@ export default function Accueil() {
       <a href="/europe" className="border p-3">Europe</a>
       <a href="/afrique" className="border p-3">Afrique</a>
       <a href="/onu" className="border p-3">ONU</a>
-      <a href="/scores" className="border p-3">Scores</a>
+      {/* <a href="/scores" className="border p-3">Scores</a> */}
     </div>
   );
 }
