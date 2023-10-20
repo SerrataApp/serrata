@@ -82,6 +82,7 @@ import irak from "../img/drapeaux/irak.png";
 import iran from "../img/drapeaux/iran.png";
 import irlande from "../img/drapeaux/irlande.png";
 import islande from "../img/drapeaux/islande.png";
+import israel from "../img/drapeaux/israel.png";
 import palestine from "../img/drapeaux/palestine.png";
 import italie from "../img/drapeaux/italie.png";
 import jamaique from "../img/drapeaux/jamaique.png";
@@ -277,7 +278,8 @@ irak = { noms: ["Irak", "Iraq"], img: irak };
 iran = { noms: ["Iran"], img: iran };
 irlande = { noms: ["Irlande"], img: irlande };
 islande = { noms: ["Islande"], img: islande };
-palestine = { noms: ["palestine"], img: palestine };
+israel = { noms: ["Israël"], img: israel};
+palestine = { noms: ["Palestine"], img: palestine };
 italie = { noms: ["Italie"], img: italie };
 jamaique = { noms: ["Jamaïque"], img: jamaique };
 japon = { noms: ["Japon"], img: japon };
@@ -473,6 +475,7 @@ const drapeauxONU = [
   iran,
   irlande,
   islande,
+  israel,
   palestine,
   italie,
   jamaique,
