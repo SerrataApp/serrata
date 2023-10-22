@@ -6,7 +6,7 @@ export default function EnvoyerScore(props) {
 
   function submitScore(event) {
     event.preventDefault();
-    fetch(`http://api.biblioinfo.live:8080/add_score_${props.categorie}`, {
+    fetch(`https://serrata-api.super-sympa.fr/add_score_${props.categorie}`, {
       method: 'POST',
       headers: {
         'Accept': 'application/json',
@@ -31,7 +31,7 @@ export default function EnvoyerScore(props) {
       {visible && <form className="flex flex-col w-5/6 mx-auto" onSubmit={submitScore}>
         <label for="nom">Votre nom</label>
         <input type="text" id="nom" className="border" ref={inputRef}/>
-        <input type="submit" value="Envoyer" className="hover:cursor-pointer"/>
+        <input type="submit" value="Envoyer" className="border my-1 hover:cursor-pointer"/>
       </form>}
     </>
   );
