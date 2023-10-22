@@ -11,4 +11,4 @@ Développé en React.js
 
 ## Jouer
 
-https://serrata.vercel.app/
+https://serrata.super-sympa.fr/
