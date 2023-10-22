@@ -2,9 +2,10 @@
 
 Jeu dans lequel des drapeaux apparaissent un à un, et il faut taper leur nom le plus vite possible, en évitant de faire des fautes d'othographe/de frappe.
 
-2 modes disponibles :
+3 modes disponibles :
 - Drapeaux des pays d'Europe (46)
-- Drapeaux des pays membres de l'ONU (192)
+- Drapeaux des pays d'Afrique (54)
+- Drapeaux des pays du monde (195)
 
 Développé en React.js
 

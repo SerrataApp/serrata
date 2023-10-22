@@ -8,7 +8,7 @@ export default function Scores() {
         <h1>Scores</h1>
       </div>
       <div className="flex justify-around">
-        <TabScores categorie="onu" key="scores_onu"/>
+        <TabScores categorie="monde" key="scores_monde"/>
         <TabScores categorie="europe" key="scores_europe"/>
       </div>
     </>

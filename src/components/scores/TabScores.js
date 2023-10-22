@@ -58,7 +58,7 @@ export default function TabScores(props) {
   return (
     <div>
       <div className="flex flex-nowrap justify-between">
-        <h2 className="text-center">{props.categorie==="onu" ? "ONU" : "Europe"}</h2>
+        <h2 className="text-center">{props.categorie==="monde" ? "Monde" : "Europe"}</h2>
         <div>
           <input type="checkbox" onChange={toggleRunParfaite} id={`perfect_${props.categorie}`}/>
           <label htmlFor={`perfect_${props.categorie}`} className="ml-1 select-none">0 erreur</label>

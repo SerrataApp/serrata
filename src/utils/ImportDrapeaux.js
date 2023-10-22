@@ -1,3 +1,4 @@
+import afghanistan from "../img/drapeaux/afghanistan.png";
 import afriquedusud from "../img/drapeaux/afriquedusud.png";
 import albanie from "../img/drapeaux/albanie.png";
 import algerie from "../img/drapeaux/algerie.png";
@@ -194,6 +195,7 @@ import yemen from "../img/drapeaux/yemen.png";
 import zambie from "../img/drapeaux/zambie.png";
 import zimbabwe from "../img/drapeaux/zimbabwe.png";
 
+afghanistan = { noms: ["Afghanistan"], img: afghanistan };
 afriquedusud = { noms: ["Afrique du Sud"], img: afriquedusud };
 albanie = { noms: ["Albanie"], img: albanie };
 algerie = { noms: ["Algérie"], img: algerie };
@@ -390,7 +392,8 @@ yemen = { noms: ["Yémen"], img: yemen };
 zambie = { noms: ["Zambie"], img: zambie };
 zimbabwe = { noms: ["Zimbabwe"], img: zimbabwe };
 
-const drapeauxONU = [
+const drapeauxMonde = [
+  afghanistan,
   afriquedusud,
   albanie,
   algerie,
@@ -476,7 +479,6 @@ const drapeauxONU = [
   irlande,
   islande,
   israel,
-  palestine,
   italie,
   jamaique,
   japon,
@@ -485,6 +487,7 @@ const drapeauxONU = [
   kenya,
   kirghizistan,
   kiribati,
+  kosovo,
   koweit,
   laos,
   lesotho,
@@ -525,6 +528,7 @@ const drapeauxONU = [
   ouzbekistan,
   pakistan,
   palaos,
+  palestine,
   panama,
   papouasienouvelleguinee,
   paraguay,
@@ -579,6 +583,7 @@ const drapeauxONU = [
   ukraine,
   uruguay,
   vanuatu,
+  vatican,
   venezuela,
   vietnam,
   yemen,
@@ -693,5 +698,5 @@ const drapeauxAfrique = [
 ]
 
 export {drapeauxEurope};
-export {drapeauxONU};
+export {drapeauxMonde};
 export {drapeauxAfrique};
