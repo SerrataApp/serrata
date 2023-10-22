@@ -9,7 +9,7 @@ export default function TabScores(props) {
   useEffect(() => {
     const fetchScores = async () => {
       setIsLoading(true);
-      const response = await fetch(`http://api.biblioinfo.live:8080/scores_${props.categorie}`);
+      const response = await fetch(`https://serrata-api.super-sympa.fr/scores_${props.categorie}`);
 
       if(!response.ok) {
         throw new Error("Something went wrong");
@@ -58,7 +58,7 @@ export default function TabScores(props) {
   return (
     <div>
       <div className="flex flex-nowrap justify-between">
-        <h2 className="text-center">{props.categorie==="monde" ? "Monde" : "Europe"}</h2>
+        <h2 className="text-center">{props.categorie[0].toUpperCase()+props.categorie.slice(1)}</h2>
         <div>
           <input type="checkbox" onChange={toggleRunParfaite} id={`perfect_${props.categorie}`}/>
           <label htmlFor={`perfect_${props.categorie}`} className="ml-1 select-none">0 erreur</label>

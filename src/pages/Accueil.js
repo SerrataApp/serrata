@@ -1,6 +1,6 @@
 export default function Accueil() {
   return (
-    <div className="w-screen h-screen flex justify-center items-center flex-col">
+    <div className="w-screen h-screen flex justify-center items-center flex-col gap-1">
       <h1>Choisir mode</h1>
       <a href="/europe" className="border p-3">Europe</a>
       <a href="/afrique" className="border p-3">Afrique</a>

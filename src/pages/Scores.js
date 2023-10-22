@@ -10,6 +10,7 @@ export default function Scores() {
       <div className="flex justify-around">
         <TabScores categorie="monde" key="scores_monde"/>
         <TabScores categorie="europe" key="scores_europe"/>
+        <TabScores categorie="afrique" key="scores_afrique"/>
       </div>
     </>
   );
