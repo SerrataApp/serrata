@@ -12,3 +12,7 @@ Développé en React.js
 ## Jouer
 
 https://serrata.super-sympa.fr/
+
+## API
+
+https://github.com/CorentinAT/serrata_api
