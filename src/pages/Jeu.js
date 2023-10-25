@@ -23,7 +23,7 @@ export default function Jeu(props) {
 
   return (
     <>
-      {resultatsAffiches && <Resultats onClose={relancer}/>}
+      {resultatsAffiches && <Resultats categorie={props.titre} onClose={relancer}/>}
       <div className='flex flex-col items-center gap-10'>
         <div className='text-center'>
           <a href="/" className='underline'>Retour Accueil</a>
