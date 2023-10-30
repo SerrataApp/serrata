@@ -16,20 +16,25 @@ export default function HistoriqueParties() {
         <tr>
           <th className="p-1 border">Temps</th>
           <th className="p-1 border">Erreurs</th>
+          <th className="p-1 border">Date</th>
         </tr>
         <tr>
           <td className="p-1 border">zefzefzef</td>
           <td className="p-1 border">zefzefzef</td>
-        </tr>
-        <tr>
-          <td className="p-1 border">zefzefzef</td>
           <td className="p-1 border">zefzefzef</td>
         </tr>
         <tr>
           <td className="p-1 border">zefzefzef</td>
           <td className="p-1 border">zefzefzef</td>
+          <td className="p-1 border">zefzefzef</td>
         </tr>
         <tr>
+          <td className="p-1 border">zefzefzef</td>
+          <td className="p-1 border">zefzefzef</td>
+          <td className="p-1 border">zefzefzef</td>
+        </tr>
+        <tr>
+          <td className="p-1 border">zefzefzef</td>
           <td className="p-1 border">zefzefzef</td>
           <td className="p-1 border">zefzefzef</td>
         </tr>
