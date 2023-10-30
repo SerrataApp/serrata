@@ -1,4 +1,12 @@
-export default function HistoriqueParties() {
+export default function HistoriqueParties(props) {
+  const listeParties = props.listeParties.map(partie => (
+    <tr>
+      <td className="p-1 border">{partie.temps}</td>
+      <td className="p-1 border">{partie.erreurs}</td>
+      <td className="p-1 border">{partie.date}</td>
+    </tr>
+  ));
+
   return (
     <div>
       <div>
@@ -13,26 +21,16 @@ export default function HistoriqueParties() {
         </select>
       </div>
       <table>
-        <tr>
-          <th className="p-1 border">Temps</th>
-          <th className="p-1 border">Erreurs</th>
-        </tr>
-        <tr>
-          <td className="p-1 border">zefzefzef</td>
-          <td className="p-1 border">zefzefzef</td>
-        </tr>
-        <tr>
-          <td className="p-1 border">zefzefzef</td>
-          <td className="p-1 border">zefzefzef</td>
-        </tr>
-        <tr>
-          <td className="p-1 border">zefzefzef</td>
-          <td className="p-1 border">zefzefzef</td>
-        </tr>
-        <tr>
-          <td className="p-1 border">zefzefzef</td>
-          <td className="p-1 border">zefzefzef</td>
-        </tr>
+        <thead>
+          <tr>
+            <th className="p-1 border">Temps</th>
+            <th className="p-1 border">Erreurs</th>
+            <th className="p-1 border">Date</th>
+          </tr>
+        </thead>
+        <tbody>
+          {listeParties}
+        </tbody>
       </table>
     </div>
   );
