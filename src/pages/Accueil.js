@@ -6,6 +6,7 @@ export default function Accueil() {
       <a href="/afrique" className="border p-3">Afrique</a>
       <a href="/monde" className="border p-3">Monde</a>
       <a href="/scores" className="border p-3">Scores</a>
+      <a href="/profil" className="border p-3">Profil</a>
     </div>
   );
 }

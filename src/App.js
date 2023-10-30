@@ -3,6 +3,7 @@ import ResultatsProvider from './components/store/ResultatsProvider';
 import { Routes, Route, BrowserRouter } from 'react-router-dom';
 import Accueil from "./pages/Accueil";
 import Jeu from "./pages/Jeu";
+import Profil from "./pages/Profil";
 import { drapeauxAfrique, drapeauxEurope, drapeauxMonde } from "./utils/ImportDrapeaux";
 import Scores from './pages/Scores';
 
@@ -17,6 +18,7 @@ export default function App() {
             <Route path="/monde" element={<Jeu drapeaux={drapeauxMonde} titre="Monde"/>}/>
             <Route path="/afrique" element={<Jeu drapeaux={drapeauxAfrique} titre="Afrique"/>} />
             <Route path="/scores" element={<Scores/>} />
+            <Route path="/profil" element={<Profil/>} />
           </Routes>
         </BrowserRouter>
       </DrapeauxUtilisesProvider>
