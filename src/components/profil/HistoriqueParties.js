@@ -1,11 +1,11 @@
+import ResumePartie from "./ResumePartie";
+
 export default function HistoriqueParties(props) {
-  const listeParties = props.listeParties.map(partie => (
-    <tr>
-      <td className="p-1 border">{partie.temps}</td>
-      <td className="p-1 border">{partie.erreurs}</td>
-      <td className="p-1 border">{partie.date}</td>
-    </tr>
-  ));
+  const listeParties = props.listeParties.map((partie, index) => {
+    if(partie.temps) {
+      return <ResumePartie key={index} temps={partie.temps} erreurs={partie.erreurs} date={partie.date}/>
+    }
+  });
 
   return (
     <div>
