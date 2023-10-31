@@ -1,19 +1,33 @@
 import ResumePartie from "./ResumePartie";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 export default function HistoriqueParties(props) {
   const [tri, setTri] = useState("tmp_cr");
+  const [listeParties, setListeParties] = useState([...props.listeParties]);
+  const [partiesTriees, setPartiesTriees] = useState([]);
 
   function onChangeHandler(event) {
     setTri(event.target.value);
   }
 
-  const listeParties = props.listeParties.map((partie, index) => {
-    if(partie.temps) {
-      return <ResumePartie key={index} temps={partie.temps} erreurs={partie.erreurs} date={partie.date}/>
+  useEffect(() => {
+    switch(tri) {
+      case "tmp_cr": setListeParties(listeParties.sort((a,b) => (a.temps>b.temps?1:-1))); break;
+      case "err_cr": setListeParties(listeParties.sort((a,b) => (a.erreurs>b.erreurs?1:-1))); break;
+      case "tmp_decr": setListeParties(listeParties.sort((a,b) => (a.temps<b.temps?1:-1))); break;
+      case "err_decr": setListeParties(listeParties.sort((a,b) => (a.erreurs<b.erreurs?1:-1))); break;
+      default: break;
     }
-    return null;
-  });
+  }, [tri, listeParties])
+
+  useEffect(() => {
+    setPartiesTriees(listeParties.map((partie, index) => {
+      if(partie.temps) {
+        return <ResumePartie key={index} temps={partie.temps} erreurs={partie.erreurs} date={partie.date}/>
+      }
+      return null;
+    }));
+  }, [tri, listeParties]);
 
   return (
     <div>
@@ -37,7 +51,7 @@ export default function HistoriqueParties(props) {
           </tr>
         </thead>
         <tbody>
-          {listeParties}
+          {partiesTriees}
         </tbody>
       </table>
     </div>
