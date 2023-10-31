@@ -19,7 +19,7 @@ export default function HistoriqueParties(props) {
     <div>
       <div>
         <label htmlFor="tri">Trier par : </label>
-        <select id="tri" value={tri} onChange={onChangeHandler}>
+        <select className="border" id="tri" value={tri} onChange={onChangeHandler}>
           <option value="tmp_cr">Temps croissant</option>
           <option value="err_cr">Erreurs croissant</option>
           <option value="rec">Plus récent</option>
