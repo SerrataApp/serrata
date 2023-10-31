@@ -19,9 +19,7 @@ export default function Profil() {
       date: "04/09/2004"
     },
     {
-      temps: null,
-      erreurs: 2,
-      date: "04/09/2004"
+      temps: null
     }
   ]
 
@@ -45,8 +43,11 @@ export default function Profil() {
 
   return (
     <>
+      <div className='text-center'>
+        <a href="/" className='underline'>Retour Accueil</a>
+      </div>
       <div className="flex flex-col items-center gap-5">
-        <h1 className="text-xl">Pseudo</h1>
+        <h1>Pseudo</h1>
         <div className="flex items-center gap-12">
           <ResumeStats stats={stats}/>
           <HistoriqueParties listeParties={listeParties}/>

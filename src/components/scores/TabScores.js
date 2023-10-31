@@ -41,6 +41,7 @@ export default function TabScores(props) {
         </tr>
       );
     }
+    return null;
   })
 
   if(httpError) {
