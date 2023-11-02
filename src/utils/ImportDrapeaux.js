@@ -487,7 +487,6 @@ const drapeauxMonde = [
   kenya,
   kirghizistan,
   kiribati,
-  kosovo,
   koweit,
   laos,
   lesotho,
