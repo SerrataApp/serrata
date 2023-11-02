@@ -9,19 +9,21 @@ import Scores from './pages/Scores';
 
 export default function App() {
   return (
-    <ResultatsProvider>
-      <DrapeauxUtilisesProvider>
-        <BrowserRouter>
-          <Routes>
-            <Route path="/" element={<Accueil />} />
-            <Route path="/europe" element={<Jeu drapeaux={drapeauxEurope} titre="Europe"/>} />
-            <Route path="/monde" element={<Jeu drapeaux={drapeauxMonde} titre="Monde"/>}/>
-            <Route path="/afrique" element={<Jeu drapeaux={drapeauxAfrique} titre="Afrique"/>} />
-            <Route path="/scores" element={<Scores/>} />
-            <Route path="/profil" element={<Profil/>} />
-          </Routes>
-        </BrowserRouter>
-      </DrapeauxUtilisesProvider>
-    </ResultatsProvider>
+    <div className="h-screen overflow-scroll bg-primary">
+      <ResultatsProvider>
+        <DrapeauxUtilisesProvider>
+          <BrowserRouter>
+            <Routes>
+              <Route path="/" element={<Accueil />} />
+              <Route path="/europe" element={<Jeu drapeaux={drapeauxEurope} titre="Europe"/>} />
+              <Route path="/monde" element={<Jeu drapeaux={drapeauxMonde} titre="Monde"/>}/>
+              <Route path="/afrique" element={<Jeu drapeaux={drapeauxAfrique} titre="Afrique"/>} />
+              <Route path="/scores" element={<Scores/>} />
+              <Route path="/profil" element={<Profil/>} />
+            </Routes>
+          </BrowserRouter>
+        </DrapeauxUtilisesProvider>
+      </ResultatsProvider>
+    </div>
   );
 }

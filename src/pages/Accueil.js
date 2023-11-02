@@ -1,14 +1,19 @@
+import LienAccueil from "../components/Elements/LienAccueil";
+import Page from "./Page";
+
 export default function Accueil() {
   return (
-    <div className="w-screen h-screen flex justify-center items-center flex-col gap-1">
+    <Page>
+    <div className="w-screen flex justify-center items-center flex-col gap-1">
       <h1 className="font-bold">Serrata</h1>
       <h2>Choisir mode</h2>
-      <a href="/europe" className="border p-3">Europe</a>
-      <a href="/afrique" className="border p-3">Afrique</a>
-      <a href="/monde" className="border p-3">Monde</a>
+      <LienAccueil href="/europe" texte="Europe"/>
+      <LienAccueil href="/afrique" texte="Afrique"/>
+      <LienAccueil href="/monde" texte="Monde"/>
       <h2>Autres</h2>
-      <a href="/scores" className="border p-3">Scores</a>
-      <a href="/profil" className="border p-3">Profil</a>
+      <LienAccueil href="/scores" texte="Score"/>
+      <LienAccueil href="/profil" texte="Profil"/>
     </div>
+    </Page>
   );
 }
