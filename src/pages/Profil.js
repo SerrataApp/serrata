@@ -1,5 +1,6 @@
 import HistoriqueParties from "../components/profil/HistoriqueParties";
 import ResumeStats from "../components/profil/ResumeStats";
+import Page from "./Page";
 
 export default function Profil() {
   const listeParties = [
@@ -42,10 +43,7 @@ export default function Profil() {
   stats.temps_moyen = temps_total/stats.parties_finies;
 
   return (
-    <>
-      <div className='text-center'>
-        <a href="/" className='underline'>Retour Accueil</a>
-      </div>
+    <Page>
       <div className="flex flex-col items-center gap-5">
         <h1>Pseudo</h1>
         <div className="flex items-center gap-12">
@@ -53,6 +51,6 @@ export default function Profil() {
           <HistoriqueParties listeParties={listeParties}/>
         </div>
       </div>
-    </>
+    </Page>
   );
 }

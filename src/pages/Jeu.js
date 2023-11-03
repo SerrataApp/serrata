@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
 
+import Page from './Page';
 import ListeDrapeaux from '../components/drapeaux/ListeDrapeaux';
 import ZoneDeJeu from '../components/zone_de_jeu/ZoneDeJeu';
 import Informations from '../components/informations/Informations';
@@ -22,17 +23,14 @@ export default function Jeu(props) {
   }, [props.drapeaux])
 
   return (
-    <>
+    <Page>
       {resultatsAffiches && <Resultats categorie={props.titre} onClose={relancer}/>}
       <div className='flex flex-col items-center gap-10'>
-        <div className='text-center'>
-          <a href="/" className='underline'>Retour Accueil</a>
-          <h1>Drapeaux {props.titre}</h1>
-        </div>
+        <h2>Drapeaux {props.titre}</h2>
         <Informations longueur={drapeaux.length}/>
         <ZoneDeJeu drapeaux={drapeaux} onTermine={afficherResultats}/>
         <ListeDrapeaux drapeaux={drapeaux}/>
       </div>
-    </>
+    </Page>
   );
 }
