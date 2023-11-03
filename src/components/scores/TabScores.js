@@ -39,9 +39,12 @@ export default function TabScores(props) {
       }
       return (
         <tr key={score.temps+score.joueur} className={style}>
-          <td className="p-1 border">{score.joueur}</td>
-          <td className="p-1 border">{minutes < 10 ? "0" + minutes : minutes}:{secondes < 10 ? "0" + secondes : secondes}</td>
-          <td className="p-1 border">{score.erreurs}</td>
+          <td className="py-1 px-3 border text-center">{index+1}</td>
+          <td className="py-1 px-3 border font-bold">{score.joueur}</td>
+          <td className="py-1 px-3 border text-center">{minutes < 10 ? "0" + minutes : minutes}:{secondes < 10 ? "0" + secondes : secondes}</td>
+          <td className="py-1 px-3 border text-center">{score.erreurs}</td>
+          <td className="py-1 px-3 border text-center">0</td>
+          <td className="py-1 px-3 border text-center">02/09/2004</td>
         </tr>
       );
     }
@@ -67,7 +70,7 @@ export default function TabScores(props) {
   }
 
   return (
-    <div className="w-full">
+    <div className="w-full overflow-scroll">
       <div>
         <input type="checkbox" onChange={toggleRunParfaite} id={`perfect_${props.categorie}`}/>
         <label htmlFor={`perfect_${props.categorie}`} className="ml-1 select-none">0 erreur</label>
@@ -75,9 +78,12 @@ export default function TabScores(props) {
       <table className="w-full">
         <thead>
           <tr>
-            <th className="p-1 border w-1/3">Joueur</th>
-            <th className="p-1 border w-1/3">Temps</th>
-            <th className="p-1 border w-1/3">Erreurs</th>
+            <th className="py-1 px-3 border w-fit">#</th>
+            <th className="py-1 px-3 border w-full">Joueur</th>
+            <th className="py-1 px-3 border w-fit">Temps</th>
+            <th className="py-1 px-3 border w-fit">Erreurs</th>
+            <th className="py-1 px-3 border w-fit">Indices</th>
+            <th className="py-1 px-3 border w-fit">Date</th>
           </tr>
         </thead>
         <tbody>
