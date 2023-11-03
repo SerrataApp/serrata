@@ -58,7 +58,7 @@ export default function ZoneDeJeu(props) {
   }, [props.drapeaux])
 
   return (
-    <div className="flex gap-2">
+    <div className="flex gap-2 mb-10">
       <img src={drapeauActuel.img} alt={drapeauActuel.noms[0]} className="border" style={{maxWidth: "250px"}}/>
       <ZoneDentree onEnvoi={validationDrapeau} onSkip={passer} nomDrapeau={drapeauActuel.noms[0]}/>
     </div>

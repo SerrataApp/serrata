@@ -25,8 +25,8 @@ export default function Jeu(props) {
   return (
     <Page>
       {resultatsAffiches && <Resultats categorie={props.titre} onClose={relancer}/>}
-      <div className='flex flex-col items-center gap-10'>
-        <h2>Drapeaux {props.titre}</h2>
+      <div className='flex flex-col items-center gap-5 mt-3'>
+        <h2 className='text-xl'>Drapeaux {props.titre}</h2>
         <Informations longueur={drapeaux.length}/>
         <ZoneDeJeu drapeaux={drapeaux} onTermine={afficherResultats}/>
         <ListeDrapeaux drapeaux={drapeaux}/>
