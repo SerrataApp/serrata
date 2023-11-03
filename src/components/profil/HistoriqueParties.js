@@ -23,17 +23,17 @@ export default function HistoriqueParties(props) {
   useEffect(() => {
     setPartiesTriees(listeParties.map((partie, index) => {
       if(partie.temps) {
-        return <ResumePartie key={index} temps={partie.temps} erreurs={partie.erreurs} date={partie.date}/>
+        return <ResumePartie key={index} index={index} temps={partie.temps} erreurs={partie.erreurs} date={partie.date}/>
       }
       return null;
     }));
   }, [tri, listeParties]);
 
   return (
-    <div>
-      <div>
-        <label htmlFor="tri">Trier par : </label>
-        <select className="border" id="tri" value={tri} onChange={onChangeHandler}>
+    <div className="w-8/12 flex flex-col items-center overflow-auto">
+      <div className="mb-2">
+        <label htmlFor="tri" className="text-l">Trier par : </label>
+        <select className="border p-2 rounded" id="tri" value={tri} onChange={onChangeHandler}>
           <option value="tmp_cr">Temps croissant</option>
           <option value="err_cr">Erreurs croissant</option>
           <option value="rec">Plus récent</option>
@@ -42,11 +42,12 @@ export default function HistoriqueParties(props) {
           <option value="anc">Plus anciens</option>
         </select>
       </div>
-      <table>
+      <table className="w-full">
         <thead>
           <tr>
             <th className="p-1 border">Temps</th>
             <th className="p-1 border">Erreurs</th>
+            <th className="p-1 border">Indices</th>
             <th className="p-1 border">Date</th>
           </tr>
         </thead>
