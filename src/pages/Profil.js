@@ -43,9 +43,8 @@ export default function Profil() {
   stats.temps_moyen = temps_total/stats.parties_finies;
 
   return (
-    <Page>
+    <Page titre="Profil">
       <div className="flex flex-col items-center gap-5 mt-3">
-        <h2 className="text-xl">Pseudo</h2>
         <ResumeStats stats={stats}/>
         <HistoriqueParties listeParties={listeParties}/>
       </div>
