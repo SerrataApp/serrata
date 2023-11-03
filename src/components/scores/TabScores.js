@@ -60,7 +60,7 @@ export default function TabScores(props) {
     );
   }
 
-  if(scores.length===0) {
+  if(listeScores.length===0) {
     return (
       <p className="text-center">Aucun score dans cette catégorie pour le moment</p>
     );
