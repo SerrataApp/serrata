@@ -45,10 +45,10 @@ export default function HistoriqueParties(props) {
       <table className="w-full">
         <thead>
           <tr>
-            <th className="p-1 border">Temps</th>
-            <th className="p-1 border">Erreurs</th>
-            <th className="p-1 border">Indices</th>
-            <th className="p-1 border">Date</th>
+            <th className="p-1 border w-1/4">Temps</th>
+            <th className="p-1 border w-1/4">Erreurs</th>
+            <th className="p-1 border w-1/4">Indices</th>
+            <th className="p-1 border w-1/4">Date</th>
           </tr>
         </thead>
         <tbody>
