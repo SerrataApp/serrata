@@ -29,12 +29,16 @@ export default function TabScores(props) {
     setRunParfaite(!runParfaite);
   }
 
-  const listeScores = scores.map(score => {
+  const listeScores = scores.map((score, index) => {
     if((runParfaite && score.erreurs===0) || !runParfaite) {
       const minutes = Math.floor(score.temps/60);
       const secondes = score.temps%60;
+      let style = "";
+      if(index%2===0) {
+        style = "bg-gray-100";
+      }
       return (
-        <tr key={score.temps+score.joueur}>
+        <tr key={score.temps+score.joueur} className={style}>
           <td className="p-1 border">{score.joueur}</td>
           <td className="p-1 border">{minutes < 10 ? "0" + minutes : minutes}:{secondes < 10 ? "0" + secondes : secondes}</td>
           <td className="p-1 border">{score.erreurs}</td>
@@ -46,31 +50,34 @@ export default function TabScores(props) {
 
   if(httpError) {
     return (
-      <div>{httpError}</div>
+      <div className="text-center">{httpError}</div>
     );
   }
 
   if(isLoading) {
     return (
-      <p>Chargement</p>
+      <p className="text-center">Chargement</p>
+    );
+  }
+
+  if(scores.length===0) {
+    return (
+      <p className="text-center">Aucun score dans cette catégorie pour le moment</p>
     );
   }
 
   return (
-    <div>
-      <div className="flex flex-nowrap justify-between">
-        <h2 className="text-center">{props.categorie[0].toUpperCase()+props.categorie.slice(1)}</h2>
-        <div>
-          <input type="checkbox" onChange={toggleRunParfaite} id={`perfect_${props.categorie}`}/>
-          <label htmlFor={`perfect_${props.categorie}`} className="ml-1 select-none">0 erreur</label>
+    <div className="w-full">
+      <div>
+        <input type="checkbox" onChange={toggleRunParfaite} id={`perfect_${props.categorie}`}/>
+        <label htmlFor={`perfect_${props.categorie}`} className="ml-1 select-none">0 erreur</label>
         </div>
-      </div>
-      <table className="border text-center">
+      <table className="w-full">
         <thead>
           <tr>
-            <th className="p-1 border">Joueur</th>
-            <th className="p-1 border">Temps</th>
-            <th className="p-1 border">Erreurs</th>
+            <th className="p-1 border w-1/3">Joueur</th>
+            <th className="p-1 border w-1/3">Temps</th>
+            <th className="p-1 border w-1/3">Erreurs</th>
           </tr>
         </thead>
         <tbody>
