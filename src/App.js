@@ -9,7 +9,7 @@ import Scores from './pages/Scores';
 
 export default function App() {
   return (
-    <div className="h-screen overflow-scroll bg-primary">
+    <div className="h-screen overflow-auto bg-primary">
       <ResultatsProvider>
         <DrapeauxUtilisesProvider>
           <BrowserRouter>

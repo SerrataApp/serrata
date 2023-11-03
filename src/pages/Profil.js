@@ -44,12 +44,10 @@ export default function Profil() {
 
   return (
     <Page>
-      <div className="flex flex-col items-center gap-5">
-        <h1>Pseudo</h1>
-        <div className="flex items-center gap-12">
-          <ResumeStats stats={stats}/>
-          <HistoriqueParties listeParties={listeParties}/>
-        </div>
+      <div className="flex flex-col items-center gap-5 mt-3">
+        <h2 className="text-xl">Pseudo</h2>
+        <ResumeStats stats={stats}/>
+        <HistoriqueParties listeParties={listeParties}/>
       </div>
     </Page>
   );
