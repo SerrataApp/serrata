@@ -16,12 +16,14 @@ export default function Scores() {
         <div className="flex w-fit mb-3">
           <BoutonMode mode="Europe" onSelect={changeModeHandler} selection={modeSelect}/>
           <BoutonMode mode="Afrique" onSelect={changeModeHandler} selection={modeSelect}/>
+          <BoutonMode mode="Asie" onSelect={changeModeHandler} selection={modeSelect}/>
           <BoutonMode mode="Monde" onSelect={changeModeHandler} selection={modeSelect}/>
         </div>
         <div className="w-8/12">
           {modeSelect==="Monde" && <TabScores categorie="monde" key="scores_monde"/>}
           {modeSelect==="Europe" && <TabScores categorie="europe" key="scores_europe"/>}
           {modeSelect==="Afrique" && <TabScores categorie="afrique" key="scores_afrique"/>}
+          {modeSelect==="Asie" && <TabScores categorie="asie" key="scores_asie"/>}
         </div>
       </div>
     </Page>

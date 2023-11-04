@@ -696,6 +696,58 @@ const drapeauxAfrique = [
   zimbabwe
 ]
 
+const drapeauxAsie = [
+  afghanistan,
+  arabiesaoudite,
+  armenie,
+  azerbaidjan,
+  bahrein,
+  bangladesh,
+  bhoutan,
+  birmanie,
+  brunei,
+  cambodge,
+  chine,
+  coreedunord,
+  coreedusud,
+  georgie,
+  inde,
+  indonesie,
+  irak,
+  iran,
+  israel,
+  japon,
+  jordanie,
+  kazakhstan,
+  kirghizistan,
+  koweit,
+  laos,
+  liban,
+  malaisie,
+  maldives,
+  mongolie,
+  nepal,
+  oman,
+  ouzbekistan,
+  pakistan,
+  palestine,
+  philippines,
+  qatar,
+  russie,
+  singapour,
+  srilanka,
+  syrie,
+  tadjikistan,
+  thailande,
+  timororiental,
+  turkmenistan,
+  turquie,
+  vietnam,
+  yemen,
+  emiratsarabesunis
+]
+
 export {drapeauxEurope};
 export {drapeauxMonde};
 export {drapeauxAfrique};
+export {drapeauxAsie};
