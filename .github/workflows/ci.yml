@@ -1,0 +1,11 @@
+name: CI
+
+on:
+  push:
+    branches: ['master']
+
+jobs:
+  build-and-test:
+    steps:
+      - name: Build
+        run: npm run build
