@@ -13,6 +13,7 @@ export default function Accueil() {
         <LienAccueil href="/afrique" texte="Afrique" img={afrique}/>
         <LienAccueil href="/asie" texte="Asie" img={asie}/>
         <LienAccueil href="/monde" texte="Monde" img={monde}/>
+        <span>teeest</span>
       </div>
     </Page>
   );
