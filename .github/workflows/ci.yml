@@ -6,6 +6,8 @@ on:
 
 jobs:
   build-and-test:
+    runs-on: ubuntu-latest
+
     steps:
       - name: Build
         run: npm run build
