@@ -77,7 +77,7 @@ export default function TabScores(props) {
         <input type="checkbox" onChange={toggleRunParfaite} id={`perfect_${props.categorie}`}/>
         <label htmlFor={`perfect_${props.categorie}`} className="ml-1 select-none">0 erreur</label>
         </div>
-      <div className="overflow-auto" style={{maxHeight: "400px"}}>
+      <div className="overflow-auto w-full" style={{maxHeight: "400px"}}>
         <table className="w-full">
           <thead>
             <tr>
