@@ -54,19 +54,21 @@ export default function HistoriqueParties(props) {
             <option value="anc">Plus anciens</option>
           </select>
         </div>
-        <table className="w-full">
-          <thead>
-            <tr>
-              <th className="p-1 border w-1/4">Temps</th>
-              <th className="p-1 border w-1/4">Erreurs</th>
-              <th className="p-1 border w-1/4">Indices</th>
-              <th className="p-1 border w-1/4">Date</th>
-            </tr>
-          </thead>
-          <tbody>
-            {partiesTriees}
-          </tbody>
-        </table>
+        <div className="overflow-auto" style={{maxHeight: "400px"}}>
+          <table className="w-full">
+            <thead>
+              <tr>
+                <th className="p-1 border w-1/4">Temps</th>
+                <th className="p-1 border w-1/4">Erreurs</th>
+                <th className="p-1 border w-1/4">Indices</th>
+                <th className="p-1 border w-1/4">Date</th>
+              </tr>
+            </thead>
+            <tbody>
+              {partiesTriees}
+            </tbody>
+          </table>
+        </div>
       </>:
       <p>Aucune partie dans cette catégorie pour l'instant</p>}
     </div>

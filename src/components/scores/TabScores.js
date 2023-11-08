@@ -77,21 +77,23 @@ export default function TabScores(props) {
         <input type="checkbox" onChange={toggleRunParfaite} id={`perfect_${props.categorie}`}/>
         <label htmlFor={`perfect_${props.categorie}`} className="ml-1 select-none">0 erreur</label>
         </div>
-      <table className="w-full">
-        <thead>
-          <tr>
-            <th className="py-1 px-3 border w-fit">#</th>
-            <th className="py-1 px-3 border w-full">Joueur</th>
-            <th className="py-1 px-3 border w-fit">Temps</th>
-            <th className="py-1 px-3 border w-fit">Erreurs</th>
-            <th className="py-1 px-3 border w-fit">Indices</th>
-            <th className="py-1 px-3 border w-fit">Date</th>
-          </tr>
-        </thead>
-        <tbody>
-          {listeScores}
-        </tbody>
-      </table>
+      <div className="overflow-auto" style={{maxHeight: "400px"}}>
+        <table className="w-full">
+          <thead>
+            <tr>
+              <th className="py-1 px-3 border w-fit">#</th>
+              <th className="py-1 px-3 border w-full">Joueur</th>
+              <th className="py-1 px-3 border w-fit">Temps</th>
+              <th className="py-1 px-3 border w-fit">Erreurs</th>
+              <th className="py-1 px-3 border w-fit">Indices</th>
+              <th className="py-1 px-3 border w-fit">Date</th>
+            </tr>
+          </thead>
+          <tbody>
+            {listeScores}
+          </tbody>
+        </table>
+      </div>
     </div>
   );
 }
