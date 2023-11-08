@@ -1,7 +1,7 @@
 import { useState } from "react";
 import TabScores from "../components/scores/TabScores";
 import Page from "./Page";
-import BoutonMode from "../components/scores/BoutonMode";
+import ChoixMode from "../components/Elements/ChoixMode";
 
 export default function Scores() {
   const [modeSelect, setModeSelect] = useState("Europe");
@@ -13,12 +13,7 @@ export default function Scores() {
   return (
     <Page titre="Scores">
       <div className="flex flex-col items-center w-full">
-        <div className="flex w-fit mb-3">
-          <BoutonMode mode="Europe" onSelect={changeModeHandler} selection={modeSelect}/>
-          <BoutonMode mode="Afrique" onSelect={changeModeHandler} selection={modeSelect}/>
-          <BoutonMode mode="Asie" onSelect={changeModeHandler} selection={modeSelect}/>
-          <BoutonMode mode="Monde" onSelect={changeModeHandler} selection={modeSelect}/>
-        </div>
+        <ChoixMode changeModeHandler={changeModeHandler} modeSelect={modeSelect}/>
         <div className="w-8/12">
           {modeSelect==="Monde" && <TabScores categorie="monde" key="scores_monde"/>}
           {modeSelect==="Europe" && <TabScores categorie="europe" key="scores_europe"/>}

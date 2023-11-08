@@ -1,13 +1,19 @@
 import ResumePartie from "./ResumePartie";
 import { useEffect, useState } from "react";
+import ChoixMode from "../Elements/ChoixMode";
 
 export default function HistoriqueParties(props) {
   const [tri, setTri] = useState("tmp_cr");
   const [listeParties, setListeParties] = useState([...props.listeParties]);
   const [partiesTriees, setPartiesTriees] = useState([]);
+  const [modeSelect, setModeSelect] = useState("Europe")
 
   function onChangeHandler(event) {
     setTri(event.target.value);
+  }
+
+  function changeModeHandler(mode) {
+    setModeSelect(mode);
   }
 
   useEffect(() => {
@@ -31,6 +37,7 @@ export default function HistoriqueParties(props) {
 
   return (
     <div className="w-8/12 flex flex-col items-center overflow-auto">
+      <ChoixMode changeModeHandler={changeModeHandler} modeSelect={modeSelect}/>
       <div className="mb-2">
         <label htmlFor="tri" className="text-l">Trier par : </label>
         <select className="border p-2 rounded" id="tri" value={tri} onChange={onChangeHandler}>
