@@ -27,13 +27,14 @@ export default function HistoriqueParties(props) {
   }, [tri, listeParties])
 
   useEffect(() => {
-    setPartiesTriees(listeParties.map((partie, index) => {
-      if(partie.temps) {
-        return <ResumePartie key={index} index={index} temps={partie.temps} erreurs={partie.erreurs} date={partie.date}/>
+    let compteur = 0;
+    setPartiesTriees(listeParties.map((partie) => {
+      if(partie.temps && modeSelect===partie.mode) {
+        return <ResumePartie key={compteur+1} index={compteur++} temps={partie.temps} erreurs={partie.erreurs} date={partie.date}/>
       }
       return null;
     }));
-  }, [tri, listeParties]);
+  }, [tri, listeParties, modeSelect]);
 
   return (
     <div className="w-8/12 flex flex-col items-center overflow-auto">
@@ -49,6 +50,7 @@ export default function HistoriqueParties(props) {
           <option value="anc">Plus anciens</option>
         </select>
       </div>
+      {partiesTriees.length>0?
       <table className="w-full">
         <thead>
           <tr>
@@ -61,7 +63,8 @@ export default function HistoriqueParties(props) {
         <tbody>
           {partiesTriees}
         </tbody>
-      </table>
+      </table>:
+      <p>Aucun score dans ce mode pour le moment</p>}
     </div>
   );
 }

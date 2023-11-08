@@ -7,17 +7,20 @@ export default function Profil() {
     {
       temps: 455,
       erreurs: 3,
-      date: "02/09/2004"
+      date: "02/09/2004",
+      mode: "Europe"
     },
     {
       temps: 305,
       erreurs: 5,
-      date: "03/09/2004"
+      date: "03/09/2004",
+      mode: "Afrique"
     },
     {
       temps: 555,
       erreurs: 2,
-      date: "04/09/2004"
+      date: "04/09/2004",
+      mode: "Monde"
     },
     {
       temps: null

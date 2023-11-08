@@ -29,14 +29,16 @@ export default function TabScores(props) {
     setRunParfaite(!runParfaite);
   }
 
+  let compteur = 0;
   const listeScores = scores.map((score, index) => {
     if((runParfaite && score.erreurs===0) || !runParfaite) {
       const minutes = Math.floor(score.temps/60);
       const secondes = score.temps%60;
       let style = "";
-      if(index%2===0) {
+      if(compteur%2===0) {
         style = "bg-gray-100";
       }
+      compteur++;
       return (
         <tr key={score.temps+score.joueur} className={style}>
           <td className="py-1 px-3 border text-center">{index+1}</td>
