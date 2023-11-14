@@ -27,7 +27,6 @@ export default function Resultats(props) {
         <span className="text-3xl">
           {ctx.indices} {ctx.indices>1 ? "indices" : "indice"}
         </span>
-        <EnvoyerScore categorie={props.categorie.toLowerCase()} score={ctx}/>
         <button className="border py-4" onClick={props.onClose}>Fermer</button>
       </div>
     </Modal>
