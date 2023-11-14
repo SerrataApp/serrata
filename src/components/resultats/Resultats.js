@@ -1,7 +1,6 @@
 import Modal from "../Modal/Modal";
 import ResultatsContext from "../store/resultats-context";
 import { useContext, useEffect, useState } from "react";
-import EnvoyerScore from "./EnvoyerScore";
 
 export default function Resultats(props) {
   const [minutes, setMinutes] = useState(0);
