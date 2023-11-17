@@ -1,6 +1,5 @@
 import { useRef } from "react";
 import Page from "./Page";
-import Cookies from "js-cookie";
 
 export default function Connexion() {
   const inputPseudo = useRef();
@@ -23,7 +22,7 @@ export default function Connexion() {
     })
     .then(response => response.json())
     .then(data => {
-      Cookies.set('token', data.access_token);
+      window.localStorage.setItem("token", data.access_token);
     })
   }
 

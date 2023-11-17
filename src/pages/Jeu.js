@@ -5,7 +5,6 @@ import ListeDrapeaux from '../components/drapeaux/ListeDrapeaux';
 import ZoneDeJeu from '../components/zone_de_jeu/ZoneDeJeu';
 import Informations from '../components/informations/Informations';
 import Resultats from '../components/resultats/Resultats';
-import Cookies from 'js-cookie';
 import ResultatsContext from '../components/store/resultats-context';
 
 export default function Jeu(props) {
@@ -16,10 +15,11 @@ export default function Jeu(props) {
 
   function finPartie() {
     setResultatsAffiches(true);
+    console.log(ctx.temps);
 
     const scoreData = {
       game_mode: 1,
-      time: "18:19:07.391Z",
+      time: ctx.temps,
       errors: ctx.erreurs,
       hint: ctx.indices,
       player_id: 1,
@@ -33,7 +33,7 @@ export default function Jeu(props) {
       headers: {
         "Accept": "application/json",
         "Content-Type": "application/json",
-        "Authorization": `Bearer ${Cookies.get("token")}`
+        "Authorization": `Bearer ${window.localStorage.getItem("token")}`
       },
       body: JSON.stringify(scoreData),
     })
