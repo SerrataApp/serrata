@@ -40,7 +40,7 @@ export default function TabScores(props) {
       }
       compteur++;
       return (
-        <tr key={score.temps+score.joueur} className={style}>
+        <tr key={index} className={style}>
           <td className="py-1 px-3 border text-center">{index+1}</td>
           <td className="py-1 px-3 border font-bold">{score.joueur}</td>
           <td className="py-1 px-3 border text-center">{minutes < 10 ? "0" + minutes : minutes}:{secondes < 10 ? "0" + secondes : secondes}</td>
@@ -61,7 +61,9 @@ export default function TabScores(props) {
 
   if(isLoading) {
     return (
-      <p className="text-center">Chargement</p>
+      <div className="flex justify-center">
+        <span className="loading loading-spinner"></span>
+      </div>
     );
   }
 
