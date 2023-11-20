@@ -23,7 +23,7 @@ export default function PetitDrapeau(props) {
   return (
     <div className="h-24 w-40 border-black flex flex-col items-center mb-4">
       <img src={props.drapeau.img} alt={props.drapeau.noms[0]} className={style}/>
-      {estTrouve && <span className="">{props.drapeau.noms[0]}</span>}
+      {estTrouve && <span className="text-center">{props.drapeau.noms[0]}</span>}
     </div>
   );
 }
