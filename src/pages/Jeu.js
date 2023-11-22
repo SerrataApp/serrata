@@ -13,31 +13,45 @@ export default function Jeu(props) {
 
   const ctx = useContext(ResultatsContext);
 
-  function finPartie() {
-    setResultatsAffiches(true);
-    console.log(ctx.temps);
-
-    const scoreData = {
-      game_mode: 1,
-      time: ctx.temps,
-      errors: ctx.erreurs,
-      hint: ctx.indices,
-      player_id: 1,
-      public: true,
-    };
-
-    const url = "http://localhost:8000/score/";
-
-    fetch(url, {
-      method: "POST",
-      headers: {
-        "Accept": "application/json",
-        "Content-Type": "application/json",
-        "Authorization": `Bearer ${window.localStorage.getItem("token")}`
-      },
-      body: JSON.stringify(scoreData),
-    })
+  function numeroMode() {
+    switch(props.titre) {
+      case "Monde": return 0;
+      case "Europe": return 1;
+      case "Afrique": return 2;
+      case "Asie": return 3;
+    }
   }
+
+  useEffect(() => {
+    if(ctx.estFini && ctx.temps>0) {
+      setResultatsAffiches(true);
+      console.log(ctx);
+
+      const numMode = numeroMode();
+      console.log("mode:"+numMode);
+
+      const scoreData = {
+        game_mode: numMode,
+        time: ctx.temps,
+        errors: ctx.erreurs,
+        hint: ctx.indices,
+        player_id: 1,
+        public: true,
+      };
+
+      const url = "http://localhost:8000/score/";
+
+      fetch(url, {
+        method: "POST",
+        headers: {
+          "Accept": "application/json",
+          "Content-Type": "application/json",
+          "Authorization": `Bearer ${window.localStorage.getItem("token")}`
+        },
+        body: JSON.stringify(scoreData),
+      })
+    }
+  }, [ctx.estFini, ctx.temps]);
 
   function relancer() {
     window.location.reload();
@@ -52,7 +66,7 @@ export default function Jeu(props) {
       {resultatsAffiches && <Resultats categorie={props.titre} onClose={relancer}/>}
       <div className='flex flex-col items-center gap-5 mt-3'>
         <Informations longueur={drapeaux.length}/>
-        <ZoneDeJeu drapeaux={drapeaux} onTermine={finPartie}/>
+        <ZoneDeJeu drapeaux={drapeaux}/>
         <ListeDrapeaux drapeaux={drapeaux}/>
       </div>
     </Page>

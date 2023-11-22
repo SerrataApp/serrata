@@ -67,7 +67,7 @@ export default function HistoriqueParties(props) {
             <option value="anc">Plus anciens</option>
           </select>
         </div>
-        <div className="overflow-auto w-full border rounded-xl" style={{maxHeight: "400px"}}>
+        <div className="overflow-auto w-full border rounded-xl mb-3" style={{maxHeight: "400px"}}>
           <table className="w-full">
             <thead>
               <tr>

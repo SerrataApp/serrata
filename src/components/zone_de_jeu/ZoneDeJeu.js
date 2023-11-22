@@ -41,7 +41,6 @@ export default function ZoneDeJeu(props) {
       setDrapeauActuel(drapeauxRestants[Math.floor(Math.random() * drapeauxRestants.length)]);
     } else {
       ctxResultats.finir();
-      props.onTermine();
     }
   }
 
