@@ -5,6 +5,7 @@ import Page from "./Page";
 
 export default function Profil() {
   const [listeParties, setListeParties] = useState();
+  const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
     function fetchGames(id) {
@@ -21,6 +22,7 @@ export default function Profil() {
     }
 
     function fetchProfile() {
+      setIsLoading(true);
       const url = "http://127.0.0.1:8000/"
       return fetch(url+"users/me", {
         method: "GET",
@@ -30,20 +32,11 @@ export default function Profil() {
         }
       })
       .then(response => response.json())
-      .then(data => fetchGames(data.id));
+      .then(data => fetchGames(data.id))
+      .then(retour => {setIsLoading(false); return retour});
     }
     fetchProfile().then(liste => setListeParties(liste));
   }, [])
-
-  // const listeParties = [
-  //   {
-  //     time: 455,
-  //     errors: 3,
-  //     hint: 12,
-  //     game_date: "2004-09-02",
-  //     game_mode: 1
-  //   }
-  // ]
 
   const stats = {
     parties_lancees: 0,
@@ -60,10 +53,17 @@ export default function Profil() {
 
   return (
     <Page titre="Profil">
-      <div className="flex flex-col items-center gap-5 mt-3">
-        <ResumeStatsGeneral stats={stats}/>
-        {listeParties && <HistoriqueParties listeParties={listeParties}/>}
-      </div>
+      {isLoading &&
+        <div className="flex justify-center">
+          <span className="loading loading-spinner"></span>
+        </div>
+      }
+      {!isLoading &&
+        <div className="flex flex-col items-center gap-5 mt-3">
+          <ResumeStatsGeneral stats={stats}/>
+          {listeParties && <HistoriqueParties listeParties={listeParties}/>}
+        </div>
+      }
     </Page>
   );
 }
