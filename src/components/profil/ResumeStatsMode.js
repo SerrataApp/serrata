@@ -13,11 +13,11 @@ export default function ResumeStatsMode(props) {
   let indices_total = 0;
 
   props.listeParties.forEach(partie => {
-    if(partie.temps!==null && partie.mode===props.modeSelect) {
+    if(props.verifMode(partie.game_mode, props.modeSelect)) {
       stats.parties_finies++;
-      temps_total += partie.temps;
-      erreurs_total += partie.erreurs;
-      indices_total += partie.indices;
+      temps_total += partie.time;
+      erreurs_total += partie.errors;
+      indices_total += partie.hint;
     }
   });
 
