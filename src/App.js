@@ -6,8 +6,30 @@ import Jeu from "./pages/Jeu";
 import Profil from "./pages/Profil";
 import { drapeauxAfrique, drapeauxAsie, drapeauxEurope, drapeauxMonde } from "./utils/ImportDrapeaux";
 import Scores from './pages/Scores';
+import { useContext, useEffect } from 'react';
+import ConnexionContext from './components/store/connexion-context';
 
 export default function App() {
+  const ctxConnexion = useContext(ConnexionContext);
+
+  useEffect(() => {
+    if(window.localStorage.getItem("token")) {
+      const url = "http://127.0.0.1:8000/users/me";
+      fetch(url, {
+        method: "GET",
+        headers: {
+          "Accept": "application/json",
+          "Authorization": `Bearer ${window.localStorage.getItem("token")}`
+        }
+      })
+      .then(response => {
+        if(response.ok) {
+          ctxConnexion.connecter();
+        }
+      })
+    }
+  }, [])
+
   return (
     <div className="h-screen overflow-auto bg-primary">
       <ResultatsProvider>
