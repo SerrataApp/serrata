@@ -1,14 +1,16 @@
+import Modal from "../Modal/Modal";
 import { useRef, useState } from "react";
-import Page from "./Page";
 
-export default function Connexion() {
+export default function ModalConnexion(props) {
   const [erreur, setErreur] = useState();
+  const [isLoading, setIsLoading] = useState(false);
 
   const inputPseudo = useRef();
   const inputMdp = useRef();
 
   function onSubmitHandler(e) {
     e.preventDefault();
+    setIsLoading(true);
     setErreur(null);
     const url = "http://127.0.0.1:8000/token";
     const formData = new URLSearchParams();
@@ -27,19 +29,22 @@ export default function Connexion() {
       response.json()
       .then(data => {
         switch(response.status) {
-          case 200: window.localStorage.setItem("token", data.access_token); break;
+          case 200: window.localStorage.setItem("token", data.access_token); props.onClose(); break;
           case 401: setErreur(data.detail); break;
           case 422: setErreur(`Champ manquant : ${data.detail[0].loc[1]}`); break;
           default: setErreur("Erreur, veuillez réessayer");
         }
+        setIsLoading(false);
       });
     })
+    .catch(() => {setErreur("Erreur, veuillez réessayer");})
   }
 
-  return(
-    <Page titre="Connexion">
-      <div className="flex justify-center">
-        <form onSubmit={onSubmitHandler} className="w-5/12 border bg-gray-100 flex flex-col items-center p-4 gap-3 rounded">
+  return (
+    <Modal onClose={props.onClose}>
+      <div className="flex flex-col items-center">
+        <h2 className="text-xl">Connexion</h2>
+        <form onSubmit={onSubmitHandler} className="flex flex-col items-center p-4 gap-3 rounded">
           <label className="flex flex-col">
             Pseudo
             <input type="text" className="border" ref={inputPseudo}/>
@@ -48,10 +53,14 @@ export default function Connexion() {
             Mot de passe
             <input type="password" className="border" ref={inputMdp}/>
           </label>
-          <input type="submit" value="Se connecter" className="bg-white border p-2"/>
-          {erreur && <p className="text-red-500">{erreur}</p>}
+          <div className="flex gap-2">
+            <input type="submit" value="Se connecter" className="rounded border p-2 transition-all duration-200 bg-green-400 hover:bg-green-500"/>
+            <input type="button" onClick={props.onClose} value="Annuler" className="rounded border p-2 transition-all duration-200 bg-red-400 hover:bg-red-500"/>
+          </div>
+          <div className="h-5 text-red-500">{erreur}</div>
+          {isLoading && <span className="loading loading-spinner"></span>}
         </form>
       </div>
-    </Page>
-  );
+    </Modal>
+  )
 }

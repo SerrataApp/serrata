@@ -6,7 +6,6 @@ import Jeu from "./pages/Jeu";
 import Profil from "./pages/Profil";
 import { drapeauxAfrique, drapeauxAsie, drapeauxEurope, drapeauxMonde } from "./utils/ImportDrapeaux";
 import Scores from './pages/Scores';
-import Connexion from './pages/Connexion';
 
 export default function App() {
   return (
@@ -22,7 +21,6 @@ export default function App() {
               <Route path="/asie" element={<Jeu drapeaux={drapeauxAsie} titre="Asie"/>} />
               <Route path="/scores" element={<Scores/>} />
               <Route path="/profil" element={<Profil/>} />
-              <Route path="/connexion" element={<Connexion/>} />
             </Routes>
           </BrowserRouter>
         </DrapeauxUtilisesProvider>
