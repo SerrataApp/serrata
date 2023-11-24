@@ -6,6 +6,7 @@ import Page from "./Page";
 export default function Profil() {
   const [listeParties, setListeParties] = useState();
   const [isLoading, setIsLoading] = useState(true);
+  const [dateInscription, setDateInscription] = useState();
 
   useEffect(() => {
     function fetchGames(id) {
@@ -32,7 +33,7 @@ export default function Profil() {
         }
       })
       .then(response => response.json())
-      .then(data => fetchGames(data.id))
+      .then(data => {setDateInscription(data.signup_date); return fetchGames(data.id)})
       .then(retour => {setIsLoading(false); return retour});
     }
     fetchProfile().then(liste => setListeParties(liste));
@@ -60,7 +61,7 @@ export default function Profil() {
       }
       {!isLoading &&
         <div className="flex flex-col items-center gap-5 mt-3">
-          <ResumeStatsGeneral stats={stats}/>
+          <ResumeStatsGeneral stats={stats} dateInscription={dateInscription}/>
           {listeParties && <HistoriqueParties listeParties={listeParties}/>}
         </div>
       }
