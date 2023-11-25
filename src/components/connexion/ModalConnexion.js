@@ -52,7 +52,7 @@ export default function ModalConnexion(props) {
     <Modal onClose={onClose}>
       <div className="flex flex-col items-center">
         <h2 className="text-xl">Connexion</h2>
-        <p className="italic text-gray-500">Il faut obligatoirement être connecté pour jouer à Serrata.</p>
+        <p className="italic text-gray-500">Il faut être connecté pour jouer à Serrata.</p>
         <form onSubmit={onSubmitHandler} className="flex flex-col items-center p-4 gap-3 rounded">
           <label className="flex flex-col">
             Pseudo

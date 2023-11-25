@@ -54,7 +54,7 @@ export default function App() {
   }
 
   if(!isLoading) return (
-    <div className="h-screen overflow-auto bg-primary">
+    <div className="h-screen overflow-auto bg-white">
       <ResultatsProvider>
         <DrapeauxUtilisesProvider>
           <BrowserRouter>
