@@ -6,13 +6,14 @@ import Jeu from "./pages/Jeu";
 import Profil from "./pages/Profil";
 import { drapeauxAfrique, drapeauxAsie, drapeauxEurope, drapeauxMonde } from "./utils/ImportDrapeaux";
 import Scores from './pages/Scores';
-import { useContext, useEffect } from 'react';
+import { useContext, useEffect, useState } from 'react';
 import ConnexionContext from './components/store/connexion-context';
 import UrlApi from './utils/UrlApi';
 import Inscription from './pages/Inscription';
 
 export default function App() {
   const ctxConnexion = useContext(ConnexionContext);
+  const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
     if(window.localStorage.getItem("token")) {
@@ -26,12 +27,15 @@ export default function App() {
       .then(response => {
         if(response.ok) {
           ctxConnexion.connecter();
+          setIsLoading(false);
         }
       })
+    } else {
+      setIsLoading(false);
     }
   }, [])
 
-  return (
+  if(!isLoading) return (
     <div className="h-screen overflow-auto bg-primary">
       <ResultatsProvider>
         <DrapeauxUtilisesProvider>

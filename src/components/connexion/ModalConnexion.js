@@ -2,7 +2,7 @@ import UrlApi from "../../utils/UrlApi";
 import Modal from "../Modal/Modal";
 import { useRef, useState } from "react";
 
-export default function ModalConnexion(props) {
+export default function ModalConnexion() {
   const [erreur, setErreur] = useState();
   const [isLoading, setIsLoading] = useState(false);
 
@@ -51,17 +51,17 @@ export default function ModalConnexion(props) {
         <form onSubmit={onSubmitHandler} className="flex flex-col items-center p-4 gap-3 rounded">
           <label className="flex flex-col">
             Pseudo
-            <input type="text" className="border" ref={inputPseudo}/>
+            <input type="text" className="border rounded p-1" ref={inputPseudo} required/>
           </label>
           <label className="flex flex-col">
             Mot de passe
-            <input type="password" className="border" ref={inputMdp}/>
+            <input type="password" className="border rounded p-1" ref={inputMdp} required/>
           </label>
           <div className="flex gap-2">
             <input type="submit" value="Se connecter" className="rounded border p-2 transition-all duration-200 bg-green-400 hover:bg-green-500"/>
             <input type="button" onClick={onClose} value="Annuler" className="rounded border p-2 transition-all duration-200 bg-red-400 hover:bg-red-500"/>
           </div>
-          <div className="h-5 text-red-500">{erreur}</div>
+          {erreur && <div className="h-5 text-red-500">{erreur}</div>}
           {isLoading && <span className="loading loading-spinner"></span>}
         </form>
       </div>
