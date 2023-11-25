@@ -1,6 +1,7 @@
 import { useRef, useEffect, useState, useContext } from "react";
 import ResultatsContext from "../store/resultats-context";
 import ConnexionContext from "../store/connexion-context";
+import ModalConnexion from "../connexion/ModalConnexion";
 
 export default function ZoneDentree(props) {
   const inputRef = useRef(null);
@@ -47,19 +48,26 @@ export default function ZoneDentree(props) {
     inputRef.current.focus();
   }
 
+  function annuler() {
+    window.location.href = "/";
+  }
+
   useEffect(() => {
     inputRef.current.focus();
   }, []);
 
   return (
-    <form onSubmit={envoyerRep} className="flex flex-col gap-2">
-      <input type="text" className="border" ref={inputRef} disabled={ctxResultats.estFini}/>
-      <input type="submit" className="border" value="Envoyer" disabled={ctxResultats.estFini||!ctxConnexion.connecte}/>
-      <div className="flex gap-2">
-        <button className="border w-full" onClick={passer} disabled={ctxResultats.estFini||!ctxConnexion.connecte}>Passer</button>
-        <button className="border w-full" onClick={indice} disabled={ctxResultats.estFini||!ctxConnexion.connecte}>Indice</button>
-      </div>
-      <span>{texteIndice}</span>
-    </form>
+    <>
+      {!ctxConnexion.connecte && <ModalConnexion onClose={annuler}/>}
+      <form onSubmit={envoyerRep} className="flex flex-col gap-2">
+        <input type="text" className="border" ref={inputRef} disabled={ctxResultats.estFini||!ctxConnexion.connecte}/>
+        <input type="submit" className="border" value="Envoyer" disabled={ctxResultats.estFini||!ctxConnexion.connecte}/>
+        <div className="flex gap-2">
+          <button className="border w-full" onClick={passer} disabled={ctxResultats.estFini||!ctxConnexion.connecte}>Passer</button>
+          <button className="border w-full" onClick={indice} disabled={ctxResultats.estFini||!ctxConnexion.connecte}>Indice</button>
+        </div>
+        <span>{texteIndice}</span>
+      </form>
+    </>
   );
 }
