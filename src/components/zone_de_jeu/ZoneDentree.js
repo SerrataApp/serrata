@@ -51,11 +51,11 @@ export default function ZoneDentree(props) {
 
   return (
     <form onSubmit={envoyerRep} className="flex flex-col gap-2">
-      <input type="text" className="border" ref={inputRef}/>
-      <input type="submit" className="border" value="Envoyer"/>
+      <input type="text" className="border" ref={inputRef} disabled={ctx.estFini}/>
+      <input type="submit" className="border" value="Envoyer" disabled={ctx.estFini}/>
       <div className="flex gap-2">
-        <button className="border w-full" onClick={passer}>Passer</button>
-        <button className="border w-full" onClick={indice}>Indice</button>
+        <button className="border w-full" onClick={passer} disabled={ctx.estFini}>Passer</button>
+        <button className="border w-full" onClick={indice} disabled={ctx.estFini}>Indice</button>
       </div>
       <span>{texteIndice}</span>
     </form>

@@ -9,14 +9,14 @@ export default function TabScores(props) {
   useEffect(() => {
     const fetchScores = async () => {
       setIsLoading(true);
-      const response = await fetch(`https://serrata-api.super-sympa.fr/scores_${props.categorie}`);
+      const response = await fetch(`http://127.0.0.1:8000/scores/mode/?game_mode_id=${props.categorie}`);
 
       if(!response.ok) {
         throw new Error("Something went wrong");
       }
       const data = await response.json();
       setScores(data);
-      setIsLoading(false)      
+      setIsLoading(false);
     };
     
     fetchScores().catch(error => {
@@ -31,9 +31,9 @@ export default function TabScores(props) {
 
   let compteur = 0;
   const listeScores = scores.map((score, index) => {
-    if((runParfaite && score.erreurs===0) || !runParfaite) {
-      const minutes = Math.floor(score.temps/60);
-      const secondes = score.temps%60;
+    if((runParfaite && score.errors===0) || !runParfaite) {
+      const minutes = Math.floor(score.time/60);
+      const secondes = score.time%60;
       let style = "";
       if(compteur%2===0) {
         style = "bg-gray-100";
@@ -44,9 +44,9 @@ export default function TabScores(props) {
           <td className="py-1 px-3 border text-center">{index+1}</td>
           <td className="py-1 px-3 border font-bold">{score.joueur}</td>
           <td className="py-1 px-3 border text-center">{minutes < 10 ? "0" + minutes : minutes}:{secondes < 10 ? "0" + secondes : secondes}</td>
-          <td className="py-1 px-3 border text-center">{score.erreurs}</td>
-          <td className="py-1 px-3 border text-center">0</td>
-          <td className="py-1 px-3 border text-center">02/09/2004</td>
+          <td className="py-1 px-3 border text-center">{score.errors}</td>
+          <td className="py-1 px-3 border text-center">{score.hint}</td>
+          <td className="py-1 px-3 border text-center">{score.game_date}</td>
         </tr>
       );
     }

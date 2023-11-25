@@ -17,10 +17,6 @@ export default function Header() {
     setConnexionOuvert(true);
   }
 
-  function closeConnexionModal() {
-    setConnexionOuvert(false);
-  }
-
   function disconnect() {
     ctxConnexion.deconnecter();
   }
@@ -38,7 +34,7 @@ export default function Header() {
         }
         {connecte && <a onClick={disconnect} className="text-blue-700 hover:underline hover:cursor-pointer">Deconnexion</a>}
       </div>
-      {connexionOuvert && <ModalConnexion onClose={closeConnexionModal}/>}
+      {connexionOuvert && <ModalConnexion/>}
     </div>
   );
 }

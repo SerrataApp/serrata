@@ -8,6 +8,10 @@ export default function ModalConnexion(props) {
   const inputPseudo = useRef();
   const inputMdp = useRef();
 
+  function onClose() {
+    window.location.reload();
+  }
+
   function onSubmitHandler(e) {
     e.preventDefault();
     setIsLoading(true);
@@ -29,7 +33,7 @@ export default function ModalConnexion(props) {
       response.json()
       .then(data => {
         switch(response.status) {
-          case 200: window.localStorage.setItem("token", data.access_token); props.onClose(); break;
+          case 200: window.localStorage.setItem("token", data.access_token); onClose(); break;
           case 401: setErreur(data.detail); break;
           case 422: setErreur(`Champ manquant : ${data.detail[0].loc[1]}`); break;
           default: setErreur("Erreur, veuillez réessayer");
@@ -37,11 +41,11 @@ export default function ModalConnexion(props) {
         setIsLoading(false);
       });
     })
-    .catch(() => {setErreur("Erreur, veuillez réessayer");})
+    .catch(() => {setErreur("Erreur, veuillez réessayer"); setIsLoading(false)})
   }
 
   return (
-    <Modal onClose={props.onClose}>
+    <Modal onClose={onClose}>
       <div className="flex flex-col items-center">
         <h2 className="text-xl">Connexion</h2>
         <form onSubmit={onSubmitHandler} className="flex flex-col items-center p-4 gap-3 rounded">
@@ -55,7 +59,7 @@ export default function ModalConnexion(props) {
           </label>
           <div className="flex gap-2">
             <input type="submit" value="Se connecter" className="rounded border p-2 transition-all duration-200 bg-green-400 hover:bg-green-500"/>
-            <input type="button" onClick={props.onClose} value="Annuler" className="rounded border p-2 transition-all duration-200 bg-red-400 hover:bg-red-500"/>
+            <input type="button" onClick={onClose} value="Annuler" className="rounded border p-2 transition-all duration-200 bg-red-400 hover:bg-red-500"/>
           </div>
           <div className="h-5 text-red-500">{erreur}</div>
           {isLoading && <span className="loading loading-spinner"></span>}
