@@ -1,12 +1,14 @@
 import { useRef, useEffect, useState, useContext } from "react";
 import ResultatsContext from "../store/resultats-context";
+import ConnexionContext from "../store/connexion-context";
 
 export default function ZoneDentree(props) {
   const inputRef = useRef(null);
   const [texteIndice, setTexteIndice] = useState("");
   const [compteurIndice, setCompteurIndice] = useState(0);
 
-  const ctx = useContext(ResultatsContext);
+  const ctxResultats = useContext(ResultatsContext);
+  const ctxConnexion = useContext(ConnexionContext);
 
   function envoyerRep(event) {
     event.preventDefault();
@@ -40,7 +42,7 @@ export default function ZoneDentree(props) {
       }
       setCompteurIndice(compteurIndice+1);
       setTexteIndice(chaine);
-      ctx.ajouterIndice();
+      ctxResultats.ajouterIndice();
     }
     inputRef.current.focus();
   }
@@ -51,11 +53,11 @@ export default function ZoneDentree(props) {
 
   return (
     <form onSubmit={envoyerRep} className="flex flex-col gap-2">
-      <input type="text" className="border" ref={inputRef} disabled={ctx.estFini}/>
-      <input type="submit" className="border" value="Envoyer" disabled={ctx.estFini}/>
+      <input type="text" className="border" ref={inputRef} disabled={ctxResultats.estFini}/>
+      <input type="submit" className="border" value="Envoyer" disabled={ctxResultats.estFini||!ctxConnexion.connecte}/>
       <div className="flex gap-2">
-        <button className="border w-full" onClick={passer} disabled={ctx.estFini}>Passer</button>
-        <button className="border w-full" onClick={indice} disabled={ctx.estFini}>Indice</button>
+        <button className="border w-full" onClick={passer} disabled={ctxResultats.estFini||!ctxConnexion.connecte}>Passer</button>
+        <button className="border w-full" onClick={indice} disabled={ctxResultats.estFini||!ctxConnexion.connecte}>Indice</button>
       </div>
       <span>{texteIndice}</span>
     </form>

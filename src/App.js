@@ -9,6 +9,7 @@ import Scores from './pages/Scores';
 import { useContext, useEffect } from 'react';
 import ConnexionContext from './components/store/connexion-context';
 import UrlApi from './utils/UrlApi';
+import Inscription from './pages/Inscription';
 
 export default function App() {
   const ctxConnexion = useContext(ConnexionContext);
@@ -42,6 +43,7 @@ export default function App() {
               <Route path="/afrique" element={<Jeu drapeaux={drapeauxAfrique} titre="Afrique"/>} />
               <Route path="/asie" element={<Jeu drapeaux={drapeauxAsie} titre="Asie"/>} />
               <Route path="/scores" element={<Scores/>} />
+              <Route path="/inscription" element={<Inscription/>} />
               <Route path="/profil/:id" element={<Profil/>} />
             </Routes>
           </BrowserRouter>
