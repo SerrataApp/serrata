@@ -1,6 +1,6 @@
 import DrapeauxUtilisesProvider from './components/store/DrapeauxUtilisesProvider';
 import ResultatsProvider from './components/store/ResultatsProvider';
-import { Routes, Route, BrowserRouter } from 'react-router-dom';
+import { Routes, Route, BrowserRouter, useNavigate } from 'react-router-dom';
 import Accueil from "./pages/Accueil";
 import Jeu from "./pages/Jeu";
 import Profil from "./pages/Profil";
@@ -25,15 +25,33 @@ export default function App() {
         }
       })
       .then(response => {
-        if(response.ok) {
-          ctxConnexion.connecter();
-          setIsLoading(false);
-        }
+        response.json()
+        .then(data => {
+          if(response.ok) {
+            ctxConnexion.connecter(data.username);
+            setIsLoading(false);
+          }
+        })
       })
     } else {
       setIsLoading(false);
     }
-  }, [])
+  }, []);
+
+  
+  function RedirectProfil() {
+    const navigate = useNavigate();
+
+    useEffect(() => {
+      if(ctxConnexion.connecte) {
+        navigate('/profil/'+ctxConnexion.username, { replace: true });
+      } else {
+        navigate('/profil/Coco', { replace: true });
+      }
+    }, [navigate]);
+
+    return null;
+  }
 
   if(!isLoading) return (
     <div className="h-screen overflow-auto bg-primary">
@@ -49,6 +67,7 @@ export default function App() {
               <Route path="/scores" element={<Scores/>} />
               <Route path="/inscription" element={<Inscription/>} />
               <Route path="/profil/:id" element={<Profil/>} />
+              <Route path="/profil" element={<RedirectProfil />} />
             </Routes>
           </BrowserRouter>
         </DrapeauxUtilisesProvider>

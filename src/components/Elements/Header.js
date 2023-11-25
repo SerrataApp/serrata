@@ -28,7 +28,7 @@ export default function Header() {
         <a href="/" className="text-blue-700 hover:underline">Jouer</a>
         <a href="/scores" className="text-blue-700 hover:underline">Scores</a>
         {connecte ?
-          <a href="/profil" className="text-blue-700 hover:underline">Profil</a>
+          <a href={`/profil/${ctxConnexion.username}`} className="text-blue-700 hover:underline">Profil</a>
         :
           <a onClick={openConnexionModal} className="text-blue-700 hover:underline hover:cursor-pointer">Connexion</a>
         }

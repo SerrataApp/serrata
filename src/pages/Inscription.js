@@ -1,6 +1,7 @@
+import ConnexionContext from "../components/store/connexion-context";
 import UrlApi from "../utils/UrlApi";
 import Page from "./Page";
-import { useRef, useState } from "react";
+import { useContext, useRef, useState } from "react";
 
 export default function Inscription() {
   const [erreur, setErreur] = useState(null);
@@ -10,6 +11,12 @@ export default function Inscription() {
   const refEmail = useRef();
   const refMdp = useRef();
   const refMdp2 = useRef();
+
+  const ctxConnexion = useContext(ConnexionContext);
+
+  if(ctxConnexion.connecte) {
+    window.location.href = "/";
+  }
 
   function connexionRedirection() {
     const formData = new URLSearchParams();
