@@ -7,12 +7,14 @@ import Informations from '../components/informations/Informations';
 import Resultats from '../components/resultats/Resultats';
 import ResultatsContext from '../components/store/resultats-context';
 import UrlApi from '../utils/UrlApi';
+import ConnexionContext from '../components/store/connexion-context';
 
 export default function Jeu(props) {
   const [resultatsAffiches, setResultatsAffiches] = useState(false);
   const [drapeaux, setDrapeaux] = useState([...props.drapeaux]);
 
-  const ctx = useContext(ResultatsContext);
+  const ctxResultats = useContext(ResultatsContext);
+  const ctxConnexion = useContext(ConnexionContext);
 
   function numeroMode() {
     switch(props.titre) {
@@ -24,33 +26,46 @@ export default function Jeu(props) {
   }
 
   useEffect(() => {
-    if(ctx.estFini && ctx.temps>0) {
+    if(ctxResultats.estFini && ctxResultats.temps>0) {
       setResultatsAffiches(true);
-      console.log(ctx);
 
       const numMode = numeroMode();
-      console.log("mode:"+numMode);
 
-      const scoreData = {
-        game_mode: numMode,
-        time: ctx.temps,
-        errors: ctx.erreurs,
-        hint: ctx.indices,
-        player_id: 1,
-        public: true,
-      };
-
-      fetch(UrlApi+"score", {
-        method: "POST",
-        headers: {
-          "Accept": "application/json",
-          "Content-Type": "application/json",
-          "Authorization": `Bearer ${window.localStorage.getItem("token")}`
-        },
-        body: JSON.stringify(scoreData),
+      fetch(UrlApi+"score/user/?user_id="+ctxConnexion.id)
+      .then(response => response.json())
+      .then(data => {
+        const partiesTriees = data.filter(game => game.game_mode === numMode);
+        let temps_min = null;
+        if(partiesTriees.length>0) {
+          temps_min = partiesTriees[0].time;
+          for(let game of partiesTriees) {
+            if(game.time<temps_min) {
+              temps_min = game.time
+            }
+          }
+        }
+        return temps_min;
+      })
+      .then(temps_min => {
+        fetch(UrlApi+"score", {
+          method: "POST",
+          headers: {
+            "Accept": "application/json",
+            "Content-Type": "application/json",
+            "Authorization": `Bearer ${window.localStorage.getItem("token")}`
+          },
+          body: JSON.stringify({
+            game_mode: numMode,
+            time: ctxResultats.temps,
+            errors: ctxResultats.erreurs,
+            hint: ctxResultats.indices,
+            player_id: ctxConnexion.id,
+            public: temps_min===null || ctxResultats.temps <= temps_min
+          }),
+        })
       })
     }
-  }, [ctx.estFini, ctx.temps]);
+  }, [ctxResultats.estFini, ctxResultats.temps]);
 
   function relancer() {
     window.location.reload();

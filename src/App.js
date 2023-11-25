@@ -28,7 +28,7 @@ export default function App() {
         response.json()
         .then(data => {
           if(response.ok) {
-            ctxConnexion.connecter(data.username);
+            ctxConnexion.connecter(data.username, data.id);
             setIsLoading(false);
           }
         })
