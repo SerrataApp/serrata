@@ -1,3 +1,4 @@
+import UrlApi from "../../utils/UrlApi";
 import Modal from "../Modal/Modal";
 import { useRef, useState } from "react";
 
@@ -16,12 +17,11 @@ export default function ModalConnexion(props) {
     e.preventDefault();
     setIsLoading(true);
     setErreur(null);
-    const url = "http://127.0.0.1:8000/token";
     const formData = new URLSearchParams();
     formData.append("username", inputPseudo.current.value);
     formData.append("password", inputMdp.current.value);
 
-    fetch(url, {
+    fetch(UrlApi+"token", {
       method: "POST",
       mode: "cors",
       headers: {

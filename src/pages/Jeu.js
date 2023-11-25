@@ -6,6 +6,7 @@ import ZoneDeJeu from '../components/zone_de_jeu/ZoneDeJeu';
 import Informations from '../components/informations/Informations';
 import Resultats from '../components/resultats/Resultats';
 import ResultatsContext from '../components/store/resultats-context';
+import UrlApi from '../utils/UrlApi';
 
 export default function Jeu(props) {
   const [resultatsAffiches, setResultatsAffiches] = useState(false);
@@ -39,9 +40,7 @@ export default function Jeu(props) {
         public: true,
       };
 
-      const url = "http://localhost:8000/score/";
-
-      fetch(url, {
+      fetch(UrlApi+"score", {
         method: "POST",
         headers: {
           "Accept": "application/json",

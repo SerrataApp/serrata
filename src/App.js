@@ -8,14 +8,14 @@ import { drapeauxAfrique, drapeauxAsie, drapeauxEurope, drapeauxMonde } from "./
 import Scores from './pages/Scores';
 import { useContext, useEffect } from 'react';
 import ConnexionContext from './components/store/connexion-context';
+import UrlApi from './utils/UrlApi';
 
 export default function App() {
   const ctxConnexion = useContext(ConnexionContext);
 
   useEffect(() => {
     if(window.localStorage.getItem("token")) {
-      const url = "http://127.0.0.1:8000/users/me";
-      fetch(url, {
+      fetch(UrlApi+"users/me", {
         method: "GET",
         headers: {
           "Accept": "application/json",
@@ -42,7 +42,7 @@ export default function App() {
               <Route path="/afrique" element={<Jeu drapeaux={drapeauxAfrique} titre="Afrique"/>} />
               <Route path="/asie" element={<Jeu drapeaux={drapeauxAsie} titre="Asie"/>} />
               <Route path="/scores" element={<Scores/>} />
-              <Route path="/profil" element={<Profil/>} />
+              <Route path="/profil/:id" element={<Profil/>} />
             </Routes>
           </BrowserRouter>
         </DrapeauxUtilisesProvider>

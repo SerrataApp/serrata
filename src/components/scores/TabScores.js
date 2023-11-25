@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import UrlApi from "../../utils/UrlApi";
 
 export default function TabScores(props) {
   const [isLoading, setIsLoading] = useState(false);
@@ -9,7 +10,7 @@ export default function TabScores(props) {
   useEffect(() => {
     const fetchScores = async () => {
       setIsLoading(true);
-      const response = await fetch(`http://127.0.0.1:8000/scores/mode/?game_mode_id=${props.categorie}`);
+      const response = await fetch(`${UrlApi}scores/mode/?game_mode_id=${props.categorie}`);
 
       if(!response.ok) {
         throw new Error("Something went wrong");

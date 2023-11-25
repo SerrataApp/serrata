@@ -1,42 +1,44 @@
 import { useEffect, useState } from "react";
+import { useParams } from 'react-router-dom';
 import HistoriqueParties from "../components/profil/HistoriqueParties";
 import ResumeStatsGeneral from "../components/profil/ResumeStatsGeneral";
 import Page from "./Page";
+import UrlApi from "../utils/UrlApi";
 
 export default function Profil() {
   const [listeParties, setListeParties] = useState();
   const [isLoading, setIsLoading] = useState(true);
   const [dateInscription, setDateInscription] = useState();
 
+  const {id} = useParams();
+
   useEffect(() => {
-    function fetchGames(id) {
+    function fetchGames() {
       console.log(id);
-      const url = "http://127.0.0.1:8000/score/user/?user_id="+id;
-      return fetch(url, {
+      return fetch(UrlApi+"score/user/?user_id="+id, {
         method: "GET",
         headers: {
           "Accept": "application/json",
           "Authorization": `Bearer ${window.localStorage.getItem("token")}`
         }
       })
-      .then(response => response.json());
+      .then(response => {setIsLoading(false); return response.json()});
     }
 
-    function fetchProfile() {
-      setIsLoading(true);
-      const url = "http://127.0.0.1:8000/"
-      return fetch(url+"users/me", {
-        method: "GET",
-        headers: {
-          "Accept": "application/json",
-          "Authorization": `Bearer ${window.localStorage.getItem("token")}`
-        }
-      })
-      .then(response => response.json())
-      .then(data => {setDateInscription(data.signup_date); return fetchGames(data.id)})
-      .then(retour => {setIsLoading(false); return retour});
-    }
-    fetchProfile().then(liste => setListeParties(liste));
+    // function fetchProfile() {
+    //   setIsLoading(true);
+    //   return fetch(UrlApi+"users/me", {
+    //     method: "GET",
+    //     headers: {
+    //       "Accept": "application/json",
+    //       "Authorization": `Bearer ${window.localStorage.getItem("token")}`
+    //     }
+    //   })
+    //   .then(response => response.json())
+    //   .then(data => {setDateInscription(data.signup_date); return fetchGames(data.id)})
+    //   .then(retour => {setIsLoading(false); return retour});
+    // }
+    fetchGames().then(liste => setListeParties(liste));
   }, [])
 
   const stats = {
