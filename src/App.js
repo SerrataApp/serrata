@@ -4,7 +4,7 @@ import { Routes, Route, BrowserRouter, useNavigate } from 'react-router-dom';
 import Accueil from "./pages/Accueil";
 import Jeu from "./pages/Jeu";
 import Profil from "./pages/Profil";
-import { drapeauxAfrique, drapeauxAsie, drapeauxEurope, drapeauxMonde } from "./utils/ImportDrapeaux";
+import { drapeauxAfrique, drapeauxAsie, drapeauxEurope, drapeauxMonde, drapeauxAmerique, drapeauxOceanie } from "./utils/ImportDrapeaux";
 import Scores from './pages/Scores';
 import { useContext, useEffect, useState } from 'react';
 import ConnexionContext from './components/store/connexion-context';
@@ -64,6 +64,8 @@ export default function App() {
               <Route path="/monde" element={<Jeu drapeaux={drapeauxMonde} titre="Monde"/>}/>
               <Route path="/afrique" element={<Jeu drapeaux={drapeauxAfrique} titre="Afrique"/>} />
               <Route path="/asie" element={<Jeu drapeaux={drapeauxAsie} titre="Asie"/>} />
+              <Route path="/amerique" element={<Jeu drapeaux={drapeauxAmerique} titre="Amérique"/>} />
+              <Route path="/oceanie" element={<Jeu drapeaux={drapeauxOceanie} titre="Océanie"/>} />
               <Route path="/scores" element={<Scores/>} />
               <Route path="/inscription" element={<Inscription/>} />
               <Route path="/profil/:username" element={<Profil/>} />

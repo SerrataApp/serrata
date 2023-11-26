@@ -4,6 +4,8 @@ import europe from "../img/modes/europe.png";
 import afrique from "../img/modes/afrique.png";
 import asie from "../img/modes/asie.png";
 import monde from "../img/modes/monde.png";
+import amerique from "../img/modes/amerique.png";
+import oceanie from "../img/modes/oceanie.png";
 
 export default function Accueil() {
   return (
@@ -12,6 +14,8 @@ export default function Accueil() {
         <LienAccueil href="/europe" texte="Europe" img={europe}/>
         <LienAccueil href="/afrique" texte="Afrique" img={afrique}/>
         <LienAccueil href="/asie" texte="Asie" img={asie}/>
+        <LienAccueil href="/amerique" texte="Amérique" img={amerique}/>
+        <LienAccueil href="/oceanie" texte="Océanie" img={oceanie}/>
         <LienAccueil href="/monde" texte="Monde" img={monde}/>
       </div>
     </Page>

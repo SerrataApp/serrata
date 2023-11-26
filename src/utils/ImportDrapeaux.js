@@ -747,7 +747,64 @@ const drapeauxAsie = [
   emiratsarabesunis
 ]
 
+const drapeauxAmerique = [
+  antiguaetbarbuda,
+  argentine,
+  bahamas,
+  barbade,
+  belize,
+  bolivie,
+  bresil,
+  canada,
+  chili,
+  colombie,
+  costarica,
+  cuba,
+  dominique,
+  equateur,
+  etatsunis,
+  grenade,
+  guatemala,
+  guyana,
+  haiti,
+  honduras,
+  jamaique,
+  mexique,
+  nicaragua,
+  panama,
+  paraguay,
+  perou,
+  republiquedominicaine,
+  salvador,
+  saintchristopheetnieves,
+  saintelucie,
+  saintvincentetlesgrenadines,
+  suriname,
+  triniteettobago,
+  uruguay,
+  venezuela
+]
+
+const drapeauxOceanie = [
+  australie,
+  ilesmarshall,
+  ilessalomon,
+  fidji,
+  kiribati,
+  micronesie,
+  nauru,
+  nouvellezelande,
+  palaos,
+  papouasienouvelleguinee,
+  samoa,
+  tonga,
+  tuvalu,
+  vanuatu
+]
+
 export {drapeauxEurope};
 export {drapeauxMonde};
 export {drapeauxAfrique};
+export {drapeauxAmerique};
+export {drapeauxOceanie};
 export {drapeauxAsie};

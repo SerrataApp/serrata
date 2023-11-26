@@ -22,6 +22,8 @@ export default function Jeu(props) {
       case "Europe": return 1;
       case "Afrique": return 2;
       case "Asie": return 3;
+      case "Amérique": return 4;
+      case "Océanie": return 5;
     }
   }
 
