@@ -31,21 +31,35 @@ export default function Jeu(props) {
 
       const numMode = numeroMode();
 
-      fetch(urlApi+"score/user/?user_id="+ctxConnexion.id)
+      fetch(urlApi+"score/user/?username="+ctxConnexion.username)
       .then(response => response.json())
       .then(data => {
         let partiesTriees = [];
-        if(data.length>0) {
-          partiesTriees = data.filter(game => game.game_mode === numMode);
+        if(data.games.length>0) {
+          partiesTriees = data.games.filter(game => game.game_mode === numMode);
+          partiesTriees = partiesTriees.filter(game => game.public);
         }
         let temps_min = null;
+        let id_min = null;
         if(partiesTriees.length>0) {
           temps_min = partiesTriees[0].time;
+          id_min = partiesTriees[0].id;
           for(let game of partiesTriees) {
             if(game.time<temps_min) {
-              temps_min = game.time
+              temps_min = game.time;
+              id_min = game.id;
             }
           }
+        }
+        if(temps_min && ctxResultats.temps<=temps_min) {
+          fetch(urlApi+"score/changeState/?game_id="+id_min, {
+            method:"PUT",
+            headers: {
+              "Accept": "application/json",
+              "Content-Type": "application/json",
+              "Authorization": `Bearer ${window.localStorage.getItem("token")}`
+              }
+          });
         }
         return temps_min;
       })
