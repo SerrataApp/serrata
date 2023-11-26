@@ -25,20 +25,6 @@ export default function Profil() {
       })
       .then(response => {setIsLoading(false); return response.json()});
     }
-
-    // function fetchProfile() {
-    //   setIsLoading(true);
-    //   return fetch(UrlApi+"users/me", {
-    //     method: "GET",
-    //     headers: {
-    //       "Accept": "application/json",
-    //       "Authorization": `Bearer ${window.localStorage.getItem("token")}`
-    //     }
-    //   })
-    //   .then(response => response.json())
-    //   .then(data => {setDateInscription(data.signup_date); return fetchGames(data.id)})
-    //   .then(retour => {setIsLoading(false); return retour});
-    // }
     fetchGames().then(data => {setDataJoueur(data); setDateInscription(data.signup_date); setPartiesLancees(data.played_games)});
   }, [])
 
