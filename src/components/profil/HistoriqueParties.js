@@ -2,7 +2,6 @@ import ResumePartie from "./ResumePartie";
 import { useEffect, useState } from "react";
 import ChoixMode from "../Elements/ChoixMode";
 import ResumeStatsMode from "./ResumeStatsMode";
-import formatDate from "../../utils/formatDate";
 
 export default function HistoriqueParties(props) {
   const [tri, setTri] = useState("tmp_cr");
@@ -32,7 +31,7 @@ export default function HistoriqueParties(props) {
     let compteur = 0;
     setPartiesTriees(listeParties.map((partie) => {
       if(partie.game_mode==modeSelect) {
-        return <ResumePartie key={compteur+1} index={compteur++} temps={partie.time} erreurs={partie.errors} indices={partie.hint} date={formatDate(partie.game_date)}/>
+        return <ResumePartie key={compteur+1} index={compteur++} partie={partie} username={props.username}/>
       }
       return null;
     }).filter(element => element !== null));
@@ -59,10 +58,11 @@ export default function HistoriqueParties(props) {
           <table className="w-full">
             <thead>
               <tr>
-                <th className="p-1 border w-1/4">Temps</th>
-                <th className="p-1 border w-1/4">Erreurs</th>
-                <th className="p-1 border w-1/4">Indices</th>
-                <th className="p-1 border w-1/4">Date</th>
+                <th className="p-1 border w-1/5">Temps</th>
+                <th className="p-1 border w-1/5">Erreurs</th>
+                <th className="p-1 border w-1/5">Indices</th>
+                <th className="p-1 border w-1/5">Date</th>
+                <th className="p-1 border w-1/5">Visibilité (dans scores)</th>
               </tr>
             </thead>
             <tbody>

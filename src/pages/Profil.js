@@ -51,7 +51,7 @@ export default function Profil() {
       {!isLoading && !erreur &&
         <div className="flex flex-col items-center gap-5 mt-3">
           <ResumeStatsGeneral stats={stats} dateInscription={formatDate(dateInscription)} partiesLancees={partiesLancees}/>
-          {dataJoueur.games && <HistoriqueParties listeParties={dataJoueur.games}/>}
+          {dataJoueur.games && <HistoriqueParties listeParties={dataJoueur.games} username={username}/>}
         </div>
       }
       {!isLoading && erreur && <p className="text-center text-red-500">{erreur}</p>}

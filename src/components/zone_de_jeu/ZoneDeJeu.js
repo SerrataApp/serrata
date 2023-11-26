@@ -25,7 +25,7 @@ export default function ZoneDeJeu(props) {
         "Accept": "application/json",
         "Content-Type": "application/json",
         "Authorization": `Bearer ${window.localStorage.getItem("token")}`
-        },
+        }
       })
     }
     let retour = false;
