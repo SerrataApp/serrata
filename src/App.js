@@ -53,6 +53,16 @@ export default function App() {
     return null;
   }
 
+  function RedirectAccueil() {
+    const navigate = useNavigate();
+
+    useEffect(() => {
+      navigate('/', { replace: true });
+    }, [navigate]);
+
+    return null;
+  }
+
   if(!isLoading) return (
     <div className="h-screen overflow-auto bg-white">
       <ResultatsProvider>
@@ -70,6 +80,7 @@ export default function App() {
               <Route path="/inscription" element={<Inscription/>} />
               <Route path="/profil/:username" element={<Profil/>} />
               <Route path="/profil" element={<RedirectProfil />} />
+              <Route path="*" element={<RedirectAccueil />} />
             </Routes>
           </BrowserRouter>
         </DrapeauxUtilisesProvider>
