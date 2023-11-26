@@ -7,7 +7,7 @@ export default function HistoriqueParties(props) {
   const [tri, setTri] = useState("tmp_cr");
   const [listeParties, setListeParties] = useState([...props.listeParties]);
   const [partiesTriees, setPartiesTriees] = useState([]);
-  const [modeSelect, setModeSelect] = useState("Europe");
+  const [modeSelect, setModeSelect] = useState("1");
 
   function onChangeHandler(event) {
     setTri(event.target.value);
@@ -15,18 +15,6 @@ export default function HistoriqueParties(props) {
 
   function changeModeHandler(mode) {
     setModeSelect(mode);
-  }
-
-  function verifMode(donne, cherche) {
-    if(cherche==="Europe") {
-      return donne===1;
-    } else if(cherche==="Afrique") {
-      return donne===2;
-    } else if(cherche==="Asie") {
-      return donne===3;
-    } else {
-      return donne===0;
-    }
   }
 
   useEffect(() => {
@@ -43,7 +31,7 @@ export default function HistoriqueParties(props) {
     console.log(listeParties);
     let compteur = 0;
     setPartiesTriees(listeParties.map((partie) => {
-      if(verifMode(partie.game_mode, modeSelect)) {
+      if(partie.game_mode==modeSelect) {
         return <ResumePartie key={compteur+1} index={compteur++} temps={partie.time} erreurs={partie.errors} indices={partie.hint} date={partie.game_date}/>
       }
       return null;
@@ -55,7 +43,7 @@ export default function HistoriqueParties(props) {
       <ChoixMode changeModeHandler={changeModeHandler} modeSelect={modeSelect}/>
       {partiesTriees.length>0?
       <>
-        <ResumeStatsMode listeParties={props.listeParties} modeSelect={modeSelect} verifMode={verifMode}/>
+        <ResumeStatsMode listeParties={props.listeParties} modeSelect={modeSelect}/>
         <div className="my-2">
           <label htmlFor="tri" className="text-l">Trier par : </label>
           <select className="border p-2 rounded" id="tri" value={tri} onChange={onChangeHandler}>

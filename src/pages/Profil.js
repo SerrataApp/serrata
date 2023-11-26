@@ -6,16 +6,17 @@ import Page from "./Page";
 import UrlApi from "../utils/UrlApi";
 
 export default function Profil() {
-  const [listeParties, setListeParties] = useState();
+  const [dataJoueur, setDataJoueur] = useState({});
   const [isLoading, setIsLoading] = useState(true);
   const [dateInscription, setDateInscription] = useState();
+  const [partiesLancees, setPartiesLancees] = useState();
 
-  const {id} = useParams();
+  const {username} = useParams();
 
   useEffect(() => {
     function fetchGames() {
-      console.log(id);
-      return fetch(UrlApi+"score/user/?user_id="+id, {
+      console.log(username);
+      return fetch(UrlApi+"score/user/?username="+username, {
         method: "GET",
         headers: {
           "Accept": "application/json",
@@ -38,17 +39,15 @@ export default function Profil() {
     //   .then(data => {setDateInscription(data.signup_date); return fetchGames(data.id)})
     //   .then(retour => {setIsLoading(false); return retour});
     // }
-    fetchGames().then(liste => setListeParties(liste));
+    fetchGames().then(data => {setDataJoueur(data); setDateInscription(data.signup_date); setPartiesLancees(data.played_games)});
   }, [])
 
   const stats = {
-    parties_lancees: 0,
     parties_finies: 0,
     temps_moyen: 0
   };
 
-  listeParties?.forEach(partie => {
-    stats.parties_lancees++;
+  dataJoueur.games?.forEach(partie => {
     if(partie.temps!==null) {
       stats.parties_finies++;
     }
@@ -63,8 +62,8 @@ export default function Profil() {
       }
       {!isLoading &&
         <div className="flex flex-col items-center gap-5 mt-3">
-          <ResumeStatsGeneral stats={stats} dateInscription={dateInscription}/>
-          {listeParties && <HistoriqueParties listeParties={listeParties}/>}
+          <ResumeStatsGeneral stats={stats} dateInscription={dateInscription} partiesLancees={partiesLancees}/>
+          {dataJoueur.games && <HistoriqueParties listeParties={dataJoueur.games}/>}
         </div>
       }
     </Page>

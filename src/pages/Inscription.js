@@ -67,6 +67,7 @@ export default function Inscription() {
         .then(data => {
           switch(response.status) {
             case 200: connexionRedirection(); break;
+            case 400: setErreur(data.detail); break;
             case 401: setErreur(data.detail); break;
             case 422: setErreur(`Champ manquant : ${data.detail[0].loc[1]}`); break;
             default: setErreur("Erreur, veuillez réessayer");

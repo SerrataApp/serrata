@@ -34,7 +34,10 @@ export default function Jeu(props) {
       fetch(UrlApi+"score/user/?user_id="+ctxConnexion.id)
       .then(response => response.json())
       .then(data => {
-        const partiesTriees = data.filter(game => game.game_mode === numMode);
+        let partiesTriees = [];
+        if(data.length>0) {
+          partiesTriees = data.filter(game => game.game_mode === numMode);
+        }
         let temps_min = null;
         if(partiesTriees.length>0) {
           temps_min = partiesTriees[0].time;

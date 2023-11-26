@@ -52,7 +52,11 @@ export default function ModalConnexion(props) {
     <Modal onClose={onClose}>
       <div className="flex flex-col items-center">
         <h2 className="text-xl">Connexion</h2>
-        <p className="italic text-gray-500">Il faut être connecté pour jouer à Serrata.</p>
+        <p className="italic text-gray-500 text-center">
+          Il faut être connecté pour jouer à Serrata,
+          <br/>
+          ce sera prochainement possible de jouer sans compte.
+        </p>
         <form onSubmit={onSubmitHandler} className="flex flex-col items-center p-4 gap-3 rounded">
           <label className="flex flex-col">
             Pseudo
@@ -68,7 +72,7 @@ export default function ModalConnexion(props) {
           </div>
           {erreur && <div className="h-5 text-red-500">{erreur}</div>}
           {isLoading && <span className="loading loading-spinner"></span>}
-          {!erreur && !isLoading && <p>Pas encore inscrit ? <a href="/inscription" className="text-blue-500 hover:underline">Créer un compte</a></p>}
+          <p>Pas encore inscrit ? <a href="/inscription" className="text-blue-500 hover:underline">Créer un compte</a></p>
         </form>
       </div>
     </Modal>

@@ -66,7 +66,7 @@ export default function App() {
               <Route path="/asie" element={<Jeu drapeaux={drapeauxAsie} titre="Asie"/>} />
               <Route path="/scores" element={<Scores/>} />
               <Route path="/inscription" element={<Inscription/>} />
-              <Route path="/profil/:id" element={<Profil/>} />
+              <Route path="/profil/:username" element={<Profil/>} />
               <Route path="/profil" element={<RedirectProfil />} />
             </Routes>
           </BrowserRouter>
