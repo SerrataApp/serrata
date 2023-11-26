@@ -10,7 +10,6 @@ export default function Header() {
 
   useEffect(() => {
     setConnecte(ctxConnexion.connecte);
-    console.log("zrgrezg");
   }, [ctxConnexion.connecte]);
 
   function openConnexionModal() {

@@ -28,7 +28,6 @@ export default function HistoriqueParties(props) {
   }, [tri, listeParties])
 
   useEffect(() => {
-    console.log(listeParties);
     let compteur = 0;
     setPartiesTriees(listeParties.map((partie) => {
       if(partie.game_mode==modeSelect) {

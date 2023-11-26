@@ -27,7 +27,6 @@ export default function DrapeauxUtilisesProvider(props) {
   const [drapeauxUtilisesState, dispatchDrapeauxUtilises] = useReducer(DrapeauxUtilisesReducer, drapeauxUtilisesParDefaut);
 
   function ajouterDrapeau(drapeau) {
-    console.log(drapeau);
     dispatchDrapeauxUtilises({type: "AJOUTER_DRAPEAU", drapeau: drapeau});
   }
 

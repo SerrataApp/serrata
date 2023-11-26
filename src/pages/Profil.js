@@ -10,12 +10,12 @@ export default function Profil() {
   const [isLoading, setIsLoading] = useState(true);
   const [dateInscription, setDateInscription] = useState();
   const [partiesLancees, setPartiesLancees] = useState();
+  const [erreur, setErreur] = useState();
 
   const {username} = useParams();
 
   useEffect(() => {
     function fetchGames() {
-      console.log(username);
       return fetch(UrlApi+"score/user/?username="+username, {
         method: "GET",
         headers: {
@@ -25,7 +25,8 @@ export default function Profil() {
       })
       .then(response => {setIsLoading(false); return response.json()});
     }
-    fetchGames().then(data => {setDataJoueur(data); setDateInscription(data.signup_date); setPartiesLancees(data.played_games)});
+    fetchGames().then(data => {setDataJoueur(data); setDateInscription(data.signup_date); setPartiesLancees(data.played_games)})
+    .catch(() => {setErreur("Le joueur n'existe pas"); setIsLoading(false)});
   }, [])
 
   const stats = {
@@ -40,18 +41,19 @@ export default function Profil() {
   });
 
   return (
-    <Page titre="Profil">
+    <Page titre={username}>
       {isLoading &&
         <div className="flex justify-center">
           <span className="loading loading-spinner"></span>
         </div>
       }
-      {!isLoading &&
+      {!isLoading && !erreur &&
         <div className="flex flex-col items-center gap-5 mt-3">
           <ResumeStatsGeneral stats={stats} dateInscription={dateInscription} partiesLancees={partiesLancees}/>
           {dataJoueur.games && <HistoriqueParties listeParties={dataJoueur.games}/>}
         </div>
       }
+      {!isLoading && erreur && <p className="text-center text-red-500">{erreur}</p>}
     </Page>
   );
 }
