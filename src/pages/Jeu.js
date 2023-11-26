@@ -6,7 +6,7 @@ import ZoneDeJeu from '../components/zone_de_jeu/ZoneDeJeu';
 import Informations from '../components/informations/Informations';
 import Resultats from '../components/resultats/Resultats';
 import ResultatsContext from '../components/store/resultats-context';
-import UrlApi from '../utils/UrlApi';
+import urlApi from '../utils/urlApi';
 import ConnexionContext from '../components/store/connexion-context';
 
 export default function Jeu(props) {
@@ -31,7 +31,7 @@ export default function Jeu(props) {
 
       const numMode = numeroMode();
 
-      fetch(UrlApi+"score/user/?user_id="+ctxConnexion.id)
+      fetch(urlApi+"score/user/?user_id="+ctxConnexion.id)
       .then(response => response.json())
       .then(data => {
         let partiesTriees = [];
@@ -50,7 +50,7 @@ export default function Jeu(props) {
         return temps_min;
       })
       .then(temps_min => {
-        fetch(UrlApi+"score", {
+        fetch(urlApi+"score", {
           method: "POST",
           headers: {
             "Accept": "application/json",

@@ -8,7 +8,7 @@ import { drapeauxAfrique, drapeauxAsie, drapeauxEurope, drapeauxMonde } from "./
 import Scores from './pages/Scores';
 import { useContext, useEffect, useState } from 'react';
 import ConnexionContext from './components/store/connexion-context';
-import UrlApi from './utils/UrlApi';
+import urlApi from './utils/urlApi';
 import Inscription from './pages/Inscription';
 
 export default function App() {
@@ -17,7 +17,7 @@ export default function App() {
 
   useEffect(() => {
     if(window.localStorage.getItem("token")) {
-      fetch(UrlApi+"users/me", {
+      fetch(urlApi+"users/me", {
         method: "GET",
         headers: {
           "Accept": "application/json",

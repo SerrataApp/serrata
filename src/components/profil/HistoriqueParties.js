@@ -2,6 +2,7 @@ import ResumePartie from "./ResumePartie";
 import { useEffect, useState } from "react";
 import ChoixMode from "../Elements/ChoixMode";
 import ResumeStatsMode from "./ResumeStatsMode";
+import formatDate from "../../utils/formatDate";
 
 export default function HistoriqueParties(props) {
   const [tri, setTri] = useState("tmp_cr");
@@ -31,7 +32,7 @@ export default function HistoriqueParties(props) {
     let compteur = 0;
     setPartiesTriees(listeParties.map((partie) => {
       if(partie.game_mode==modeSelect) {
-        return <ResumePartie key={compteur+1} index={compteur++} temps={partie.time} erreurs={partie.errors} indices={partie.hint} date={partie.game_date}/>
+        return <ResumePartie key={compteur+1} index={compteur++} temps={partie.time} erreurs={partie.errors} indices={partie.hint} date={formatDate(partie.game_date)}/>
       }
       return null;
     }).filter(element => element !== null));

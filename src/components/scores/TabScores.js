@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
-import UrlApi from "../../utils/UrlApi";
+import urlApi from "../../utils/urlApi";
+import formatDate from "../../utils/formatDate";
 
 export default function TabScores(props) {
   const [isLoading, setIsLoading] = useState(false);
@@ -10,14 +11,14 @@ export default function TabScores(props) {
   useEffect(() => {
     const fetchScores = async () => {
       setIsLoading(true);
-      const response = await fetch(`${UrlApi}scores/mode/?game_mode_id=${props.categorie}`);
+      const response = await fetch(`${urlApi}scores/mode/?game_mode_id=${props.categorie}`);
 
       if(!response.ok) {
         throw new Error("Something went wrong");
       }
       let data = await response.json();
       for(let i_partie in data) {
-        const responseJoueur = await fetch(UrlApi+"users/?user_id="+data[i_partie].player_id);
+        const responseJoueur = await fetch(urlApi+"users/?user_id="+data[i_partie].player_id);
         const dataJoueur = await responseJoueur.json();
         const nomJoueur = dataJoueur.username;
         data[i_partie] = {
@@ -25,6 +26,7 @@ export default function TabScores(props) {
           username: nomJoueur
         }
       }
+      data = data.sort((a,b) => (a.time>b.time?1:-1));
       setScores(data);
       setIsLoading(false);
     };
@@ -56,7 +58,7 @@ export default function TabScores(props) {
           <td className="py-1 px-3 border text-center">{minutes < 10 ? "0" + minutes : minutes}:{secondes < 10 ? "0" + secondes : secondes}</td>
           <td className="py-1 px-3 border text-center">{score.errors}</td>
           <td className="py-1 px-3 border text-center">{score.hint}</td>
-          <td className="py-1 px-3 border text-center">{score.game_date}</td>
+          <td className="py-1 px-3 border text-center">{formatDate(score.game_date)}</td>
         </tr>
       );
     }

@@ -2,7 +2,7 @@ import { useState, useContext, useEffect } from "react";
 import ZoneDentree from "./ZoneDentree";
 import DrapeauxUtilisesContext from "../store/drapeaux-utilises-context";
 import ResultatsContext from "../store/resultats-context";
-import UrlApi from "../../utils/UrlApi";
+import urlApi from "../../utils/urlApi";
 
 export default function ZoneDeJeu(props) {
   const [drapeauActuel, setDrapeauActuel] = useState(props.drapeaux[Math.floor(Math.random() * props.drapeaux.length)]);
@@ -19,7 +19,7 @@ export default function ZoneDeJeu(props) {
 
   function validationDrapeau(drapeauEntre) {
     if(ctxDrapeauxUtilises.drapeauxUtilises.length===0) {
-      fetch(UrlApi+"users/me/game", {
+      fetch(urlApi+"users/me/game", {
         method: "PUT",
         headers: {
         "Accept": "application/json",

@@ -3,7 +3,8 @@ import { useParams } from 'react-router-dom';
 import HistoriqueParties from "../components/profil/HistoriqueParties";
 import ResumeStatsGeneral from "../components/profil/ResumeStatsGeneral";
 import Page from "./Page";
-import UrlApi from "../utils/UrlApi";
+import urlApi from "../utils/urlApi";
+import formatDate from "../utils/formatDate";
 
 export default function Profil() {
   const [dataJoueur, setDataJoueur] = useState({});
@@ -16,7 +17,7 @@ export default function Profil() {
 
   useEffect(() => {
     function fetchGames() {
-      return fetch(UrlApi+"score/user/?username="+username, {
+      return fetch(urlApi+"score/user/?username="+username, {
         method: "GET",
         headers: {
           "Accept": "application/json",
@@ -49,7 +50,7 @@ export default function Profil() {
       }
       {!isLoading && !erreur &&
         <div className="flex flex-col items-center gap-5 mt-3">
-          <ResumeStatsGeneral stats={stats} dateInscription={dateInscription} partiesLancees={partiesLancees}/>
+          <ResumeStatsGeneral stats={stats} dateInscription={formatDate(dateInscription)} partiesLancees={partiesLancees}/>
           {dataJoueur.games && <HistoriqueParties listeParties={dataJoueur.games}/>}
         </div>
       }

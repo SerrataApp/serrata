@@ -1,5 +1,5 @@
 import ConnexionContext from "../components/store/connexion-context";
-import UrlApi from "../utils/UrlApi";
+import urlApi from "../utils/urlApi";
 import Page from "./Page";
 import { useContext, useRef, useState } from "react";
 
@@ -23,7 +23,7 @@ export default function Inscription() {
     formData.append("username", refPseudo.current.value);
     formData.append("password", refMdp.current.value);
 
-    fetch(UrlApi+"token", {
+    fetch(urlApi+"token", {
       method: "POST",
       mode: "cors",
       headers: {
@@ -50,7 +50,7 @@ export default function Inscription() {
     } else {
       setIsLoading(true);
 
-      fetch(UrlApi+"signup", {
+      fetch(urlApi+"signup", {
         method: "POST",
         headers: {
           'Accept': 'application/json',
