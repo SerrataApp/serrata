@@ -17,6 +17,14 @@ export default function ModalConnexion(props) {
     }
   }
 
+  function onCancel() {
+    if(!props.onCancel) {
+      onClose();
+    } else {
+      props.onCancel();
+    }
+  }
+
   function onSubmitHandler(e) {
     e.preventDefault();
     setIsLoading(true);
@@ -49,7 +57,7 @@ export default function ModalConnexion(props) {
   }
 
   return (
-    <Modal onClose={onClose}>
+    <Modal onClose={onCancel}>
       <div className="flex flex-col items-center">
         <h2 className="text-xl">Connexion</h2>
         <p className="italic text-gray-500 text-center">
@@ -68,7 +76,7 @@ export default function ModalConnexion(props) {
           </label>
           <div className="flex gap-2">
             <input type="submit" value="Se connecter" className="rounded border p-2 transition-all duration-200 bg-green-400 hover:bg-green-500"/>
-            <input type="button" onClick={onClose} value="Annuler" className="rounded border p-2 transition-all duration-200 bg-red-400 hover:bg-red-500"/>
+            <input type="button" onClick={onCancel} value="Annuler" className="rounded border p-2 transition-all duration-200 bg-red-400 hover:bg-red-500"/>
           </div>
           {erreur && <div className="h-5 text-red-500">{erreur}</div>}
           {isLoading && <span className="loading loading-spinner"></span>}
