@@ -21,8 +21,10 @@ export default function HistoriqueParties(props) {
     switch(tri) {
       case "tmp_cr": setListeParties(listeParties.sort((a,b) => (a.time>b.time?1:-1))); break;
       case "err_cr": setListeParties(listeParties.sort((a,b) => (a.errors>b.errors?1:-1))); break;
+      case "rec": setListeParties(listeParties.sort((a,b) => (a.id<b.id?1:-1))); break;
       case "tmp_decr": setListeParties(listeParties.sort((a,b) => (a.time<b.time?1:-1))); break;
       case "err_decr": setListeParties(listeParties.sort((a,b) => (a.errors<b.errors?1:-1))); break;
+      case "anc": setListeParties(listeParties.sort((a,b) => (a.id>b.id?1:-1))); break;
       default: break;
     }
   }, [tri, listeParties])
