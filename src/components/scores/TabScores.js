@@ -96,7 +96,7 @@ export default function TabScores(props) {
           <thead>
             <tr>
               <th className="py-1 px-3 border w-fit">#</th>
-              <th className="py-1 px-3 border w-full">Joueur</th>
+              <th className="py-1 px-3 border w-full">Joueur -<span className=" font-normal"> cliquer pour accéder au profil</span></th>
               <th className="py-1 px-3 border w-fit">Temps</th>
               <th className="py-1 px-3 border w-fit">Erreurs</th>
               <th className="py-1 px-3 border w-fit">Indices</th>
