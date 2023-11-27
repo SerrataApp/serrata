@@ -27,10 +27,12 @@ export default function App() {
       .then(response => {
         response.json()
         .then(data => {
-          if(response.ok) {
+          if(response.status===200) {
             ctxConnexion.connecter(data.username, data.id);
-            setIsLoading(false);
+          } else {
+            window.localStorage.removeItem("token");
           }
+          setIsLoading(false);
         })
       })
     } else {
