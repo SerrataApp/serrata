@@ -5,6 +5,7 @@ export default function Chrono() {
   const [temps, setTemps] = useState(0);
   const [minutes, setMinutes] = useState(0);
   const [secondes, setSecondes] = useState(0);
+  const [dateDebut, setDateDebut] = useState(Date.now());
 
   const ctx = useContext(ResultatsContext);
 
@@ -15,7 +16,7 @@ export default function Chrono() {
 
     if(ctx.estFini) {
       clearInterval(interval);
-      ctx.definirTemps(temps);
+      ctx.definirTemps(Date.now()-dateDebut);
     }
 
     return () => {

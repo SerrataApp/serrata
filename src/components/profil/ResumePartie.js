@@ -17,8 +17,9 @@ export default function ResumePartie(props) {
     });
   }
 
-  const minutes = Math.floor(props.partie.time/60);
-  const secondes = props.partie.time%60;
+  const minutes = Math.floor(props.partie.time/(60*1000));
+  const secondes = Math.floor(props.partie.time%(60*1000)/1000);
+  const ms = props.partie.time%1000;
   let style = "";
   if(props.index%2===0) {
     style = "bg-gray-100";
@@ -26,7 +27,7 @@ export default function ResumePartie(props) {
 
   return (
     <tr className={style}>
-      <td className="p-1 border text-center">{minutes < 10 ? "0" + minutes : minutes}:{secondes < 10 ? "0" + secondes : secondes}</td>
+      <td className="p-1 border text-center">{minutes < 10 ? "0" + minutes : minutes}:{secondes < 10 ? "0" + secondes : secondes}:{(ms < 10) ? '00' + ms : (ms < 100) ? '0' + ms : ms}</td>
       <td className="p-1 border text-center">{props.partie.errors}</td>
       <td className="p-1 border text-center">{props.partie.hint}</td>
       <td className="p-1 border text-center">{formatDate(props.partie.game_date)}</td>

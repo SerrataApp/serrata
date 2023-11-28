@@ -44,8 +44,9 @@ export default function TabScores(props) {
   let compteur = 0;
   const listeScores = scores.map((score, index) => {
     if((runParfaite && score.errors===0) || !runParfaite) {
-      const minutes = Math.floor(score.time/60);
-      const secondes = score.time%60;
+      const minutes = Math.floor(score.time/(60*1000));
+      const secondes = Math.floor(score.time%(60*1000)/1000);
+      const ms = score.time%1000;
       let style = "";
       if(compteur%2===0) {
         style = "bg-gray-100";
@@ -55,7 +56,7 @@ export default function TabScores(props) {
         <tr key={index} className={style}>
           <td className="py-1 px-3 border text-center">{index+1}</td>
           <td className="py-1 px-3 border font-bold"><a href={`/profil/${score.username}`} className="hover:underline">{score.username}</a></td>
-          <td className="py-1 px-3 border text-center">{minutes < 10 ? "0" + minutes : minutes}:{secondes < 10 ? "0" + secondes : secondes}</td>
+          <td className="py-1 px-3 border text-center">{minutes < 10 ? "0" + minutes : minutes}:{secondes < 10 ? "0" + secondes : secondes}:{(ms < 10) ? '00' + ms : (ms < 100) ? '0' + ms : ms}</td>
           <td className="py-1 px-3 border text-center">{score.errors}</td>
           <td className="py-1 px-3 border text-center">{score.hint}</td>
           <td className="py-1 px-3 border text-center">{formatDate(score.game_date)}</td>
