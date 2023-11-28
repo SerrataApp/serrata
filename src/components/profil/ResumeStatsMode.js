@@ -24,9 +24,10 @@ export default function ResumeStatsMode(props) {
   stats.erreurs_moyen = Math.round((erreurs_total/stats.parties_finies)*10)/10;
   stats.indices_moyen = Math.round((indices_total/stats.parties_finies)*10)/10;
   stats.temps_moyen = temps_total/stats.parties_finies;
-  const minutes = Math.floor(stats.temps_moyen/60);
-  const secondes = Math.round(stats.temps_moyen%60);
-  const temps_moyen = `${minutes < 10 ? "0" + minutes : minutes}:${secondes < 10 ? "0" + secondes : secondes}`;
+  const minutes = Math.floor(stats.temps_moyen/(60*1000));
+  const secondes = Math.floor(stats.temps_moyen%(60*1000)/1000);
+  const ms = Math.round(stats.temps_moyen%1000);
+  const temps_moyen = `${minutes < 10 ? "0" + minutes : minutes}:${secondes < 10 ? "0" + secondes : secondes}:${(ms < 10) ? '00' + ms : (ms < 100) ? '0' + ms : ms}`;
 
   return (
     <div className="flex flex-wrap justify-center gap-5">
