@@ -68,7 +68,7 @@ export default function ModalConnexion(props) {
         <form onSubmit={onSubmitHandler} className="flex flex-col items-center p-4 gap-3 rounded">
           <label className="flex flex-col">
             Pseudo
-            <input type="text" className="border rounded p-1" ref={inputPseudo} required/>
+            <input type="text" className="border rounded p-1" ref={inputPseudo} required autoFocus={true}/>
           </label>
           <label className="flex flex-col">
             Mot de passe

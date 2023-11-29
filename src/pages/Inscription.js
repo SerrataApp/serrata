@@ -86,7 +86,7 @@ export default function Inscription() {
         <form onSubmit={onSubmitHandler} className="flex flex-col gap-3 items-center border bg-gray-100 rounded p-5">
           <label className="flex flex-col">
             Pseudo
-            <input type="text" className="border p-1 rounded" ref={refPseudo} required/>
+            <input type="text" className="border p-1 rounded" ref={refPseudo} required autoFocus={true}/>
           </label>
           <label className="flex flex-col">
             Adresse mail
