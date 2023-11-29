@@ -15,7 +15,7 @@ export default function Scores() {
       <div className="flex flex-col items-center w-full">
         <ChoixMode changeModeHandler={changeModeHandler} modeSelect={modeSelect}/>
         <div className="w-8/12">
-          <TabScores categorie={modeSelect}/>
+          <TabScores categorie={modeSelect} changeMode={changeModeHandler}/>
         </div>
       </div>
     </Page>

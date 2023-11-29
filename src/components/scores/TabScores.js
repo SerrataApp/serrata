@@ -28,6 +28,7 @@ export default function TabScores(props) {
       }
       data = data.sort((a,b) => (a.time>b.time?1:-1));
       setScores(data);
+      props.changeMode(props.categorie);
       setIsLoading(false);
     };
     
