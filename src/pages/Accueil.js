@@ -10,7 +10,7 @@ import oceanie from "../img/modes/oceanie.png";
 export default function Accueil() {
   return (
     <Page titre="Jouer">
-      <div className="grid grid-cols-3 mx-12 gap-4">
+      <div className=" flex flex-col gap-2 md:grid md:grid-cols-3 md:mx-12 md:gap-4">
         <LienAccueil href="/europe" texte="Europe" img={europe}/>
         <LienAccueil href="/afrique" texte="Afrique" img={afrique}/>
         <LienAccueil href="/asie" texte="Asie" img={asie}/>
