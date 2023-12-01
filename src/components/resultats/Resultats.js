@@ -17,8 +17,8 @@ export default function Resultats(props) {
 
   return(
     <Modal onClose={props.onClose}>
-      <div className="flex flex-col text-center gap-3 w-fit">
-        <span className="text-9xl">
+      <div className="flex flex-col text-center gap-3 w-fit items-center w-full">
+        <span className=" text-5xl md:text-7xl lg:text-8xl">
           {minutes < 10 ? "0" + minutes : minutes}:
           {secondes < 10 ? "0" + secondes : secondes}:
           {(ms < 10) ? '00' + ms : (ms < 100) ? '0' + ms : ms}
@@ -29,7 +29,7 @@ export default function Resultats(props) {
         <span className="text-3xl">
           {ctx.indices} {ctx.indices>1 ? "indices" : "indice"}
         </span>
-        <button className="border py-4" onClick={props.onClose}>Fermer</button>
+        <button className="border py-4 w-full transition-all duration-150 hover:bg-gray-100" onClick={props.onClose}>Fermer</button>
       </div>
     </Modal>
   );
