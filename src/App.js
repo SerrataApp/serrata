@@ -10,6 +10,7 @@ import { useContext, useEffect, useState } from 'react';
 import ConnexionContext from './components/store/connexion-context';
 import urlApi from './utils/urlApi';
 import Inscription from './pages/Inscription';
+import MentionsLegales from './pages/MentionsLegales';
 
 export default function App() {
   const ctxConnexion = useContext(ConnexionContext);
@@ -83,6 +84,7 @@ export default function App() {
               <Route path="/profil/:username" element={<Profil/>} />
               <Route path="/profil" element={<RedirectProfil />} />
               <Route path="*" element={<RedirectAccueil />} />
+              <Route path="/mentionslegales" element={<MentionsLegales />} />
             </Routes>
           </BrowserRouter>
         </DrapeauxUtilisesProvider>
