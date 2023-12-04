@@ -17,7 +17,7 @@ export default function Resultats(props) {
 
   return(
     <Modal onClose={props.onClose}>
-      <div className="flex flex-col text-center gap-3 w-fit items-center w-full">
+      <div className="flex flex-col text-center gap-3 items-center w-full">
         <span className=" text-5xl md:text-7xl lg:text-8xl">
           {minutes < 10 ? "0" + minutes : minutes}:
           {secondes < 10 ? "0" + secondes : secondes}:
