@@ -1,14 +1,11 @@
 import Page from "./Page";
-import ReactMarkdown from 'react-markdown';
+import Markdown from "../components/markdown/Markdown";
+import MentionsLegalesFile from '../md/mentionslegales.md';
 
 export default function MentionsLegales() {
-  const markdownText = '# Titre principal\n\nCeci est un paragraphe en **Markdown**.';
-
   return (
     <Page titre="Mentions Légales">
-      <ReactMarkdown>
-        {markdownText}
-      </ReactMarkdown>
+      <Markdown markdownFile={MentionsLegalesFile}/>
     </Page>
   );
 }

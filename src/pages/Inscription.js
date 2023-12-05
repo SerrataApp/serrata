@@ -100,6 +100,10 @@ export default function Inscription() {
             Confirmer mot de passe
             <input type="password" className="border p-1 rounded" ref={refMdp2} required/>
           </label>
+          <label>
+            <input type="checkbox" className="mr-1" required/>
+            J'ai lu et j'accepte les <a href="/cgu" className="text-blue-500 hover:underline">CGUs</a>
+          </label>
           <button type="submit" className="btn bg-blue-400 hover:bg-blue-500">Créer un compte</button>
           {erreur && <div className="h-5 text-red-500">{erreur}</div>}
           {isLoading && <span className="loading loading-spinner"></span>}
