@@ -66,6 +66,11 @@ export default function Jeu(props) {
         return temps_min;
       })
       .then(temps_min => {
+        const dateActuelle = new Date();
+        const annee = dateActuelle.getFullYear();
+        const mois = ('0' + (dateActuelle.getMonth() + 1)).slice(-2);
+        const jour = ('0' + dateActuelle.getDate()).slice(-2);
+
         fetch(urlApi+"score", {
           method: "POST",
           headers: {
@@ -79,7 +84,8 @@ export default function Jeu(props) {
             errors: ctxResultats.erreurs,
             hint: ctxResultats.indices,
             player_id: ctxConnexion.id,
-            public: temps_min===null || ctxResultats.temps <= temps_min
+            public: temps_min===null || ctxResultats.temps <= temps_min,
+            game_date: `${annee}-${mois}-${jour}`
           }),
         })
       })

@@ -50,6 +50,11 @@ export default function Inscription() {
     } else {
       setIsLoading(true);
 
+      const dateActuelle = new Date();
+      const annee = dateActuelle.getFullYear();
+      const mois = ('0' + (dateActuelle.getMonth() + 1)).slice(-2);
+      const jour = ('0' + dateActuelle.getDate()).slice(-2);
+
       fetch(urlApi+"signup", {
         method: "POST",
         headers: {
@@ -59,7 +64,8 @@ export default function Inscription() {
         body: JSON.stringify({
           username: refPseudo.current.value,
           email: refEmail.current.value,
-          password: refMdp.current.value
+          password: refMdp.current.value,
+          signup_date: `${annee}-${mois}-${jour}`
         })
       })
       .then(response =>
