@@ -31,6 +31,12 @@ export default function ModalConnexion(props) {
     setShowPassword(!showPassword);
   }
 
+  function onPasswordKeyPressHandler(e) {
+    if (e.key === 'Enter') {
+      onSubmitHandler(e);
+    }
+  }
+
   function onSubmitHandler(e) {
     e.preventDefault();
     setIsLoading(true);
@@ -56,7 +62,6 @@ export default function ModalConnexion(props) {
           case 422: setErreur(`Champ manquant : ${data.detail[0].loc[1]}`); break;
           default: setErreur("Erreur, veuillez réessayer");
         }
-        setIsLoading(false);
       });
     })
     .catch(() => {setErreur("Erreur, veuillez réessayer"); setIsLoading(false)})
@@ -79,7 +84,7 @@ export default function ModalConnexion(props) {
           <label className="flex flex-col w-full">
             Mot de passe
             <div className="flex gap-1">
-              <input type={showPassword ? 'text' : 'password'} className="border rounded p-1 w-full" ref={inputMdp} required/>
+              <input onKeyDown={onPasswordKeyPressHandler} type={showPassword ? 'text' : 'password'} className="border rounded p-1 w-full" ref={inputMdp} required/>
               <button onClick={toggleShowPassword} className="border bg-gray-100 w-fit p-1 rounded">{showPassword?"Cacher":"Montrer"}</button>
             </div>
           </label>
@@ -87,12 +92,9 @@ export default function ModalConnexion(props) {
             <input type="submit" value="Se connecter" className="w-1/2 rounded border p-2 transition-all duration-200 bg-green-400 hover:bg-green-500"/>
             <input type="button" onClick={onCancel} value="Annuler" className="w-1/2 rounded border p-2 transition-all duration-200 bg-red-400 hover:bg-red-500"/>
           </div>
-          {erreur && <div className="h-5 text-red-500">{erreur}</div>}
-          {isLoading && <span className="loading loading-spinner"></span>}
-          <div>
-            <p>Pas encore inscrit ?</p>
-            <a href="/inscription" className="text-blue-500 hover:underline">Créer un compte</a>
-          </div>
+          {erreur && <div className="h-5 whitespace-nowrap inline text-red-500 text-center">{erreur}</div>}
+          {isLoading && !erreur && <span className="loading loading-spinner"></span>}
+          <p className="whitespace-nowrap inline">Pas encore inscrit ? <a href="/inscription" className="text-blue-500 hover:underline">Créer un compte</a></p>
         </form>
       </div>
     </Modal>
