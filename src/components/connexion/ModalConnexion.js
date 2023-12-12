@@ -5,6 +5,7 @@ import { useRef, useState } from "react";
 export default function ModalConnexion(props) {
   const [erreur, setErreur] = useState();
   const [isLoading, setIsLoading] = useState(false);
+  const [showPassword, setShowPassword] = useState(false);
 
   const inputPseudo = useRef();
   const inputMdp = useRef();
@@ -23,6 +24,11 @@ export default function ModalConnexion(props) {
     } else {
       props.onCancel();
     }
+  }
+
+  function toggleShowPassword(e) {
+    e.preventDefault();
+    setShowPassword(!showPassword);
   }
 
   function onSubmitHandler(e) {
@@ -65,22 +71,28 @@ export default function ModalConnexion(props) {
           <br/>
           ce sera prochainement possible de jouer sans compte.
         </p>
-        <form onSubmit={onSubmitHandler} className="flex flex-col items-center p-4 gap-3 rounded">
-          <label className="flex flex-col">
+        <form onSubmit={onSubmitHandler} className="flex flex-col items-center p-4 gap-3 rounded w-[250px]">
+          <label className="flex flex-col w-full">
             Pseudo
             <input type="text" className="border rounded p-1" ref={inputPseudo} required autoFocus={true}/>
           </label>
-          <label className="flex flex-col">
+          <label className="flex flex-col w-full">
             Mot de passe
-            <input type="password" className="border rounded p-1" ref={inputMdp} required/>
+            <div className="flex gap-1">
+              <input type={showPassword ? 'text' : 'password'} className="border rounded p-1 w-full" ref={inputMdp} required/>
+              <button onClick={toggleShowPassword} className="border bg-gray-100 w-fit p-1 rounded">{showPassword?"Cacher":"Montrer"}</button>
+            </div>
           </label>
-          <div className="flex gap-2">
-            <input type="submit" value="Se connecter" className="rounded border p-2 transition-all duration-200 bg-green-400 hover:bg-green-500"/>
-            <input type="button" onClick={onCancel} value="Annuler" className="rounded border p-2 transition-all duration-200 bg-red-400 hover:bg-red-500"/>
+          <div className="flex gap-2 w-full">
+            <input type="submit" value="Se connecter" className="w-1/2 rounded border p-2 transition-all duration-200 bg-green-400 hover:bg-green-500"/>
+            <input type="button" onClick={onCancel} value="Annuler" className="w-1/2 rounded border p-2 transition-all duration-200 bg-red-400 hover:bg-red-500"/>
           </div>
           {erreur && <div className="h-5 text-red-500">{erreur}</div>}
           {isLoading && <span className="loading loading-spinner"></span>}
-          <p>Pas encore inscrit ? <a href="/inscription" className="text-blue-500 hover:underline">Créer un compte</a></p>
+          <div>
+            <p>Pas encore inscrit ?</p>
+            <a href="/inscription" className="text-blue-500 hover:underline">Créer un compte</a>
+          </div>
         </form>
       </div>
     </Modal>
