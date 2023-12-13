@@ -6,7 +6,7 @@ export default function Page(props) {
     <main className="h-full flex flex-col justify-between">
       <div>
         <Header/>
-        <h2 className="text-center my-4 text-xl">{props.titre}</h2>
+        <h2 className="text-center my-4 text-xl break-words">{props.titre}</h2>
         {props.children}
       </div>
       <Footer/>

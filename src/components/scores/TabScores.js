@@ -56,7 +56,7 @@ export default function TabScores(props) {
       return (
         <tr key={index} className={style}>
           <td className="py-1 px-3 border text-center">{index+1}</td>
-          <td className="py-1 px-3 border font-bold"><a href={`/profil/${score.username}`} className="hover:underline">{score.username}</a></td>
+          <td className="py-1 px-3 border font-bold max-w-[300px] overflow-hidden"><a href={`/profil/${score.username}`} className="hover:underline">{score.username}</a></td>
           <td className="py-1 px-3 border text-center">{minutes < 10 ? "0" + minutes : minutes}:{secondes < 10 ? "0" + secondes : secondes}:{(ms < 10) ? '00' + ms : (ms < 100) ? '0' + ms : ms}</td>
           <td className="py-1 px-3 border text-center">{score.errors}</td>
           <td className="py-1 px-3 border text-center">{score.hint}</td>
