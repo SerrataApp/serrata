@@ -78,7 +78,7 @@ export default function ModalConnexion(props) {
         </p>
         <form onSubmit={onSubmitHandler} className="flex flex-col items-center p-4 gap-3 rounded w-[250px]">
           <label className="flex flex-col w-full">
-            Pseudo
+            Pseudo ou Email
             <input type="text" className="border rounded p-1" ref={inputPseudo} required autoFocus={true}/>
           </label>
           <label className="flex flex-col w-full">
