@@ -1,12 +1,23 @@
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import urlApi from "../../utils/urlApi";
 import formatDate from "../../utils/formatDate";
+import ConnexionContext from "../store/connexion-context";
+import ModalSupprimer from "./ModalSupprimer";
 
 export default function TabScores(props) {
   const [isLoading, setIsLoading] = useState(false);
   const [httpError, setHttpError] = useState();
   const [scores, setScores] = useState([]);
   const [runParfaite, setRunParfaite] = useState(false);
+  const [partieSelect, setPartieSelect] = useState(null);
+
+  const ctxConnexion = useContext(ConnexionContext);
+
+  useEffect(() => {
+    if (partieSelect) {
+      document.getElementById('my_modal_5').showModal();
+    }
+  }, [partieSelect]);
 
   useEffect(() => {
     const fetchScores = async () => {
@@ -42,6 +53,18 @@ export default function TabScores(props) {
     setRunParfaite(!runParfaite);
   }
 
+  function afficherModalSupprimer(partie) {
+    setPartieSelect(partie);
+  }
+
+  function onModalClose(reload) {
+    if(reload) {
+      window.location.reload();
+    } else {
+      setPartieSelect(null);
+    }
+  }
+
   let compteur = 0;
   const listeScores = scores.map((score, index) => {
     if((runParfaite && score.errors===0) || !runParfaite) {
@@ -61,6 +84,13 @@ export default function TabScores(props) {
           <td className="py-1 px-3 border text-center">{score.errors}</td>
           <td className="py-1 px-3 border text-center">{score.hint}</td>
           <td className="py-1 px-3 border text-center">{formatDate(score.game_date)}</td>
+          {ctxConnexion&&ctxConnexion.admin&&
+            <td className="py-1 px-3 border text-center">
+              <button onClick={() => {afficherModalSupprimer(score)}}>
+                <i className="fa fa-trash-can transition-text duration-150 text-red-600 hover:text-red-400"></i>
+              </button>
+            </td>
+          }
         </tr>
       );
     }
@@ -103,6 +133,7 @@ export default function TabScores(props) {
               <th className="py-1 px-3 border w-fit">Erreurs</th>
               <th className="py-1 px-3 border w-fit">Indices</th>
               <th className="py-1 px-3 border w-fit">Date</th>
+              {ctxConnexion&&ctxConnexion.admin&&<th className="py-1 px-3 border w-fit"></th>}
             </tr>
           </thead>
           <tbody>
@@ -110,6 +141,7 @@ export default function TabScores(props) {
           </tbody>
         </table>
       </div>
+      <ModalSupprimer partie={partieSelect} onClose={onModalClose}/>
     </div>
   );
 }
