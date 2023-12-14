@@ -7,6 +7,7 @@ export default function ZoneDentree(props) {
   const inputRef = useRef(null);
   const [texteIndice, setTexteIndice] = useState("");
   const [compteurIndice, setCompteurIndice] = useState(0);
+  const [bordRouge, setBordRouge] = useState(false);
 
   const ctxResultats = useContext(ResultatsContext);
   const ctxConnexion = useContext(ConnexionContext);
@@ -54,6 +55,13 @@ export default function ZoneDentree(props) {
 
   function bloqueCtrlV(e) {
     e.preventDefault();
+    setBordRouge(true);
+  }
+  
+  function enleverRouge() {
+    if(bordRouge) {
+      setBordRouge(false);
+    }
   }
 
   useEffect(() => {
@@ -64,7 +72,7 @@ export default function ZoneDentree(props) {
     <>
       {!ctxConnexion.connecte && <ModalConnexion onCancel={annuler}/>}
       <form onSubmit={envoyerRep} className="flex flex-col gap-2">
-        <input type="text" className="border" ref={inputRef} onPaste={bloqueCtrlV} disabled={ctxResultats.estFini||!ctxConnexion.connecte}/>
+        <input type="text" className={`border`} placeholder={`${bordRouge?"Pas de Ctrl+V !!":""}`} ref={inputRef} onChange={enleverRouge} onPaste={bloqueCtrlV} disabled={ctxResultats.estFini||!ctxConnexion.connecte}/>
         <input type="submit" className="border" value="Envoyer" disabled={ctxResultats.estFini||!ctxConnexion.connecte}/>
         <div className="flex gap-2">
           <button className="border w-full" onClick={passer} disabled={ctxResultats.estFini||!ctxConnexion.connecte}>Passer</button>
