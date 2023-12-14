@@ -20,6 +20,8 @@ export default function ModalSupprimer(props) {
       })
     }
 
+    const width = props.partie.username?"w-1/5":"w-1/4";
+
     return (
       <dialog id="my_modal_5" className="modal modal-bottom sm:modal-middle">
         <div className="modal-box">
@@ -27,11 +29,11 @@ export default function ModalSupprimer(props) {
           <div className="rounded-xl border overflow-hidden text-center my-4">
             <table className="w-full">
               <tr className="">
-                <td className="p-3 border-r w-1/5">{props.partie.username}</td>
-                <td className="p-3 border-r w-1/5">{minutes < 10 ? "0" + minutes : minutes}:{secondes < 10 ? "0" + secondes : secondes}:{(ms < 10) ? '00' + ms : (ms < 100) ? '0' + ms : ms}</td>
-                <td className="p-3 border-r w-1/5">{props.partie.errors} erreur</td>
-                <td className="p-3 border-r w-1/5">{props.partie.hint} indice</td>
-                <td className="p-3">{formatDate(props.partie.game_date)}</td>
+                {props.partie.username&&<td className="p-3 border-r w-1/5">{props.partie.username}</td>}
+                <td className={`p-3 border-r ${width}`}>{minutes < 10 ? "0" + minutes : minutes}:{secondes < 10 ? "0" + secondes : secondes}:{(ms < 10) ? '00' + ms : (ms < 100) ? '0' + ms : ms}</td>
+                <td className={`p-3 border-r ${width}`}>{props.partie.errors} {props.partie.errors>1?"erreurs":"erreur"}</td>
+                <td className={`p-3 border-r ${width}`}>{props.partie.hint} {props.partie.hint>1?"indices":"indice"}</td>
+                <td className={`p-3 ${width}`}>{formatDate(props.partie.game_date)}</td>
               </tr>
             </table>
             </div>

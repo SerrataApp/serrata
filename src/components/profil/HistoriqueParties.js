@@ -1,13 +1,16 @@
 import ResumePartie from "./ResumePartie";
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import ChoixMode from "../Elements/ChoixMode";
 import ResumeStatsMode from "./ResumeStatsMode";
+import ConnexionContext from "../store/connexion-context";
 
 export default function HistoriqueParties(props) {
   const [tri, setTri] = useState("tmp_cr");
   const [listeParties, setListeParties] = useState([...props.listeParties]);
   const [partiesTriees, setPartiesTriees] = useState([]);
   const [modeSelect, setModeSelect] = useState("1");
+
+  const ctxConnexion = useContext(ConnexionContext);
 
   function onChangeHandler(event) {
     setTri(event.target.value);
@@ -65,6 +68,7 @@ export default function HistoriqueParties(props) {
                 <th className="p-1 border w-1/5">Indices</th>
                 <th className="p-1 border w-1/5">Date</th>
                 <th className="p-1 border w-1/5">Visibilité (dans scores)</th>
+                {ctxConnexion&&ctxConnexion.admin&&<th className="py-1 px-3 border w-fit"></th>}
               </tr>
             </thead>
             <tbody>

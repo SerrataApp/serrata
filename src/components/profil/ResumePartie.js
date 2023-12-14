@@ -1,10 +1,19 @@
-import { useContext } from "react";
+import { useContext, useState, useEffect } from "react";
 import formatDate from "../../utils/formatDate";
 import urlApi from "../../utils/urlApi";
 import ConnexionContext from "../store/connexion-context";
+import ModalSupprimer from "../scores/ModalSupprimer";
 
 export default function ResumePartie(props) {
+  const [select, setSelect] = useState(false);
+
   const ctxConnexion = useContext(ConnexionContext);
+
+  useEffect(() => {
+    if (select) {
+      document.getElementById('my_modal_5').showModal();
+    }
+  }, [select]);
 
   function onChangeVisibilityHandler() {
     fetch(urlApi+"score/changeState/?game_id="+props.partie.id, {
@@ -15,6 +24,18 @@ export default function ResumePartie(props) {
         "Authorization": `Bearer ${window.localStorage.getItem("token")}`
         }
     });
+  }
+
+  function afficherModalSupprimer(partie) {
+    setSelect(partie);
+  }
+
+  function onModalClose(reload) {
+    if(reload) {
+      window.location.reload();
+    } else {
+      setSelect(false);
+    }
   }
 
   const minutes = Math.floor(props.partie.time/(60*1000));
@@ -41,6 +62,16 @@ export default function ResumePartie(props) {
           props.partie.public?"Publique":"Privée"
         }
       </td>
+      {ctxConnexion.admin&&
+        <>
+          <td className="py-1 px-3 border text-center">
+              <button onClick={afficherModalSupprimer}>
+                <i className="fa fa-trash-can transition-text duration-150 text-red-600 hover:text-red-400"></i>
+              </button>
+            </td>
+          {select&&<ModalSupprimer partie={props.partie} onClose={onModalClose}/>}
+        </>
+      }
     </tr>
   );
 }
