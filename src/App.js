@@ -30,7 +30,7 @@ export default function App() {
         response.json()
         .then(data => {
           if(response.status===200) {
-            ctxConnexion.connecter(data.username, data.id);
+            ctxConnexion.connecter(data.username, data.id, data.admin);
           } else {
             window.localStorage.removeItem("token");
           }

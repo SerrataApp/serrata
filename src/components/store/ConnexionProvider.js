@@ -5,7 +5,8 @@ import ConnexionContext from "./connexion-context";
 const connexionParDefaut = {
   connecte: false,
   username: null,
-  id: null
+  id: null,
+  admin: false
 }
 
 function ConnexionReducer(state, action) {
@@ -14,7 +15,8 @@ function ConnexionReducer(state, action) {
       ...state,
       connecte: true,
       username: action.username,
-      id: action.id
+      id: action.id,
+      admin: action.admin
     }
   }
   if(action.type==="DECONNECTER") {
@@ -23,7 +25,8 @@ function ConnexionReducer(state, action) {
       ...state,
       connecte: false,
       username: null,
-      id: null
+      id: null,
+      admin: false
     }
   }
 }
@@ -31,8 +34,8 @@ function ConnexionReducer(state, action) {
 export default function ConnexionProvider(props) {
   const [connexionState, dispatchConnexion] = useReducer(ConnexionReducer, connexionParDefaut);
 
-  function connecter(username, id) {
-    dispatchConnexion({type: "CONNECTER", username: username, id: id});
+  function connecter(username, id, admin) {
+    dispatchConnexion({type: "CONNECTER", username: username, id: id, admin: admin});
   }
 
   function deconnecter() {
@@ -43,6 +46,7 @@ export default function ConnexionProvider(props) {
     connecte: connexionState.connecte,
     username: connexionState.username,
     id: connexionState.id,
+    admin: connexionState.admin,
     connecter,
     deconnecter
   }

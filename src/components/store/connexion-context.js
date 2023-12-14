@@ -4,6 +4,7 @@ const ConnexionContext = createContext({
   connecte: false,
   username: null,
   id: null,
+  admin: false,
   connecter: () => {},
   deconnecter: () => {}
 })
