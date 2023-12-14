@@ -52,6 +52,10 @@ export default function ZoneDentree(props) {
     window.location.href = "/";
   }
 
+  function bloqueCtrlV(e) {
+    e.preventDefault();
+  }
+
   useEffect(() => {
     inputRef.current.focus();
   }, []);
@@ -60,7 +64,7 @@ export default function ZoneDentree(props) {
     <>
       {!ctxConnexion.connecte && <ModalConnexion onCancel={annuler}/>}
       <form onSubmit={envoyerRep} className="flex flex-col gap-2">
-        <input type="text" className="border" ref={inputRef} disabled={ctxResultats.estFini||!ctxConnexion.connecte}/>
+        <input type="text" className="border" ref={inputRef} onPaste={bloqueCtrlV} disabled={ctxResultats.estFini||!ctxConnexion.connecte}/>
         <input type="submit" className="border" value="Envoyer" disabled={ctxResultats.estFini||!ctxConnexion.connecte}/>
         <div className="flex gap-2">
           <button className="border w-full" onClick={passer} disabled={ctxResultats.estFini||!ctxConnexion.connecte}>Passer</button>
