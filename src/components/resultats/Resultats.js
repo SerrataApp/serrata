@@ -29,7 +29,7 @@ export default function Resultats(props) {
         <span className="text-3xl">
           {ctx.indices} {ctx.indices>1 ? "indices" : "indice"}
         </span>
-        <button className="border py-4 w-full transition-all duration-150 hover:bg-gray-100" onClick={props.onClose}>Fermer</button>
+        <button autoFocus={true} className="border py-4 w-full rounded-xl transition-all duration-150 bg-gray-100 hover:bg-gray-200" onClick={props.onClose}>Fermer</button>
       </div>
     </Modal>
   );

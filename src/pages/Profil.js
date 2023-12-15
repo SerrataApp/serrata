@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import { useParams } from 'react-router-dom';
 import HistoriqueParties from "../components/profil/HistoriqueParties";
 import ResumeStatsGeneral from "../components/profil/ResumeStatsGeneral";
@@ -6,6 +6,7 @@ import Page from "./Page";
 import urlApi from "../utils/urlApi";
 import formatDate from "../utils/formatDate";
 import ActionsAdmin from "../components/profil/ActionsAdmin";
+import ConnexionContext from "../components/store/connexion-context";
 
 export default function Profil() {
   const [dataJoueur, setDataJoueur] = useState({});
@@ -15,6 +16,8 @@ export default function Profil() {
   const [erreur, setErreur] = useState();
 
   const {username} = useParams();
+
+  const ctxConnexion = useContext(ConnexionContext);
 
   useEffect(() => {
     async function fetchGames() {
@@ -52,7 +55,7 @@ export default function Profil() {
       }
       {!isLoading && !erreur &&
         <div className="flex flex-col items-center gap-5 mt-3">
-          <ActionsAdmin user={dataJoueur}/>
+          {ctxConnexion.admin && <ActionsAdmin user={dataJoueur}/>}
           <ResumeStatsGeneral stats={stats} dateInscription={formatDate(dateInscription)} partiesLancees={partiesLancees}/>
           {dataJoueur.games && <HistoriqueParties listeParties={dataJoueur.games} username={username}/>}
         </div>
