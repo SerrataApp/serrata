@@ -5,6 +5,7 @@ import ResumeStatsGeneral from "../components/profil/ResumeStatsGeneral";
 import Page from "./Page";
 import urlApi from "../utils/urlApi";
 import formatDate from "../utils/formatDate";
+import ActionsAdmin from "../components/profil/ActionsAdmin";
 
 export default function Profil() {
   const [dataJoueur, setDataJoueur] = useState({});
@@ -16,15 +17,16 @@ export default function Profil() {
   const {username} = useParams();
 
   useEffect(() => {
-    function fetchGames() {
-      return fetch(urlApi+"score/user/?username="+username, {
+    async function fetchGames() {
+      const response = await fetch(urlApi + "score/user/?username=" + username, {
         method: "GET",
         headers: {
           "Accept": "application/json",
           "Authorization": `Bearer ${window.localStorage.getItem("token")}`
         }
-      })
-      .then(response => {setIsLoading(false); return response.json()});
+      });
+      setIsLoading(false);
+      return await response.json();
     }
     fetchGames().then(data => {setDataJoueur(data); setDateInscription(data.signup_date); setPartiesLancees(data.played_games)})
     .catch(() => {setErreur("Le joueur n'existe pas"); setIsLoading(false)});
@@ -50,6 +52,7 @@ export default function Profil() {
       }
       {!isLoading && !erreur &&
         <div className="flex flex-col items-center gap-5 mt-3">
+          <ActionsAdmin/>
           <ResumeStatsGeneral stats={stats} dateInscription={formatDate(dateInscription)} partiesLancees={partiesLancees}/>
           {dataJoueur.games && <HistoriqueParties listeParties={dataJoueur.games} username={username}/>}
         </div>

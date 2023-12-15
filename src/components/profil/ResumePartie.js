@@ -2,18 +2,12 @@ import { useContext, useState, useEffect } from "react";
 import formatDate from "../../utils/formatDate";
 import urlApi from "../../utils/urlApi";
 import ConnexionContext from "../store/connexion-context";
-import ModalSupprimer from "../scores/ModalSupprimer";
+import ModalSupprimer from "../Elements/ModalSupprimer";
 
 export default function ResumePartie(props) {
-  const [select, setSelect] = useState(false);
+  const [modalSupprimer, setModalSupprimer] = useState(false);
 
   const ctxConnexion = useContext(ConnexionContext);
-
-  useEffect(() => {
-    if (select) {
-      document.getElementById('my_modal_5').showModal();
-    }
-  }, [select]);
 
   function onChangeVisibilityHandler() {
     fetch(urlApi+"score/changeState/?game_id="+props.partie.id, {
@@ -26,15 +20,15 @@ export default function ResumePartie(props) {
     });
   }
 
-  function afficherModalSupprimer(partie) {
-    setSelect(partie);
+  function afficherModalSupprimer() {
+    setModalSupprimer(<ModalSupprimer partie={props.partie} onClose={onModalClose}/>);
   }
 
   function onModalClose(reload) {
     if(reload) {
       window.location.reload();
     } else {
-      setSelect(false);
+      setModalSupprimer(null);
     }
   }
 
@@ -69,7 +63,7 @@ export default function ResumePartie(props) {
                 <i className="fa fa-trash-can transition-text duration-150 text-red-600 hover:text-red-400"></i>
               </button>
             </td>
-          {select&&<ModalSupprimer partie={props.partie} onClose={onModalClose}/>}
+          {modalSupprimer}
         </>
       }
     </tr>

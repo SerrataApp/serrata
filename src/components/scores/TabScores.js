@@ -2,22 +2,16 @@ import { useContext, useEffect, useState } from "react";
 import urlApi from "../../utils/urlApi";
 import formatDate from "../../utils/formatDate";
 import ConnexionContext from "../store/connexion-context";
-import ModalSupprimer from "./ModalSupprimer";
+import ModalSupprimer from "../Elements/ModalSupprimer";
 
 export default function TabScores(props) {
   const [isLoading, setIsLoading] = useState(false);
   const [httpError, setHttpError] = useState();
   const [scores, setScores] = useState([]);
   const [runParfaite, setRunParfaite] = useState(false);
-  const [partieSelect, setPartieSelect] = useState(null);
+  const [modalSupprimer, setModalSupprimer] = useState(null);
 
   const ctxConnexion = useContext(ConnexionContext);
-
-  useEffect(() => {
-    if (partieSelect) {
-      document.getElementById('my_modal_5').showModal();
-    }
-  }, [partieSelect]);
 
   useEffect(() => {
     const fetchScores = async () => {
@@ -54,14 +48,14 @@ export default function TabScores(props) {
   }
 
   function afficherModalSupprimer(partie) {
-    setPartieSelect(partie);
+    setModalSupprimer(<ModalSupprimer partie={partie} onClose={onModalClose}/>);
   }
 
   function onModalClose(reload) {
     if(reload) {
       window.location.reload();
     } else {
-      setPartieSelect(null);
+      setModalSupprimer(null);
     }
   }
 
@@ -141,7 +135,7 @@ export default function TabScores(props) {
           </tbody>
         </table>
       </div>
-      <ModalSupprimer partie={partieSelect} onClose={onModalClose}/>
+      {modalSupprimer}
     </div>
   );
 }
