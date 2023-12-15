@@ -47,7 +47,7 @@ export default function ResumePartie(props) {
       <td className="p-1 border text-center">{props.partie.hint}</td>
       <td className="p-1 border text-center">{formatDate(props.partie.game_date)}</td>
       <td className="p-1 border text-center">
-        {ctxConnexion.username===props.username?
+        {(ctxConnexion.username===props.username||ctxConnexion.admin)?
           <select className="rounded p-1 bg-gray-300" onChange={onChangeVisibilityHandler}>
             <option value="Publique" selected={props.partie.public}>Publique</option>
             <option value="Privée" selected={!props.partie.public}>Privée</option>
