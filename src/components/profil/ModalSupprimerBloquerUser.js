@@ -1,7 +1,7 @@
 import Modal from "../Modal/Modal";
 import formatDate from "../../utils/formatDate";
 
-export default function ModalSupprimerUser(props) {
+export default function ModalSupprimerBloquerUser(props) {
   return (
     <Modal onClose={() => {props.onClose(false)}}>
       <h3 className="font-bold text-lg">{props.titre} l'utilisateur ?</h3>

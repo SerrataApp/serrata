@@ -14,6 +14,7 @@ export default function TabScores(props) {
   const ctxConnexion = useContext(ConnexionContext);
 
   useEffect(() => {
+    setHttpError(null);
     const fetchScores = async () => {
       setIsLoading(true);
       const response = await fetch(`${urlApi}scores/mode/?game_mode_id=${props.categorie}`);

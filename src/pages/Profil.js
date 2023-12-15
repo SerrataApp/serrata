@@ -60,7 +60,12 @@ export default function Profil() {
           {dataJoueur.games && <HistoriqueParties listeParties={dataJoueur.games} username={username}/>}
         </div>
       }
-      {!isLoading && erreur && <p className="text-center text-red-500">{erreur}</p>}
+      {!isLoading && erreur &&
+        <div className="flex flex-col gap-3 items-center">
+          <p className="text-red-500">{erreur}</p>
+          <a className="btn" href="/">Retourner à l'accueil</a>
+        </div>
+      }
     </Page>
   );
 }

@@ -1,12 +1,20 @@
 import BtnActionUser from "./BtnActionUser";
 import ModalSupprimerBloquerUser from "./ModalSupprimerBloquerUser";
 import { useState } from "react";
+import urlApi from "../../utils/urlApi";
 
 export default function ActionsAdmin(props) {
   const [modal, setModal] = useState(null);
 
   function supprimerUser() {
-    fermerModal(true);
+    fetch(urlApi+"users/?user_id="+props.user.id, {
+      method: "DELETE",
+      headers: {
+        Accept: "application/json",
+        Authorization: `Bearer ${window.localStorage.getItem("token")}`
+      }
+    })
+    .then(() => {fermerModal(true);})
   }
 
   function bloquerUser() {
