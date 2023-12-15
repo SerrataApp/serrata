@@ -1,4 +1,4 @@
-_Dernière mise à jour : 05/12/2023_
+_Dernière mise à jour : 15/12/2023_
 
 Bienvenue sur serrata.super-sympa.fr !
 
@@ -12,11 +12,13 @@ En utilisant ce site, vous acceptez de vous conformer aux présentes Conditions 
 
 ## Licence Apache
 
-Ce site web utilise des logiciels distribués sous la licence Apache 2.0. Vous pouvez consulter une copie de la licence à l'adresse suivante : https://www.apache.org/licenses/LICENSE-2.0. La licence Apache 2.0 est une licence open source qui impose certaines obligations aux utilisateurs. En utilisant ce site, vous acceptez également les termes de la licence Apache 2.0.
+Ce site web utilise des logiciels distribués sous la licence Apache 2.0. Vous pouvez consulter une copie de la licence à l'adresse suivante : 
+https://www.apache.org/licenses/LICENSE-2.0. La licence Apache 2.0 est une licence open source qui impose certaines obligations aux utilisateurs. En utilisant ce site, vous acceptez également les termes de la licence Apache 2.0.
 
 ## Objectif du site
 
 Le site Serrata a pour objectif d’enseigner les drapeaux du monde dans un contexte d’écriture rapide.
+L'objectif principal est surtout que Xavier tombe follement amoureux de moi <33...
 
 ## Conditions d'accès
 
@@ -32,7 +34,7 @@ Vous êtes responsable de toute activité sur votre compte. En cas de violation 
 
 ## Propriété intellectuelle
 
-Le contenu présent sur ce site est la propriété de Corentin Albert. Vous pouvez utiliser le contenu conformément à ces CGU et à la licence Apache 2.0, mais toute utilisation non autorisée est interdite.
+Le contenu présent sur ce site est la propriété de Corentin Albert et/ou de propriété publique; dans les cas échéants les auteurs sont prévenus et crédités. Vous pouvez utiliser le contenu conformément à ces CGU et à la licence Apache 2.0, mais toute utilisation non autorisée est interdite.
 
 ## Liens vers d'autres sites
 
