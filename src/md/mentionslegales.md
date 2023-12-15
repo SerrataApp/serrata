@@ -21,10 +21,30 @@ Je prends des mesures de sécurité appropriées pour protéger vos informations
 
 ## Droits d'auteur
 
-Le contenu de ce site est protégé par le droit d'auteur. Toute reproduction non autorisée est interdite.
+Le contenu de ce site est protégé par le droit d'auteur. Toute reproduction non autorisée et/ou non conforme à la license Apache 2.0 est interdite.
 Liens externes :
 Mon site peut contenir des liens vers des sites externes. Je ne suis pas responsable du contenu ou de la politique de confidentialité de ces sites.
 
 ## Modification des mentions légales :
 
 Je me réserve le droit de modifier les présentes mentions légales à tout moment. Les utilisateurs seront informés des modifications via une notification sur le site.
+
+## Crédits photos
+
+Photo rubrique Océanie
+Joey Csunyo
+
+Photo rubrique Amerique
+Leon Overweel
+
+Photo rubrique Europe
+Claudio Schwarz
+
+Photo rubrique Asie
+Christian Lue
+
+Photo rubrique Afrique
+James Wiseman
+
+Photo rubrique Monde
+NASA
