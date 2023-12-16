@@ -17,7 +17,7 @@ export default function Footer() {
 
   return (
     <div className="w-full bg-gray-100 py-2 flex justify-end items-center gap-3 md:gap-4 pr-5">
-      <a target="_blank" href="https://github.com/corentinAT/serrata" className="hover:underline text-center w-1/3 md:w-auto">Github</a>
+      <a target="_blank" href="https://github.com/SerrataApp/serrata" className="hover:underline text-center w-1/3 md:w-auto">Github</a>
       <a href="/mentionslegales" className="hover:underline text-center w-1/3 md:w-auto">Mentions légales</a>
       <a href="/cgu" className="hover:underline text-center w-1/3 md:w-auto">{innerWidth<768?"CGU":"Conditions générales d'utilisation"}</a>
     </div>
