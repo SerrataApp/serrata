@@ -2,6 +2,8 @@ import Footer from "../components/Elements/Footer";
 import Header from "../components/Elements/Header";
 
 export default function Page(props) {
+  document.title = "Serrata - "+props.titre;
+
   return (
     <main className="h-full flex flex-col justify-between">
       <div>
