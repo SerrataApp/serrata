@@ -31,20 +31,26 @@ Je me réserve le droit de modifier les présentes mentions légales à tout mom
 
 ## Crédits photos
 
-Photo rubrique Océanie
+**Photo rubrique Océanie**
+
 Joey Csunyo
 
-Photo rubrique Amerique
+**Photo rubrique Amerique**
+
 Leon Overweel
 
-Photo rubrique Europe
+**Photo rubrique Europe**
+
 Claudio Schwarz
 
-Photo rubrique Asie
+**Photo rubrique Asie**
+
 Christian Lue
 
-Photo rubrique Afrique
+**Photo rubrique Afrique**
+
 James Wiseman
 
-Photo rubrique Monde
+**Photo rubrique Monde**
+
 NASA
