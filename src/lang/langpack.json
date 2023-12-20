@@ -1,0 +1,45 @@
+{
+	"menu_jouer": {"fr": "Jouer", "en" : "Play"},
+    "menu_scores": {"fr": "Scores", "en": "Leaderboard"},
+    "menu_prof": {"fr": "Profil", "en": "Profile"},
+    "menu_co": {"fr": "Connexion", "en":"Log in"},
+    "menu_deco": {"fr": "Déconnexion", "en": "Log out"},
+    
+    "rub_eu": {"fr": "Europe", "en": "Europe"},
+    "rub_af": {"fr": "Afrique", "en": "Africa"},
+    "rub_as": {"fr": "Asie", "en": "Asia"},
+    "rub_am": {"fr": "Amérique", "en": "America"},
+    "rub_oc": {"fr": "Océanie", "en": "Oceania"},
+    "rub_mo": {"fr": "Monde", "en": "World"},
+    
+    "sco_zerreur": {"fr": "Aucune erreur", "en": "No errors"},
+    "sco_joueur": {"fr": "Joueur", "en": "Player"},
+    "sco_accprof": {"fr": "cliquer pour accéder au profil", "en": "click to access profile"},
+    "sco_temps": {"fr": "Temps", "en": "Time"},
+    "sco_err": {"fr": "Erreurs", "en": "Errors"},
+    "sco_ind": {"fr": "Indices", "en": "Hints"},
+    "sco_date": {"fr": "Date", "en": "Date"},
+    "sco_vis": {"fr": "Visibilité", "en": "Visibility"},
+    
+    "prof_partlan": {"fr": "Parties lancées", "en": "Games started"},
+    "prof_partterm": {"fr": "Parties terminées", "en": "Games finished"},
+    "prof_date": {"fr": "Date d'inscription", "en": "Registration date"},
+    "prof_tps": {"fr": "Temps moyen", "en": "Average time"},
+    "prof_errmoy": {"fr": "Erreurs en moyenne", "en": "Average number of errors"},
+    "prof_indmoy": {"fr": "Indices en moyennes", "en": "Average number of hints"},
+    "prof_tri": {"fr": "Trier par", "en": "Sort by"},
+    "prof_tri_errcroi": {"fr": "Erreurs croissant", "en": "Errors ascending"},
+    "prof_tri_tpscroi": {"fr": "Temps croissant", "en": "Time ascending"},
+    "prof_tri_errdecroi": {"fr": "Erreurs décroissant", "en": "Errors descending"},
+    "prof_tri_tpsdecroi": {"fr": "Temps décroissant", "en": "Time descending"},
+    "prof_tri_precent": {"fr": "Plus récent", "en": "Newest"},
+    "prof_tri_pancien": {"fr": "Plus ancien", "en": "Oldest"},
+
+    "foot_gh": {"fr": "Github", "en": "Github"},
+    "foot_ml": {"fr": "Mentions légales", "en": "Legal notices"},
+    "foot_cguext": {"fr": "Conditions Générales d'Utilisation", "en": "Terms of Conditions"},
+    "foot_cgu": {"fr": "CGU", "en": "ToC"},
+    
+    "jou_env": {"fr": "Envoyer", "en": "Submit"},
+    "jou_pas": {"fr": "Passer", "en": "Skip"}
+}
