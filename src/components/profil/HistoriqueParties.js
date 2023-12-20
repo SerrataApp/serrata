@@ -36,7 +36,7 @@ export default function HistoriqueParties(props) {
     let compteur = 0;
     setPartiesTriees(listeParties.map((partie) => {
       if(partie.game_mode==modeSelect) {
-        return <ResumePartie key={compteur+1} index={compteur++} partie={partie} username={props.username}/>
+        return <ResumePartie key={compteur+1} index={compteur++} partie={partie} username={props.username} setIsLoading={props.setIsLoading}/>
       }
       return null;
     }).filter(element => element !== null));

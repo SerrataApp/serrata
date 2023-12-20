@@ -1,4 +1,4 @@
-import { useContext, useState, useEffect } from "react";
+import { useContext, useState } from "react";
 import formatDate from "../../utils/formatDate";
 import urlApi from "../../utils/urlApi";
 import ConnexionContext from "../store/connexion-context";
@@ -17,7 +17,9 @@ export default function ResumePartie(props) {
         "Content-Type": "application/json",
         "Authorization": `Bearer ${window.localStorage.getItem("token")}`
         }
-    });
+    })
+    .then(() => {window.location.reload()})
+    props.setIsLoading(true);
   }
 
   function afficherModalSupprimer() {

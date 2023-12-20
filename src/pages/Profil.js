@@ -70,7 +70,7 @@ export default function Profil() {
         <div className="flex flex-col items-center gap-5 mt-3">
           {ctxConnexion.admin && <ActionsAdmin user={dataJoueur}/>}
           <ResumeStatsGeneral stats={stats} dateInscription={formatDate(dateInscription)} partiesLancees={partiesLancees}/>
-          {dataJoueur.games && <HistoriqueParties listeParties={dataJoueur.games} username={username}/>}
+          {dataJoueur.games && <HistoriqueParties listeParties={dataJoueur.games} username={username} setIsLoading={setIsLoading}/>}
         </div>
       }
       {!isLoading && erreur &&
