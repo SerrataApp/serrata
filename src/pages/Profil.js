@@ -21,15 +21,28 @@ export default function Profil() {
 
   useEffect(() => {
     async function fetchGames() {
-      const response = await fetch(urlApi + "score/user/?username=" + username, {
+      let response = await fetch(urlApi + "score/user/?username=" + username, {
         method: "GET",
         headers: {
           "Accept": "application/json",
           "Authorization": `Bearer ${window.localStorage.getItem("token")}`
         }
       });
+      let data = await response.json();
+      if(ctxConnexion.admin) {
+        response = await fetch(urlApi + "adminusers/?user_id=" + data.id, {
+          headers: {
+            "Accept": "application/json",
+            "Authorization": `Bearer ${window.localStorage.getItem("token")}`
+          }
+        })
+      }
+      data = await {
+        ...data,
+        ...await response.json()
+      }
       setIsLoading(false);
-      return await response.json();
+      return data;
     }
     fetchGames().then(data => {setDataJoueur(data); setDateInscription(data.signup_date); setPartiesLancees(data.played_games)})
     .catch(() => {setErreur("Le joueur n'existe pas"); setIsLoading(false)});
