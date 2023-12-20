@@ -17,7 +17,7 @@ export default function ActionsAdmin(props) {
     .then(() => {fermerModal(true);})
   }
 
-  function bloquerUser() {
+  function toggleBloquerUser() {
     fetch(urlApi+"admindisable/?user_id="+props.user.id, {
       method: "PUT",
       headers: {
@@ -37,17 +37,25 @@ export default function ActionsAdmin(props) {
   }
 
   function afficherModalSupprimerUser() {
-    setModal(<ModalSupprimerBloquerUser titre="Supprimer" user={props.user} onClose={fermerModal} action={supprimerUser}/>);
+    setModal(<ModalSupprimerBloquerUser danger={true} titre="Supprimer" user={props.user} onClose={fermerModal} action={supprimerUser}/>);
   }
 
   function afficherModalBloquerUser() {
-    setModal(<ModalSupprimerBloquerUser titre="Bloquer" user={props.user} onClose={fermerModal} action={bloquerUser}/>);
+    setModal(<ModalSupprimerBloquerUser danger={true} titre="Bloquer" user={props.user} onClose={fermerModal} action={toggleBloquerUser}/>);
+  }
+
+  function afficherModalDebloquerUser() {
+    setModal(<ModalSupprimerBloquerUser danger={false} titre="Débloquer" user={props.user} onClose={fermerModal} action={toggleBloquerUser}/>)
   }
 
   return (
     <div className="flex gap-2">
-      <BtnActionUser icon="user-slash" onClick={afficherModalSupprimerUser}/>
-      <BtnActionUser icon="user-lock" onClick={afficherModalBloquerUser}/>
+      <BtnActionUser danger={true} icon="user-slash" onClick={afficherModalSupprimerUser}/>
+      {props.user.disabled?
+        <BtnActionUser danger={false} icon="unlock" onClick={afficherModalDebloquerUser}/>
+        :
+        <BtnActionUser danger={true} icon="user-lock" onClick={afficherModalBloquerUser}/>
+      }
       {modal}
     </div>
   );
