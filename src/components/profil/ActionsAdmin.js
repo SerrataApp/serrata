@@ -18,7 +18,14 @@ export default function ActionsAdmin(props) {
   }
 
   function bloquerUser() {
-    fermerModal(true);
+    fetch(urlApi+"admindisable/?user_id="+props.user.id, {
+      method: "PUT",
+      headers: {
+        Accept: "application/json",
+        Authorization: `Bearer ${window.localStorage.getItem("token")}`
+      }
+    })
+    .then(() => {fermerModal(true);})
   }
 
   function fermerModal(reload) {

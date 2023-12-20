@@ -36,10 +36,10 @@ export default function Profil() {
             "Authorization": `Bearer ${window.localStorage.getItem("token")}`
           }
         })
-      }
-      data = await {
-        ...data,
-        ...await response.json()
+        data = await {
+          ...data,
+          ...await response.json()
+        }
       }
       setIsLoading(false);
       return data;
