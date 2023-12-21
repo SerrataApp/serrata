@@ -3,6 +3,7 @@ import ModalConnexion from "../connexion/ModalConnexion";
 import ConnexionContext from "../store/connexion-context";
 import langpack from "../../lang/langpack.json";
 import LanguageContext from "../store/language-context";
+import SwitchLanguage from "../SwitchLanguage/SwitchLanguage";
 
 export default function Header() {
   const [connexionOuvert, setConnexionOuvert] = useState(false);
@@ -42,7 +43,7 @@ export default function Header() {
   return(
     <div className="w-full bg-gray-100 p-4 flex justify-between">
       <a href="/"><h1 className="select-none">Serrata</h1></a>
-      <div className="flex gap-5">
+      <div className="flex gap-5 items-center">
         <a href="/" className="text-blue-700 hover:underline">{langpack["menu_jouer"][lang]}</a>
         <a href="/scores" className="text-blue-700 hover:underline">{langpack["menu_scores"][lang]}</a>
         {connecte ?
@@ -51,7 +52,7 @@ export default function Header() {
           <a onClick={openConnexionModal} className="text-blue-700 hover:underline hover:cursor-pointer">{langpack["menu_co"][lang]}</a>
         }
         {connecte && <a onClick={disconnect} className="text-blue-700 hover:underline hover:cursor-pointer">{langpack["menu_deco"][lang]}</a>}
-        <button onClick={switchLang}>Langue</button>
+        <SwitchLanguage/>
       </div>
       {connexionOuvert && <ModalConnexion onCancel={closeConnexionModal}/>}
     </div>
