@@ -14,10 +14,12 @@ import Inscription from './pages/Inscription';
 import MentionsLegales from './pages/MentionsLegales';
 import CGU from './pages/CGU';
 import LanguageContext from './components/store/language-context';
+import langpack from "./lang/langpack.json";
 
 export default function App() {
   const ctxConnexion = useContext(ConnexionContext);
   const ctxLanguage = useContext(LanguageContext);
+  const lang = ctxLanguage.lang;
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
@@ -81,12 +83,12 @@ export default function App() {
             <BrowserRouter>
               <Routes>
                 <Route path="/" element={<Accueil />} />
-                <Route path="/europe" element={<Jeu drapeaux={drapeauxEurope} titre="Europe"/>} />
-                <Route path="/monde" element={<Jeu drapeaux={drapeauxMonde} titre="Monde"/>}/>
-                <Route path="/afrique" element={<Jeu drapeaux={drapeauxAfrique} titre="Afrique"/>} />
-                <Route path="/asie" element={<Jeu drapeaux={drapeauxAsie} titre="Asie"/>} />
-                <Route path="/amerique" element={<Jeu drapeaux={drapeauxAmerique} titre="Amérique"/>} />
-                <Route path="/oceanie" element={<Jeu drapeaux={drapeauxOceanie} titre="Océanie"/>} />
+                <Route path="/europe" element={<Jeu drapeaux={drapeauxEurope} titre={langpack["rub_eu"][lang]}/>}/>
+                <Route path="/monde" element={<Jeu drapeaux={drapeauxMonde} titre={langpack["rub_mo"][lang]}/>}/>
+                <Route path="/afrique" element={<Jeu drapeaux={drapeauxAfrique} titre={langpack["rub_af"][lang]}/>} />
+                <Route path="/asie" element={<Jeu drapeaux={drapeauxAsie} titre={langpack["rub_as"][lang]}/>} />
+                <Route path="/amerique" element={<Jeu drapeaux={drapeauxAmerique} titre={langpack["rub_am"][lang]}/>} />
+                <Route path="/oceanie" element={<Jeu drapeaux={drapeauxOceanie} titre={langpack["rub_oc"][lang]}/>} />
                 <Route path="/scores" element={<Scores/>} />
                 <Route path="/inscription" element={<Inscription/>} />
                 <Route path="/profil/:username" element={<Profil/>} />

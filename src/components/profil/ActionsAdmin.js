@@ -1,10 +1,14 @@
 import BtnActionUser from "./BtnActionUser";
 import ModalSupprimerBloquerUser from "./ModalSupprimerBloquerUser";
-import { useState } from "react";
+import { useContext, useState } from "react";
 import urlApi from "../../utils/urlApi";
+import langpack from "../../lang/langpack.json";
+import LanguageContext from "../store/language-context";
 
 export default function ActionsAdmin(props) {
   const [modal, setModal] = useState(null);
+
+  const lang = useContext(LanguageContext).lang;
 
   function supprimerUser() {
     fetch(urlApi+"users/?user_id="+props.user.id, {
@@ -37,15 +41,15 @@ export default function ActionsAdmin(props) {
   }
 
   function afficherModalSupprimerUser() {
-    setModal(<ModalSupprimerBloquerUser danger={true} titre="Supprimer" user={props.user} onClose={fermerModal} action={supprimerUser}/>);
+    setModal(<ModalSupprimerBloquerUser danger={true} titre={langpack["admin_suppr"][lang]} user={props.user} onClose={fermerModal} action={supprimerUser}/>);
   }
 
   function afficherModalBloquerUser() {
-    setModal(<ModalSupprimerBloquerUser danger={true} titre="Bloquer" user={props.user} onClose={fermerModal} action={toggleBloquerUser}/>);
+    setModal(<ModalSupprimerBloquerUser danger={true} titre={langpack["admin_blo"][lang]} user={props.user} onClose={fermerModal} action={toggleBloquerUser}/>);
   }
 
   function afficherModalDebloquerUser() {
-    setModal(<ModalSupprimerBloquerUser danger={false} titre="Débloquer" user={props.user} onClose={fermerModal} action={toggleBloquerUser}/>)
+    setModal(<ModalSupprimerBloquerUser danger={false} titre={langpack["admin_deblo"][lang]} user={props.user} onClose={fermerModal} action={toggleBloquerUser}/>)
   }
 
   return (

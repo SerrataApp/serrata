@@ -81,7 +81,7 @@ export default function HistoriqueParties(props) {
           </table>
         </div>
       </>:
-      <p>Aucune partie dans cette catégorie pour l'instant</p>}
+      <p>{langpack["prof_aucu"][lang]}</p>}
     </div>
   );
 }

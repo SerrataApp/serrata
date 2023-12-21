@@ -17,7 +17,9 @@
     "sco_accprof": {"fr": "cliquer pour accéder au profil", "en": "click to access profile"},
     "sco_temps": {"fr": "Temps", "en": "Time"},
     "sco_err": {"fr": "Erreurs", "en": "Errors"},
+    "sco_errsing": {"fr": "Erreur", "en": "Error"},
     "sco_ind": {"fr": "Indices", "en": "Hints"},
+    "sco_indsing": {"fr": "Indice", "en": "Hint"},
     "sco_date": {"fr": "Date", "en": "Date"},
     "sco_vis": {"fr": "Visibilité (dans scores)", "en": "Visibility (in leaderboard)"},
     
@@ -34,6 +36,11 @@
     "prof_tri_tpsdecroi": {"fr": "Temps décroissant", "en": "Time descending"},
     "prof_tri_precent": {"fr": "Plus récent", "en": "Newest"},
     "prof_tri_pancien": {"fr": "Plus ancien", "en": "Oldest"},
+    "prof_retour_acc": {"fr": "Retourner à l'accueil", "en": ""}, // à compléter
+    "prof_err_existepas": {"fr": "Le joueur n'existe pas", "en": "a"}, // à compléter
+    "prof_aucu": {"fr": "Aucune partie dans cette catégorie pour l'instant", "en": ""}, // à compléter
+    "prof_pub": {"fr": "Publique", "en": "Public"},
+    "prof_priv": {"fr": "Privée", "en": "Private"},
 
     "foot_gh": {"fr": "Github", "en": "Github"},
     "foot_ml": {"fr": "Mentions légales", "en": "Legal notices"},
@@ -41,5 +48,34 @@
     "foot_cgu": {"fr": "CGU", "en": "ToC"},
     
     "jou_env": {"fr": "Envoyer", "en": "Submit"},
-    "jou_pas": {"fr": "Passer", "en": "Skip"}
+    "jou_pas": {"fr": "Passer", "en": "Skip"},
+    "jou_drap": {"fr": "Drapeaux", "en": "Flags"},
+    "jou_fermer": {"fr": "Fermer", "en": "Close"},
+
+    "insc_titre": {"fr": "Inscription", "en": ""}, // à compléter
+    "insc_pseudo": {"fr": "Pseudo", "en": "Username"},
+    "insc_mail": {"fr": "Adresse Mail", "en": "Email address"},
+    "insc_mdp": {"fr": "Mot de passe", "en": "Password"},
+    "insc_conf_mdp": {"fr": "Confirm password", "en": "Confirm password"},
+    "insc_cgu": {"fr": "J'ai lu et j'accepte les", "en": ""}, // à compléter
+    "insc_btn": {"fr": "Créer un compte", "en": ""}, // à compléter
+    "insc_err_mdp": {"fr": "Les mots de passe de correspondent pas.", "en": ""}, // à compléter
+    "insc_err_champ": {"fr": "Champ manquant", "en": "Missing field"},
+    "insc_err": {"fr": "Erreur, veuillez réessayer", "en": "a"}, // à compléter
+
+    "co_ann": {"fr": "Annuler", "en": "Cancel"},
+    "co_p1": {"fr": "Il faut être connecté pour jouer à Serrata,", "en": ""}, // à compléter
+    "co_p2": {"fr": "ce sera prochainement possible de jouer sans compte", "en": ""}, // à compléter
+    "co_id": {"fr": "Pseudo ou Email", "en": ""}, // à compléter
+    "co_mdp": {"fr": "Mot de passe", "en": "Password"},
+    "co_montr": {"fr": "Montrer", "en": "Show"},
+    "co_cach": {"fr": "Cacher", "en": "Hide"},
+    "co_conn": {"fr": "Se connecter", "en": ""}, // à compléter
+    "co_pas_insc": {"fr": "Pas encore inscrit ?", "en": ""}, // à compléter
+
+    "admin_suppr": {"fr": "Supprimer", "en": "Delete"},
+    "admin_suppr_partie": {"fr": "Supprimer la partie ?", "en": "Delete game ?"},
+    "admin_blo": {"fr": "Bloquer", "en": "Lock"},
+    "admin_deblo": {"fr": "Débloquer", "en": "Unlock"},
+    "admin_uti": {"fr": "l'utilisateur", "en": "user"}
 }

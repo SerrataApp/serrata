@@ -141,7 +141,7 @@ export default function ZoneDentree(props) {
         <input type="submit" className="border" value={langpack["jou_env"][lang]} disabled={ctxResultats.estFini||!ctxConnexion.connecte}/>
         <div className="flex gap-2">
           <button className="border w-full" onClick={passer} disabled={ctxResultats.estFini||!ctxConnexion.connecte}>{langpack["jou_pas"][lang]}</button>
-          <button className="border w-full" onClick={indice} disabled={ctxResultats.estFini||!ctxConnexion.connecte}>Indice</button>
+          <button className="border w-full" onClick={indice} disabled={ctxResultats.estFini||!ctxConnexion.connecte}>{langpack["sco_indsing"][lang]}</button>
         </div>
         <span>{texteIndice}</span>
       </form>

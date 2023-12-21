@@ -3,11 +3,15 @@ import formatDate from "../../utils/formatDate";
 import urlApi from "../../utils/urlApi";
 import ConnexionContext from "../store/connexion-context";
 import ModalSupprimer from "../Elements/ModalSupprimer";
+import LanguageContext from "../store/language-context";
+import langpack from "../../lang/langpack.json";
 
 export default function ResumePartie(props) {
   const [modalSupprimer, setModalSupprimer] = useState(false);
 
   const ctxConnexion = useContext(ConnexionContext);
+
+  const lang = useContext(LanguageContext).lang;
 
   function onChangeVisibilityHandler() {
     fetch(urlApi+"score/changeState/?game_id="+props.partie.id, {
@@ -51,11 +55,11 @@ export default function ResumePartie(props) {
       <td className="p-1 border text-center">
         {(ctxConnexion.username===props.username||ctxConnexion.admin)?
           <select className="rounded p-1 bg-gray-300" onChange={onChangeVisibilityHandler}>
-            <option value="Publique" selected={props.partie.public}>Publique</option>
-            <option value="Privée" selected={!props.partie.public}>Privée</option>
+            <option value="Publique" selected={props.partie.public}>{langpack["prof_pub"][lang]}</option>
+            <option value="Privée" selected={!props.partie.public}>{langpack["prof_priv"][lang]}</option>
           </select>
           :
-          props.partie.public?"Publique":"Privée"
+          props.partie.public?langpack["prof_pub"][lang]:langpack["prof_priv"][lang]
         }
       </td>
       {ctxConnexion.admin&&

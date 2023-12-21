@@ -9,6 +9,7 @@ import ResultatsContext from '../components/store/resultats-context';
 import urlApi from '../utils/urlApi';
 import ConnexionContext from '../components/store/connexion-context';
 import langpack from "../lang/langpack.json";
+import LanguageContext from '../components/store/language-context';
 
 export default function Jeu(props) {
   const [resultatsAffiches, setResultatsAffiches] = useState(false);
@@ -16,6 +17,8 @@ export default function Jeu(props) {
 
   const ctxResultats = useContext(ResultatsContext);
   const ctxConnexion = useContext(ConnexionContext);
+
+  const lang = useContext(LanguageContext).lang;
 
   function numeroMode() {
     switch(props.titre) {
@@ -102,7 +105,7 @@ export default function Jeu(props) {
   }, [props.drapeaux])
 
   return (
-    <Page titre={`Drapeaux ${props.titre}`}>
+    <Page titre={`${langpack["jou_drap"][lang]} - ${props.titre}`}>
       {resultatsAffiches && <Resultats categorie={props.titre} onClose={relancer}/>}
       <div className='flex flex-col items-center gap-5 mt-3'>
         <Informations longueur={drapeaux.length}/>
