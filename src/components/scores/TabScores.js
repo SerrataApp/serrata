@@ -5,7 +5,7 @@ import ConnexionContext from "../store/connexion-context";
 import ModalSupprimer from "../Elements/ModalSupprimer";
 
 export default function TabScores(props) {
-  const [isLoading, setIsLoading] = useState(false);
+  const [isLoading, setIsLoading] = props.loading;
   const [httpError, setHttpError] = useState();
   const [scores, setScores] = useState([]);
   const [runParfaite, setRunParfaite] = useState(false);
