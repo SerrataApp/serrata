@@ -133,7 +133,6 @@ export default function ZoneDentree(props) {
     <>
       {!ctxConnexion.connecte && <ModalConnexion onCancel={annuler}/>}
       <form onSubmit={envoyerRep} className="flex flex-col gap-2">
-        dfdf
         <input type="text" className={`border`} placeholder={`${ctrlV?"Pas de Ctrl+V !!":""}`} ref={inputRef} onChange={onChangeHandler} onPaste={bloqueCtrlV} disabled={ctxResultats.estFini||!ctxConnexion.connecte}/>
         <input type="submit" className="border" value="Envoyer" disabled={ctxResultats.estFini||!ctxConnexion.connecte}/>
         <div className="flex gap-2">
