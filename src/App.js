@@ -43,12 +43,11 @@ export default function App() {
     } else {
       setIsLoading(false);
     }
-
-    if(!window.localStorage.getItem("lang")) {
-      ctxLanguage.setLangue("fr");
-    }
   }, []);
 
+  if(!window.localStorage.getItem("lang")) {
+    ctxLanguage.setLangue("fr");
+  }
   
   function RedirectProfil() {
     const navigate = useNavigate();
