@@ -19,7 +19,7 @@
     "sco_err": {"fr": "Erreurs", "en": "Errors"},
     "sco_ind": {"fr": "Indices", "en": "Hints"},
     "sco_date": {"fr": "Date", "en": "Date"},
-    "sco_vis": {"fr": "Visibilité", "en": "Visibility"},
+    "sco_vis": {"fr": "Visibilité (dans scores)", "en": "Visibility (in leaderboard)"},
     
     "prof_partlan": {"fr": "Parties lancées", "en": "Games started"},
     "prof_partterm": {"fr": "Parties terminées", "en": "Games finished"},

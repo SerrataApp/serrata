@@ -2,6 +2,7 @@ import { useState } from "react";
 import TabScores from "../components/scores/TabScores";
 import Page from "./Page";
 import ChoixMode from "../components/Elements/ChoixMode";
+import langpack from "../lang/langpack.json";
 
 export default function Scores() {
   const [modeSelect, setModeSelect] = useState("1");
@@ -12,7 +13,7 @@ export default function Scores() {
   }
 
   return (
-    <Page titre="Scores">
+    <Page titre={langpack["menu_scores"][localStorage.getItem("lang")]}>
       <div className="flex flex-col items-center w-full">
         <ChoixMode changeModeHandler={changeModeHandler} modeSelect={modeSelect} disabled={isLoading}/>
         <div className="w-8/12">

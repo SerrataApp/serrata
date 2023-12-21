@@ -40,6 +40,11 @@ export default function App() {
     } else {
       setIsLoading(false);
     }
+
+    window.localStorage.removeItem("lang")
+    if(!window.localStorage.getItem("lang")) {
+      window.localStorage.setItem("lang", "en");
+    }
   }, []);
 
   

@@ -8,6 +8,7 @@ import Resultats from '../components/resultats/Resultats';
 import ResultatsContext from '../components/store/resultats-context';
 import urlApi from '../utils/urlApi';
 import ConnexionContext from '../components/store/connexion-context';
+import langpack from "../lang/langpack.json";
 
 export default function Jeu(props) {
   const [resultatsAffiches, setResultatsAffiches] = useState(false);
@@ -18,12 +19,12 @@ export default function Jeu(props) {
 
   function numeroMode() {
     switch(props.titre) {
-      case "Monde": return 0;
-      case "Europe": return 1;
-      case "Afrique": return 2;
-      case "Asie": return 3;
-      case "Amérique": return 4;
-      case "Océanie": return 5;
+      case langpack["rub_mo"][localStorage.getItem("lang")]: return 0;
+      case langpack["rub_eu"][localStorage.getItem("lang")]: return 1;
+      case langpack["rub_af"][localStorage.getItem("lang")]: return 2;
+      case langpack["rub_as"][localStorage.getItem("lang")]: return 3;
+      case langpack["rub_am"][localStorage.getItem("lang")]: return 4;
+      case langpack["rub_oc"][localStorage.getItem("lang")]: return 5;
     }
   }
 

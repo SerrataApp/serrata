@@ -3,6 +3,7 @@ import urlApi from "../../utils/urlApi";
 import formatDate from "../../utils/formatDate";
 import ConnexionContext from "../store/connexion-context";
 import ModalSupprimer from "../Elements/ModalSupprimer";
+import langpack from "../../lang/langpack.json";
 
 export default function TabScores(props) {
   const [isLoading, setIsLoading] = props.loading;
@@ -12,6 +13,8 @@ export default function TabScores(props) {
   const [modalSupprimer, setModalSupprimer] = useState(null);
 
   const ctxConnexion = useContext(ConnexionContext);
+
+  const lang = localStorage.getItem("lang");
 
   useEffect(() => {
     setHttpError(null);
@@ -116,18 +119,18 @@ export default function TabScores(props) {
     <div className="w-full overflow-auto">
       <div>
         <input type="checkbox" onChange={toggleRunParfaite} id={`perfect_${props.categorie}`} checked={runParfaite}/>
-        <label htmlFor={`perfect_${props.categorie}`} className="ml-1 select-none">0 erreur</label>
+        <label htmlFor={`perfect_${props.categorie}`} className="ml-1 select-none">{langpack["sco_zerreur"][lang]}</label>
         </div>
       <div className="overflow-auto w-full border rounded-xl" style={{maxHeight: "400px"}}>
         <table className="w-full">
           <thead>
             <tr>
               <th className="py-1 px-3 border w-fit">#</th>
-              <th className="py-1 px-3 border w-full">Joueur -<span className=" font-normal"> cliquer pour accéder au profil</span></th>
-              <th className="py-1 px-3 border w-fit">Temps</th>
-              <th className="py-1 px-3 border w-fit">Erreurs</th>
-              <th className="py-1 px-3 border w-fit">Indices</th>
-              <th className="py-1 px-3 border w-fit">Date</th>
+              <th className="py-1 px-3 border w-full">{langpack["sco_joueur"][lang]} -<span className=" font-normal"> {langpack["sco_accprof"][lang]}</span></th>
+              <th className="py-1 px-3 border w-fit">{langpack["sco_temps"][lang]}</th>
+              <th className="py-1 px-3 border w-fit">{langpack["sco_err"][lang]}</th>
+              <th className="py-1 px-3 border w-fit">{langpack["sco_ind"][lang]}</th>
+              <th className="py-1 px-3 border w-fit">{langpack["sco_date"][lang]}</th>
               {ctxConnexion&&ctxConnexion.admin&&<th className="py-1 px-3 border w-fit"></th>}
             </tr>
           </thead>
