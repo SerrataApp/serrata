@@ -4,6 +4,7 @@ import ResultatsContext from "../store/resultats-context";
 import ConnexionContext from "../store/connexion-context";
 import ModalConnexion from "../connexion/ModalConnexion";
 import langpack from "../../lang/langpack.json";
+import LanguageContext from "../store/language-context";
 
 export default function ZoneDentree(props) {
   const inputRef = useRef(null);
@@ -15,7 +16,7 @@ export default function ZoneDentree(props) {
   const ctxResultats = useContext(ResultatsContext);
   const ctxConnexion = useContext(ConnexionContext);
 
-  const lang = localStorage.getItem("lang");
+  const lang = useContext(LanguageContext).lang;
 
   function envoyerRep(event) {
     event.preventDefault();

@@ -1,10 +1,11 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState, useContext } from "react";
 import langpack from "../../lang/langpack.json";
+import LanguageContext from "../store/language-context";
 
 export default function Footer() {
   const [innerWidth, setInnerWidth] = useState(window.innerWidth);
 
-  const lang = localStorage.getItem("lang");
+  const lang = useContext(LanguageContext).lang;
 
   useEffect(() => {
     const handleResize = () => {

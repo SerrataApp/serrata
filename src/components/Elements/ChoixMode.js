@@ -1,11 +1,13 @@
 import langpack from "../../lang/langpack.json";
+import { useContext } from "react";
+import LanguageContext from "../store/language-context";
 
 export default function ChoixMode(props) {
   function onSelectHandler(e) {
     props.changeModeHandler(e.target.value);
   }
 
-  const lang = localStorage.getItem("lang");
+  const lang = useContext(LanguageContext).lang;
 
   return (
     <div className="join join-vertical md:join-horizontal mb-5 w-full flex items-center justify-center">

@@ -4,6 +4,7 @@ import formatDate from "../../utils/formatDate";
 import ConnexionContext from "../store/connexion-context";
 import ModalSupprimer from "../Elements/ModalSupprimer";
 import langpack from "../../lang/langpack.json";
+import LanguageContext from "../store/language-context";
 
 export default function TabScores(props) {
   const [isLoading, setIsLoading] = props.loading;
@@ -14,7 +15,7 @@ export default function TabScores(props) {
 
   const ctxConnexion = useContext(ConnexionContext);
 
-  const lang = localStorage.getItem("lang");
+  const lang = useContext(LanguageContext).lang;
 
   useEffect(() => {
     setHttpError(null);

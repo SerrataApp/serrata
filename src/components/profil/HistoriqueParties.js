@@ -4,6 +4,7 @@ import ChoixMode from "../Elements/ChoixMode";
 import ResumeStatsMode from "./ResumeStatsMode";
 import ConnexionContext from "../store/connexion-context";
 import langpack from "../../lang/langpack.json";
+import LanguageContext from "../store/language-context";
 
 export default function HistoriqueParties(props) {
   const [tri, setTri] = useState("tmp_cr");
@@ -13,7 +14,7 @@ export default function HistoriqueParties(props) {
 
   const ctxConnexion = useContext(ConnexionContext);
 
-  const lang = localStorage.getItem("lang");
+  const lang = useContext(LanguageContext).lang;
 
   function onChangeHandler(event) {
     setTri(event.target.value);

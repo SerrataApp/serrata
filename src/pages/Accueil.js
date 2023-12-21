@@ -7,9 +7,11 @@ import monde from "../img/modes/monde.png";
 import amerique from "../img/modes/amerique.png";
 import oceanie from "../img/modes/oceanie.png";
 import langpack from "../lang/langpack.json";
+import { useContext } from "react";
+import LanguageContext from "../components/store/language-context";
 
 export default function Accueil() {
-  const lang = localStorage.getItem("lang");
+  const lang = useContext(LanguageContext).lang;
 
   return (
     <Page titre={langpack["menu_jouer"][lang]}>

@@ -1,8 +1,10 @@
 import Stat from "./Stat";
 import langpack from "../../lang/langpack.json";
+import { useContext } from "react";
+import LanguageContext from "../store/language-context";
 
 export default function ResumeStatsGeneral(props) {
-  const lang = localStorage.getItem("lang");
+  const lang = useContext(LanguageContext).lang;
 
   return (
     <div className="flex flex-wrap justify-center gap-5">

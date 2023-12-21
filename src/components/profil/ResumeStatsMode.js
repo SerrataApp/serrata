@@ -1,8 +1,10 @@
 import Stat from "./Stat";
 import langpack from "../../lang/langpack.json";
+import { useContext } from "react";
+import LanguageContext from "../store/language-context";
 
 export default function ResumeStatsMode(props) {
-  const lang = localStorage.getItem("lang");
+  const lang = useContext(LanguageContext).lang;
 
   const stats = {
     parties_finies: 0,
