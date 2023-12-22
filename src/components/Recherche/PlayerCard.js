@@ -6,12 +6,18 @@ export default function PlayerCard(props) {
       <p>{props.user.username}</p>
       <div className="rounded-xl overflow-hidden border">
         <table className="text-center">
-          <th className="p-2 border-r border-b">Parties lancées</th>
-          <th className="p-2 border-b">Date d'inscription</th>
-          <tr>
-            <td className="p-2 border-r">{props.user.played_games}</td>
-            <td className="p-2">{formatDate(props.user.signup_date)}</td>
-          </tr>
+          <thead>
+            <tr>
+              <th className="p-2 border-r border-b">Parties lancées</th>
+              <th className="p-2 border-b">Date d'inscription</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td className="p-2 border-r">{props.user.played_games}</td>
+              <td className="p-2">{formatDate(props.user.signup_date)}</td>
+            </tr>
+          </tbody>
         </table>
       </div>
     </a>
