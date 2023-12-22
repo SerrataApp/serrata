@@ -12,6 +12,7 @@ import urlApi from './utils/urlApi';
 import Inscription from './pages/Inscription';
 import MentionsLegales from './pages/MentionsLegales';
 import CGU from './pages/CGU';
+import Recherche from './pages/Recherche';
 
 export default function App() {
   const ctxConnexion = useContext(ConnexionContext);
@@ -82,6 +83,7 @@ export default function App() {
               <Route path="/oceanie" element={<Jeu drapeaux={drapeauxOceanie} titre="Océanie"/>} />
               <Route path="/scores" element={<Scores/>} />
               <Route path="/inscription" element={<Inscription/>} />
+              <Route path="/recherche" element={<Recherche/>} />
               <Route path="/profil/:username" element={<Profil/>} />
               <Route path="/profil" element={<RedirectProfil />} />
               <Route path="/mentionslegales" element={<MentionsLegales />} />
