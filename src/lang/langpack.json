@@ -51,7 +51,7 @@
     "jou_pas": {"fr": "Passer", "en": "Skip"},
     "jou_drap": {"fr": "Drapeaux", "en": "Flags"},
     "jou_fermer": {"fr": "Fermer", "en": "Close"},
-    "jour_ctrlv": {"fr": "Pas de Ctrl+V !!", "en": ""}, // à compléter
+    "jou_ctrlv": {"fr": "Pas de Ctrl+V !!", "en": ""}, // à compléter
 
     "insc_titre": {"fr": "Inscription", "en": ""}, // à compléter
     "insc_pseudo": {"fr": "Pseudo", "en": "Username"},
