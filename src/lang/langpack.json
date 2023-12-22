@@ -36,9 +36,9 @@
     "prof_tri_tpsdecroi": {"fr": "Temps décroissant", "en": "Time descending"},
     "prof_tri_precent": {"fr": "Plus récent", "en": "Newest"},
     "prof_tri_pancien": {"fr": "Plus ancien", "en": "Oldest"},
-    "prof_retour_acc": {"fr": "Retourner à l'accueil", "en": ""}, // à compléter
-    "prof_err_existepas": {"fr": "Le joueur n'existe pas", "en": "a"}, // à compléter
-    "prof_aucu": {"fr": "Aucune partie dans cette catégorie pour l'instant", "en": ""}, // à compléter
+    "prof_retour_acc": {"fr": "Retourner à l'accueil", "en": ""}, 
+    "prof_err_existepas": {"fr": "Le joueur n'existe pas", "en": "a"}, 
+    "prof_aucu": {"fr": "Aucune partie dans cette catégorie pour l'instant", "en": ""}, 
     "prof_pub": {"fr": "Publique", "en": "Public"},
     "prof_priv": {"fr": "Privée", "en": "Private"},
 
@@ -51,28 +51,28 @@
     "jou_pas": {"fr": "Passer", "en": "Skip"},
     "jou_drap": {"fr": "Drapeaux", "en": "Flags"},
     "jou_fermer": {"fr": "Fermer", "en": "Close"},
-    "jou_ctrlv": {"fr": "Pas de Ctrl+V !!", "en": ""}, // à compléter
+    "jou_ctrlv": {"fr": "Pas de Ctrl+V !!", "en": ""}, 
 
-    "insc_titre": {"fr": "Inscription", "en": ""}, // à compléter
+    "insc_titre": {"fr": "Inscription", "en": ""}, 
     "insc_pseudo": {"fr": "Pseudo", "en": "Username"},
     "insc_mail": {"fr": "Adresse Mail", "en": "Email address"},
     "insc_mdp": {"fr": "Mot de passe", "en": "Password"},
     "insc_conf_mdp": {"fr": "Confirm password", "en": "Confirm password"},
-    "insc_cgu": {"fr": "J'ai lu et j'accepte les", "en": ""}, // à compléter
-    "insc_btn": {"fr": "Créer un compte", "en": ""}, // à compléter
-    "insc_err_mdp": {"fr": "Les mots de passe de correspondent pas.", "en": ""}, // à compléter
+    "insc_cgu": {"fr": "J'ai lu et j'accepte les", "en": ""}, 
+    "insc_btn": {"fr": "Créer un compte", "en": ""}, 
+    "insc_err_mdp": {"fr": "Les mots de passe de correspondent pas.", "en": ""}, 
     "insc_err_champ": {"fr": "Champ manquant", "en": "Missing field"},
-    "insc_err": {"fr": "Erreur, veuillez réessayer", "en": "a"}, // à compléter
+    "insc_err": {"fr": "Erreur, veuillez réessayer", "en": "a"}, 
 
     "co_ann": {"fr": "Annuler", "en": "Cancel"},
-    "co_p1": {"fr": "Il faut être connecté pour jouer à Serrata,", "en": ""}, // à compléter
-    "co_p2": {"fr": "ce sera prochainement possible de jouer sans compte", "en": ""}, // à compléter
-    "co_id": {"fr": "Pseudo ou Email", "en": ""}, // à compléter
+    "co_p1": {"fr": "Il faut être connecté pour jouer à Serrata,", "en": ""}, 
+    "co_p2": {"fr": "ce sera prochainement possible de jouer sans compte", "en": ""}, 
+    "co_id": {"fr": "Pseudo ou Email", "en": ""}, 
     "co_mdp": {"fr": "Mot de passe", "en": "Password"},
     "co_montr": {"fr": "Montrer", "en": "Show"},
     "co_cach": {"fr": "Cacher", "en": "Hide"},
-    "co_conn": {"fr": "Se connecter", "en": ""}, // à compléter
-    "co_pas_insc": {"fr": "Pas encore inscrit ?", "en": ""}, // à compléter
+    "co_conn": {"fr": "Se connecter", "en": ""}, 
+    "co_pas_insc": {"fr": "Pas encore inscrit ?", "en": ""}, 
 
     "admin_suppr": {"fr": "Supprimer", "en": "Delete"},
     "admin_suppr_partie": {"fr": "Supprimer la partie ?", "en": "Delete game ?"},

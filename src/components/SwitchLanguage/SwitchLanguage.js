@@ -27,11 +27,7 @@ export default function SwitchLanguage() {
     <div className="relative">
       <div className="flex gap-1 hover:cursor-pointer" onClick={toggleListeLangues}>
         <img src={image} className="h-4"/>
-        {showListeLangue?
-          <i className="fa fa-chevron-up"></i>
-          :
-          <i className="fa fa-chevron-down"></i>
-        }
+        <i className={`fa fa-chevron-up transition-all duration-150 ${!showListeLangue?"fa-flip-vertical":""}`}></i>
       </div>
       {showListeLangue && <SelectionLangue drapeaux={drapeaux} closeDiv={toggleListeLangues}/>}
     </div>
