@@ -2,13 +2,15 @@ import { useReducer } from "react";
 
 import DrapeauxUtilisesContext from "./drapeaux-utilises-context";
 
+const lang = localStorage.getItem("lang");
+
 const drapeauxUtilisesParDefaut = {
   drapeauxUtilises: [],
 }
 
 function DrapeauxUtilisesReducer(state, action) {
   if(action.type==="AJOUTER_DRAPEAU") {
-    const updatedDrapeauxUtilises = [...state.drapeauxUtilises, action.drapeau.noms[0]];
+    const updatedDrapeauxUtilises = [...state.drapeauxUtilises, action.nomDrapeau];
     return {
       ...state,
       drapeauxUtilises: updatedDrapeauxUtilises
@@ -26,8 +28,8 @@ function DrapeauxUtilisesReducer(state, action) {
 export default function DrapeauxUtilisesProvider(props) {
   const [drapeauxUtilisesState, dispatchDrapeauxUtilises] = useReducer(DrapeauxUtilisesReducer, drapeauxUtilisesParDefaut);
 
-  function ajouterDrapeau(drapeau) {
-    dispatchDrapeauxUtilises({type: "AJOUTER_DRAPEAU", drapeau: drapeau});
+  function ajouterDrapeau(nomDrapeau) {
+    dispatchDrapeauxUtilises({type: "AJOUTER_DRAPEAU", nomDrapeau: nomDrapeau});
   }
 
   function resetDrapeauxUtilises() {

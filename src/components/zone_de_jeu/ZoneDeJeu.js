@@ -3,6 +3,7 @@ import ZoneDentree from "./ZoneDentree";
 import DrapeauxUtilisesContext from "../store/drapeaux-utilises-context";
 import ResultatsContext from "../store/resultats-context";
 import urlApi from "../../utils/urlApi";
+import LanguageContext from "../store/language-context";
 
 export default function ZoneDeJeu(props) {
   const [drapeauActuel, setDrapeauActuel] = useState(props.drapeaux[Math.floor(Math.random() * props.drapeaux.length)]);
@@ -10,6 +11,8 @@ export default function ZoneDeJeu(props) {
 
   const ctxDrapeauxUtilises = useContext(DrapeauxUtilisesContext);
   const ctxResultats = useContext(ResultatsContext);
+
+  const lang = useContext(LanguageContext).lang;
 
   function nettoyerChaine(chaine) {
     const chaineSansAccents = chaine.normalize("NFD").replace(/[\u0300-\u036f]/g, "");
@@ -29,13 +32,13 @@ export default function ZoneDeJeu(props) {
       })
     }
     let retour = false;
-    const nbNoms = drapeauActuel.noms.length;
+    const nbNoms = drapeauActuel.noms[lang].length;
     let i = 0;
     while(i<nbNoms && retour===false) {
-      if(nettoyerChaine(drapeauEntre).toLowerCase()===nettoyerChaine(drapeauActuel.noms[i]).toLowerCase()) {
-        ctxDrapeauxUtilises.ajouterDrapeau(drapeauActuel);
+      if(nettoyerChaine(drapeauEntre).toLowerCase()===nettoyerChaine(drapeauActuel.noms[lang][i]).toLowerCase()) {
+        ctxDrapeauxUtilises.ajouterDrapeau(drapeauActuel.noms[lang][i]);
         setDrapeauxRestants(drapeauxRestants.filter(pays => {
-          return pays.noms[0] !== drapeauActuel.noms[0];
+          return pays.noms[lang][0] !== drapeauActuel.noms[lang][0];
         }));
         retour = true;
       }
@@ -70,7 +73,7 @@ export default function ZoneDeJeu(props) {
   return (
     <div className="flex flex-col md:flex-row gap-2 mb-10">
       <img src={drapeauActuel.img} alt="drapeau" className="border" style={{maxWidth: "250px"}}/>
-      <ZoneDentree onEnvoi={validationDrapeau} onSkip={passer} nomDrapeau={drapeauActuel.noms[0]}/>
+      <ZoneDentree onEnvoi={validationDrapeau} onSkip={passer} nomDrapeau={drapeauActuel.noms[lang][0]}/>
     </div>
   );
 }

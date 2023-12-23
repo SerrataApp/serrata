@@ -195,202 +195,787 @@ import yemen from "../img/drapeaux/yemen.png";
 import zambie from "../img/drapeaux/zambie.png";
 import zimbabwe from "../img/drapeaux/zimbabwe.png";
 
-afghanistan = { noms: ["Afghanistan"], img: afghanistan };
-afriquedusud = { noms: ["Afrique du Sud"], img: afriquedusud };
-albanie = { noms: ["Albanie"], img: albanie };
-algerie = { noms: ["Algérie"], img: algerie };
-allemagne = { noms: ["Allemagne"], img: allemagne };
-andorre = { noms: ["Andorre"], img: andorre };
-angola = { noms: ["Angola"], img: angola };
-antiguaetbarbuda = { noms: ["Antigua-et-Barbuda"], img: antiguaetbarbuda };
-arabiesaoudite = { noms: ["Arabie saoudite"], img: arabiesaoudite };
-argentine = { noms: ["Argentine"], img: argentine };
-armenie = { noms: ["Arménie"], img: armenie };
-australie = { noms: ["Australie"], img: australie };
-autriche = { noms: ["Autriche"], img: autriche };
-azerbaidjan = { noms: ["Azerbaïdjan"], img: azerbaidjan };
-bahamas = { noms: ["Bahamas"], img: bahamas };
-bahrein = { noms: ["Bahreïn"], img: bahrein };
-bangladesh = { noms: ["Bangladesh"], img: bangladesh };
-barbade = { noms: ["Barbade"], img: barbade };
-belgique = { noms: ["Belgique"], img: belgique };
-belize = { noms: ["Belize"], img: belize };
-benin = { noms: ["Bénin"], img: benin };
-bhoutan = { noms: ["Bhoutan"], img: bhoutan };
-bielorussie = { noms: ["Biélorussie", "Bélarus"], img: bielorussie };
-birmanie = { noms: ["Birmanie", "Myanmar"], img: birmanie };
-bolivie = { noms: ["Bolivie"], img: bolivie };
-bosnieherzegovine = { noms: ["Bosnie-Herzégovine"], img: bosnieherzegovine };
-botswana = { noms: ["Botswana"], img: botswana };
-bresil = { noms: ["Brésil"], img: bresil };
-brunei = { noms: ["Brunei"], img: brunei };
-bulgarie = { noms: ["Bulgarie"], img: bulgarie };
-burkinafaso = { noms: ["Burkina Faso"], img: burkinafaso };
-burundi = { noms: ["Burundi"], img: burundi };
-cambodge = { noms: ["Cambodge"], img: cambodge };
-cameroun = { noms: ["Cameroun"], img: cameroun };
-canada = { noms: ["Canada"], img: canada };
-capvert = { noms: ["Cap-Vert"], img: capvert };
-chili = { noms: ["Chili"], img: chili };
-chine = { noms: ["Chine"], img: chine };
-chypre = { noms: ["Chypre"], img: chypre };
-colombie = { noms: ["Colombie"], img: colombie };
-comores = { noms: ["Comores"], img: comores };
-congo = { noms: ["Congo"], img: congo };
-coreedunord = { noms: ["Corée du Nord"], img: coreedunord };
-coreedusud = { noms: ["Corée du Sud"], img: coreedusud };
-costarica = { noms: ["Costa Rica"], img: costarica };
-cotedivoire = { noms: ["Côte d'Ivoire"], img: cotedivoire };
-croatie = { noms: ["Croatie"], img: croatie };
-cuba = { noms: ["Cuba"], img: cuba };
-danemark = { noms: ["Danemark"], img: danemark };
-djibouti = { noms: ["Djibouti"], img: djibouti };
-dominique = { noms: ["Dominique"], img: dominique };
-equateur = { noms: ["Équateur"], img: equateur };
-egypte = { noms: ["Égypte"], img: egypte };
-emiratsarabesunis = { noms: ["Émirats arabes unis", "eau"], img: emiratsarabesunis };
-erythree = { noms: ["Érythrée"], img: erythree };
-espagne = { noms: ["Espagne"], img: espagne };
-estonie = { noms: ["Estonie"], img: estonie };
-eswatini = { noms: ["Eswatini"], img: eswatini };
-etatsunis = { noms: ["États-Unis", "usa"], img: etatsunis };
-ethiopie = { noms: ["Éthiopie"], img: ethiopie };
-fidji = { noms: ["Fidji"], img: fidji };
-finlande = { noms: ["Finlande"], img: finlande };
-france = { noms: ["France"], img: france };
-gabon = { noms: ["Gabon"], img: gabon };
-gambie = { noms: ["Gambie"], img: gambie };
-georgie = { noms: ["Géorgie"], img: georgie };
-ghana = { noms: ["Ghana"], img: ghana };
-grece = { noms: ["Grèce"], img: grece };
-grenade = { noms: ["Grenade"], img: grenade };
-guatemala = { noms: ["Guatemala"], img: guatemala };
-guinee = { noms: ["Guinée"], img: guinee };
-guineebissau = { noms: ["Guinée-Bissau"], img: guineebissau };
-guineeequatoriale = { noms: ["Guinée équatoriale"], img: guineeequatoriale };
-guyana = { noms: ["Guyana"], img: guyana };
-haiti = { noms: ["Haïti"], img: haiti };
-honduras = { noms: ["Honduras"], img: honduras };
-hongrie = { noms: ["Hongrie"], img: hongrie };
-ilesmarshall = { noms: ["Iles Marshall"], img: ilesmarshall };
-ilessalomon = { noms: ["Iles Salomon"], img: ilessalomon };
-inde = { noms: ["Inde"], img: inde };
-indonesie = { noms: ["Indonésie"], img: indonesie };
-irak = { noms: ["Irak", "Iraq"], img: irak };
-iran = { noms: ["Iran"], img: iran };
-irlande = { noms: ["Irlande"], img: irlande };
-islande = { noms: ["Islande"], img: islande };
-israel = { noms: ["Israël"], img: israel};
-palestine = { noms: ["Palestine"], img: palestine };
-italie = { noms: ["Italie"], img: italie };
-jamaique = { noms: ["Jamaïque"], img: jamaique };
-japon = { noms: ["Japon"], img: japon };
-jordanie = { noms: ["Jordanie"], img: jordanie };
-kazakhstan = { noms: ["Kazakhstan"], img: kazakhstan };
-kenya = { noms: ["Kenya"], img: kenya };
-kirghizistan = { noms: ["Kirghizistan"], img: kirghizistan };
-kiribati = { noms: ["Kiribati"], img: kiribati };
-kosovo = { noms: ["Kosovo"], img: kosovo};
-koweit = { noms: ["Koweït"], img: koweit };
-laos = { noms: ["Laos"], img: laos };
-lesotho = { noms: ["Lesotho"], img: lesotho };
-lettonie = { noms: ["Lettonie"], img: lettonie };
-liban = { noms: ["Liban"], img: liban };
-liberia = { noms: ["Liberia"], img: liberia };
-libye = { noms: ["Libye"], img: libye };
-liechtenstein = { noms: ["Liechtenstein"], img: liechtenstein };
-lituanie = { noms: ["Lituanie"], img: lituanie };
-luxembourg = { noms: ["Luxembourg"], img: luxembourg };
-macedoinedunord = { noms: ["Macédoine du Nord"], img: macedoinedunord };
-madagascar = { noms: ["Madagascar"], img: madagascar };
-malaisie = { noms: ["Malaisie"], img: malaisie };
-malawi = { noms: ["Malawi"], img: malawi };
-maldives = { noms: ["Maldives"], img: maldives };
-mali = { noms: ["Mali"], img: mali };
-malte = { noms: ["Malte"], img: malte };
-maroc = { noms: ["Maroc"], img: maroc };
-maurice = { noms: ["Maurice"], img: maurice };
-mauritanie = { noms: ["Mauritanie"], img: mauritanie };
-mexique = { noms: ["Mexique"], img: mexique };
-micronesie = { noms: ["Micronésie"], img: micronesie };
-moldavie = { noms: ["Moldavie"], img: moldavie };
-monaco = { noms: ["Monaco"], img: monaco };
-mongolie = { noms: ["Mongolie"], img: mongolie };
-montenegro = { noms: ["Monténégro"], img: montenegro };
-mozambique = { noms: ["Mozambique"], img: mozambique };
-namibie = { noms: ["Namibie"], img: namibie };
-nauru = { noms: ["Nauru"], img: nauru };
-nepal = { noms: ["Népal"], img: nepal };
-nicaragua = { noms: ["Nicaragua"], img: nicaragua };
-niger = { noms: ["Niger"], img: niger };
-nigeria = { noms: ["Nigeria"], img: nigeria };
-norvege = { noms: ["Norvège"], img: norvege };
-nouvellezelande = { noms: ["Nouvelle-Zélande"], img: nouvellezelande };
-oman = { noms: ["Oman"], img: oman };
-ouganda = { noms: ["Ouganda"], img: ouganda };
-ouzbekistan = { noms: ["Ouzbékistan"], img: ouzbekistan };
-pakistan = { noms: ["Pakistan"], img: pakistan };
-palaos = { noms: ["Palaos"], img: palaos };
-panama = { noms: ["Panama"], img: panama };
-papouasienouvelleguinee = { noms: ["Papouasie-Nouvelle-Guinée"], img: papouasienouvelleguinee };
-paraguay = { noms: ["Paraguay"], img: paraguay };
-paysbas = { noms: ["Pays-Bas"], img: paysbas };
-perou = { noms: ["Pérou"], img: perou };
-philippines = { noms: ["Philippines"], img: philippines };
-pologne = { noms: ["Pologne"], img: pologne };
-portugal = { noms: ["Portugal"], img: portugal };
-qatar = { noms: ["Qatar"], img: qatar };
-republiquecentrafricaine = { noms: ["République centrafricaine", "rca"], img: republiquecentrafricaine };
-republiquedemocratiqueducongo = { noms: ["République démocratique du Congo", "rdc"], img: republiquedemocratiqueducongo };
-republiquedominicaine = { noms: ["République dominicaine"], img: republiquedominicaine };
-roumanie = { noms: ["Roumanie"], img: roumanie };
-royaumeuni = { noms: ["Royaume-Uni"], img: royaumeuni };
-russie = { noms: ["Russie"], img: russie };
-rwanda = { noms: ["Rwanda"], img: rwanda };
-saintchristopheetnieves = { noms: ["Saint-Christophe-et-Niévès"], img: saintchristopheetnieves };
-saintmarin = { noms: ["Saint-Marin"], img: saintmarin };
-saintvincentetlesgrenadines = { noms: ["Saint-Vincent-et-les Grenadines"], img: saintvincentetlesgrenadines };
-saintelucie = { noms: ["Sainte-Lucie"], img: saintelucie };
-salvador = { noms: ["Salvador"], img: salvador };
-samoa = { noms: ["Samoa"], img: samoa };
-saotomeetprincipe = { noms: ["São Tomé-et-Príncipe"], img: saotomeetprincipe };
-senegal = { noms: ["Sénégal"], img: senegal };
-serbie = { noms: ["Serbie"], img: serbie };
-seychelles = { noms: ["Seychelles"], img: seychelles };
-sierraleone = { noms: ["Sierra Leone"], img: sierraleone };
-singapour = { noms: ["Singapour"], img: singapour };
-slovaquie = { noms: ["Slovaquie"], img: slovaquie };
-slovenie = { noms: ["Slovénie"], img: slovenie };
-somalie = { noms: ["Somalie"], img: somalie };
-soudan = { noms: ["Soudan"], img: soudan };
-soudandusud = { noms: ["Soudan du Sud"], img: soudandusud };
-srilanka = { noms: ["Sri Lanka"], img: srilanka };
-suede = { noms: ["Suède"], img: suede };
-suisse = { noms: ["Suisse"], img: suisse };
-suriname = { noms: ["Suriname"], img: suriname };
-syrie = { noms: ["Syrie"], img: syrie };
-tadjikistan = { noms: ["Tadjikistan"], img: tadjikistan };
-tanzanie = { noms: ["Tanzanie"], img: tanzanie };
-tchad = { noms: ["Tchad"], img: tchad };
-tchequie = { noms: ["Tchéquie", "République tchèque"], img: tchequie };
-thailande = { noms: ["Thaïlande"], img: thailande };
-timororiental = { noms: ["Timor oriental"], img: timororiental };
-togo = { noms: ["Togo"], img: togo };
-tonga = { noms: ["Tonga"], img: tonga };
-triniteettobago = { noms: ["Trinité-et-Tobago"], img: triniteettobago };
-tunisie = { noms: ["Tunisie"], img: tunisie };
-turkmenistan = { noms: ["Turkménistan"], img: turkmenistan };
-turquie = { noms: ["Turquie"], img: turquie };
-tuvalu = { noms: ["Tuvalu"], img: tuvalu };
-ukraine = { noms: ["Ukraine"], img: ukraine };
-uruguay = { noms: ["Uruguay"], img: uruguay };
-vanuatu = { noms: ["Vanuatu"], img: vanuatu };
-vatican = { noms: ["Vatican"], img: vatican };
-venezuela = { noms: ["Venezuela"], img: venezuela };
-vietnam = { noms: ["Vietnam"], img: vietnam };
-yemen = { noms: ["Yémen"], img: yemen };
-zambie = { noms: ["Zambie"], img: zambie };
-zimbabwe = { noms: ["Zimbabwe"], img: zimbabwe };
+afghanistan = {
+  noms: {fr: ["Afghanistan"], en: ["Afghanistan"]},
+  img: afghanistan
+};
+afriquedusud = {
+  noms: {fr: ["Afrique du Sud"], en: ["South Africa"]},
+  img: afriquedusud
+};
+albanie = {
+  noms: {fr: ["Albanie"], en: ["Albania"]},
+  img: albanie
+};
+algerie = {
+  noms: {fr: ["Algérie"], en: ["Algeria"]},
+  img: algerie
+};
+allemagne = {
+  noms: {fr: ["Allemagne"], en: ["Germany"] },
+  img: allemagne
+};
+andorre = {
+  noms: {fr: ["Andorre"], en: ["Andorra"]},
+  img: andorre
+};
+angola = {
+  noms: {fr: ["Angola"], en: ["Angola"]},
+  img: angola
+};
+antiguaetbarbuda = {
+  noms: {fr: ["Antigua-et-Barbuda"], en: ["Antigua and Barbuda"] },
+  img: antiguaetbarbuda
+};
+arabiesaoudite = {
+  noms: { fr: ["Arabie saoudite"], en: ["Saudi Arabia"] },
+  img: arabiesaoudite
+};
+argentine = {
+  noms: { fr: ["Argentine"], en: ["Argentina"] },
+  img: argentine
+};
+armenie = {
+  noms: { fr: ["Arménie"], en: ["Armenia"] },
+  img: armenie
+};
+australie = {
+  noms: { fr: ["Australie"], en: ["Australia"] },
+  img: australie
+};
+autriche = {
+  noms: { fr: ["Autriche"], en: ["Austria"] },
+  img: autriche
+};
+azerbaidjan = {
+  noms: { fr: ["Azerbaïdjan"], en: ["Azerbaijan"] },
+  img: azerbaidjan
+};
+bahamas = {
+  noms: { fr: ["Bahamas"], en: ["Bahamas"] },
+  img: bahamas
+};
+bahrein = {
+  noms: { fr: ["Bahreïn"], en: ["Bahrain"] },
+  img: bahrein
+};
+bangladesh = {
+  noms: { fr: ["Bangladesh"], en: ["Bangladesh"] },
+  img: bangladesh
+};
+barbade = {
+  noms: { fr: ["Barbade"], en: ["Barbados"] },
+  img: barbade
+};
+belgique = {
+  noms: { fr: ["Belgique"], en: ["Belgium"] },
+  img: belgique
+};
+belize = {
+  noms: { fr: ["Belize"], en: ["Belize"] },
+  img: belize
+};
+benin = {
+  noms: { fr: ["Bénin"], en: ["Benin"] },
+  img: benin
+};
+bhoutan = {
+  noms: { fr: ["Bhoutan"], en: ["Bhutan"] },
+  img: bhoutan
+};
+bielorussie = {
+  noms: { fr: ["Biélorussie", "Bélarus"], en: ["Belarus"] },
+  img: bielorussie
+};
+birmanie = {
+  noms: { fr: ["Birmanie", "Myanmar"], en: ["Myanmar"] },
+  img: birmanie
+};
+bolivie = {
+  noms: { fr: ["Bolivie"], en: ["Bolivia"] },
+  img: bolivie
+};
+bosnieherzegovine = {
+  noms: { fr: ["Bosnie-Herzégovine"], en: ["Bosnia and Herzegovina"] },
+  img: bosnieherzegovine
+};
+botswana = {
+  noms: { fr: ["Botswana"], en: ["Botswana"] },
+  img: botswana
+};
+bresil = {
+  noms: { fr: ["Brésil"], en: ["Brazil"] },
+  img: bresil
+};
+brunei = {
+  noms: { fr: ["Brunei"], en: ["Brunei"] },
+  img: brunei
+};
+bulgarie = {
+  noms: { fr: ["Bulgarie"], en: ["Bulgaria"] },
+  img: bulgarie
+};
+burkinafaso = {
+  noms: { fr: ["Burkina Faso"], en: ["Burkina Faso"] },
+  img: burkinafaso
+};
+burundi = {
+  noms: { fr: ["Burundi"], en: ["Burundi"] },
+  img: burundi
+};
+cambodge = {
+  noms: { fr: ["Cambodge"], en: ["Cambodia"] },
+  img: cambodge
+};
+cameroun = {
+  noms: { fr: ["Cameroun"], en: ["Cameroon"] },
+  img: cameroun
+};
+canada = {
+  noms: { fr: ["Canada"], en: ["Canada"] },
+  img: canada
+};
+capvert = {
+  noms: { fr: ["Cap-Vert"], en: ["Cape Verde"] },
+  img: capvert
+};
+chili = {
+  noms: { fr: ["Chili"], en: ["Chile"] },
+  img: chili
+};
+chine = {
+  noms: { fr: ["Chine"], en: ["China"] },
+  img: chine
+};
+chypre = {
+  noms: { fr: ["Chypre"], en: ["Cyprus"] },
+  img: chypre
+};
+colombie = {
+  noms: { fr: ["Colombie"], en: ["Colombia"] },
+  img: colombie
+};
+comores = {
+  noms: { fr: ["Comores"], en: ["Comoros"] },
+  img: comores
+};
+congo = {
+  noms: { fr: ["Congo"], en: ["Congo"] },
+  img: congo
+};
+coreedunord = {
+  noms: { fr: ["Corée du Nord"], en: ["North Korea"] },
+  img: coreedunord
+};
+coreedusud = {
+  noms: { fr: ["Corée du Sud"], en: ["South Korea"] },
+  img: coreedusud
+};
+costarica = {
+  noms: { fr: ["Costa Rica"], en: ["Costa Rica"] },
+  img: costarica
+};
+cotedivoire = {
+  noms: { fr: ["Côte d'Ivoire"], en: ["Ivory Coast"] },
+  img: cotedivoire
+};
+croatie = {
+  noms: { fr: ["Croatie"], en: ["Croatia"] },
+  img: croatie
+};
+cuba = {
+  noms: { fr: ["Cuba"], en: ["Cuba"] },
+  img: cuba
+};
+danemark = {
+  noms: { fr: ["Danemark"], en: ["Denmark"] },
+  img: danemark
+};
+djibouti = {
+  noms: { fr: ["Djibouti"], en: ["Djibouti"] },
+  img: djibouti
+};
+dominique = {
+  noms: { fr: ["Dominique"], en: ["Dominica"] },
+  img: dominique
+};
+equateur = {
+  noms: { fr: ["Équateur"], en: ["Ecuador"] },
+  img: equateur
+};
+egypte = {
+  noms: { fr: ["Égypte"], en: ["Egypt"] },
+  img: egypte
+};
+emiratsarabesunis = {
+  noms: { fr: ["Émirats arabes unis", "eau"], en: ["United Arab Emirates", "uae"] },
+  img: emiratsarabesunis
+};
+erythree = {
+  noms: { fr: ["Érythrée"], en: ["Eritrea"] },
+  img: erythree
+};
+espagne = {
+  noms: { fr: ["Espagne"], en: ["Spain"] },
+  img: espagne
+};
+estonie = {
+  noms: { fr: ["Estonie"], en: ["Estonia"] },
+  img: estonie
+};
+eswatini = {
+  noms: { fr: ["Eswatini", "Swaziland"], en: ["Eswatini", "Swaziland"] },
+  img: eswatini
+};
+etatsunis = {
+  noms: { fr: ["États-Unis", "usa"], en: ["United States", "usa"] },
+  img: etatsunis
+};
+ethiopie = {
+  noms: { fr: ["Éthiopie"], en: ["Ethiopia"] },
+  img: ethiopie
+};
+fidji = {
+  noms: { fr: ["Fidji"], en: ["Fiji"] },
+  img: fidji
+};
+finlande = {
+  noms: { fr: ["Finlande"], en: ["Finland"] },
+  img: finlande
+};
+france = {
+  noms: { fr: ["France"], en: ["France"] },
+  img: france
+};
+gabon = {
+  noms: { fr: ["Gabon"], en: ["Gabon"] },
+  img: gabon
+};
+gambie = {
+  noms: { fr: ["Gambie"], en: ["Gambia"] },
+  img: gambie
+};
+georgie = {
+  noms: { fr: ["Géorgie"], en: ["Georgia"] },
+  img: georgie
+};
+ghana = {
+  noms: { fr: ["Ghana"], en: ["Ghana"] },
+  img: ghana
+};
+grece = {
+  noms: { fr: ["Grèce"], en: ["Greece"] },
+  img: grece
+};
+grenade = {
+  noms: { fr: ["Grenade"], en: ["Grenada"] },
+  img: grenade
+};
+guatemala = {
+  noms: { fr: ["Guatemala"], en: ["Guatemala"] },
+  img: guatemala
+};
+guinee = {
+  noms: { fr: ["Guinée"], en: ["Guinea"] },
+  img: guinee
+};
+guineeequatoriale = {
+  noms: { fr: ["Guinée équatoriale"], en: ["Equatorial Guinea"] },
+  img: guineeequatoriale
+};
+guineebissau = {
+  noms: { fr: ["Guinée-Bissau"], en: ["Guinea-Bissau"] },
+  img: guineebissau
+};
+guyana = {
+  noms: { fr: ["Guyana"], en: ["Guyana"] },
+  img: guyana
+};
+haiti = {
+  noms: { fr: ["Haïti"], en: ["Haiti"] },
+  img: haiti
+};
+honduras = {
+  noms: { fr: ["Honduras"], en: ["Honduras"] },
+  img: honduras
+};
+hongrie = {
+  noms: { fr: ["Hongrie"], en: ["Hungary"] },
+  img: hongrie
+};
+ilesmarshall = {
+  noms: { fr: ["Îles Marshall"], en: ["Marshall Islands"] },
+  img: ilesmarshall
+};
+ilessalomon = {
+  noms: { fr: ["Îles Salomon"], en: ["Salomon Isles"] },
+  img: ilessalomon
+};
+inde = {
+  noms: { fr: ["Inde"], en: ["India"] },
+  img: inde
+};
+indonesie = {
+  noms: { fr: ["Indonésie"], en: ["Indonesia"] },
+  img: indonesie
+};
+irak = {
+  noms: { fr: ["Irak"], en: ["Iraq"] },
+  img: irak
+};
+iran = {
+  noms: { fr: ["Iran"], en: ["Iran"] },
+  img: iran
+};
+irlande = {
+  noms: { fr: ["Irlande"], en: ["Ireland"] },
+  img: irlande
+};
+islande = {
+  noms: { fr: ["Islande"], en: ["Iceland"] },
+  img: islande
+};
+israel = {
+  noms: { fr: ["Israël"], en: ["Israel"] },
+  img: israel
+};
+italie = {
+  noms: { fr: ["Italie"], en: ["Italy"] },
+  img: italie
+};
+jamaique = {
+  noms: { fr: ["Jamaïque"], en: ["Jamaica"] },
+  img: jamaique
+};
+japon = {
+  noms: { fr: ["Japon"], en: ["Japan"] },
+  img: japon
+};
+jordanie = {
+  noms: { fr: ["Jordanie"], en: ["Jordan"] },
+  img: jordanie
+};
+kazakhstan = {
+  noms: { fr: ["Kazakhstan"], en: ["Kazakhstan"] },
+  img: kazakhstan
+};
+kenya = {
+  noms: { fr: ["Kenya"], en: ["Kenya"] },
+  img: kenya
+};
+kirghizistan = {
+  noms: { fr: ["Kirghizistan"], en: ["Kyrgyzstan"] },
+  img: kirghizistan
+};
+kiribati = {
+  noms: { fr: ["Kiribati"], en: ["Kiribati"] },
+  img: kiribati
+};
+kosovo = {
+  noms: { fr: ["Kosovo"], en: ["Kosovo"] },
+  img: kosovo
+};
+koweit = {
+  noms: { fr: ["Koweït"], en: ["Kuwait"] },
+  img: koweit
+};
+laos = {
+  noms: { fr: ["Laos"], en: ["Laos"] },
+  img: laos
+};
+lesotho = {
+  noms: { fr: ["Lesotho"], en: ["Lesotho"] },
+  img: lesotho
+};
+lettonie = {
+  noms: { fr: ["Lettonie"], en: ["Latvia"] },
+  img: lettonie
+};
+liban = {
+  noms: { fr: ["Liban"], en: ["Lebanon"] },
+  img: liban
+};
+liberia = {
+  noms: { fr: ["Libéria"], en: ["Liberia"] },
+  img: liberia
+};
+libye = {
+  noms: { fr: ["Libye"], en: ["Libya"] },
+  img: libye
+};
+liechtenstein = {
+  noms: { fr: ["Liechtenstein"], en: ["Liechtenstein"] },
+  img: liechtenstein
+};
+lituanie = {
+  noms: { fr: ["Lituanie"], en: ["Lithuania"] },
+  img: lituanie
+};
+luxembourg = {
+  noms: { fr: ["Luxembourg"], en: ["Luxembourg"] },
+  img: luxembourg
+};
+macedoinedunord = {
+  noms: { fr: ["Macédoine du Nord"], en: ["North Macedonia"] },
+  img: macedoinedunord
+};
+madagascar = {
+  noms: { fr: ["Madagascar"], en: ["Madagascar"] },
+  img: madagascar
+};
+malaisie = {
+  noms: { fr: ["Malaisie"], en: ["Malaysia"] },
+  img: malaisie
+};
+malawi = {
+  noms: { fr: ["Malawi"], en: ["Malawi"] },
+  img: malawi
+};
+maldives = {
+  noms: { fr: ["Maldives"], en: ["Maldives"] },
+  img: maldives
+};
+mali = {
+  noms: { fr: ["Mali"], en: ["Mali"] },
+  img: mali
+};
+malte = {
+  noms: { fr: ["Malte"], en: ["Malta"] },
+  img: malte
+};
+maroc = {
+  noms: { fr: ["Maroc"], en: ["Morocco"] },
+  img: maroc
+};
+maurice = {
+  noms: { fr: ["Maurice"], en: ["Mauritius"] },
+  img: maurice
+};
+mauritanie = {
+  noms: { fr: ["Mauritanie"], en: ["Mauritania"] },
+  img: mauritanie
+};
+mexique = {
+  noms: { fr: ["Mexique"], en: ["Mexico"] },
+  img: mexique
+};
+micronesie = {
+  noms: { fr: ["Micronésie"], en: ["Micronesia"] },
+  img: micronesie
+};
+moldavie = {
+  noms: { fr: ["Moldavie"], en: ["Moldova"] },
+  img: moldavie
+};
+monaco = {
+  noms: { fr: ["Monaco"], en: ["Monaco"] },
+  img: monaco
+};
+mongolie = {
+  noms: { fr: ["Mongolie"], en: ["Mongolia"] },
+  img: mongolie
+};
+montenegro = {
+  noms: { fr: ["Monténégro"], en: ["Montenegro"] },
+  img: montenegro
+};
+mozambique = {
+  noms: { fr: ["Mozambique"], en: ["Mozambique"] },
+  img: mozambique
+};
+namibie = {
+  noms: { fr: ["Namibie"], en: ["Namibia"] },
+  img: namibie
+};
+nauru = {
+  noms: { fr: ["Nauru"], en: ["Nauru"] },
+  img: nauru
+};
+nepal = {
+  noms: { fr: ["Népal"], en: ["Nepal"] },
+  img: nepal
+};
+nicaragua = {
+  noms: { fr: ["Nicaragua"], en: ["Nicaragua"] },
+  img: nicaragua
+};
+niger = {
+  noms: { fr: ["Niger"], en: ["Niger"] },
+  img: niger
+};
+nigeria = {
+  noms: { fr: ["Nigéria"], en: ["Nigeria"] },
+  img: nigeria
+};
+norvege = {
+  noms: { fr: ["Norvège"], en: ["Norway"] },
+  img: norvege
+};
+nouvellezelande = {
+  noms: { fr: ["Nouvelle-Zélande"], en: ["New Zealand"] },
+  img: nouvellezelande
+};
+oman = {
+  noms: { fr: ["Oman"], en: ["Oman"] },
+  img: oman
+};
+ouganda = {
+  noms: { fr: ["Ouganda"], en: ["Uganda"] },
+  img: ouganda
+};
+ouzbekistan = {
+  noms: { fr: ["Ouzbékistan"], en: ["Uzbekistan"] },
+  img: ouzbekistan
+};
+pakistan = {
+  noms: { fr: ["Pakistan"], en: ["Pakistan"] },
+  img: pakistan
+};
+palaos = {
+  noms: { fr: ["Palaos"], en: ["Palau"] },
+  img: palaos
+};
+palestine = {
+  noms: { fr: ["Palestine"], en: ["Palestine"] },
+  img: palestine
+};
+panama = {
+  noms: { fr: ["Panama"], en: ["Panama"] },
+  img: panama
+};
+papouasienouvelleguinee = {
+  noms: { fr: ["Papouasie-Nouvelle-Guinée"], en: ["Papua New Guinea"] },
+  img: papouasienouvelleguinee
+};
+paraguay = {
+  noms: { fr: ["Paraguay"], en: ["Paraguay"] },
+  img: paraguay
+};
+paysbas = {
+  noms: { fr: ["Pays-Bas"], en: ["Netherlands"] },
+  img: paysbas
+};
+perou = {
+  noms: { fr: ["Pérou"], en: ["Peru"] },
+  img: perou
+};
+philippines = {
+  noms: { fr: ["Philippines"], en: ["Philippines"] },
+  img: philippines
+};
+pologne = {
+  noms: { fr: ["Pologne"], en: ["Poland"] },
+  img: pologne
+};
+portugal = {
+  noms: { fr: ["Portugal"], en: ["Portugal"] },
+  img: portugal
+};
+qatar = {
+  noms: { fr: ["Qatar"], en: ["Qatar"] },
+  img: qatar
+};
+republiquedominicaine = {
+  noms: { fr: ["République dominicaine"], en: ["Dominican Republic"] },
+  img: republiquedominicaine
+};
+roumanie = {
+  noms: { fr: ["Roumanie"], en: ["Romania"] },
+  img: roumanie
+};
+royaumeuni = {
+  noms: { fr: ["Royaume-Uni"], en: ["United Kingdom"] },
+  img: royaumeuni
+};
+russie = {
+  noms: { fr: ["Russie"], en: ["Russia"] },
+  img: russie
+};
+rwanda = {
+  noms: { fr: ["Rwanda"], en: ["Rwanda"] },
+  img: rwanda
+};
+saintchristopheetnieves = {
+  noms: { fr: ["Saint-Christophe-et-Niévès"], en: ["Saint Kitts and Nevis"] },
+  img: saintchristopheetnieves
+};
+saintmarin = {
+  noms: { fr: ["Saint-Marin"], en: ["San Marino"] },
+  img: saintmarin
+};
+saintvincentetlesgrenadines = {
+  noms: { fr: ["Saint-Vincent-et-les Grenadines"], en: ["Saint Vincent and the Grenadines"] },
+  img: saintvincentetlesgrenadines
+};
+saintelucie = {
+  noms: { fr: ["Sainte-Lucie"], en: ["Saint Lucia"] },
+  img: saintelucie
+};
+salvador = {
+  noms: { fr: ["Salvador"], en: ["El Salvador"] },
+  img: salvador
+};
+samoa = {
+  noms: { fr: ["Samoa"], en: ["Samoa"] },
+  img: samoa
+};
+saotomeetprincipe = {
+  noms: { fr: ["São Tomé-et-Príncipe"], en: ["São Tomé and Príncipe"] },
+  img: saotomeetprincipe
+};
+senegal = {
+  noms: { fr: ["Sénégal"], en: ["Senegal"] },
+  img: senegal
+};
+serbie = {
+  noms: { fr: ["Serbie"], en: ["Serbia"] },
+  img: serbie
+};
+seychelles = {
+  noms: { fr: ["Seychelles"], en: ["Seychelles"] },
+  img: seychelles
+};
+sierraleone = {
+  noms: { fr: ["Sierra Leone"], en: ["Sierra Leone"] },
+  img: sierraleone
+};
+singapour = {
+  noms: { fr: ["Singapour"], en: ["Singapore"] },
+  img: singapour
+};
+slovaquie = {
+  noms: { fr: ["Slovaquie"], en: ["Slovakia"] },
+  img: slovaquie
+};
+slovenie = {
+  noms: { fr: ["Slovénie"], en: ["Slovenia"] },
+  img: slovenie
+};
+somalie = {
+  noms: { fr: ["Somalie"], en: ["Somalia"] },
+  img: somalie
+};
+soudan = {
+  noms: { fr: ["Soudan"], en: ["Sudan"] },
+  img: soudan
+};
+soudandusud = {
+  noms: { fr: ["Soudan du Sud"], en: ["South Sudan"] },
+  img: soudandusud
+};
+srilanka = {
+  noms: { fr: ["Sri Lanka"], en: ["Sri Lanka"] },
+  img: srilanka
+};
+suede = {
+  noms: { fr: ["Suède"], en: ["Sweden"] },
+  img: suede
+};
+suisse = {
+  noms: { fr: ["Suisse"], en: ["Switzerland"] },
+  img: suisse
+};
+suriname = {
+  noms: { fr: ["Suriname"], en: ["Suriname"] },
+  img: suriname
+};
+syrie = {
+  noms: { fr: ["Syrie"], en: ["Syria"] },
+  img: syrie
+};
+tadjikistan = {
+  noms: { fr: ["Tadjikistan"], en: ["Tajikistan"] },
+  img: tadjikistan
+};
+// taiwan = {
+//   noms: { fr: ["Taïwan"], en: ["Taiwan"] },
+//   img: taiwan
+// };
+tanzanie = {
+  noms: { fr: ["Tanzanie"], en: ["Tanzania"] },
+  img: tanzanie
+};
+tchad = {
+  noms: { fr: ["Tchad"], en: ["Chad"] },
+  img: tchad
+};
+tchequie = {
+  noms: { fr: ["Tchéquie", "République tchèque"], en: ["Czechia", "Czech Republic"] },
+  img: tchequie
+};
+thailande = {
+  noms: { fr: ["Thaïlande"], en: ["Thailand"] },
+  img: thailande
+};
+timororiental = {
+  noms: { fr: ["Timor oriental"], en: ["Timor-Leste"] },
+  img: timororiental
+};
+togo = {
+  noms: { fr: ["Togo"], en: ["Togo"] },
+  img: togo
+};
+tonga = {
+  noms: { fr: ["Tonga"], en: ["Tonga"] },
+  img: tonga
+};
+triniteettobago = {
+  noms: { fr: ["Trinité-et-Tobago"], en: ["Trinidad and Tobago"] },
+  img: triniteettobago
+};
+tunisie = {
+  noms: { fr: ["Tunisie"], en: ["Tunisia"] },
+  img: tunisie
+};
+turkmenistan = {
+  noms: { fr: ["Turkménistan"], en: ["Turkmenistan"] },
+  img: turkmenistan
+};
+turquie = {
+  noms: { fr: ["Turquie"], en: ["Turkey"] },
+  img: turquie
+};
+tuvalu = {
+  noms: { fr: ["Tuvalu"], en: ["Tuvalu"] },
+  img: tuvalu
+};
+ukraine = {
+  noms: { fr: ["Ukraine"], en: ["Ukraine"] },
+  img: ukraine
+};
+uruguay = {
+  noms: { fr: ["Uruguay"], en: ["Uruguay"] },
+  img: uruguay
+};
+vanuatu = {
+  noms: { fr: ["Vanuatu"], en: ["Vanuatu"] },
+  img: vanuatu
+};
+vatican = {
+  noms: { fr: ["Vatican"], en: ["Vatican City", "Vatican"] },
+  img: vatican
+}
+venezuela = {
+  noms: { fr: ["Venezuela"], en: ["Venezuela"] },
+  img: venezuela
+};
+vietnam = {
+  noms: { fr: ["Vietnam"], en: ["Vietnam"] },
+  img: vietnam
+};
+yemen = {
+  noms: { fr: ["Yémen"], en: ["Yemen"] },
+  img: yemen
+};
+zambie = {
+  noms: { fr: ["Zambie"], en: ["Zambia"] },
+  img: zambie
+};
+zimbabwe = {
+  noms: { fr: ["Zimbabwe"], en: ["Zimbabwe"] },
+  img: zimbabwe
+};
+
 
 const drapeauxMonde = [
   afghanistan,
@@ -802,9 +1387,9 @@ const drapeauxOceanie = [
   vanuatu
 ]
 
-export {drapeauxEurope};
-export {drapeauxMonde};
-export {drapeauxAfrique};
-export {drapeauxAmerique};
-export {drapeauxOceanie};
-export {drapeauxAsie};
+export { drapeauxEurope };
+export { drapeauxMonde };
+export { drapeauxAfrique };
+export { drapeauxAmerique };
+export { drapeauxOceanie };
+export { drapeauxAsie };

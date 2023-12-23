@@ -7,6 +7,8 @@ import urlApi from "../utils/urlApi";
 import formatDate from "../utils/formatDate";
 import ActionsAdmin from "../components/profil/ActionsAdmin";
 import ConnexionContext from "../components/store/connexion-context";
+import LanguageContext from "../components/store/language-context";
+import langpack from "../lang/langpack.json";
 
 export default function Profil() {
   const [dataJoueur, setDataJoueur] = useState({});
@@ -18,6 +20,8 @@ export default function Profil() {
   const {username} = useParams();
 
   const ctxConnexion = useContext(ConnexionContext);
+
+  const lang = useContext(LanguageContext).lang;
 
   useEffect(() => {
     async function fetchGames() {
@@ -45,7 +49,7 @@ export default function Profil() {
       return data;
     }
     fetchGames().then(data => {setDataJoueur(data); setDateInscription(data.signup_date); setPartiesLancees(data.played_games)})
-    .catch(() => {setErreur("Le joueur n'existe pas"); setIsLoading(false)});
+    .catch(() => {setErreur(langpack["prof_err_existepas"][lang]); setIsLoading(false)});
   }, [])
 
   const stats = {
@@ -76,7 +80,7 @@ export default function Profil() {
       {!isLoading && erreur &&
         <div className="flex flex-col gap-3 items-center">
           <p className="text-red-500">{erreur}</p>
-          <a className="btn" href="/">Retourner à l'accueil</a>
+          <a className="btn" href="/">{langpack["prof_retour_acc"][lang]}</a>
         </div>
       }
     </Page>

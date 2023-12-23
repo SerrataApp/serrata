@@ -1,8 +1,12 @@
 import { useContext, useEffect, useState } from "react";
 import ResultatsContext from "../store/resultats-context";
+import langpack from "../../lang/langpack.json";
+import LanguageContext from "../store/language-context";
 
 export default function Pourcents() {
   const [erreurs, setErreurs] = useState();
+
+  const lang = useContext(LanguageContext).lang;
 
   const ctx = useContext(ResultatsContext);
 
@@ -12,7 +16,7 @@ export default function Pourcents() {
 
   return (
     <span>
-      {erreurs} {erreurs>1 ? "erreurs" : "erreur"}
+      {erreurs} {erreurs>1 ? langpack["sco_err"][lang].toLowerCase() : langpack["sco_errsing"][lang].toLowerCase()}
     </span>
   );
 }

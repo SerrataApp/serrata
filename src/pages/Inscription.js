@@ -1,7 +1,9 @@
 import ConnexionContext from "../components/store/connexion-context";
+import LanguageContext from "../components/store/language-context";
 import urlApi from "../utils/urlApi";
 import Page from "./Page";
 import { useContext, useRef, useState } from "react";
+import langpack from "../lang/langpack.json";
 
 export default function Inscription() {
   const [erreur, setErreur] = useState(null);
@@ -13,6 +15,8 @@ export default function Inscription() {
   const refMdp2 = useRef();
 
   const ctxConnexion = useContext(ConnexionContext);
+
+  const lang = useContext(LanguageContext).lang;
 
   if(ctxConnexion.connecte) {
     window.location.href = "/";
@@ -87,30 +91,30 @@ export default function Inscription() {
   }
 
   return(
-    <Page titre="Inscription">
+    <Page titre={langpack["insc_titre"][lang]}>
       <div className="flex justify-center w-screen">
         <form onSubmit={onSubmitHandler} className="flex flex-col gap-3 items-center border bg-gray-100 rounded p-5">
           <label className="flex flex-col">
-            Pseudo
+            {langpack["insc_pseudo"][lang]}
             <input type="text" className="border p-1 rounded" ref={refPseudo} required autoFocus={true}/>
           </label>
           <label className="flex flex-col">
-            Adresse mail
+            {langpack["insc_mail"][lang]}
             <input type="email" className="border p-1 rounded" ref={refEmail} required/>
           </label>
           <label className="flex flex-col">
-            Mot de passe
+          {langpack["insc_mdp"][lang]}
             <input type="password" className="border p-1 rounded" ref={refMdp} required/>
           </label>
           <label className="flex flex-col">
-            Confirmer mot de passe
+          {langpack["insc_conf_mdp"][lang]}
             <input type="password" className="border p-1 rounded" ref={refMdp2} required/>
           </label>
           <label>
             <input type="checkbox" className="mr-1" required/>
-            J'ai lu et j'accepte les <a href="/cgu" className="text-blue-500 hover:underline">CGUs</a>
+            {langpack["insc_cgu"][lang]} <a href="/cgu" className="text-blue-500 hover:underline">{langpack["foot_cgu"][lang]}</a>
           </label>
-          <button type="submit" className="btn bg-blue-400 hover:bg-blue-500">Créer un compte</button>
+          <button type="submit" className="btn bg-blue-400 hover:bg-blue-500">{langpack["insc_btn"][lang]}</button>
           {erreur && <div className="h-5 text-red-500">{erreur}</div>}
           {isLoading && <span className="loading loading-spinner"></span>}
         </form>

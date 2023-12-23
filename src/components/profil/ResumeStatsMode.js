@@ -1,6 +1,11 @@
 import Stat from "./Stat";
+import langpack from "../../lang/langpack.json";
+import { useContext } from "react";
+import LanguageContext from "../store/language-context";
 
 export default function ResumeStatsMode(props) {
+  const lang = useContext(LanguageContext).lang;
+
   const stats = {
     parties_finies: 0,
     temps_moyen: 0,
@@ -31,10 +36,10 @@ export default function ResumeStatsMode(props) {
 
   return (
     <div className="flex flex-wrap justify-center gap-5">
-      <Stat key="parties_finies" nom="Parties terminées" valeur={stats.parties_finies}/>
-      <Stat key="temps_moyen" nom="Temps moyen" valeur={temps_moyen}/>
-      <Stat key="erreurs_moyen" nom="Erreurs en moyenne" valeur={stats.erreurs_moyen}/>
-      <Stat key="indices_moyen" nom="Indices en moyenne" valeur={stats.indices_moyen}/>
+      <Stat key="parties_finies" nom={langpack["prof_partterm"][lang]} valeur={stats.parties_finies}/>
+      <Stat key="temps_moyen" nom={langpack["prof_tps"][lang]} valeur={temps_moyen}/>
+      <Stat key="erreurs_moyen" nom={langpack["prof_errmoy"][lang]} valeur={stats.erreurs_moyen}/>
+      <Stat key="indices_moyen" nom={langpack["prof_indmoy"][lang]} valeur={stats.indices_moyen}/>
     </div>
   );
 }

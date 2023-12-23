@@ -2,7 +2,7 @@ import { createContext } from "react"
 
 const DrapeauxUtilisesContext = createContext({
   drapeauxUtilises: [],
-  ajouterDrapeau: drapeau => {},
+  ajouterDrapeau: nomDrapeau => {},
   resetDrapeauxUtilises: () => {}
 })
 

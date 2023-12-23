@@ -3,6 +3,8 @@ import { useContext, useEffect, useState } from "react";
 import ChoixMode from "../Elements/ChoixMode";
 import ResumeStatsMode from "./ResumeStatsMode";
 import ConnexionContext from "../store/connexion-context";
+import langpack from "../../lang/langpack.json";
+import LanguageContext from "../store/language-context";
 
 export default function HistoriqueParties(props) {
   const [tri, setTri] = useState("tmp_cr");
@@ -11,6 +13,8 @@ export default function HistoriqueParties(props) {
   const [modeSelect, setModeSelect] = useState("1");
 
   const ctxConnexion = useContext(ConnexionContext);
+
+  const lang = useContext(LanguageContext).lang;
 
   function onChangeHandler(event) {
     setTri(event.target.value);
@@ -49,25 +53,25 @@ export default function HistoriqueParties(props) {
       <>
         <ResumeStatsMode listeParties={props.listeParties} modeSelect={modeSelect}/>
         <div className="my-2">
-          <label htmlFor="tri" className="text-l">Trier par : </label>
+          <label htmlFor="tri" className="text-l">{langpack["prof_tri"][lang]} : </label>
           <select className="border p-2 rounded" id="tri" value={tri} onChange={onChangeHandler}>
-            <option value="tmp_cr">Temps croissant</option>
-            <option value="err_cr">Erreurs croissant</option>
-            <option value="rec">Plus récent</option>
-            <option value="tmp_decr">Temps décroissant</option>
-            <option value="err_decr">Erreurs décroissant</option>
-            <option value="anc">Plus anciens</option>
+            <option value="tmp_cr">{langpack["prof_tri_tpscroi"][lang]}</option>
+            <option value="err_cr">{langpack["prof_tri_errcroi"][lang]}</option>
+            <option value="rec">{langpack["prof_tri_precent"][lang]}</option>
+            <option value="tmp_decr">{langpack["prof_tri_tpsdecroi"][lang]}</option>
+            <option value="err_decr">{langpack["prof_tri_errdecroi"][lang]}</option>
+            <option value="anc">{langpack["prof_tri_pancien"][lang]}</option>
           </select>
         </div>
         <div className="overflow-auto w-full border rounded-xl mb-3" style={{maxHeight: "400px"}}>
           <table className="w-full">
             <thead>
               <tr>
-                <th className="p-1 border w-1/5">Temps</th>
-                <th className="p-1 border w-1/5">Erreurs</th>
-                <th className="p-1 border w-1/5">Indices</th>
-                <th className="p-1 border w-1/5">Date</th>
-                <th className="p-1 border w-1/5">Visibilité (dans scores)</th>
+                <th className="p-1 border w-1/5">{langpack["sco_temps"][lang]}</th>
+                <th className="p-1 border w-1/5">{langpack["sco_err"][lang]}</th>
+                <th className="p-1 border w-1/5">{langpack["sco_ind"][lang]}</th>
+                <th className="p-1 border w-1/5">{langpack["sco_date"][lang]}</th>
+                <th className="p-1 border w-1/5">{langpack["sco_vis"][lang]}</th>
                 {ctxConnexion&&ctxConnexion.admin&&<th className="py-1 px-3 border w-fit"></th>}
               </tr>
             </thead>
@@ -77,7 +81,7 @@ export default function HistoriqueParties(props) {
           </table>
         </div>
       </>:
-      <p>Aucune partie dans cette catégorie pour l'instant</p>}
+      <p>{langpack["prof_aucu"][lang]}</p>}
     </div>
   );
 }
