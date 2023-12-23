@@ -47,8 +47,10 @@ export default function App() {
     }
   }, []);
 
-  if(!window.localStorage.getItem("lang")) {
+  if(!window.localStorage.getItem("lang") || (localStorage.getItem("lang")!=="fr" && localStorage.getItem("lang")!=="en")) {
+    localStorage.setItem("lang", "fr");
     ctxLanguage.setLangue("fr");
+    window.location.reload();
   }
   
   function RedirectProfil() {
