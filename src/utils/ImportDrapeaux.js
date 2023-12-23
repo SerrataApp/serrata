@@ -424,11 +424,11 @@ estonie = {
   img: estonie
 };
 eswatini = {
-  noms: { fr: ["Eswatini"], en: ["Eswatini"] },
+  noms: { fr: ["Eswatini", "Swaziland"], en: ["Eswatini", "Swaziland"] },
   img: eswatini
 };
 etatsunis = {
-  noms: { fr: ["États-Unis"], en: ["United States"] },
+  noms: { fr: ["États-Unis", "usa"], en: ["United States", "usa"] },
   img: etatsunis
 };
 ethiopie = {
@@ -731,9 +731,9 @@ pakistan = {
   noms: { fr: ["Pakistan"], en: ["Pakistan"] },
   img: pakistan
 };
-palau = {
+palaos = {
   noms: { fr: ["Palaos"], en: ["Palau"] },
-  img: palau
+  img: palaos
 };
 palestine = {
   noms: { fr: ["Palestine"], en: ["Palestine"] },
@@ -778,10 +778,6 @@ qatar = {
 republiquedominicaine = {
   noms: { fr: ["République dominicaine"], en: ["Dominican Republic"] },
   img: republiquedominicaine
-};
-republiquetcheque = {
-  noms: { fr: ["République tchèque"], en: ["Czech Republic"] },
-  img: republiquetcheque
 };
 roumanie = {
   noms: { fr: ["Roumanie"], en: ["Romania"] },
@@ -883,10 +879,6 @@ suriname = {
   noms: { fr: ["Suriname"], en: ["Suriname"] },
   img: suriname
 };
-swaziland = {
-  noms: { fr: ["Swaziland"], en: ["Eswatini"] },
-  img: swaziland
-};
 syrie = {
   noms: { fr: ["Syrie"], en: ["Syria"] },
   img: syrie
@@ -895,10 +887,10 @@ tadjikistan = {
   noms: { fr: ["Tadjikistan"], en: ["Tajikistan"] },
   img: tadjikistan
 };
-taiwan = {
-  noms: { fr: ["Taïwan"], en: ["Taiwan"] },
-  img: taiwan
-};
+// taiwan = {
+//   noms: { fr: ["Taïwan"], en: ["Taiwan"] },
+//   img: taiwan
+// };
 tanzanie = {
   noms: { fr: ["Tanzanie"], en: ["Tanzania"] },
   img: tanzanie
@@ -907,9 +899,13 @@ tchad = {
   noms: { fr: ["Tchad"], en: ["Chad"] },
   img: tchad
 };
+tchequie = {
+  noms: { fr: ["Tchéquie", "République tchèque"], en: ["Czechia", "Czech Republic"] },
+  img: tchequie
+};
 thailande = {
   noms: { fr: ["Thaïlande"], en: ["Thailand"] },
-  img: thaïlande
+  img: thailande
 };
 timororiental = {
   noms: { fr: ["Timor oriental"], en: ["Timor-Leste"] },
