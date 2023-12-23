@@ -137,7 +137,7 @@ export default function ZoneDentree(props) {
     <>
       {!ctxConnexion.connecte && <ModalConnexion onCancel={annuler}/>}
       <form onSubmit={envoyerRep} className="flex flex-col gap-2">
-        <input type="text" className={`border`} placeholder={`${ctrlV?langpack["jou_ctrlv"][lang]:""}`} ref={inputRef} onChange={onChangeHandler} onPaste={bloqueCtrlV} disabled={ctxResultats.estFini||!ctxConnexion.connecte}/>
+        <input type="text" autoComplete="off" className={`border`} placeholder={`${ctrlV?langpack["jou_ctrlv"][lang]:""}`} ref={inputRef} onChange={onChangeHandler} onPaste={bloqueCtrlV} disabled={ctxResultats.estFini||!ctxConnexion.connecte}/>
         <input type="submit" className="border" value={langpack["jou_env"][lang]} disabled={ctxResultats.estFini||!ctxConnexion.connecte}/>
         <div className="flex gap-2">
           <button className="border w-full" onClick={passer} disabled={ctxResultats.estFini||!ctxConnexion.connecte}>{langpack["jou_pas"][lang]}</button>
