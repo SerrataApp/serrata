@@ -72,7 +72,7 @@
     "co_montr": {"fr": "Montrer", "en": "Show"},
     "co_cach": {"fr": "Cacher", "en": "Hide"},
     "co_conn": {"fr": "Se connecter", "en": "Log in"}, 
-    "co_pas_insc": {"fr": "Pas encore inscrit ?", "en": "Not registered yet?"}, 
+    "co_pas_insc": {"fr": "Pas encore inscrit ?", "en": "Not registered yet ?"}, 
 
     "admin_suppr": {"fr": "Supprimer", "en": "Delete"},
     "admin_suppr_partie": {"fr": "Supprimer la partie ?", "en": "Delete this game ?"},
