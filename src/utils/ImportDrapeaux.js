@@ -775,6 +775,14 @@ qatar = {
   noms: { fr: ["Qatar"], en: ["Qatar"] },
   img: qatar
 };
+republiquecentrafricaine = {
+  noms: { fr: ["République centrafricaine", "rca"], en: ["Central African Republic", "car"] },
+  img: republiquecentrafricaine
+}
+republiquedemocratiqueducongo = {
+  noms: { fr: ["République démocratique du Congo", "rdc"], en: ["Democratic Republic of the Congo", "DRC"] },
+  img: republiquedemocratiqueducongo
+}
 republiquedominicaine = {
   noms: { fr: ["République dominicaine"], en: ["Dominican Republic"] },
   img: republiquedominicaine
