@@ -15,6 +15,7 @@ import MentionsLegales from './pages/MentionsLegales';
 import CGU from './pages/CGU';
 import LanguageContext from './components/store/language-context';
 import langpack from "./lang/langpack.json";
+import TypingTest from './pages/TypingTest';
 
 export default function App() {
   const ctxConnexion = useContext(ConnexionContext);
@@ -91,6 +92,7 @@ export default function App() {
                 <Route path="/asie" element={<Jeu drapeaux={drapeauxAsie} titre={langpack["rub_as"][lang]}/>} />
                 <Route path="/amerique" element={<Jeu drapeaux={drapeauxAmerique} titre={langpack["rub_am"][lang]}/>} />
                 <Route path="/oceanie" element={<Jeu drapeaux={drapeauxOceanie} titre={langpack["rub_oc"][lang]}/>} />
+                <Route path="/typingtest" element={<TypingTest/>} />
                 <Route path="/scores" element={<Scores/>} />
                 <Route path="/inscription" element={<Inscription/>} />
                 <Route path="/profil/:username" element={<Profil/>} />
