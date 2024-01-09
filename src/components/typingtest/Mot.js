@@ -18,9 +18,13 @@ export default function Mot(props) {
   }
 
   function onKeyDownHandler(e) {
-    if (e.key==="Backspace" && indexCurseur>0) {
-      setIndexCurseur(indexCurseur-1);
-      setEfface(true);
+    if (e.key==="Backspace") {
+      if(indexCurseur>0) {
+        setIndexCurseur(indexCurseur-1);
+        setEfface(true);
+      } else {
+        props.motPrecedent(0);
+      }
     }
   }
 
@@ -31,7 +35,7 @@ export default function Mot(props) {
 
   return(
     <>
-      <input type="text" autoFocus={true} className="fixed opacity-0" ref={props.inputRef} onChange={onInputHandler} onKeyDown={onKeyDownHandler}/>
+      <input type="text" autoFocus={true} onBlur={props.onBlur} onFocus={props.onFocus} className="fixed opacity-0" ref={props.inputRef} onChange={onInputHandler} onKeyDown={onKeyDownHandler}/>
       <div className="flex gap-[1.5px]">
         {listeLettres}
       </div>
