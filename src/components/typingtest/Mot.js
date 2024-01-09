@@ -7,7 +7,7 @@ export default function Mot(props) {
   const [currentInput, setCurrentInput] = useState();
 
   function onInputHandler(e) {
-    if(e.target.value===" ") {
+    if(e.target.value===" "&&props.mot[indexCurseur]!==" ") {
       props.motSuivant();
     } else {
       setEfface(false);
@@ -26,7 +26,7 @@ export default function Mot(props) {
 
   let listeLettres = "";
   for(let i=0; i<props.mot.length; i++) {
-    listeLettres = [...listeLettres, <Lettre lettre={props.mot[i]} index={i} key={i} efface={efface} input={currentInput} indexCurseur={indexCurseur} {...props}/>]
+    listeLettres = [...listeLettres, <Lettre lettre={props.mot[i]} index={i} key={i} efface={efface} input={currentInput} indexCurseur={indexCurseur} estBon={props.estBon} estFaux={props.estFaux}/>]
   }
 
   return(

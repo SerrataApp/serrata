@@ -26,7 +26,7 @@ export default function ZoneSaisie(props) {
     setIndexDrapeau(indexDrapeau+1);
   }
 
-  let listeMots = listeDrapeaux.map(drapeau => <Mot inputRef={inputRef} mot={drapeau.noms[lang][0]} key={drapeau.noms[lang][0]} estBon={props.estBon} estFaux={props.estFaux} motSuivant={motSuivant}/>)
+  let listeMots = listeDrapeaux.map(drapeau => <Mot inputRef={inputRef} mot={drapeau.noms[lang][0].normalize("NFD").replace(/[\u0300-\u036f]/g, "")} key={drapeau.noms[lang][0]} estBon={props.estBon} estFaux={props.estFaux} motSuivant={motSuivant}/>)
 
   return (
     <div className="w-10/12 md:w-8/12 border h-[300px] rounded p-2 border-gray-300" onClick={onClickHandler}>
