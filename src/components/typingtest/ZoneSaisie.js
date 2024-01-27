@@ -53,7 +53,7 @@ export default function ZoneSaisie(props) {
     <div className="w-10/12 md:w-8/12 border h-[300px] rounded p-2 border-gray-300 relative" onClick={onClickHandler}>
       {!isFocus && <MessageClick/>}
       <div className="h-full flex flex-wrap overflow-hidden whitespace-break-spaces">
-        {listeMots}
+        {listeMots[indexDrapeau]}
       </div>
     </div>
   );
