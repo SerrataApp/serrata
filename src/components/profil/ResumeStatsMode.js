@@ -18,7 +18,7 @@ export default function ResumeStatsMode(props) {
   let indices_total = 0;
 
   props.listeParties.forEach(partie => {
-    if(partie.game_mode==props.modeSelect) {
+    if(partie.gameMode==props.modeSelect) {
       stats.parties_finies++;
       temps_total += partie.time;
       erreurs_total += partie.errors;

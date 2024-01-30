@@ -25,7 +25,7 @@ export default function Profil() {
 
   useEffect(() => {
     async function fetchGames() {
-      let response = await fetch(urlApi + "score/user/?username=" + username, {
+      let response = await fetch(urlApi + "game/user?username=" + username, {
         method: "GET",
         headers: {
           "Accept": "application/json",
@@ -45,10 +45,15 @@ export default function Profil() {
           ...await response.json()
         }
       }
+      response = await fetch(urlApi + "users/username?username=" + username);
+      data = await {
+        ...data,
+        ...await response.json()
+      };
       setIsLoading(false);
       return data;
     }
-    fetchGames().then(data => {setDataJoueur(data); setDateInscription(data.signup_date); setPartiesLancees(data.played_games)})
+    fetchGames().then(data => {setDataJoueur(data); setDateInscription(data.user.signupDate); setPartiesLancees(data.user.playedGames)})
     .catch(() => {setErreur(langpack["prof_err_existepas"][lang]); setIsLoading(false)});
   }, [])
 

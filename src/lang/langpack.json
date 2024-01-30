@@ -22,6 +22,7 @@
     "sco_indsing": {"fr": "Indice", "en": "Hint"},
     "sco_date": {"fr": "Date", "en": "Date"},
     "sco_vis": {"fr": "Visibilité (dans scores)", "en": "Visibility (in leaderboard)"},
+    "sco_non": {"fr": "Aucun score dans cette catégorie pour le moment", "en": "No scores in this category yet"},
     
     "prof_partlan": {"fr": "Parties lancées", "en": "Games started"},
     "prof_partterm": {"fr": "Parties terminées", "en": "Games finished"},

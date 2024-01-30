@@ -14,7 +14,7 @@ export default function ResumePartie(props) {
   const lang = useContext(LanguageContext).lang;
 
   function onChangeVisibilityHandler() {
-    fetch(urlApi+"score/changeState/?game_id="+props.partie.id, {
+    fetch(urlApi+"games/changeState?id="+props.partie.id, {
       method:"PUT",
       headers: {
         "Accept": "application/json",

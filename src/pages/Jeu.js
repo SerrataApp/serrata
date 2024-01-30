@@ -22,12 +22,12 @@ export default function Jeu(props) {
 
   function numeroMode() {
     switch(props.titre) {
-      case langpack["rub_mo"][localStorage.getItem("lang")]: return 0;
-      case langpack["rub_eu"][localStorage.getItem("lang")]: return 1;
-      case langpack["rub_af"][localStorage.getItem("lang")]: return 2;
-      case langpack["rub_as"][localStorage.getItem("lang")]: return 3;
-      case langpack["rub_am"][localStorage.getItem("lang")]: return 4;
-      case langpack["rub_oc"][localStorage.getItem("lang")]: return 5;
+      case langpack["rub_mo"][localStorage.getItem("lang")]: return 1;
+      case langpack["rub_eu"][localStorage.getItem("lang")]: return 2;
+      case langpack["rub_af"][localStorage.getItem("lang")]: return 3;
+      case langpack["rub_as"][localStorage.getItem("lang")]: return 4;
+      case langpack["rub_am"][localStorage.getItem("lang")]: return 5;
+      case langpack["rub_oc"][localStorage.getItem("lang")]: return 6;
     }
   }
 
@@ -37,7 +37,7 @@ export default function Jeu(props) {
 
       const numMode = numeroMode();
 
-      fetch(urlApi+"score/user/?username="+ctxConnexion.username)
+      fetch(urlApi+"game/user?username="+ctxConnexion.username)
       .then(response => response.json())
       .then(data => {
         let partiesTriees = [];
@@ -58,7 +58,7 @@ export default function Jeu(props) {
           }
         }
         if(temps_min && ctxResultats.temps<=temps_min) {
-          fetch(urlApi+"score/changeState/?game_id="+id_min, {
+          fetch(urlApi+"games/changeState?id="+id_min, {
             method:"PUT",
             headers: {
               "Accept": "application/json",
@@ -75,7 +75,7 @@ export default function Jeu(props) {
         const mois = ('0' + (dateActuelle.getMonth() + 1)).slice(-2);
         const jour = ('0' + dateActuelle.getDate()).slice(-2);
 
-        fetch(urlApi+"score", {
+        fetch(urlApi+"game", {
           method: "POST",
           headers: {
             "Accept": "application/json",
@@ -83,13 +83,11 @@ export default function Jeu(props) {
             "Authorization": `Bearer ${window.localStorage.getItem("token")}`
           },
           body: JSON.stringify({
-            game_mode: numMode,
+            gameMode: numMode,
             time: ctxResultats.temps,
             errors: ctxResultats.erreurs,
             hint: ctxResultats.indices,
-            player_id: ctxConnexion.id,
-            public: temps_min===null || ctxResultats.temps <= temps_min,
-            game_date: `${annee}-${mois}-${jour}`
+            public: temps_min===null || ctxResultats.temps <= temps_min
           }),
         })
       })
