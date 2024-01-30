@@ -7,16 +7,17 @@ import Informations from '../components/informations/Informations';
 import Resultats from '../components/resultats/Resultats';
 import ResultatsContext from '../components/store/resultats-context';
 import urlApi from '../utils/urlApi';
-import ConnexionContext from '../components/store/connexion-context';
 import langpack from "../lang/langpack.json";
 import LanguageContext from '../components/store/language-context';
 
 export default function Jeu(props) {
   const [resultatsAffiches, setResultatsAffiches] = useState(false);
   const [drapeaux, setDrapeaux] = useState([...props.drapeaux]);
+  const [isLoading, setIsLoading] = useState(false);
+  const [isBest, setIsBest] = useState();
+  const [gameId, setGameId] = useState();
 
   const ctxResultats = useContext(ResultatsContext);
-  const ctxConnexion = useContext(ConnexionContext);
 
   const lang = useContext(LanguageContext).lang;
 
@@ -33,64 +34,31 @@ export default function Jeu(props) {
 
   useEffect(() => {
     if(ctxResultats.estFini && ctxResultats.temps>0) {
+      setIsLoading(true);
       setResultatsAffiches(true);
 
       const numMode = numeroMode();
-
-      fetch(urlApi+"game/user?username="+ctxConnexion.username)
+      
+      fetch(urlApi+"game", {
+        method: "POST",
+        headers: {
+          "Accept": "application/json",
+          "Content-Type": "application/json",
+          "Authorization": `Bearer ${window.localStorage.getItem("token")}`
+        },
+        body: JSON.stringify({
+          gameMode: numMode,
+          time: ctxResultats.temps,
+          errors: ctxResultats.erreurs,
+          hint: ctxResultats.indices
+        }),
+      })
       .then(response => response.json())
       .then(data => {
-        let partiesTriees = [];
-        if(data.games.length>0) {
-          partiesTriees = data.games.filter(game => game.game_mode === numMode);
-          partiesTriees = partiesTriees.filter(game => game.public);
-        }
-        let temps_min = null;
-        let id_min = null;
-        if(partiesTriees.length>0) {
-          temps_min = partiesTriees[0].time;
-          id_min = partiesTriees[0].id;
-          for(let game of partiesTriees) {
-            if(game.time<temps_min) {
-              temps_min = game.time;
-              id_min = game.id;
-            }
-          }
-        }
-        if(temps_min && ctxResultats.temps<=temps_min) {
-          fetch(urlApi+"games/changeState?id="+id_min, {
-            method:"PUT",
-            headers: {
-              "Accept": "application/json",
-              "Content-Type": "application/json",
-              "Authorization": `Bearer ${window.localStorage.getItem("token")}`
-              }
-          });
-        }
-        return temps_min;
-      })
-      .then(temps_min => {
-        const dateActuelle = new Date();
-        const annee = dateActuelle.getFullYear();
-        const mois = ('0' + (dateActuelle.getMonth() + 1)).slice(-2);
-        const jour = ('0' + dateActuelle.getDate()).slice(-2);
-
-        fetch(urlApi+"game", {
-          method: "POST",
-          headers: {
-            "Accept": "application/json",
-            "Content-Type": "application/json",
-            "Authorization": `Bearer ${window.localStorage.getItem("token")}`
-          },
-          body: JSON.stringify({
-            gameMode: numMode,
-            time: ctxResultats.temps,
-            errors: ctxResultats.erreurs,
-            hint: ctxResultats.indices,
-            public: temps_min===null || ctxResultats.temps <= temps_min
-          }),
-        })
-      })
+        setGameId(data.id);
+        setIsBest(data.best);
+        setIsLoading(false);
+      });
     }
   }, [ctxResultats.estFini, ctxResultats.temps]);
 
@@ -104,7 +72,7 @@ export default function Jeu(props) {
 
   return (
     <Page titre={`${langpack["jou_drap"][lang]} - ${props.titre}`}>
-      {resultatsAffiches && <Resultats categorie={props.titre} onClose={relancer}/>}
+      {resultatsAffiches && <Resultats categorie={props.titre} onClose={relancer} isLoading={isLoading} isBest={isBest} gameId={gameId}/>}
       <div className='flex flex-col items-center gap-5 mt-3'>
         <Informations longueur={drapeaux.length}/>
         <ZoneDeJeu drapeaux={drapeaux}/>

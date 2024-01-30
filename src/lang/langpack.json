@@ -53,6 +53,8 @@
     "jou_drap": {"fr": "Drapeaux", "en": "Flags"},
     "jou_fermer": {"fr": "Fermer", "en": "Close"},
     "jou_ctrlv": {"fr": "Pas de Ctrl+V !!", "en": "No Ctrl+V !!"}, 
+    "jou_rec": {"fr": "Nouveau record !", "en": "New best !"},
+    "jou_pub": {"fr": "Mettre en publique", "en": "Mettre en publique"},
 
     "insc_titre": {"fr": "Inscription", "en": "Sign up"}, 
     "insc_pseudo": {"fr": "Pseudo", "en": "Username"},

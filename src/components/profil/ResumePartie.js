@@ -51,7 +51,7 @@ export default function ResumePartie(props) {
       <td className="p-1 border text-center">{minutes < 10 ? "0" + minutes : minutes}:{secondes < 10 ? "0" + secondes : secondes}:{(ms < 10) ? '00' + ms : (ms < 100) ? '0' + ms : ms}</td>
       <td className="p-1 border text-center">{props.partie.errors}</td>
       <td className="p-1 border text-center">{props.partie.hint}</td>
-      <td className="p-1 border text-center">{formatDate(props.partie.game_date)}</td>
+      <td className="p-1 border text-center">{formatDate(props.partie.gameDate)}</td>
       <td className="p-1 border text-center">
         {(ctxConnexion.username===props.username||ctxConnexion.admin)?
           <select className="rounded p-1 bg-gray-300" onChange={onChangeVisibilityHandler}>

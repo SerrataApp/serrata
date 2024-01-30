@@ -77,6 +77,16 @@ export default function App() {
     return null;
   }
 
+  function RedirectScores() {
+    const navigate = useNavigate();
+
+    useEffect(() => {
+      navigate('/scores/europe', { replace: true });
+    }, [navigate]);
+
+    return null;
+  }
+
   if(!isLoading) return (
     <div className="h-screen overflow-auto bg-white">
       <ResultatsProvider>
@@ -91,7 +101,8 @@ export default function App() {
                 <Route path="/asie" element={<Jeu drapeaux={drapeauxAsie} titre={langpack["rub_as"][lang]}/>} />
                 <Route path="/amerique" element={<Jeu drapeaux={drapeauxAmerique} titre={langpack["rub_am"][lang]}/>} />
                 <Route path="/oceanie" element={<Jeu drapeaux={drapeauxOceanie} titre={langpack["rub_oc"][lang]}/>} />
-                <Route path="/scores" element={<Scores/>} />
+                <Route path="/scores" element={<RedirectScores />} />
+                <Route path="/scores/:continent" element={<Scores/>} />
                 <Route path="/inscription" element={<Inscription/>} />
                 <Route path="/profil/:username" element={<Profil/>} />
                 <Route path="/profil" element={<RedirectProfil />} />
