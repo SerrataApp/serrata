@@ -14,7 +14,7 @@ export default function ModalSupprimer(props) {
     const ms = props.partie.time%1000;
 
     function supprimerPartie() {
-      fetch(urlApi+"score/?game_id="+props.partie.id, {
+      fetch(urlApi+"admin/game?id="+props.partie.id, {
         method: "DELETE",
         headers: {
           Accept: "application/json",
