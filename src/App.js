@@ -38,9 +38,9 @@ export default function App() {
         .then(data => {
           if(response.ok) {
             ctxConnexion.connecter(data.user.username, data.user.id, data.user.admin);
-            // if(!data.user.cgu && window.location.pathname!=="/cgu") {
-            //   setAfficheCGU(true);
-            // }
+            if(!data.user.cgu && window.location.pathname!=="/cgu") {
+              setAfficheCGU(true);
+            }
           } else {
             window.localStorage.removeItem("token");
           }
