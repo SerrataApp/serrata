@@ -95,6 +95,10 @@ export default function App() {
   function modalCGUHandler(accepte) {
     if(accepte) {
       setAfficheCGU(false)
+    } else {
+      if(!ctxConnexion.connecte) {
+        setAfficheCGU(false);
+      }
     }
   }
 
