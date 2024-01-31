@@ -85,5 +85,6 @@
     "admin_suppr_partie": {"fr": "Supprimer la partie ?", "en": "Delete this game ?"},
     "admin_blo": {"fr": "Bloquer", "en": "Block"},
     "admin_deblo": {"fr": "Débloquer", "en": "Unlock"},
-    "admin_uti": {"fr": "l'utilisateur", "en": "user"}
+    "admin_uti": {"fr": "l'utilisateur", "en": "user"},
+    "admin_cgu": {"fr": "Notifier d'une mise à jour", "en": "Notify an update"}
 }

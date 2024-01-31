@@ -1,4 +1,4 @@
-_Dernière mise à jour : 15/12/2023_
+_Dernière mise à jour : 30/01/2024_
 
 Bienvenue sur serrata.super-sympa.fr !
 
