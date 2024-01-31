@@ -54,12 +54,7 @@ export default function Inscription() {
     } else {
       setIsLoading(true);
 
-      const dateActuelle = new Date();
-      const annee = dateActuelle.getFullYear();
-      const mois = ('0' + (dateActuelle.getMonth() + 1)).slice(-2);
-      const jour = ('0' + dateActuelle.getDate()).slice(-2);
-
-      fetch(urlApi+"signup", {
+      fetch(urlApi+"users", {
         method: "POST",
         headers: {
           'Accept': 'application/json',
@@ -68,21 +63,28 @@ export default function Inscription() {
         body: JSON.stringify({
           username: refPseudo.current.value,
           email: refEmail.current.value,
-          password: refMdp.current.value,
-          signup_date: `${annee}-${mois}-${jour}`
+          password: refMdp.current.value
         })
       })
       .then(response =>
         response.json()
         .then(data => {
-          switch(response.status) {
-            case 200: connexionRedirection(); break;
-            case 400: setErreur(data.detail); break;
-            case 401: setErreur(data.detail); break;
-            case 422: setErreur(`Champ manquant : ${data.detail[0].loc[1]}`); break;
-            default: setErreur("Erreur, veuillez réessayer");
-          }
-          if(response.status!==200) {
+          if(response.ok) {
+            connexionRedirection();
+          } else {
+            if(response.status===400) {
+              if(data.field) {
+                if(data.field[0]==="username") {
+                  setErreur("Pseudo déjà existant");
+                } else {
+                  setErreur("Email déjà existant");
+                }
+              } else {
+                setErreur("Il faut remplir tous les champs");
+              }
+            } else {
+              setErreur("Erreur, réessayez plus tard");
+            }
             setIsLoading(false);
           }
         })

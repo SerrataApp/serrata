@@ -25,7 +25,7 @@ export default function Profil() {
 
   useEffect(() => {
     async function fetchGames() {
-      let response = await fetch(urlApi + "score/user/?username=" + username, {
+      let response = await fetch(urlApi + "game/user?username=" + username, {
         method: "GET",
         headers: {
           "Accept": "application/json",
@@ -33,8 +33,13 @@ export default function Profil() {
         }
       });
       let data = await response.json();
+      response = await fetch(urlApi + "users/username?username=" + username);
+      data = await {
+        ...data,
+        ...await response.json()
+      };
       if(ctxConnexion.admin) {
-        response = await fetch(urlApi + "adminusers/?user_id=" + data.id, {
+        response = await fetch(urlApi + "admin/user?id=" + data.user.id, {
           headers: {
             "Accept": "application/json",
             "Authorization": `Bearer ${window.localStorage.getItem("token")}`
@@ -43,12 +48,12 @@ export default function Profil() {
         data = await {
           ...data,
           ...await response.json()
-        }
+        };
       }
       setIsLoading(false);
       return data;
     }
-    fetchGames().then(data => {setDataJoueur(data); setDateInscription(data.signup_date); setPartiesLancees(data.played_games)})
+    fetchGames().then(data => {setDataJoueur(data); setDateInscription(data.user.signupDate); setPartiesLancees(data.user.playedGames)})
     .catch(() => {setErreur(langpack["prof_err_existepas"][lang]); setIsLoading(false)});
   }, [])
 
@@ -72,7 +77,7 @@ export default function Profil() {
       }
       {!isLoading && !erreur &&
         <div className="flex flex-col items-center gap-5 mt-3">
-          {ctxConnexion.admin && <ActionsAdmin user={dataJoueur}/>}
+          {ctxConnexion.admin && <ActionsAdmin user={dataJoueur.user}/>}
           <ResumeStatsGeneral stats={stats} dateInscription={formatDate(dateInscription)} partiesLancees={partiesLancees}/>
           {dataJoueur.games && <HistoriqueParties listeParties={dataJoueur.games} username={username} setIsLoading={setIsLoading}/>}
         </div>

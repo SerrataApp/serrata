@@ -21,22 +21,13 @@ export default function TabScores(props) {
     setHttpError(null);
     const fetchScores = async () => {
       setIsLoading(true);
-      const response = await fetch(`${urlApi}scores/mode/?game_mode_id=${props.categorie}`);
+      const response = await fetch(`${urlApi}games/mode?gamemode=${props.categorie}`);
 
       if(!response.ok) {
         throw new Error("Something went wrong");
       }
       let data = await response.json();
-      for(let i_partie in data) {
-        const responseJoueur = await fetch(urlApi+"users/?user_id="+data[i_partie].player_id);
-        const dataJoueur = await responseJoueur.json();
-        const nomJoueur = dataJoueur.username;
-        data[i_partie] = {
-          ...data[i_partie],
-          username: nomJoueur
-        }
-      }
-      data = data.sort((a,b) => (a.time>b.time?1:-1));
+      data = data.games.sort((a,b) => (a.time>b.time?1:-1));
       setScores(data);
       props.changeMode(props.categorie);
       setIsLoading(false);
@@ -78,11 +69,11 @@ export default function TabScores(props) {
       return (
         <tr key={index} className={style}>
           <td className="py-1 px-3 border text-center">{index+1}</td>
-          <td className="py-1 px-3 border font-bold max-w-[300px] overflow-hidden"><a href={`/profil/${score.username}`} className="hover:underline">{score.username}</a></td>
+          <td className="py-1 px-3 border font-bold max-w-[300px] overflow-hidden"><a href={`/profil/${score.player.username}`} className="hover:underline">{score.player.username}</a></td>
           <td className="py-1 px-3 border text-center">{minutes < 10 ? "0" + minutes : minutes}:{secondes < 10 ? "0" + secondes : secondes}:{(ms < 10) ? '00' + ms : (ms < 100) ? '0' + ms : ms}</td>
           <td className="py-1 px-3 border text-center">{score.errors}</td>
           <td className="py-1 px-3 border text-center">{score.hint}</td>
-          <td className="py-1 px-3 border text-center">{formatDate(score.game_date)}</td>
+          <td className="py-1 px-3 border text-center">{formatDate(score.gameDate)}</td>
           {ctxConnexion&&ctxConnexion.admin&&
             <td className="py-1 px-3 border text-center">
               <button onClick={() => {afficherModalSupprimer(score)}}>
@@ -112,7 +103,7 @@ export default function TabScores(props) {
 
   if(listeScores.length===0) {
     return (
-      <p className="text-center">Aucun score dans cette catégorie pour le moment</p>
+      <p className="text-center">{langpack["sco_non"][lang]}</p>
     );
   }
 

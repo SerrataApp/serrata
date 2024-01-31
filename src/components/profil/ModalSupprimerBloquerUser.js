@@ -24,7 +24,7 @@ export default function ModalSupprimerBloquerUser(props) {
             <tr>
               <td className="p-3 border-r w-1/3">{props.user.username}</td>
               <td className="p-3 border-r w-1/3">{props.user.email}</td>
-              <td className="p-3 w-1/3">{formatDate(props.user.signup_date)}</td>
+              <td className="p-3 w-1/3">{formatDate(props.user.signupDate)}</td>
             </tr>
           </table>
         </div>

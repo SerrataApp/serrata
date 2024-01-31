@@ -11,7 +11,7 @@ export default function ActionsAdmin(props) {
   const lang = useContext(LanguageContext).lang;
 
   function supprimerUser() {
-    fetch(urlApi+"users/?user_id="+props.user.id, {
+    fetch(urlApi+"admin/user?username="+props.user.username, {
       method: "DELETE",
       headers: {
         Accept: "application/json",
@@ -22,7 +22,7 @@ export default function ActionsAdmin(props) {
   }
 
   function toggleBloquerUser() {
-    fetch(urlApi+"admindisable/?user_id="+props.user.id, {
+    fetch(urlApi+"admin/disable?id="+props.user.id, {
       method: "PUT",
       headers: {
         Accept: "application/json",
@@ -34,7 +34,7 @@ export default function ActionsAdmin(props) {
 
   function fermerModal(reload) {
     if(reload) {
-      window.location.reload()
+      window.location.reload();
     } else {
       setModal(null);
     }
@@ -55,7 +55,7 @@ export default function ActionsAdmin(props) {
   return (
     <div className="flex gap-2">
       <BtnActionUser danger={true} icon="user-slash" onClick={afficherModalSupprimerUser}/>
-      {props.user.disabled?
+      {props.user?.disabled?
         <BtnActionUser danger={false} icon="unlock" onClick={afficherModalDebloquerUser}/>
         :
         <BtnActionUser danger={true} icon="user-lock" onClick={afficherModalBloquerUser}/>

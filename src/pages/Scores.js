@@ -6,7 +6,7 @@ import langpack from "../lang/langpack.json";
 import LanguageContext from "../components/store/language-context";
 
 export default function Scores() {
-  const [modeSelect, setModeSelect] = useState("1");
+  const [modeSelect, setModeSelect] = useState("2");
   const [isLoading, setIsLoading] = useState(false);
 
   const lang = useContext(LanguageContext).lang;

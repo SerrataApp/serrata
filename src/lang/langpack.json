@@ -4,6 +4,9 @@
     "menu_prof": {"fr": "Profil", "en": "Profile"},
     "menu_co": {"fr": "Connexion", "en":"Log in"},
     "menu_deco": {"fr": "Déconnexion", "en": "Log out"},
+    "menu_cgu": {"fr": "Mise à jour des conditions générales d'utilisation", "en": "The terms of conditions have been updated"},
+    "menu_cgu_par": {"fr": "En cliquant sur ''J'accepte'', vous affirmez avoir lu et accepté les", "en": "By clicking on ''I agree'', you thus confirm to have read the"},
+    "menu_cgu_btn": {"fr": "J'accepte", "en": "I agree"},
     
     "rub_eu": {"fr": "Europe", "en": "Europe"},
     "rub_af": {"fr": "Afrique", "en": "Africa"},
@@ -22,6 +25,7 @@
     "sco_indsing": {"fr": "Indice", "en": "Hint"},
     "sco_date": {"fr": "Date", "en": "Date"},
     "sco_vis": {"fr": "Visibilité (dans scores)", "en": "Visibility (in leaderboard)"},
+    "sco_non": {"fr": "Aucun score dans cette catégorie pour le moment", "en": "No scores in this category yet"},
     
     "prof_partlan": {"fr": "Parties lancées", "en": "Games started"},
     "prof_partterm": {"fr": "Parties terminées", "en": "Games finished"},
@@ -52,6 +56,8 @@
     "jou_drap": {"fr": "Drapeaux", "en": "Flags"},
     "jou_fermer": {"fr": "Fermer", "en": "Close"},
     "jou_ctrlv": {"fr": "Pas de Ctrl+V !!", "en": "No Ctrl+V !!"}, 
+    "jou_rec": {"fr": "Nouveau record !", "en": "New best !"},
+    "jou_pub": {"fr": "Mettre en publique", "en": "Flag as public"},
 
     "insc_titre": {"fr": "Inscription", "en": "Sign up"}, 
     "insc_pseudo": {"fr": "Pseudo", "en": "Username"},
@@ -72,11 +78,13 @@
     "co_montr": {"fr": "Montrer", "en": "Show"},
     "co_cach": {"fr": "Cacher", "en": "Hide"},
     "co_conn": {"fr": "Se connecter", "en": "Log in"}, 
-    "co_pas_insc": {"fr": "Pas encore inscrit ?", "en": "Not registered yet ?"}, 
+    "co_pas_insc": {"fr": "Pas encore inscrit ?", "en": "Not registered yet ?"},
+    "co_err": {"fr": "Mauvais identifiant ou mot de passe", "en": "Wrong login or password"},
 
     "admin_suppr": {"fr": "Supprimer", "en": "Delete"},
     "admin_suppr_partie": {"fr": "Supprimer la partie ?", "en": "Delete this game ?"},
     "admin_blo": {"fr": "Bloquer", "en": "Block"},
     "admin_deblo": {"fr": "Débloquer", "en": "Unlock"},
-    "admin_uti": {"fr": "l'utilisateur", "en": "user"}
+    "admin_uti": {"fr": "l'utilisateur", "en": "user"},
+    "admin_cgu": {"fr": "Notifier d'une mise à jour", "en": "Notify an update"}
 }

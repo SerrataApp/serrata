@@ -16,12 +16,14 @@ import CGU from './pages/CGU';
 import LanguageContext from './components/store/language-context';
 import langpack from "./lang/langpack.json";
 import TypingTest from './pages/TypingTest';
+import ModalCGU from './components/cgu/ModalCGU';
 
 export default function App() {
   const ctxConnexion = useContext(ConnexionContext);
   const ctxLanguage = useContext(LanguageContext);
   const lang = ctxLanguage.lang;
   const [isLoading, setIsLoading] = useState(true);
+  const [afficheCGU, setAfficheCGU] = useState();
 
   useEffect(() => {
     if(window.localStorage.getItem("token")) {
@@ -35,8 +37,11 @@ export default function App() {
       .then(response => {
         response.json()
         .then(data => {
-          if(response.status===200) {
-            ctxConnexion.connecter(data.username, data.id, data.admin);
+          if(response.ok) {
+            ctxConnexion.connecter(data.user.username, data.user.id, data.user.admin);
+            // if(!data.user.cgu && window.location.pathname!=="/cgu") {
+            //   setAfficheCGU(true);
+            // }
           } else {
             window.localStorage.removeItem("token");
           }
@@ -53,7 +58,7 @@ export default function App() {
     ctxLanguage.setLangue("fr");
     window.location.reload();
   }
-  
+
   function RedirectProfil() {
     const navigate = useNavigate();
 
@@ -78,12 +83,29 @@ export default function App() {
     return null;
   }
 
+  function RedirectScores() {
+    const navigate = useNavigate();
+
+    useEffect(() => {
+      navigate('/scores/europe', { replace: true });
+    }, [navigate]);
+
+    return null;
+  }
+
+  function modalCGUHandler(accepte) {
+    if(accepte) {
+      setAfficheCGU(false)
+    }
+  }
+
   if(!isLoading) return (
     <div className="h-screen overflow-auto bg-white">
       <ResultatsProvider>
         <DrapeauxUtilisesProvider>
           <LanguageProvider>
             <BrowserRouter>
+              {afficheCGU && <ModalCGU onClose={modalCGUHandler}/>}
               <Routes>
                 <Route path="/" element={<Accueil />} />
                 <Route path="/europe" element={<Jeu drapeaux={drapeauxEurope} titre={langpack["rub_eu"][lang]}/>}/>
@@ -93,7 +115,8 @@ export default function App() {
                 <Route path="/amerique" element={<Jeu drapeaux={drapeauxAmerique} titre={langpack["rub_am"][lang]}/>} />
                 <Route path="/oceanie" element={<Jeu drapeaux={drapeauxOceanie} titre={langpack["rub_oc"][lang]}/>} />
                 <Route path="/typingtest" element={<TypingTest/>} />
-                <Route path="/scores" element={<Scores/>} />
+                <Route path="/scores" element={<RedirectScores />} />
+                <Route path="/scores/:continent" element={<Scores/>} />
                 <Route path="/inscription" element={<Inscription/>} />
                 <Route path="/profil/:username" element={<Profil/>} />
                 <Route path="/profil" element={<RedirectProfil />} />

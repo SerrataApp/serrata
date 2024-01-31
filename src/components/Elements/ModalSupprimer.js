@@ -14,7 +14,7 @@ export default function ModalSupprimer(props) {
     const ms = props.partie.time%1000;
 
     function supprimerPartie() {
-      fetch(urlApi+"score/?game_id="+props.partie.id, {
+      fetch(urlApi+"admin/game?id="+props.partie.id, {
         method: "DELETE",
         headers: {
           Accept: "application/json",
@@ -38,7 +38,7 @@ export default function ModalSupprimer(props) {
               <td className={`p-3 border-r ${width}`}>{minutes < 10 ? "0" + minutes : minutes}:{secondes < 10 ? "0" + secondes : secondes}:{(ms < 10) ? '00' + ms : (ms < 100) ? '0' + ms : ms}</td>
               <td className={`p-3 border-r ${width}`}>{props.partie.errors} {props.partie.errors>1?langpack["sco_err"][lang].toLowerCase() : langpack["sco_errsing"][lang].toLowerCase()}</td>
               <td className={`p-3 border-r ${width}`}>{props.partie.hint} {props.partie.hint>1?langpack["sco_ind"][lang].toLowerCase() : langpack["sco_indsing"][lang].toLowerCase()}</td>
-              <td className={`p-3 ${width}`}>{formatDate(props.partie.game_date)}</td>
+              <td className={`p-3 ${width}`}>{formatDate(props.partie.gameDate)}</td>
             </tr>
           </table>
         </div>

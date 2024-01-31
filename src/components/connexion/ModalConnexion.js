@@ -45,30 +45,33 @@ export default function ModalConnexion(props) {
     e.preventDefault();
     setIsLoading(true);
     setErreur(null);
-    const formData = new URLSearchParams();
-    formData.append("username", inputPseudo.current.value);
-    formData.append("password", inputMdp.current.value);
+    const formData = {
+      "username": inputPseudo.current.value,
+      "password": inputMdp.current.value
+    }
 
-    fetch(urlApi+"token", {
+    fetch(urlApi+"users/login", {
       method: "POST",
       mode: "cors",
       headers: {
-        "Accept": "application/json"
+        "Accept": "application/json",
+        "Content-Type": "application/json; charset=utf-8"
       },
-      body: formData,
+      body: JSON.stringify(formData)
     })
     .then(response => {
       response.json()
       .then(data => {
         switch(response.status) {
-          case 200: window.localStorage.setItem("token", data.access_token); onClose(); break;
+          case 200: window.localStorage.setItem("token", data.token); onClose(); break;
           case 401: setErreur(data.detail); break;
           case 422: setErreur(`${langpack["insc_err_champ"][lang]} : ${data.detail[0].loc[1]}`); break;
-          default: setErreur("insc_err");
+          case 404: setErreur(langpack["co_err"][lang]); break;
+          default: setErreur(langpack["insc_err"][lang]);
         }
       });
     })
-    .catch(() => {setErreur("insc_err"); setIsLoading(false)})
+    .catch(() => {setErreur(langpack["insc_err"][lang]); setIsLoading(false)})
   }
 
   return (

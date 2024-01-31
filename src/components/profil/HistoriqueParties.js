@@ -10,7 +10,7 @@ export default function HistoriqueParties(props) {
   const [tri, setTri] = useState("tmp_cr");
   const [listeParties, setListeParties] = useState([...props.listeParties]);
   const [partiesTriees, setPartiesTriees] = useState([]);
-  const [modeSelect, setModeSelect] = useState("1");
+  const [modeSelect, setModeSelect] = useState("2");
 
   const ctxConnexion = useContext(ConnexionContext);
 
@@ -39,7 +39,7 @@ export default function HistoriqueParties(props) {
   useEffect(() => {
     let compteur = 0;
     setPartiesTriees(listeParties.map((partie) => {
-      if(partie.game_mode==modeSelect) {
+      if(partie.gameMode==modeSelect) {
         return <ResumePartie key={compteur+1} index={compteur++} partie={partie} username={props.username} setIsLoading={props.setIsLoading}/>
       }
       return null;
