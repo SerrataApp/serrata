@@ -114,7 +114,7 @@ export default function App() {
                 <Route path="/amerique" element={<Jeu drapeaux={drapeauxAmerique} titre={langpack["rub_am"][lang]}/>} />
                 <Route path="/oceanie" element={<Jeu drapeaux={drapeauxOceanie} titre={langpack["rub_oc"][lang]}/>} />
                 <Route path="/scores" element={<RedirectScores />} />
-                {/* <Route path="/scores/:continent" element={<Scores/>} /> */}
+                <Route path="/scores/:continent" element={<Scores/>} />
                 <Route path="/inscription" element={<Inscription/>} />
                 <Route path="/profil/:username" element={<Profil/>} />
                 <Route path="/profil" element={<RedirectProfil />} />
