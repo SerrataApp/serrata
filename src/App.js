@@ -15,12 +15,14 @@ import MentionsLegales from './pages/MentionsLegales';
 import CGU from './pages/CGU';
 import LanguageContext from './components/store/language-context';
 import langpack from "./lang/langpack.json";
+import ModalCGU from './components/cgu/ModalCGU';
 
 export default function App() {
   const ctxConnexion = useContext(ConnexionContext);
   const ctxLanguage = useContext(LanguageContext);
   const lang = ctxLanguage.lang;
   const [isLoading, setIsLoading] = useState(true);
+  const [afficheCGU, setAfficheCGU] = useState();
 
   useEffect(() => {
     if(window.localStorage.getItem("token")) {
@@ -36,6 +38,9 @@ export default function App() {
         .then(data => {
           if(response.ok) {
             ctxConnexion.connecter(data.user.username, data.user.id, data.user.admin);
+            if(!data.cgu && window.location.pathname==="/cgu") {
+              setAfficheCGU(true);
+            }
           } else {
             window.localStorage.removeItem("token");
           }
@@ -52,7 +57,7 @@ export default function App() {
     ctxLanguage.setLangue("fr");
     window.location.reload();
   }
-  
+
   function RedirectProfil() {
     const navigate = useNavigate();
 
@@ -87,12 +92,19 @@ export default function App() {
     return null;
   }
 
+  function modalCGUHandler(accepte) {
+    if(accepte) {
+      setAfficheCGU(false)
+    }
+  }
+
   if(!isLoading) return (
     <div className="h-screen overflow-auto bg-white">
       <ResultatsProvider>
         <DrapeauxUtilisesProvider>
           <LanguageProvider>
             <BrowserRouter>
+              {afficheCGU && <ModalCGU onClose={modalCGUHandler}/>}
               <Routes>
                 <Route path="/" element={<Accueil />} />
                 <Route path="/europe" element={<Jeu drapeaux={drapeauxEurope} titre={langpack["rub_eu"][lang]}/>}/>
