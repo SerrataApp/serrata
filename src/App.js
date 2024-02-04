@@ -16,6 +16,7 @@ import CGU from './pages/CGU';
 import LanguageContext from './components/store/language-context';
 import langpack from "./lang/langpack.json";
 import ModalCGU from './components/cgu/ModalCGU';
+import Reinitialisation from './pages/Reinitialisation';
 
 export default function App() {
   const ctxConnexion = useContext(ConnexionContext);
@@ -124,6 +125,7 @@ export default function App() {
                 <Route path="/profil" element={<RedirectProfil />} />
                 <Route path="/mentionslegales" element={<MentionsLegales />} />
                 <Route path="/cgu" element={<CGU />} />
+                <Route path="/reinitialisation/:id/:token" element={<Reinitialisation />} />
                 <Route path="*" element={<RedirectAccueil />} />
               </Routes>
             </BrowserRouter>
