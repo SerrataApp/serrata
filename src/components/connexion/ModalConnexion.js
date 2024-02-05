@@ -87,9 +87,9 @@ export default function ModalConnexion(props) {
           </label>
           <label className="flex flex-col w-full">
             {langpack["co_mdp"][lang]}
-            <div className="flex gap-1 content-bottom">
+            <div className="flex gap-1 content-bottom relative">
               <input onKeyDown={onPasswordKeyPressHandler} type={showPassword ? 'text' : 'password'} className="border rounded p-1 w-full mr-2 " ref={inputMdp} required/>
-              <i className={`fa-regular ${ showPassword?'fa-eye-slash':'fa-eye'} h-5.5 w-5.5  my-2 `} onClick={toggleShowPassword} ></i>
+              <i className={`fa-regular ${ showPassword?'fa-eye-slash':'fa-eye'} h-5.5 w-5.5  my-2 flex absolute end-4`} onClick={toggleShowPassword} ></i>
             </div>
           </label>
           <div className="flex gap-2 w-full">
