@@ -20,8 +20,9 @@ export default function InfosMode(props) {
         </label>
         <label className="flex flex-col items-center">
           Langue
-          <select className="bg-white p-1 border border-black rounded w-full md:w-[180px]" onChange={changeLangueHandler} value={props.infosMode.nom}>
+          <select className="bg-white p-1 border border-black rounded w-full md:w-[180px]" onChange={changeLangueHandler} value={props.infosMode.langue}>
             <option value="fr">Français</option>
+            <option value="en">Anglais</option>
           </select>
         </label>
       </div>

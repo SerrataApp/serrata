@@ -4,7 +4,6 @@ import AjoutImage from "./AjoutImage";
 import InfosMode from "./InfosMode";
 
 function infosModeReducer(state, action) {
-  console.log(state);
   if(action.type === "SET_NOM") {
     return {
       ...state,
@@ -21,6 +20,14 @@ function infosModeReducer(state, action) {
     return {
       ...state,
       description: action.value
+    }
+  }
+  if(action.type === "RESET") {
+    return {
+      ...state,
+      nom: "",
+      description: "",
+      vignette: null
     }
   }
 }
@@ -50,6 +57,11 @@ export default function CreationCustom() {
     setListeImages(listeImages.filter((_, i) => i !== index))
   }
 
+  function onResetHandler() {
+    setListeImages([]);
+    dispatchInfosMode({type: "RESET"});
+  }
+
   const divsImages = listeImages.map((image, index) => <AjoutImage key={image.key} index={index} supprimer={supprimerImage} modifierAttibut={modifierAttibut}/>)
 
   return (
@@ -67,7 +79,7 @@ export default function CreationCustom() {
       <div className="fixed w-screen flex bottom-[75px] justify-center">
         <div className="flex gap-4 bg-white rounded-xl border border-black p-3 shadow-lg">
           <button className="p-2 rounded shadow-md bg-red-500 hover:bg-red-400 transition-bg duration-150">Annuler</button>
-          <button className="p-2 rounded shadow-md bg-blue-500 hover:bg-blue-400 transition-bg duration-150">Réinitialiser</button>
+          <button className="p-2 rounded shadow-md bg-blue-500 hover:bg-blue-400 transition-bg duration-150" onClick={onResetHandler}>Réinitialiser</button>
           <button className="p-2 rounded shadow-md bg-green-500 hover:bg-green-400 transition-bg duration-150">Valider</button>
         </div>
       </div>
