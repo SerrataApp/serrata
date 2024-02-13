@@ -1,10 +1,33 @@
-import { useState } from "react";
+import { useState, useReducer } from "react";
 import Page from "../../pages/Page";
 import AjoutImage from "./AjoutImage";
 import InfosMode from "./InfosMode";
 
+function infosModeReducer(state, action) {
+  console.log(state);
+  if(action.type === "SET_NOM") {
+    return {
+      ...state,
+      nom: action.value
+    }
+  }
+  if(action.type === "SET_LANGUE") {
+    return {
+      ...state,
+      langue: action.value
+    }
+  }
+  if(action.type === "SET_DESCRIPTION") {
+    return {
+      ...state,
+      description: action.value
+    }
+  }
+}
+
 export default function CreationCustom() {
   const [listeImages, setListeImages] = useState([]);
+  const [infosMode, dispatchInfosMode] = useReducer(infosModeReducer, {nom: "", langue:"fr", description: "", vignette: null});
 
   function ajouterImage() {
     let nvKey = 0;
@@ -33,7 +56,7 @@ export default function CreationCustom() {
     <Page titre="Créer un mode de jeu">
       <div className="w-full flex justify-center mb-6">
         <div className="w-[80%] md:w-[70%] lg:w-[60%] flex flex-col gap-3">
-          <InfosMode/>
+          <InfosMode infosMode={infosMode} dispatchInfosMode={dispatchInfosMode}/>
           <div className="flex justify-between">
             <span>Total : {divsImages.length}</span>
             <button onClick={ajouterImage} className="border border-black rounded w-5 h-5 flex justify-center items-center hover:shadow-md transition-shadow duration-150">+</button>
