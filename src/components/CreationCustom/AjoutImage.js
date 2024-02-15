@@ -15,7 +15,7 @@ export default function AjoutImage(props) {
   }
 
   return (
-    <div className="w-full bg-gray-100 rounded p-1 flex flex-col gap-2 md:gap-0 md:flex-row justify-between">
+    <div className="w-full bg-gray-100 rounded p-1 flex flex-col gap-2 lg:gap-0 lg:flex-row justify-between">
       <Input label="Image" type="file" obligatoire={true} class="border-none" accept=".png, .jpg, .jpeg"/>
       <Input onChange={() => {modifierAttibut("nom", nomRef)}} reference={nomRef} label="Nom principal" type="text" obligatoire={true} autofocus={true}/>
       <Input onChange={() => {modifierAttibut("alias1", alias1Ref)}} reference={alias1Ref} label="Alias 1" type="text"/>

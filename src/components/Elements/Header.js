@@ -49,9 +49,9 @@ export default function Header() {
         {connecte ?
           <a href={`/profil/${ctxConnexion.username}`} className="text-blue-700 hover:underline">{langpack["menu_prof"][lang]}</a>
         :
-          <a onClick={openConnexionModal} className="text-blue-700 hover:underline hover:cursor-pointer">{langpack["menu_co"][lang]}</a>
+          <span onClick={openConnexionModal} className="text-blue-700 hover:underline hover:cursor-pointer">{langpack["menu_co"][lang]}</span>
         }
-        {connecte && <a onClick={disconnect} className="text-blue-700 hover:underline hover:cursor-pointer">{langpack["menu_deco"][lang]}</a>}
+        {connecte && <span onClick={disconnect} className="text-blue-700 hover:underline hover:cursor-pointer">{langpack["menu_deco"][lang]}</span>}
         <SwitchLanguage/>
       </div>
       {connexionOuvert && <ModalConnexion onCancel={closeConnexionModal}/>}
