@@ -64,7 +64,7 @@ export default function ModalConnexion(props) {
       .then(data => {
         switch(response.status) {
           case 200: window.localStorage.setItem("token", data.token); onClose(); break;
-          case 401: setErreur(data.detail); break;
+          case 401: setErreur(data.error); break;
           case 422: setErreur(`${langpack["insc_err_champ"][lang]} : ${data.detail[0].loc[1]}`); break;
           case 404: setErreur(langpack["co_err"][lang]); break;
           default: setErreur(langpack["insc_err"][lang]);
