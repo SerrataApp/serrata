@@ -1,7 +1,7 @@
-import { useState } from "react";
+import { useState, memo } from "react";
 import Lettre from "./Lettre";
 
-export default function Mot(props) {
+const Mot =  memo(function Mot(props) {
   const [indexCurseur, setIndexCurseur] = useState(0);
   const [efface, setEfface] = useState(false);
   const [currentInput, setCurrentInput] = useState();
@@ -28,10 +28,18 @@ export default function Mot(props) {
     }
   }
 
-  let listeLettres = "";
-  for(let i=0; i<props.mot.length; i++) {
-    listeLettres = [...listeLettres, <Lettre lettre={props.mot[i]} index={i} key={i} efface={efface} input={currentInput} indexCurseur={indexCurseur} estBon={props.estBon} estFaux={props.estFaux}/>]
-  }
+  const listeLettres = props.mot.split('').map((lettre, i) => (
+    <Lettre
+      lettre={lettre}
+      index={i}
+      key={i}
+      efface={efface}
+      input={currentInput}
+      indexCurseur={indexCurseur}
+      estBon={props.estBon}
+      estFaux={props.estFaux}
+    />
+  ));
 
   return(
     <>
@@ -41,4 +49,6 @@ export default function Mot(props) {
       </div>
     </>
   );
-}
+})
+
+export default Mot;

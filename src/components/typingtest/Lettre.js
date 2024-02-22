@@ -1,6 +1,6 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState, memo } from "react";
 
-export default function Lettre(props) {
+const Lettre = memo(function Lettre(props) {
   const [estBon, setEstBon] = useState(false);
   const [erreur, setErreur] = useState();
 
@@ -41,4 +41,6 @@ export default function Lettre(props) {
       </p>
     </div>
   );
-}
+})
+
+export default Lettre;
