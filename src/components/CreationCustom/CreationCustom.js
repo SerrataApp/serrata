@@ -2,7 +2,7 @@ import { useState, useReducer } from "react";
 import Page from "../../pages/Page";
 import AjoutImage from "./AjoutImage";
 import InfosMode from "./InfosMode";
-import urlApi from "../../utils/urlApi";
+import ModalCreerMode from "./ModalCreerMode";
 
 function infosModeReducer(state, action) {
   if(action.type === "SET_NOM") {
@@ -36,6 +36,15 @@ function infosModeReducer(state, action) {
 export default function CreationCustom() {
   const [listeImages, setListeImages] = useState([]);
   const [infosMode, dispatchInfosMode] = useReducer(infosModeReducer, {nom: "", langue:"fr", description: "", vignette: null});
+  const [isValide, setIsValide] = useState(false);
+
+  function valider() {
+    setIsValide(true);
+  }
+
+  function closeValider() {
+    setIsValide(false);
+  }
 
   function ajouterImage() {
     let nvKey = 0;
@@ -63,38 +72,6 @@ export default function CreationCustom() {
     dispatchInfosMode({type: "RESET"});
   }
 
-  function posterMode() {
-    let imageList = [];
-    for(let image of listeImages) {
-      let name = [image.nom];
-      if(image.alias1) {
-        name = [...name, image.alias1];
-      }
-      if(image.alias2) {
-        name = [...name, image.alias2];
-      }
-      imageList = [...imageList, {
-        name: name,
-        img: name[0]
-      }]
-    }
-    console.log(imageList);
-    fetch(urlApi+"gameMode/all", {
-      method: "POST",
-      headers: {
-        "Accept": "application/json",
-        "Content-Type": "application/json",
-        "Authorization": `Bearer ${window.localStorage.getItem("token")}`
-      },
-      body: JSON.stringify({
-        name: infosMode.nom,
-        description: infosMode.description,
-        lang: infosMode.langue,
-        imageList: imageList
-      })
-    });
-  }
-
   const divsImages = listeImages.map((image, index) => <AjoutImage key={image.key} index={index} supprimer={supprimerImage} modifierAttibut={modifierAttibut}/>)
 
   return (
@@ -111,11 +88,12 @@ export default function CreationCustom() {
       </div>
       <div className="fixed bottom-[75px] translate-x-[-50%] left-2/4">
         <div className="flex gap-4 bg-white rounded-xl border border-black p-3 shadow-lg">
-          <button className="p-2 rounded shadow-md bg-red-500 hover:bg-red-400 transition-bg duration-150">Annuler</button>
-          <button className="p-2 rounded shadow-md bg-blue-500 hover:bg-blue-400 transition-bg duration-150" onClick={onResetHandler}>Réinitialiser</button>
-          <button className="p-2 rounded shadow-md bg-green-500 hover:bg-green-400 transition-bg duration-150" onClick={posterMode}>Valider</button>
+          <button disabled={isValide} className="p-2 rounded shadow-md bg-red-500 hover:bg-red-400 transition-bg duration-150">Annuler</button>
+          <button disabled={isValide} className="p-2 rounded shadow-md bg-blue-500 hover:bg-blue-400 transition-bg duration-150" onClick={onResetHandler}>Réinitialiser</button>
+          <button disabled={isValide} className="p-2 rounded shadow-md bg-green-500 hover:bg-green-400 transition-bg duration-150" onClick={valider}>Valider</button>
         </div>
       </div>
+      {isValide && <ModalCreerMode infosMode={infosMode} images={listeImages} onClose={closeValider}/>}
     </Page>
   );
 }

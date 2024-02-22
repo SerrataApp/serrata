@@ -6,6 +6,7 @@
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
+    "buffer": "^6.0.3",
     "crypto-js": "^4.2.0",
     "framer-motion": "^10.12.16",
     "js-cookie": "^3.0.5",
@@ -14,7 +15,6 @@
     "react-markdown": "^9.0.1",
     "react-router-dom": "^6.12.0",
     "react-scripts": "5.0.1",
-    "sharp": "^0.33.2",
     "tailwindcss": "^3.3.2",
     "web-vitals": "^2.1.4"
   },
