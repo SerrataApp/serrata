@@ -5,8 +5,10 @@
     "menu_co": {"fr": "Connexion", "en":"Log in"},
     "menu_deco": {"fr": "Déconnexion", "en": "Log out"},
     "menu_cgu": {"fr": "Mise à jour des conditions générales d'utilisation", "en": "The terms of conditions have been updated"},
-    "menu_cgu_par": {"fr": "En cliquant sur ''J'accepte'', vous affirmez avoir lu et accepté les", "en": "By clicking on ''I agree'', you thus confirm to have read the"},
-    "menu_cgu_btn": {"fr": "J'accepte", "en": "I agree"},
+    "menu_cgu_par1": {"fr": "En cliquant sur ''J'accepte'', vous affirmez avoir lu et accepté les", "en": "By clicking on ''I agree'', you thus confirm to have read the"},
+    "menu_cgu_par2": {"fr": "Si vous refusez, vous serez déconnecté.", "en": "If you refuse, you will be disconnected."},
+    "menu_cgu_acc": {"fr": "J'accepte", "en": "I agree"},
+    "menu_cgu_ref": {"fr": "Je refuse", "en": "I refuse"},
     
     "rub_eu": {"fr": "Europe", "en": "Europe"},
     "rub_af": {"fr": "Afrique", "en": "Africa"},

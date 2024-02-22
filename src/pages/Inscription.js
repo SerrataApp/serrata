@@ -5,6 +5,7 @@ import Page from "./Page";
 import { useContext, useRef, useState } from "react";
 import langpack from "../lang/langpack.json";
 
+
 export default function Inscription() {
   const [erreur, setErreur] = useState(null);
   const [isLoading, setIsLoading] = useState(false);
@@ -93,6 +94,7 @@ export default function Inscription() {
   }
 
   return(
+
     <Page titre={langpack["insc_titre"][lang]}>
       <div className="flex justify-center w-screen">
         <form onSubmit={onSubmitHandler} className="flex flex-col gap-3 items-center border bg-gray-100 rounded p-5">
