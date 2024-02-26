@@ -27,7 +27,7 @@ const Lettre = memo(function Lettre(props) {
         setErreur(null);
       }
     }
-  }, [props.input, props.indexCurseur, props.motActuel]);
+  }, [props.input, props.indexCurseur, props.motActuel, props.efface]);
 
   let style = "text-xl transition-text duration-150";
   if(estBon) {

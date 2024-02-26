@@ -1,33 +1,31 @@
-import { useState, memo, useCallback } from "react";
+import { useState, memo } from "react";
 import Lettre from "./Lettre";
 
 const Mot =  memo(function Mot(props) {
   const [indexCurseur, setIndexCurseur] = useState(0);
-  const [efface, setEfface] = useState(false);
   const [currentInput, setCurrentInput] = useState();
   const [estFini, setEstFini] = useState(false);
   const [estBon, setEstBon] = useState(true);
-  const [lettresBonus, setLettresBonus] = useState([]);
 
   function onInputHandler(e) {
     if(e.target.value===" ") {
       props.motSuivant();
       setEstFini(true);
     } else {
-      setEfface(false);
       if(indexCurseur<props.mot.length) {
         setIndexCurseur(indexCurseur+1);
         setCurrentInput(e.target.value);
       }
       props.inputRef.current.value = "";
     }
+    props.setEfface(false);
   }
 
   function onKeyDownHandler(e) {
     if (e.key==="Backspace") {
       if(indexCurseur>0) {
         setIndexCurseur(indexCurseur-1);
-        setEfface(true);
+        props.setEfface(true);
       } else {
         setEstFini(false);
         props.motPrecedent(0);
@@ -42,7 +40,7 @@ const Mot =  memo(function Mot(props) {
           lettre={lettre}
           index={i}
           key={i}
-          efface={efface}
+          efface={props.efface}
           input={currentInput}
           indexCurseur={indexCurseur}
           estBon={props.estBon}

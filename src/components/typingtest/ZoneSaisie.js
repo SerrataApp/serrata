@@ -8,6 +8,7 @@ export default function ZoneSaisie(props) {
   const [listeDrapeaux, setListeDrapeaux] = useState([]);
   const [indexDrapeau, setIndexDrapeau] = useState(0);
   const [isFocus, setIsFocus] = useState(true);
+  const [efface, setEfface] = useState(false);
   const inputRef = useRef();
 
   const lang = useContext(LanguageContext).lang;
@@ -52,20 +53,30 @@ export default function ZoneSaisie(props) {
     setIsFocus(false);
   }
 
-  const listeMots = listeDrapeaux.map((drapeau, index) => (
-    <Mot
-      inputRef={inputRef}
-      onFocus={onFocusHandler}
-      onBlur={onBlurHandler}
-      mot={drapeau}
-      key={drapeau}
-      estBon={props.estBon}
-      estFaux={props.estFaux}
-      motSuivant={motSuivant}
-      motPrecedent={motPrecedent}
-      actuel={indexDrapeau === index}
-    />
-  ));
+  const listeMots = listeDrapeaux.map((drapeau, index) => {
+    if(indexDrapeau===index) {
+      return (<Mot
+        inputRef={inputRef}
+        onFocus={onFocusHandler}
+        onBlur={onBlurHandler}
+        mot={drapeau}
+        key={drapeau}
+        estBon={props.estBon}
+        estFaux={props.estFaux}
+        motSuivant={motSuivant}
+        motPrecedent={motPrecedent}
+        actuel={indexDrapeau === index}
+        efface={efface}
+        setEfface={setEfface}
+      />)
+    } else {
+      return (<Mot
+        mot={drapeau}
+        key={drapeau}
+        actuel={indexDrapeau === index}
+      />)
+    }
+  });
 
   return (
     <div className="w-10/12 md:w-8/12 border h-[300px] rounded p-2 border-gray-300 relative" onClick={onClickHandler}>
