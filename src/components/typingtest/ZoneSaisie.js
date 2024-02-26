@@ -30,27 +30,27 @@ export default function ZoneSaisie(props) {
 }, []);
 
 
-  const onClickHandler = useCallback(() => {
+  function onClickHandler() {
     inputRef.current.focus();
-  })
+  }
 
-  const motSuivant = useCallback(() => {
+  function motSuivant() {
     setIndexDrapeau(indexDrapeau+1);
-  })
+  }
 
-  const motPrecedent = useCallback(() => {
+  function motPrecedent() {
     if(indexDrapeau>0) {
       setIndexDrapeau(indexDrapeau-1);
     }
-  })
+  }
 
-  const onFocusHandler = useCallback(() => {
+  function onFocusHandler() {
     setIsFocus(true);
-  })
+  }
 
-  const onBlurHandler = useCallback(() => {
+  function onBlurHandler() {
     setIsFocus(false);
-  })
+  }
 
   const listeMots = listeDrapeaux.map((drapeau, index) => (
     <Mot

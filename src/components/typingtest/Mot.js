@@ -7,20 +7,23 @@ const Mot =  memo(function Mot(props) {
   const [currentInput, setCurrentInput] = useState();
   const [estFini, setEstFini] = useState(false);
   const [estBon, setEstBon] = useState(true);
+  const [lettresBonus, setLettresBonus] = useState([]);
 
-  const onInputHandler = useCallback((e) => {
+  function onInputHandler(e) {
     if(e.target.value===" ") {
       props.motSuivant();
       setEstFini(true);
     } else {
       setEfface(false);
-      setIndexCurseur(indexCurseur+1);
-      setCurrentInput(e.target.value);
+      if(indexCurseur<props.mot.length) {
+        setIndexCurseur(indexCurseur+1);
+        setCurrentInput(e.target.value);
+      }
       props.inputRef.current.value = "";
     }
-  })
+  }
 
-  const onKeyDownHandler = useCallback((e) => {
+  function onKeyDownHandler(e) {
     if (e.key==="Backspace") {
       if(indexCurseur>0) {
         setIndexCurseur(indexCurseur-1);
@@ -30,7 +33,7 @@ const Mot =  memo(function Mot(props) {
         props.motPrecedent(0);
       }
     }
-  })
+  }
 
   const listeLettres = props.mot.split('').map((lettre, i) => {
     if(props.actuel) {
