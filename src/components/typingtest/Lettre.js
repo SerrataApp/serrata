@@ -5,11 +5,18 @@ const Lettre = memo(function Lettre(props) {
   const [erreur, setErreur] = useState();
 
   useEffect(() => {
+    if(!props.motActuel && (erreur || !estBon)) {
+      props.motEstBon(false);
+    }
+  }, [props.motActuel]);
+
+  useEffect(() => {
     if(props.motActuel) {
       if(props.index===props.indexCurseur-1 && !props.efface) {
         if(props.input===props.lettre) {
           setEstBon(true);
           props.estBon();
+          props.motEstBon(true);
         } else {
           setErreur(true);
           props.estFaux();
@@ -27,11 +34,7 @@ const Lettre = memo(function Lettre(props) {
     style += " text-black";
   }
   if(erreur) {
-    if(props.lettre===" ") {
-      style += " bg-red-600"
-    } else {
-      style += " text-red-600";
-    }
+    style += " text-red-600";
   }
   if(!erreur && !estBon) {
     style += " text-gray-300";
@@ -39,12 +42,15 @@ const Lettre = memo(function Lettre(props) {
 
   return (
     <div className="flex">
-      {props.motActuel && props.index===props.indexCurseur &&
+      {props.motActuel && props.indexCurseur===0 && props.index===props.indexCurseur &&
         <div className="w-px h-6 bg-black"></div>
       }
       <p className={`select-none ${style}`}>
         {props.lettre}
       </p>
+      {props.motActuel && props.index===props.indexCurseur-1 &&
+        <div className="w-px h-6 bg-black"></div>
+      }
     </div>
   );
 })
