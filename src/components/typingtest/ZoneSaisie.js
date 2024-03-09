@@ -1,4 +1,4 @@
-import { useCallback, useContext, useEffect, useRef, useState } from "react";
+import { useContext, useEffect, useRef, useState } from "react";
 import Mot from "./Mot";
 import { drapeauxMonde } from "../../utils/ImportDrapeaux";
 import LanguageContext from "../store/language-context";
@@ -68,6 +68,9 @@ export default function ZoneSaisie(props) {
         actuel={indexDrapeau === index}
         efface={efface}
         setEfface={setEfface}
+        demarrer={props.demarrer}
+        estPremier={index===0}
+        disabled={props.disabled}
       />)
     } else {
       return (<Mot

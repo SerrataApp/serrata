@@ -8,6 +8,9 @@ const Mot =  memo(function Mot(props) {
   const [estBon, setEstBon] = useState(true);
 
   function onInputHandler(e) {
+    if(props.estPremier) {
+      props.demarrer();
+    }
     if(e.target.value===" ") {
       props.motSuivant();
       setEstFini(true);
@@ -64,7 +67,7 @@ const Mot =  memo(function Mot(props) {
 
   return(
     <div className="relative">
-      {props.actuel && <input type="text" autoFocus={true} onBlur={props.onBlur} onFocus={props.onFocus} className="absolute opacity-0" ref={props.inputRef} onChange={onInputHandler} onKeyDown={onKeyDownHandler}/>}
+      {props.actuel && <input type="text" autoFocus={true} onBlur={props.onBlur} onFocus={props.onFocus} className="absolute opacity-0" ref={props.inputRef} onChange={onInputHandler} onKeyDown={onKeyDownHandler} disabled={props.disabled}/>}
       <div className={`flex gap-[2px] ${estFini && !props.actuel && (estBon ? "border-b-2 border-black" : "border-b-2 border-red-600")}`}>
         {listeLettres}
       </div>

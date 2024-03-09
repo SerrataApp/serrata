@@ -4,12 +4,15 @@ export default function InfosTyping(props) {
   const [pourcent, setPourcent] = useState(100);
 
   useEffect(() => {
-    setPourcent(Math.round(props.nbBons/(props.nbBons+props.nbFaux)*100));
+    if(props.nbBons+props.nbFaux!==0) {
+      setPourcent(Math.round(props.nbBons/(props.nbBons+props.nbFaux)*100));
+    }
   }, [props.nbBons, props.nbFaux])
 
   return (
-    <div className="flex justify-center">
-      {pourcent}%
+    <div className="flex justify-center gap-6">
+      <span>{props.chrono}sec</span>
+      <span>{pourcent}%</span>
     </div>
   );
 }
