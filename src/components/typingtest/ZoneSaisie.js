@@ -71,6 +71,8 @@ export default function ZoneSaisie(props) {
         demarrer={props.demarrer}
         estPremier={index===0}
         disabled={props.disabled}
+        ajouterMot={props.ajouterMot}
+        retirerMot={props.retirerMot}
       />)
     } else {
       return (<Mot
@@ -83,7 +85,7 @@ export default function ZoneSaisie(props) {
 
   return (
     <div className="w-10/12 md:w-8/12 border h-[300px] rounded p-2 border-gray-300 relative" onClick={onClickHandler}>
-      {!isFocus && <MessageClick/>}
+      {!isFocus && !props.jeuEstFini && <MessageClick/>}
       <div className="h-full flex flex-wrap overflow-y-auto overflow-x-hidden whitespace-break-spaces gap-[10px] z-0">
         {listeMots}
       </div>

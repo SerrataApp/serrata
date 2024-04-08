@@ -1,4 +1,4 @@
-import { useState, memo } from "react";
+import { useState, memo, useEffect } from "react";
 import Lettre from "./Lettre";
 
 const Mot =  memo(function Mot(props) {
@@ -6,13 +6,45 @@ const Mot =  memo(function Mot(props) {
   const [currentInput, setCurrentInput] = useState();
   const [estFini, setEstFini] = useState(false);
   const [estBon, setEstBon] = useState(true);
+  const [lettres, setLettres] = useState([]);
+
+    useEffect(() => {
+        if(props.actuel) {
+            if(estFini && estBon) {
+                props.retirerMot();
+            }
+        }
+    }, [props.actuel]);
+
+    function lettresSontBonnes() {
+        for(let lettre of lettres) {
+            if(!lettre) {
+                console.log("PASBON")
+                return false;
+            }
+        }
+        console.log("CESTBON")
+        return true;
+    }
+
+    function ajouterAuTab(estBon) {
+        setLettres([...lettres, estBon]);
+    }
+
+    function retirerDuTab() {
+        const nouveauTableau = lettres.slice(0, -1);
+        setLettres(nouveauTableau);
+    }
 
   function onInputHandler(e) {
     if(props.estPremier) {
       props.demarrer();
     }
     if(e.target.value===" ") {
-      props.motSuivant();
+        if(lettresSontBonnes() && indexCurseur===props.mot.length) {
+          props.ajouterMot();
+        }
+        props.motSuivant();
       setEstFini(true);
     } else {
       if(indexCurseur<props.mot.length) {
@@ -29,6 +61,7 @@ const Mot =  memo(function Mot(props) {
       if(indexCurseur>0) {
         setIndexCurseur(indexCurseur-1);
         props.setEfface(true);
+        retirerDuTab();
       } else {
         setEstFini(false);
         props.motPrecedent(0);
@@ -50,6 +83,8 @@ const Mot =  memo(function Mot(props) {
           estFaux={props.estFaux}
           motActuel={props.actuel}
           motEstBon={setEstBon}
+          ajouterAuTab={ajouterAuTab}
+          retirerDuTab={retirerDuTab}
         />
       )
     } else {
@@ -60,6 +95,8 @@ const Mot =  memo(function Mot(props) {
         key={i}
         motActuel={false}
         motEstBon={setEstBon}
+        ajouterAuTab={ajouterAuTab}
+        retirerDuTab={retirerDuTab}
       />
       )
     }

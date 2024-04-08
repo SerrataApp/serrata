@@ -16,10 +16,12 @@ const Lettre = memo(function Lettre(props) {
         if(props.input===props.lettre) {
           setEstBon(true);
           props.estBon();
+          props.ajouterAuTab(true);
           props.motEstBon(true);
         } else {
           setErreur(true);
           props.estFaux();
+          props.ajouterAuTab(false);
         }
       }
       if(props.indexCurseur-1<props.index) {

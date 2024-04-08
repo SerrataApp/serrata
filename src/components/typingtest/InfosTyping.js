@@ -12,6 +12,7 @@ export default function InfosTyping(props) {
   return (
     <div className="flex justify-center gap-6">
       <span>{props.chrono}sec</span>
+      <span>{props.nbMots} mots</span>
       <span>{pourcent}%</span>
     </div>
   );

@@ -3,6 +3,7 @@ import ZoneSaisie from "../components/typingtest/ZoneSaisie";
 import Page from "./Page";
 import InfosTyping from "../components/typingtest/InfosTyping";
 import ChoixTemps from "../components/typingtest/ChoixTemps";
+import ModalResultTyping from "../components/typingtest/ModalResultTyping";
 
 export default function TypingTest() {
   const [nbBons, setNbBons] = useState(0);
@@ -11,6 +12,7 @@ export default function TypingTest() {
   const [chrono, setChrono] = useState(tempsSelect);
   const [estFini, setEstFini] = useState(false);
   const [estDemarre, setEstDemarre] = useState(false);
+  const [nbMots, setNbMots] = useState(0);
 
   useEffect(() => {
     let interval;
@@ -52,15 +54,24 @@ export default function TypingTest() {
     setEstDemarre(true);
   }
 
+  function ajouterMot() {
+    setNbMots(nbMots+1);
+  }
+
+  function retirerMot() {
+    setNbMots(nbMots-1);
+  }
+
   return (
     <Page titre="Typing test">
-      <div className="flex flex-col items-center gap-2">
-        <ChoixTemps tempsSelect={tempsSelect} changeTempsHandler={onChangeTempsSelect} disabled={estDemarre}/>
-        <InfosTyping nbBons={nbBons} nbFaux={nbFaux} chrono={chrono}/>
-        <div className="flex justify-center">
-          <ZoneSaisie estBon={estBon} estFaux={estFaux} demarrer={demarrer} disabled={estFini}/>
+        {estFini && <ModalResultTyping/>}
+        <div className="flex flex-col items-center gap-2">
+          <ChoixTemps tempsSelect={tempsSelect} changeTempsHandler={onChangeTempsSelect} disabled={estDemarre}/>
+          <InfosTyping nbBons={nbBons} nbFaux={nbFaux} chrono={chrono} nbMots={nbMots}/>
+          <div className="flex justify-center">
+            <ZoneSaisie estBon={estBon} estFaux={estFaux} demarrer={demarrer} jeuEstFini={estFini} disabled={estFini} ajouterMot={ajouterMot} retirerMot={retirerMot}/>
+          </div>
         </div>
-      </div>
     </Page>
   );
 }
