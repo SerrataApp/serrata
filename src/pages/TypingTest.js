@@ -62,9 +62,13 @@ export default function TypingTest() {
     setNbMots(nbMots-1);
   }
 
+  function closeModal() {
+    window.location.reload();
+  }
+
   return (
     <Page titre="Typing test">
-        {estFini && <ModalResultTyping/>}
+        {estFini && <ModalResultTyping tempsSelect={tempsSelect} nbMots={nbMots} onClose={closeModal} nbBons={nbBons} nbFaux={nbFaux}/>}
         <div className="flex flex-col items-center gap-2">
           <ChoixTemps tempsSelect={tempsSelect} changeTempsHandler={onChangeTempsSelect} disabled={estDemarre}/>
           <InfosTyping nbBons={nbBons} nbFaux={nbFaux} chrono={chrono} nbMots={nbMots}/>
