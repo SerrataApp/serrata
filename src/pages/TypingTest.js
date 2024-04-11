@@ -1,9 +1,11 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useContext } from "react";
 import ZoneSaisie from "../components/typingtest/ZoneSaisie";
 import Page from "./Page";
 import InfosTyping from "../components/typingtest/InfosTyping";
 import ChoixTemps from "../components/typingtest/ChoixTemps";
 import ModalResultTyping from "../components/typingtest/ModalResultTyping";
+import langpack from "../lang/langpack.json";
+import LanguageContext from "../components/store/language-context";
 
 export default function TypingTest() {
   const [nbBons, setNbBons] = useState(0);
@@ -13,6 +15,8 @@ export default function TypingTest() {
   const [estFini, setEstFini] = useState(false);
   const [estDemarre, setEstDemarre] = useState(false);
   const [nbMots, setNbMots] = useState(0);
+
+  const lang = useContext(LanguageContext).lang;
 
   useEffect(() => {
     let interval;
@@ -67,7 +71,7 @@ export default function TypingTest() {
   }
 
   return (
-    <Page titre="Typing test">
+    <Page titre={langpack["typ_tit"][lang]}>
         {estFini && <ModalResultTyping tempsSelect={tempsSelect} nbMots={nbMots} onClose={closeModal} nbBons={nbBons} nbFaux={nbFaux}/>}
         <div className="flex flex-col items-center gap-2">
           <ChoixTemps tempsSelect={tempsSelect} changeTempsHandler={onChangeTempsSelect} disabled={estDemarre}/>

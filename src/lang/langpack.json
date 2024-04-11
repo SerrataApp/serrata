@@ -88,5 +88,15 @@
     "admin_blo": {"fr": "Bloquer", "en": "Block"},
     "admin_deblo": {"fr": "Débloquer", "en": "Unlock"},
     "admin_uti": {"fr": "l'utilisateur", "en": "user"},
-    "admin_cgu": {"fr": "Notifier d'une mise à jour", "en": "Notify an update"}
+    "admin_cgu": {"fr": "Notifier d'une mise à jour", "en": "Notify an update"},
+
+    "typ_tit": {"fr": "Test de dactylographie", "en": "Typing test"},
+    "typ_sec_sing": {"fr": "secondes", "en": "second"},
+    "typ_sec_plu": {"fr": "secondes", "en": "seconds"},
+    "typ_mot_sing": {"fr": "mot", "en": "word"},
+    "typ_mot_plu": {"fr": "mots", "en": "words"},
+    "typ_focus": {"fr": "Cliquez dans la zone pour jouer", "en": "Click in the area to play"},
+    "typ_mpm": {"fr": "mots par minute", "en": "words per minute"},
+    "typ_prec": {"fr": "de précision", "en": "precision"},
+    "typ_mode": {"fr": "Mode", "en": "Mode"}
 }
