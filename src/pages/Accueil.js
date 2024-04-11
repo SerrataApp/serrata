@@ -16,7 +16,7 @@ export default function Accueil() {
 
   return (
     <Page titre={langpack["menu_jouer"][lang]}>
-        <div class="flex flex-col gap-2 mx-2 md:mx-12 md:gap-4">
+        <div className="flex flex-col gap-2 mx-2 md:mx-12 md:gap-4">
             <div className=" flex flex-col gap-2 md:grid md:grid-cols-3 md:gap-4">
                 <LienAccueil href="/europe" texte={langpack["rub_eu"][lang]} img={europe}/>
                 <LienAccueil href="/afrique" texte={langpack["rub_af"][lang]} img={afrique}/>

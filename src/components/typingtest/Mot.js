@@ -19,11 +19,9 @@ const Mot =  memo(function Mot(props) {
     function lettresSontBonnes() {
         for(let lettre of lettres) {
             if(!lettre) {
-                console.log("PASBON")
                 return false;
             }
         }
-        console.log("CESTBON")
         return true;
     }
 
