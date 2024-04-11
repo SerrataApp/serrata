@@ -1,987 +1,987 @@
-import afghanistan from "../img/drapeaux/afghanistan.png";
-import afriquedusud from "../img/drapeaux/afriquedusud.png";
-import albanie from "../img/drapeaux/albanie.png";
-import algerie from "../img/drapeaux/algerie.png";
-import allemagne from "../img/drapeaux/allemagne.png";
-import andorre from "../img/drapeaux/andorre.png";
-import angola from "../img/drapeaux/angola.png";
-import antiguaetbarbuda from "../img/drapeaux/antiguaetbarbuda.png";
-import arabiesaoudite from "../img/drapeaux/arabiesaoudite.png";
-import argentine from "../img/drapeaux/argentine.png";
-import armenie from "../img/drapeaux/armenie.png";
-import australie from "../img/drapeaux/australie.png";
-import autriche from "../img/drapeaux/autriche.png";
-import azerbaidjan from "../img/drapeaux/azerbaidjan.png";
-import bahamas from "../img/drapeaux/bahamas.png";
-import bahrein from "../img/drapeaux/bahrein.png";
-import bangladesh from "../img/drapeaux/bangladesh.png";
-import barbade from "../img/drapeaux/barbade.png";
-import belgique from "../img/drapeaux/belgique.png";
-import belize from "../img/drapeaux/belize.png";
-import benin from "../img/drapeaux/benin.png";
-import bhoutan from "../img/drapeaux/bhoutan.png";
-import bielorussie from "../img/drapeaux/bielorussie.png";
-import birmanie from "../img/drapeaux/birmanie.png";
-import bolivie from "../img/drapeaux/bolivie.png";
-import bosnieherzegovine from "../img/drapeaux/bosnieherzegovine.png";
-import botswana from "../img/drapeaux/botswana.png";
-import bresil from "../img/drapeaux/bresil.png";
-import brunei from "../img/drapeaux/brunei.png";
-import bulgarie from "../img/drapeaux/bulgarie.png";
-import burkinafaso from "../img/drapeaux/burkinafaso.png";
-import burundi from "../img/drapeaux/burundi.png";
-import cambodge from "../img/drapeaux/cambodge.png";
-import cameroun from "../img/drapeaux/cameroun.png";
-import canada from "../img/drapeaux/canada.png";
-import capvert from "../img/drapeaux/capvert.png";
-import chili from "../img/drapeaux/chili.png";
-import chine from "../img/drapeaux/chine.png";
-import chypre from "../img/drapeaux/chypre.png";
-import colombie from "../img/drapeaux/colombie.png";
-import comores from "../img/drapeaux/comores.png";
-import congo from "../img/drapeaux/congo.png";
-import coreedunord from "../img/drapeaux/coreedunord.png";
-import coreedusud from "../img/drapeaux/coreedusud.png";
-import costarica from "../img/drapeaux/costarica.png";
-import cotedivoire from "../img/drapeaux/cotedivoire.png";
-import croatie from "../img/drapeaux/croatie.png";
-import cuba from "../img/drapeaux/cuba.png";
-import danemark from "../img/drapeaux/danemark.png";
-import djibouti from "../img/drapeaux/djibouti.png";
-import dominique from "../img/drapeaux/dominique.png";
-import egypte from "../img/drapeaux/egypte.png";
-import emiratsarabesunis from "../img/drapeaux/emiratsarabesunis.png";
-import equateur from "../img/drapeaux/equateur.png";
-import erythree from "../img/drapeaux/erythree.png";
-import espagne from "../img/drapeaux/espagne.png";
-import estonie from "../img/drapeaux/estonie.png";
-import eswatini from "../img/drapeaux/eswatini.png";
-import etatsunis from "../img/drapeaux/etatsunis.png";
-import ethiopie from "../img/drapeaux/ethiopie.png";
-import fidji from "../img/drapeaux/fidji.png";
-import finlande from "../img/drapeaux/finlande.png";
-import france from "../img/drapeaux/france.png";
-import gabon from "../img/drapeaux/gabon.png";
-import gambie from "../img/drapeaux/gambie.png";
-import georgie from "../img/drapeaux/georgie.png";
-import ghana from "../img/drapeaux/ghana.png";
-import grece from "../img/drapeaux/grece.png";
-import grenade from "../img/drapeaux/grenade.png";
-import guatemala from "../img/drapeaux/guatemala.png";
-import guinee from "../img/drapeaux/guinee.png";
-import guineebissau from "../img/drapeaux/guineebissau.png";
-import guineeequatoriale from "../img/drapeaux/guineeequatoriale.png";
-import guyana from "../img/drapeaux/guyana.png";
-import haiti from "../img/drapeaux/haiti.png";
-import honduras from "../img/drapeaux/honduras.png";
-import hongrie from "../img/drapeaux/hongrie.png";
-import ilesmarshall from "../img/drapeaux/ilesmarshall.png";
-import ilessalomon from "../img/drapeaux/ilessalomon.png";
-import inde from "../img/drapeaux/inde.png";
-import indonesie from "../img/drapeaux/indonesie.png";
-import irak from "../img/drapeaux/irak.png";
-import iran from "../img/drapeaux/iran.png";
-import irlande from "../img/drapeaux/irlande.png";
-import islande from "../img/drapeaux/islande.png";
-import israel from "../img/drapeaux/israel.png";
-import palestine from "../img/drapeaux/palestine.png";
-import italie from "../img/drapeaux/italie.png";
-import jamaique from "../img/drapeaux/jamaique.png";
-import japon from "../img/drapeaux/japon.png";
-import jordanie from "../img/drapeaux/jordanie.png";
-import kazakhstan from "../img/drapeaux/kazakhstan.png";
-import kenya from "../img/drapeaux/kenya.png";
-import kirghizistan from "../img/drapeaux/kirghizistan.png";
-import kiribati from "../img/drapeaux/kiribati.png";
-import kosovo from "../img/drapeaux/kosovo.png";
-import koweit from "../img/drapeaux/koweit.png";
-import laos from "../img/drapeaux/laos.png";
-import lesotho from "../img/drapeaux/lesotho.png";
-import lettonie from "../img/drapeaux/lettonie.png";
-import liban from "../img/drapeaux/liban.png";
-import liberia from "../img/drapeaux/liberia.png";
-import libye from "../img/drapeaux/libye.png";
-import liechtenstein from "../img/drapeaux/liechtenstein.png";
-import lituanie from "../img/drapeaux/lituanie.png";
-import luxembourg from "../img/drapeaux/luxembourg.png";
-import macedoinedunord from "../img/drapeaux/macedoinedunord.png";
-import madagascar from "../img/drapeaux/madagascar.png";
-import malaisie from "../img/drapeaux/malaisie.png";
-import malawi from "../img/drapeaux/malawi.png";
-import maldives from "../img/drapeaux/maldives.png";
-import mali from "../img/drapeaux/mali.png";
-import malte from "../img/drapeaux/malte.png";
-import maroc from "../img/drapeaux/maroc.png";
-import maurice from "../img/drapeaux/maurice.png";
-import mauritanie from "../img/drapeaux/mauritanie.png";
-import mexique from "../img/drapeaux/mexique.png";
-import micronesie from "../img/drapeaux/micronesie.png";
-import moldavie from "../img/drapeaux/moldavie.png";
-import monaco from "../img/drapeaux/monaco.png";
-import mongolie from "../img/drapeaux/mongolie.png";
-import montenegro from "../img/drapeaux/montenegro.png";
-import mozambique from "../img/drapeaux/mozambique.png";
-import namibie from "../img/drapeaux/namibie.png";
-import nauru from "../img/drapeaux/nauru.png";
-import nepal from "../img/drapeaux/nepal.png";
-import nicaragua from "../img/drapeaux/nicaragua.png";
-import niger from "../img/drapeaux/niger.png";
-import nigeria from "../img/drapeaux/nigeria.png";
-import norvege from "../img/drapeaux/norvege.png";
-import nouvellezelande from "../img/drapeaux/nouvellezelande.png";
-import oman from "../img/drapeaux/oman.png";
-import ouganda from "../img/drapeaux/ouganda.png";
-import ouzbekistan from "../img/drapeaux/ouzbekistan.png";
-import pakistan from "../img/drapeaux/pakistan.png";
-import palaos from "../img/drapeaux/palaos.png";
-import panama from "../img/drapeaux/panama.png";
-import papouasienouvelleguinee from "../img/drapeaux/papouasienouvelleguinee.png";
-import paraguay from "../img/drapeaux/paraguay.png";
-import paysbas from "../img/drapeaux/paysbas.png";
-import perou from "../img/drapeaux/perou.png";
-import philippines from "../img/drapeaux/philippines.png";
-import pologne from "../img/drapeaux/pologne.png";
-import portugal from "../img/drapeaux/portugal.png";
-import qatar from "../img/drapeaux/qatar.png";
-import republiquecentrafricaine from "../img/drapeaux/republiquecentrafricaine.png";
-import republiquedemocratiqueducongo from "../img/drapeaux/republiquedemocratiqueducongo.png";
-import republiquedominicaine from "../img/drapeaux/republiquedominicaine.png";
-import roumanie from "../img/drapeaux/roumanie.png";
-import royaumeuni from "../img/drapeaux/royaumeuni.png";
-import russie from "../img/drapeaux/russie.png";
-import rwanda from "../img/drapeaux/rwanda.png";
-import saintchristopheetnieves from "../img/drapeaux/saintchristopheetnieves.png";
-import saintelucie from "../img/drapeaux/saintelucie.png";
-import saintmarin from "../img/drapeaux/saintmarin.png";
-import saintvincentetlesgrenadines from "../img/drapeaux/saintvincentetlesgrenadines.png";
-import salvador from "../img/drapeaux/salvador.png";
-import samoa from "../img/drapeaux/samoa.png";
-import saotomeetprincipe from "../img/drapeaux/saotomeetprincipe.png";
-import senegal from "../img/drapeaux/senegal.png";
-import serbie from "../img/drapeaux/serbie.png";
-import seychelles from "../img/drapeaux/seychelles.png";
-import sierraleone from "../img/drapeaux/sierraleone.png";
-import singapour from "../img/drapeaux/singapour.png";
-import slovaquie from "../img/drapeaux/slovaquie.png";
-import slovenie from "../img/drapeaux/slovenie.png";
-import somalie from "../img/drapeaux/somalie.png";
-import soudan from "../img/drapeaux/soudan.png";
-import soudandusud from "../img/drapeaux/soudandusud.png";
-import srilanka from "../img/drapeaux/srilanka.png";
-import suede from "../img/drapeaux/suede.png";
-import suisse from "../img/drapeaux/suisse.png";
-import suriname from "../img/drapeaux/suriname.png";
-import syrie from "../img/drapeaux/syrie.png";
-import tadjikistan from "../img/drapeaux/tadjikistan.png";
-import tanzanie from "../img/drapeaux/tanzanie.png";
-import tchad from "../img/drapeaux/tchad.png";
-import tchequie from "../img/drapeaux/tchequie.png";
-import thailande from "../img/drapeaux/thailande.png";
-import timororiental from "../img/drapeaux/timororiental.png";
-import togo from "../img/drapeaux/togo.png";
-import tonga from "../img/drapeaux/tonga.png";
-import triniteettobago from "../img/drapeaux/triniteettobago.png";
-import tunisie from "../img/drapeaux/tunisie.png";
-import turkmenistan from "../img/drapeaux/turkmenistan.png";
-import turquie from "../img/drapeaux/turquie.png";
-import tuvalu from "../img/drapeaux/tuvalu.png";
-import ukraine from "../img/drapeaux/ukraine.png";
-import uruguay from "../img/drapeaux/uruguay.png";
-import vanuatu from "../img/drapeaux/vanuatu.png";
-import vatican from "../img/drapeaux/vatican.png";
-import venezuela from "../img/drapeaux/venezuela.png";
-import vietnam from "../img/drapeaux/vietnam.png";
-import yemen from "../img/drapeaux/yemen.png";
-import zambie from "../img/drapeaux/zambie.png";
-import zimbabwe from "../img/drapeaux/zimbabwe.png";
+import drap_afghanistan from "../img/drapeaux/afghanistan.png";
+import drap_afriquedusud from "../img/drapeaux/afriquedusud.png";
+import drap_albanie from "../img/drapeaux/albanie.png";
+import drap_algerie from "../img/drapeaux/algerie.png";
+import drap_allemagne from "../img/drapeaux/allemagne.png";
+import drap_andorre from "../img/drapeaux/andorre.png";
+import drap_angola from "../img/drapeaux/angola.png";
+import drap_antiguaetbarbuda from "../img/drapeaux/antiguaetbarbuda.png";
+import drap_arabiesaoudite from "../img/drapeaux/arabiesaoudite.png";
+import drap_argentine from "../img/drapeaux/argentine.png";
+import drap_armenie from "../img/drapeaux/armenie.png";
+import drap_australie from "../img/drapeaux/australie.png";
+import drap_autriche from "../img/drapeaux/autriche.png";
+import drap_azerbaidjan from "../img/drapeaux/azerbaidjan.png";
+import drap_bahamas from "../img/drapeaux/bahamas.png";
+import drap_bahrein from "../img/drapeaux/bahrein.png";
+import drap_bangladesh from "../img/drapeaux/bangladesh.png";
+import drap_barbade from "../img/drapeaux/barbade.png";
+import drap_belgique from "../img/drapeaux/belgique.png";
+import drap_belize from "../img/drapeaux/belize.png";
+import drap_benin from "../img/drapeaux/benin.png";
+import drap_bhoutan from "../img/drapeaux/bhoutan.png";
+import drap_bielorussie from "../img/drapeaux/bielorussie.png";
+import drap_birmanie from "../img/drapeaux/birmanie.png";
+import drap_bolivie from "../img/drapeaux/bolivie.png";
+import drap_bosnieherzegovine from "../img/drapeaux/bosnieherzegovine.png";
+import drap_botswana from "../img/drapeaux/botswana.png";
+import drap_bresil from "../img/drapeaux/bresil.png";
+import drap_brunei from "../img/drapeaux/brunei.png";
+import drap_bulgarie from "../img/drapeaux/bulgarie.png";
+import drap_burkinafaso from "../img/drapeaux/burkinafaso.png";
+import drap_burundi from "../img/drapeaux/burundi.png";
+import drap_cambodge from "../img/drapeaux/cambodge.png";
+import drap_cameroun from "../img/drapeaux/cameroun.png";
+import drap_canada from "../img/drapeaux/canada.png";
+import drap_capvert from "../img/drapeaux/capvert.png";
+import drap_chili from "../img/drapeaux/chili.png";
+import drap_chine from "../img/drapeaux/chine.png";
+import drap_chypre from "../img/drapeaux/chypre.png";
+import drap_colombie from "../img/drapeaux/colombie.png";
+import drap_comores from "../img/drapeaux/comores.png";
+import drap_congo from "../img/drapeaux/congo.png";
+import drap_coreedunord from "../img/drapeaux/coreedunord.png";
+import drap_coreedusud from "../img/drapeaux/coreedusud.png";
+import drap_costarica from "../img/drapeaux/costarica.png";
+import drap_cotedivoire from "../img/drapeaux/cotedivoire.png";
+import drap_croatie from "../img/drapeaux/croatie.png";
+import drap_cuba from "../img/drapeaux/cuba.png";
+import drap_danemark from "../img/drapeaux/danemark.png";
+import drap_djibouti from "../img/drapeaux/djibouti.png";
+import drap_dominique from "../img/drapeaux/dominique.png";
+import drap_egypte from "../img/drapeaux/egypte.png";
+import drap_emiratsarabesunis from "../img/drapeaux/emiratsarabesunis.png";
+import drap_equateur from "../img/drapeaux/equateur.png";
+import drap_erythree from "../img/drapeaux/erythree.png";
+import drap_espagne from "../img/drapeaux/espagne.png";
+import drap_estonie from "../img/drapeaux/estonie.png";
+import drap_eswatini from "../img/drapeaux/eswatini.png";
+import drap_etatsunis from "../img/drapeaux/etatsunis.png";
+import drap_ethiopie from "../img/drapeaux/ethiopie.png";
+import drap_fidji from "../img/drapeaux/fidji.png";
+import drap_finlande from "../img/drapeaux/finlande.png";
+import drap_france from "../img/drapeaux/france.png";
+import drap_gabon from "../img/drapeaux/gabon.png";
+import drap_gambie from "../img/drapeaux/gambie.png";
+import drap_georgie from "../img/drapeaux/georgie.png";
+import drap_ghana from "../img/drapeaux/ghana.png";
+import drap_grece from "../img/drapeaux/grece.png";
+import drap_grenade from "../img/drapeaux/grenade.png";
+import drap_guatemala from "../img/drapeaux/guatemala.png";
+import drap_guinee from "../img/drapeaux/guinee.png";
+import drap_guineebissau from "../img/drapeaux/guineebissau.png";
+import drap_guineeequatoriale from "../img/drapeaux/guineeequatoriale.png";
+import drap_guyana from "../img/drapeaux/guyana.png";
+import drap_haiti from "../img/drapeaux/haiti.png";
+import drap_honduras from "../img/drapeaux/honduras.png";
+import drap_hongrie from "../img/drapeaux/hongrie.png";
+import drap_ilesmarshall from "../img/drapeaux/ilesmarshall.png";
+import drap_ilessalomon from "../img/drapeaux/ilessalomon.png";
+import drap_inde from "../img/drapeaux/inde.png";
+import drap_indonesie from "../img/drapeaux/indonesie.png";
+import drap_irak from "../img/drapeaux/irak.png";
+import drap_iran from "../img/drapeaux/iran.png";
+import drap_irlande from "../img/drapeaux/irlande.png";
+import drap_islande from "../img/drapeaux/islande.png";
+import drap_israel from "../img/drapeaux/israel.png";
+import drap_palestine from "../img/drapeaux/palestine.png";
+import drap_italie from "../img/drapeaux/italie.png";
+import drap_jamaique from "../img/drapeaux/jamaique.png";
+import drap_japon from "../img/drapeaux/japon.png";
+import drap_jordanie from "../img/drapeaux/jordanie.png";
+import drap_kazakhstan from "../img/drapeaux/kazakhstan.png";
+import drap_kenya from "../img/drapeaux/kenya.png";
+import drap_kirghizistan from "../img/drapeaux/kirghizistan.png";
+import drap_kiribati from "../img/drapeaux/kiribati.png";
+import drap_kosovo from "../img/drapeaux/kosovo.png";
+import drap_koweit from "../img/drapeaux/koweit.png";
+import drap_laos from "../img/drapeaux/laos.png";
+import drap_lesotho from "../img/drapeaux/lesotho.png";
+import drap_lettonie from "../img/drapeaux/lettonie.png";
+import drap_liban from "../img/drapeaux/liban.png";
+import drap_liberia from "../img/drapeaux/liberia.png";
+import drap_libye from "../img/drapeaux/libye.png";
+import drap_liechtenstein from "../img/drapeaux/liechtenstein.png";
+import drap_lituanie from "../img/drapeaux/lituanie.png";
+import drap_luxembourg from "../img/drapeaux/luxembourg.png";
+import drap_macedoinedunord from "../img/drapeaux/macedoinedunord.png";
+import drap_madagascar from "../img/drapeaux/madagascar.png";
+import drap_malaisie from "../img/drapeaux/malaisie.png";
+import drap_malawi from "../img/drapeaux/malawi.png";
+import drap_maldives from "../img/drapeaux/maldives.png";
+import drap_mali from "../img/drapeaux/mali.png";
+import drap_malte from "../img/drapeaux/malte.png";
+import drap_maroc from "../img/drapeaux/maroc.png";
+import drap_maurice from "../img/drapeaux/maurice.png";
+import drap_mauritanie from "../img/drapeaux/mauritanie.png";
+import drap_mexique from "../img/drapeaux/mexique.png";
+import drap_micronesie from "../img/drapeaux/micronesie.png";
+import drap_moldavie from "../img/drapeaux/moldavie.png";
+import drap_monaco from "../img/drapeaux/monaco.png";
+import drap_mongolie from "../img/drapeaux/mongolie.png";
+import drap_montenegro from "../img/drapeaux/montenegro.png";
+import drap_mozambique from "../img/drapeaux/mozambique.png";
+import drap_namibie from "../img/drapeaux/namibie.png";
+import drap_nauru from "../img/drapeaux/nauru.png";
+import drap_nepal from "../img/drapeaux/nepal.png";
+import drap_nicaragua from "../img/drapeaux/nicaragua.png";
+import drap_niger from "../img/drapeaux/niger.png";
+import drap_nigeria from "../img/drapeaux/nigeria.png";
+import drap_norvege from "../img/drapeaux/norvege.png";
+import drap_nouvellezelande from "../img/drapeaux/nouvellezelande.png";
+import drap_oman from "../img/drapeaux/oman.png";
+import drap_ouganda from "../img/drapeaux/ouganda.png";
+import drap_ouzbekistan from "../img/drapeaux/ouzbekistan.png";
+import drap_pakistan from "../img/drapeaux/pakistan.png";
+import drap_palaos from "../img/drapeaux/palaos.png";
+import drap_panama from "../img/drapeaux/panama.png";
+import drap_papouasienouvelleguinee from "../img/drapeaux/papouasienouvelleguinee.png";
+import drap_paraguay from "../img/drapeaux/paraguay.png";
+import drap_paysbas from "../img/drapeaux/paysbas.png";
+import drap_perou from "../img/drapeaux/perou.png";
+import drap_philippines from "../img/drapeaux/philippines.png";
+import drap_pologne from "../img/drapeaux/pologne.png";
+import drap_portugal from "../img/drapeaux/portugal.png";
+import drap_qatar from "../img/drapeaux/qatar.png";
+import drap_republiquecentrafricaine from "../img/drapeaux/republiquecentrafricaine.png";
+import drap_republiquedemocratiqueducongo from "../img/drapeaux/republiquedemocratiqueducongo.png";
+import drap_republiquedominicaine from "../img/drapeaux/republiquedominicaine.png";
+import drap_roumanie from "../img/drapeaux/roumanie.png";
+import drap_royaumeuni from "../img/drapeaux/royaumeuni.png";
+import drap_russie from "../img/drapeaux/russie.png";
+import drap_rwanda from "../img/drapeaux/rwanda.png";
+import drap_saintchristopheetnieves from "../img/drapeaux/saintchristopheetnieves.png";
+import drap_saintelucie from "../img/drapeaux/saintelucie.png";
+import drap_saintmarin from "../img/drapeaux/saintmarin.png";
+import drap_saintvincentetlesgrenadines from "../img/drapeaux/saintvincentetlesgrenadines.png";
+import drap_salvador from "../img/drapeaux/salvador.png";
+import drap_samoa from "../img/drapeaux/samoa.png";
+import drap_saotomeetprincipe from "../img/drapeaux/saotomeetprincipe.png";
+import drap_senegal from "../img/drapeaux/senegal.png";
+import drap_serbie from "../img/drapeaux/serbie.png";
+import drap_seychelles from "../img/drapeaux/seychelles.png";
+import drap_sierraleone from "../img/drapeaux/sierraleone.png";
+import drap_singapour from "../img/drapeaux/singapour.png";
+import drap_slovaquie from "../img/drapeaux/slovaquie.png";
+import drap_slovenie from "../img/drapeaux/slovenie.png";
+import drap_somalie from "../img/drapeaux/somalie.png";
+import drap_soudan from "../img/drapeaux/soudan.png";
+import drap_soudandusud from "../img/drapeaux/soudandusud.png";
+import drap_srilanka from "../img/drapeaux/srilanka.png";
+import drap_suede from "../img/drapeaux/suede.png";
+import drap_suisse from "../img/drapeaux/suisse.png";
+import drap_suriname from "../img/drapeaux/suriname.png";
+import drap_syrie from "../img/drapeaux/syrie.png";
+import drap_tadjikistan from "../img/drapeaux/tadjikistan.png";
+import drap_tanzanie from "../img/drapeaux/tanzanie.png";
+import drap_tchad from "../img/drapeaux/tchad.png";
+import drap_tchequie from "../img/drapeaux/tchequie.png";
+import drap_thailande from "../img/drapeaux/thailande.png";
+import drap_timororiental from "../img/drapeaux/timororiental.png";
+import drap_togo from "../img/drapeaux/togo.png";
+import drap_tonga from "../img/drapeaux/tonga.png";
+import drap_triniteettobago from "../img/drapeaux/triniteettobago.png";
+import drap_tunisie from "../img/drapeaux/tunisie.png";
+import drap_turkmenistan from "../img/drapeaux/turkmenistan.png";
+import drap_turquie from "../img/drapeaux/turquie.png";
+import drap_tuvalu from "../img/drapeaux/tuvalu.png";
+import drap_ukraine from "../img/drapeaux/ukraine.png";
+import drap_uruguay from "../img/drapeaux/uruguay.png";
+import drap_vanuatu from "../img/drapeaux/vanuatu.png";
+import drap_vatican from "../img/drapeaux/vatican.png";
+import drap_venezuela from "../img/drapeaux/venezuela.png";
+import drap_vietnam from "../img/drapeaux/vietnam.png";
+import drap_yemen from "../img/drapeaux/yemen.png";
+import drap_zambie from "../img/drapeaux/zambie.png";
+import drap_zimbabwe from "../img/drapeaux/zimbabwe.png";
 
-afghanistan = {
+const afghanistan = {
   noms: {fr: ["Afghanistan"], en: ["Afghanistan"]},
-  img: afghanistan
+  img: drap_afghanistan
 };
-afriquedusud = {
+const afriquedusud = {
   noms: {fr: ["Afrique du Sud"], en: ["South Africa"]},
-  img: afriquedusud
+  img: drap_afriquedusud
 };
-albanie = {
+const albanie = {
   noms: {fr: ["Albanie"], en: ["Albania"]},
-  img: albanie
+  img: drap_albanie
 };
-algerie = {
+const algerie = {
   noms: {fr: ["Algérie"], en: ["Algeria"]},
-  img: algerie
+  img: drap_algerie
 };
-allemagne = {
+const allemagne = {
   noms: {fr: ["Allemagne"], en: ["Germany"] },
-  img: allemagne
+  img: drap_allemagne
 };
-andorre = {
+const andorre = {
   noms: {fr: ["Andorre"], en: ["Andorra"]},
-  img: andorre
+  img: drap_andorre
 };
-angola = {
+const angola = {
   noms: {fr: ["Angola"], en: ["Angola"]},
-  img: angola
+  img: drap_angola
 };
-antiguaetbarbuda = {
+const antiguaetbarbuda = {
   noms: {fr: ["Antigua-et-Barbuda"], en: ["Antigua and Barbuda"] },
-  img: antiguaetbarbuda
+  img: drap_antiguaetbarbuda
 };
-arabiesaoudite = {
+const arabiesaoudite = {
   noms: { fr: ["Arabie saoudite"], en: ["Saudi Arabia"] },
-  img: arabiesaoudite
+  img: drap_arabiesaoudite
 };
-argentine = {
+const argentine = {
   noms: { fr: ["Argentine"], en: ["Argentina"] },
-  img: argentine
+  img: drap_argentine
 };
-armenie = {
+const armenie = {
   noms: { fr: ["Arménie"], en: ["Armenia"] },
-  img: armenie
+  img: drap_armenie
 };
-australie = {
+const australie = {
   noms: { fr: ["Australie"], en: ["Australia"] },
-  img: australie
+  img: drap_australie
 };
-autriche = {
+const autriche = {
   noms: { fr: ["Autriche"], en: ["Austria"] },
-  img: autriche
+  img: drap_autriche
 };
-azerbaidjan = {
+const azerbaidjan = {
   noms: { fr: ["Azerbaïdjan"], en: ["Azerbaijan"] },
-  img: azerbaidjan
+  img: drap_azerbaidjan
 };
-bahamas = {
+const bahamas = {
   noms: { fr: ["Bahamas"], en: ["Bahamas"] },
-  img: bahamas
+  img: drap_bahamas
 };
-bahrein = {
+const bahrein = {
   noms: { fr: ["Bahreïn"], en: ["Bahrain"] },
-  img: bahrein
+  img: drap_bahrein
 };
-bangladesh = {
+const bangladesh = {
   noms: { fr: ["Bangladesh"], en: ["Bangladesh"] },
-  img: bangladesh
+  img: drap_bangladesh
 };
-barbade = {
+const barbade = {
   noms: { fr: ["Barbade"], en: ["Barbados"] },
-  img: barbade
+  img: drap_barbade
 };
-belgique = {
+const belgique = {
   noms: { fr: ["Belgique"], en: ["Belgium"] },
-  img: belgique
+  img: drap_belgique
 };
-belize = {
+const belize = {
   noms: { fr: ["Belize"], en: ["Belize"] },
-  img: belize
+  img: drap_belize
 };
-benin = {
+const benin = {
   noms: { fr: ["Bénin"], en: ["Benin"] },
-  img: benin
+  img: drap_benin
 };
-bhoutan = {
+const bhoutan = {
   noms: { fr: ["Bhoutan"], en: ["Bhutan"] },
-  img: bhoutan
+  img: drap_bhoutan
 };
-bielorussie = {
+const bielorussie = {
   noms: { fr: ["Biélorussie", "Bélarus"], en: ["Belarus"] },
-  img: bielorussie
+  img: drap_bielorussie
 };
-birmanie = {
+const birmanie = {
   noms: { fr: ["Birmanie", "Myanmar"], en: ["Myanmar"] },
-  img: birmanie
+  img: drap_birmanie
 };
-bolivie = {
+const bolivie = {
   noms: { fr: ["Bolivie"], en: ["Bolivia"] },
-  img: bolivie
+  img: drap_bolivie
 };
-bosnieherzegovine = {
+const bosnieherzegovine = {
   noms: { fr: ["Bosnie-Herzégovine"], en: ["Bosnia and Herzegovina"] },
-  img: bosnieherzegovine
+  img: drap_bosnieherzegovine
 };
-botswana = {
+const botswana = {
   noms: { fr: ["Botswana"], en: ["Botswana"] },
-  img: botswana
+  img: drap_botswana
 };
-bresil = {
+const bresil = {
   noms: { fr: ["Brésil"], en: ["Brazil"] },
-  img: bresil
+  img: drap_bresil
 };
-brunei = {
+const brunei = {
   noms: { fr: ["Brunei"], en: ["Brunei"] },
-  img: brunei
+  img: drap_brunei
 };
-bulgarie = {
+const bulgarie = {
   noms: { fr: ["Bulgarie"], en: ["Bulgaria"] },
-  img: bulgarie
+  img: drap_bulgarie
 };
-burkinafaso = {
+const burkinafaso = {
   noms: { fr: ["Burkina Faso"], en: ["Burkina Faso"] },
-  img: burkinafaso
+  img: drap_burkinafaso
 };
-burundi = {
+const burundi = {
   noms: { fr: ["Burundi"], en: ["Burundi"] },
-  img: burundi
+  img: drap_burundi
 };
-cambodge = {
+const cambodge = {
   noms: { fr: ["Cambodge"], en: ["Cambodia"] },
-  img: cambodge
+  img: drap_cambodge
 };
-cameroun = {
+const cameroun = {
   noms: { fr: ["Cameroun"], en: ["Cameroon"] },
-  img: cameroun
+  img: drap_cameroun
 };
-canada = {
+const canada = {
   noms: { fr: ["Canada"], en: ["Canada"] },
-  img: canada
+  img: drap_canada
 };
-capvert = {
+const capvert = {
   noms: { fr: ["Cap-Vert"], en: ["Cape Verde"] },
-  img: capvert
+  img: drap_capvert
 };
-chili = {
+const chili = {
   noms: { fr: ["Chili"], en: ["Chile"] },
-  img: chili
+  img: drap_chili
 };
-chine = {
+const chine = {
   noms: { fr: ["Chine"], en: ["China"] },
-  img: chine
+  img: drap_chine
 };
-chypre = {
+const chypre = {
   noms: { fr: ["Chypre"], en: ["Cyprus"] },
-  img: chypre
+  img: drap_chypre
 };
-colombie = {
+const colombie = {
   noms: { fr: ["Colombie"], en: ["Colombia"] },
-  img: colombie
+  img: drap_colombie
 };
-comores = {
+const comores = {
   noms: { fr: ["Comores"], en: ["Comoros"] },
-  img: comores
+  img: drap_comores
 };
-congo = {
+const congo = {
   noms: { fr: ["Congo"], en: ["Congo"] },
-  img: congo
+  img: drap_congo
 };
-coreedunord = {
+const coreedunord = {
   noms: { fr: ["Corée du Nord"], en: ["North Korea"] },
-  img: coreedunord
+  img: drap_coreedunord
 };
-coreedusud = {
+const coreedusud = {
   noms: { fr: ["Corée du Sud"], en: ["South Korea"] },
-  img: coreedusud
+  img: drap_coreedusud
 };
-costarica = {
+const costarica = {
   noms: { fr: ["Costa Rica"], en: ["Costa Rica"] },
-  img: costarica
+  img: drap_costarica
 };
-cotedivoire = {
+const cotedivoire = {
   noms: { fr: ["Côte d'Ivoire"], en: ["Ivory Coast"] },
-  img: cotedivoire
+  img: drap_cotedivoire
 };
-croatie = {
+const croatie = {
   noms: { fr: ["Croatie"], en: ["Croatia"] },
-  img: croatie
+  img: drap_croatie
 };
-cuba = {
+const cuba = {
   noms: { fr: ["Cuba"], en: ["Cuba"] },
-  img: cuba
+  img: drap_cuba
 };
-danemark = {
+const danemark = {
   noms: { fr: ["Danemark"], en: ["Denmark"] },
-  img: danemark
+  img: drap_danemark
 };
-djibouti = {
+const djibouti = {
   noms: { fr: ["Djibouti"], en: ["Djibouti"] },
-  img: djibouti
+  img: drap_djibouti
 };
-dominique = {
+const dominique = {
   noms: { fr: ["Dominique"], en: ["Dominica"] },
-  img: dominique
+  img: drap_dominique
 };
-equateur = {
+const equateur = {
   noms: { fr: ["Équateur"], en: ["Ecuador"] },
-  img: equateur
+  img: drap_equateur
 };
-egypte = {
+const egypte = {
   noms: { fr: ["Égypte"], en: ["Egypt"] },
-  img: egypte
+  img: drap_egypte
 };
-emiratsarabesunis = {
+const emiratsarabesunis = {
   noms: { fr: ["Émirats arabes unis", "eau"], en: ["United Arab Emirates", "uae"] },
-  img: emiratsarabesunis
+  img: drap_emiratsarabesunis
 };
-erythree = {
+const erythree = {
   noms: { fr: ["Érythrée"], en: ["Eritrea"] },
-  img: erythree
+  img: drap_erythree
 };
-espagne = {
+const espagne = {
   noms: { fr: ["Espagne"], en: ["Spain"] },
-  img: espagne
+  img: drap_espagne
 };
-estonie = {
+const estonie = {
   noms: { fr: ["Estonie"], en: ["Estonia"] },
-  img: estonie
+  img: drap_estonie
 };
-eswatini = {
+const eswatini = {
   noms: { fr: ["Eswatini", "Swaziland"], en: ["Eswatini", "Swaziland"] },
-  img: eswatini
+  img: drap_eswatini
 };
-etatsunis = {
+const etatsunis = {
   noms: { fr: ["États-Unis", "usa"], en: ["United States", "usa"] },
-  img: etatsunis
+  img: drap_etatsunis
 };
-ethiopie = {
+const ethiopie = {
   noms: { fr: ["Éthiopie"], en: ["Ethiopia"] },
-  img: ethiopie
+  img: drap_ethiopie
 };
-fidji = {
+const fidji = {
   noms: { fr: ["Fidji"], en: ["Fiji"] },
-  img: fidji
+  img: drap_fidji
 };
-finlande = {
+const finlande = {
   noms: { fr: ["Finlande"], en: ["Finland"] },
-  img: finlande
+  img: drap_finlande
 };
-france = {
+const france = {
   noms: { fr: ["France"], en: ["France"] },
-  img: france
+  img: drap_france
 };
-gabon = {
+const gabon = {
   noms: { fr: ["Gabon"], en: ["Gabon"] },
-  img: gabon
+  img: drap_gabon
 };
-gambie = {
+const gambie = {
   noms: { fr: ["Gambie"], en: ["Gambia"] },
-  img: gambie
+  img: drap_gambie
 };
-georgie = {
+const georgie = {
   noms: { fr: ["Géorgie"], en: ["Georgia"] },
-  img: georgie
+  img: drap_georgie
 };
-ghana = {
+const ghana = {
   noms: { fr: ["Ghana"], en: ["Ghana"] },
-  img: ghana
+  img: drap_ghana
 };
-grece = {
+const grece = {
   noms: { fr: ["Grèce"], en: ["Greece"] },
-  img: grece
+  img: drap_grece
 };
-grenade = {
+const grenade = {
   noms: { fr: ["Grenade"], en: ["Grenada"] },
-  img: grenade
+  img: drap_grenade
 };
-guatemala = {
+const guatemala = {
   noms: { fr: ["Guatemala"], en: ["Guatemala"] },
-  img: guatemala
+  img: drap_guatemala
 };
-guinee = {
+const guinee = {
   noms: { fr: ["Guinée"], en: ["Guinea"] },
-  img: guinee
+  img: drap_guinee
 };
-guineeequatoriale = {
+const guineeequatoriale = {
   noms: { fr: ["Guinée équatoriale"], en: ["Equatorial Guinea"] },
-  img: guineeequatoriale
+  img: drap_guineeequatoriale
 };
-guineebissau = {
+const guineebissau = {
   noms: { fr: ["Guinée-Bissau"], en: ["Guinea-Bissau"] },
-  img: guineebissau
+  img: drap_guineebissau
 };
-guyana = {
+const guyana = {
   noms: { fr: ["Guyana"], en: ["Guyana"] },
-  img: guyana
+  img: drap_guyana
 };
-haiti = {
+const haiti = {
   noms: { fr: ["Haïti"], en: ["Haiti"] },
-  img: haiti
+  img: drap_haiti
 };
-honduras = {
+const honduras = {
   noms: { fr: ["Honduras"], en: ["Honduras"] },
-  img: honduras
+  img: drap_honduras
 };
-hongrie = {
+const hongrie = {
   noms: { fr: ["Hongrie"], en: ["Hungary"] },
-  img: hongrie
+  img: drap_hongrie
 };
-ilesmarshall = {
+const ilesmarshall = {
   noms: { fr: ["Îles Marshall"], en: ["Marshall Islands"] },
-  img: ilesmarshall
+  img: drap_ilesmarshall
 };
-ilessalomon = {
+const ilessalomon = {
   noms: { fr: ["Îles Salomon"], en: ["Salomon Isles"] },
-  img: ilessalomon
+  img: drap_ilessalomon
 };
-inde = {
+const inde = {
   noms: { fr: ["Inde"], en: ["India"] },
-  img: inde
+  img: drap_inde
 };
-indonesie = {
+const indonesie = {
   noms: { fr: ["Indonésie"], en: ["Indonesia"] },
-  img: indonesie
+  img: drap_indonesie
 };
-irak = {
+const irak = {
   noms: { fr: ["Irak"], en: ["Iraq"] },
-  img: irak
+  img: drap_irak
 };
-iran = {
+const iran = {
   noms: { fr: ["Iran"], en: ["Iran"] },
-  img: iran
+  img: drap_iran
 };
-irlande = {
+const irlande = {
   noms: { fr: ["Irlande"], en: ["Ireland"] },
-  img: irlande
+  img: drap_irlande
 };
-islande = {
+const islande = {
   noms: { fr: ["Islande"], en: ["Iceland"] },
-  img: islande
+  img: drap_islande
 };
-israel = {
+const israel = {
   noms: { fr: ["Israël"], en: ["Israel"] },
-  img: israel
+  img: drap_israel
 };
-italie = {
+const italie = {
   noms: { fr: ["Italie"], en: ["Italy"] },
-  img: italie
+  img: drap_italie
 };
-jamaique = {
+const jamaique = {
   noms: { fr: ["Jamaïque"], en: ["Jamaica"] },
-  img: jamaique
+  img: drap_jamaique
 };
-japon = {
+const japon = {
   noms: { fr: ["Japon"], en: ["Japan"] },
-  img: japon
+  img: drap_japon
 };
-jordanie = {
+const jordanie = {
   noms: { fr: ["Jordanie"], en: ["Jordan"] },
-  img: jordanie
+  img: drap_jordanie
 };
-kazakhstan = {
+const kazakhstan = {
   noms: { fr: ["Kazakhstan"], en: ["Kazakhstan"] },
-  img: kazakhstan
+  img: drap_kazakhstan
 };
-kenya = {
+const kenya = {
   noms: { fr: ["Kenya"], en: ["Kenya"] },
-  img: kenya
+  img: drap_kenya
 };
-kirghizistan = {
+const kirghizistan = {
   noms: { fr: ["Kirghizistan"], en: ["Kyrgyzstan"] },
-  img: kirghizistan
+  img: drap_kirghizistan
 };
-kiribati = {
+const kiribati = {
   noms: { fr: ["Kiribati"], en: ["Kiribati"] },
-  img: kiribati
+  img: drap_kiribati
 };
-kosovo = {
+const kosovo = {
   noms: { fr: ["Kosovo"], en: ["Kosovo"] },
-  img: kosovo
+  img: drap_kosovo
 };
-koweit = {
+const koweit = {
   noms: { fr: ["Koweït"], en: ["Kuwait"] },
-  img: koweit
+  img: drap_koweit
 };
-laos = {
+const laos = {
   noms: { fr: ["Laos"], en: ["Laos"] },
-  img: laos
+  img: drap_laos
 };
-lesotho = {
+const lesotho = {
   noms: { fr: ["Lesotho"], en: ["Lesotho"] },
-  img: lesotho
+  img: drap_lesotho
 };
-lettonie = {
+const lettonie = {
   noms: { fr: ["Lettonie"], en: ["Latvia"] },
-  img: lettonie
+  img: drap_lettonie
 };
-liban = {
+const liban = {
   noms: { fr: ["Liban"], en: ["Lebanon"] },
-  img: liban
+  img: drap_liban
 };
-liberia = {
+const liberia = {
   noms: { fr: ["Libéria"], en: ["Liberia"] },
-  img: liberia
+  img: drap_liberia
 };
-libye = {
+const libye = {
   noms: { fr: ["Libye"], en: ["Libya"] },
-  img: libye
+  img: drap_libye
 };
-liechtenstein = {
+const liechtenstein = {
   noms: { fr: ["Liechtenstein"], en: ["Liechtenstein"] },
-  img: liechtenstein
+  img: drap_liechtenstein
 };
-lituanie = {
+const lituanie = {
   noms: { fr: ["Lituanie"], en: ["Lithuania"] },
-  img: lituanie
+  img: drap_lituanie
 };
-luxembourg = {
+const luxembourg = {
   noms: { fr: ["Luxembourg"], en: ["Luxembourg"] },
-  img: luxembourg
+  img: drap_luxembourg
 };
-macedoinedunord = {
+const macedoinedunord = {
   noms: { fr: ["Macédoine du Nord"], en: ["North Macedonia"] },
-  img: macedoinedunord
+  img: drap_macedoinedunord
 };
-madagascar = {
+const madagascar = {
   noms: { fr: ["Madagascar"], en: ["Madagascar"] },
-  img: madagascar
+  img: drap_madagascar
 };
-malaisie = {
+const malaisie = {
   noms: { fr: ["Malaisie"], en: ["Malaysia"] },
-  img: malaisie
+  img: drap_malaisie
 };
-malawi = {
+const malawi = {
   noms: { fr: ["Malawi"], en: ["Malawi"] },
-  img: malawi
+  img: drap_malawi
 };
-maldives = {
+const maldives = {
   noms: { fr: ["Maldives"], en: ["Maldives"] },
-  img: maldives
+  img: drap_maldives
 };
-mali = {
+const mali = {
   noms: { fr: ["Mali"], en: ["Mali"] },
-  img: mali
+  img: drap_mali
 };
-malte = {
+const malte = {
   noms: { fr: ["Malte"], en: ["Malta"] },
-  img: malte
+  img: drap_malte
 };
-maroc = {
+const maroc = {
   noms: { fr: ["Maroc"], en: ["Morocco"] },
-  img: maroc
+  img: drap_maroc
 };
-maurice = {
+const maurice = {
   noms: { fr: ["Maurice"], en: ["Mauritius"] },
-  img: maurice
+  img: drap_maurice
 };
-mauritanie = {
+const mauritanie = {
   noms: { fr: ["Mauritanie"], en: ["Mauritania"] },
-  img: mauritanie
+  img: drap_mauritanie
 };
-mexique = {
+const mexique = {
   noms: { fr: ["Mexique"], en: ["Mexico"] },
-  img: mexique
+  img: drap_mexique
 };
-micronesie = {
+const micronesie = {
   noms: { fr: ["Micronésie"], en: ["Micronesia"] },
-  img: micronesie
+  img: drap_micronesie
 };
-moldavie = {
+const moldavie = {
   noms: { fr: ["Moldavie"], en: ["Moldova"] },
-  img: moldavie
+  img: drap_moldavie
 };
-monaco = {
+const monaco = {
   noms: { fr: ["Monaco"], en: ["Monaco"] },
-  img: monaco
+  img: drap_monaco
 };
-mongolie = {
+const mongolie = {
   noms: { fr: ["Mongolie"], en: ["Mongolia"] },
-  img: mongolie
+  img: drap_mongolie
 };
-montenegro = {
+const montenegro = {
   noms: { fr: ["Monténégro"], en: ["Montenegro"] },
-  img: montenegro
+  img: drap_montenegro
 };
-mozambique = {
+const mozambique = {
   noms: { fr: ["Mozambique"], en: ["Mozambique"] },
-  img: mozambique
+  img: drap_mozambique
 };
-namibie = {
+const namibie = {
   noms: { fr: ["Namibie"], en: ["Namibia"] },
-  img: namibie
+  img: drap_namibie
 };
-nauru = {
+const nauru = {
   noms: { fr: ["Nauru"], en: ["Nauru"] },
-  img: nauru
+  img: drap_nauru
 };
-nepal = {
+const nepal = {
   noms: { fr: ["Népal"], en: ["Nepal"] },
-  img: nepal
+  img: drap_nepal
 };
-nicaragua = {
+const nicaragua = {
   noms: { fr: ["Nicaragua"], en: ["Nicaragua"] },
-  img: nicaragua
+  img: drap_nicaragua
 };
-niger = {
+const niger = {
   noms: { fr: ["Niger"], en: ["Niger"] },
-  img: niger
+  img: drap_niger
 };
-nigeria = {
+const nigeria = {
   noms: { fr: ["Nigéria"], en: ["Nigeria"] },
-  img: nigeria
+  img: drap_nigeria
 };
-norvege = {
+const norvege = {
   noms: { fr: ["Norvège"], en: ["Norway"] },
-  img: norvege
+  img: drap_norvege
 };
-nouvellezelande = {
+const nouvellezelande = {
   noms: { fr: ["Nouvelle-Zélande"], en: ["New Zealand"] },
-  img: nouvellezelande
+  img: drap_nouvellezelande
 };
-oman = {
+const oman = {
   noms: { fr: ["Oman"], en: ["Oman"] },
-  img: oman
+  img: drap_oman
 };
-ouganda = {
+const ouganda = {
   noms: { fr: ["Ouganda"], en: ["Uganda"] },
-  img: ouganda
+  img: drap_ouganda
 };
-ouzbekistan = {
+const ouzbekistan = {
   noms: { fr: ["Ouzbékistan"], en: ["Uzbekistan"] },
-  img: ouzbekistan
+  img: drap_ouzbekistan
 };
-pakistan = {
+const pakistan = {
   noms: { fr: ["Pakistan"], en: ["Pakistan"] },
-  img: pakistan
+  img: drap_pakistan
 };
-palaos = {
+const palaos = {
   noms: { fr: ["Palaos"], en: ["Palau"] },
-  img: palaos
+  img: drap_palaos
 };
-palestine = {
+const palestine = {
   noms: { fr: ["Palestine"], en: ["Palestine"] },
-  img: palestine
+  img: drap_palestine
 };
-panama = {
+const panama = {
   noms: { fr: ["Panama"], en: ["Panama"] },
-  img: panama
+  img: drap_panama
 };
-papouasienouvelleguinee = {
+const papouasienouvelleguinee = {
   noms: { fr: ["Papouasie-Nouvelle-Guinée"], en: ["Papua New Guinea"] },
-  img: papouasienouvelleguinee
+  img: drap_papouasienouvelleguinee
 };
-paraguay = {
+const paraguay = {
   noms: { fr: ["Paraguay"], en: ["Paraguay"] },
-  img: paraguay
+  img: drap_paraguay
 };
-paysbas = {
+const paysbas = {
   noms: { fr: ["Pays-Bas"], en: ["Netherlands"] },
-  img: paysbas
+  img: drap_paysbas
 };
-perou = {
+const perou = {
   noms: { fr: ["Pérou"], en: ["Peru"] },
-  img: perou
+  img: drap_perou
 };
-philippines = {
+const philippines = {
   noms: { fr: ["Philippines"], en: ["Philippines"] },
-  img: philippines
+  img: drap_philippines
 };
-pologne = {
+const pologne = {
   noms: { fr: ["Pologne"], en: ["Poland"] },
-  img: pologne
+  img: drap_pologne
 };
-portugal = {
+const portugal = {
   noms: { fr: ["Portugal"], en: ["Portugal"] },
-  img: portugal
+  img: drap_portugal
 };
-qatar = {
+const qatar = {
   noms: { fr: ["Qatar"], en: ["Qatar"] },
-  img: qatar
+  img: drap_qatar
 };
-republiquecentrafricaine = {
+const republiquecentrafricaine = {
   noms: { fr: ["République centrafricaine", "rca"], en: ["Central African Republic", "car"] },
-  img: republiquecentrafricaine
-}
-republiquedemocratiqueducongo = {
+  img: drap_republiquecentrafricaine
+};
+const republiquedemocratiqueducongo = {
   noms: { fr: ["République démocratique du Congo", "rdc"], en: ["Democratic Republic of the Congo", "DRC"] },
-  img: republiquedemocratiqueducongo
-}
-republiquedominicaine = {
+  img: drap_republiquedemocratiqueducongo
+};
+const republiquedominicaine = {
   noms: { fr: ["République dominicaine"], en: ["Dominican Republic"] },
-  img: republiquedominicaine
+  img: drap_republiquedominicaine
 };
-roumanie = {
+const roumanie = {
   noms: { fr: ["Roumanie"], en: ["Romania"] },
-  img: roumanie
+  img: drap_roumanie
 };
-royaumeuni = {
+const royaumeuni = {
   noms: { fr: ["Royaume-Uni"], en: ["United Kingdom"] },
-  img: royaumeuni
+  img: drap_royaumeuni
 };
-russie = {
+const russie = {
   noms: { fr: ["Russie"], en: ["Russia"] },
-  img: russie
+  img: drap_russie
 };
-rwanda = {
+const rwanda = {
   noms: { fr: ["Rwanda"], en: ["Rwanda"] },
-  img: rwanda
+  img: drap_rwanda
 };
-saintchristopheetnieves = {
+const saintchristopheetnieves = {
   noms: { fr: ["Saint-Christophe-et-Niévès"], en: ["Saint Kitts and Nevis"] },
-  img: saintchristopheetnieves
+  img: drap_saintchristopheetnieves
 };
-saintmarin = {
+const saintmarin = {
   noms: { fr: ["Saint-Marin"], en: ["San Marino"] },
-  img: saintmarin
+  img: drap_saintmarin
 };
-saintvincentetlesgrenadines = {
+const saintvincentetlesgrenadines = {
   noms: { fr: ["Saint-Vincent-et-les Grenadines"], en: ["Saint Vincent and the Grenadines"] },
-  img: saintvincentetlesgrenadines
+  img: drap_saintvincentetlesgrenadines
 };
-saintelucie = {
+const saintelucie = {
   noms: { fr: ["Sainte-Lucie"], en: ["Saint Lucia"] },
-  img: saintelucie
+  img: drap_saintelucie
 };
-salvador = {
+const salvador = {
   noms: { fr: ["Salvador"], en: ["El Salvador"] },
-  img: salvador
+  img: drap_salvador
 };
-samoa = {
+const samoa = {
   noms: { fr: ["Samoa"], en: ["Samoa"] },
-  img: samoa
+  img: drap_samoa
 };
-saotomeetprincipe = {
+const saotomeetprincipe = {
   noms: { fr: ["São Tomé-et-Príncipe"], en: ["São Tomé and Príncipe"] },
-  img: saotomeetprincipe
+  img: drap_saotomeetprincipe
 };
-senegal = {
+const senegal = {
   noms: { fr: ["Sénégal"], en: ["Senegal"] },
-  img: senegal
+  img: drap_senegal
 };
-serbie = {
+const serbie = {
   noms: { fr: ["Serbie"], en: ["Serbia"] },
-  img: serbie
+  img: drap_serbie
 };
-seychelles = {
+const seychelles = {
   noms: { fr: ["Seychelles"], en: ["Seychelles"] },
-  img: seychelles
+  img: drap_seychelles
 };
-sierraleone = {
+const sierraleone = {
   noms: { fr: ["Sierra Leone"], en: ["Sierra Leone"] },
-  img: sierraleone
+  img: drap_sierraleone
 };
-singapour = {
+const singapour = {
   noms: { fr: ["Singapour"], en: ["Singapore"] },
-  img: singapour
+  img: drap_singapour
 };
-slovaquie = {
+const slovaquie = {
   noms: { fr: ["Slovaquie"], en: ["Slovakia"] },
-  img: slovaquie
+  img: drap_slovaquie
 };
-slovenie = {
+const slovenie = {
   noms: { fr: ["Slovénie"], en: ["Slovenia"] },
-  img: slovenie
+  img: drap_slovenie
 };
-somalie = {
+const somalie = {
   noms: { fr: ["Somalie"], en: ["Somalia"] },
-  img: somalie
+  img: drap_somalie
 };
-soudan = {
+const soudan = {
   noms: { fr: ["Soudan"], en: ["Sudan"] },
-  img: soudan
+  img: drap_soudan
 };
-soudandusud = {
+const soudandusud = {
   noms: { fr: ["Soudan du Sud"], en: ["South Sudan"] },
-  img: soudandusud
+  img: drap_soudandusud
 };
-srilanka = {
+const srilanka = {
   noms: { fr: ["Sri Lanka"], en: ["Sri Lanka"] },
-  img: srilanka
+  img: drap_srilanka
 };
-suede = {
+const suede = {
   noms: { fr: ["Suède"], en: ["Sweden"] },
-  img: suede
+  img: drap_suede
 };
-suisse = {
+const suisse = {
   noms: { fr: ["Suisse"], en: ["Switzerland"] },
-  img: suisse
+  img: drap_suisse
 };
-suriname = {
+const suriname = {
   noms: { fr: ["Suriname"], en: ["Suriname"] },
-  img: suriname
+  img: drap_suriname
 };
-syrie = {
+const syrie = {
   noms: { fr: ["Syrie"], en: ["Syria"] },
-  img: syrie
+  img: drap_syrie
 };
-tadjikistan = {
+const tadjikistan = {
   noms: { fr: ["Tadjikistan"], en: ["Tajikistan"] },
-  img: tadjikistan
+  img: drap_tadjikistan
 };
 // taiwan = {
 //   noms: { fr: ["Taïwan"], en: ["Taiwan"] },
-//   img: taiwan
+//   img: drap_taiwan
 // };
-tanzanie = {
+const tanzanie = {
   noms: { fr: ["Tanzanie"], en: ["Tanzania"] },
-  img: tanzanie
+  img: drap_tanzanie
 };
-tchad = {
+const tchad = {
   noms: { fr: ["Tchad"], en: ["Chad"] },
-  img: tchad
+  img: drap_tchad
 };
-tchequie = {
+const tchequie = {
   noms: { fr: ["Tchéquie", "République tchèque"], en: ["Czechia", "Czech Republic"] },
-  img: tchequie
+  img: drap_tchequie
 };
-thailande = {
+const thailande = {
   noms: { fr: ["Thaïlande"], en: ["Thailand"] },
-  img: thailande
+  img: drap_thailande
 };
-timororiental = {
+const timororiental = {
   noms: { fr: ["Timor oriental"], en: ["Timor-Leste"] },
-  img: timororiental
+  img: drap_timororiental
 };
-togo = {
+const togo = {
   noms: { fr: ["Togo"], en: ["Togo"] },
-  img: togo
+  img: drap_togo
 };
-tonga = {
+const tonga = {
   noms: { fr: ["Tonga"], en: ["Tonga"] },
-  img: tonga
+  img: drap_tonga
 };
-triniteettobago = {
+const triniteettobago = {
   noms: { fr: ["Trinité-et-Tobago"], en: ["Trinidad and Tobago"] },
-  img: triniteettobago
+  img: drap_triniteettobago
 };
-tunisie = {
+const tunisie = {
   noms: { fr: ["Tunisie"], en: ["Tunisia"] },
-  img: tunisie
+  img: drap_tunisie
 };
-turkmenistan = {
+const turkmenistan = {
   noms: { fr: ["Turkménistan"], en: ["Turkmenistan"] },
-  img: turkmenistan
+  img: drap_turkmenistan
 };
-turquie = {
+const turquie = {
   noms: { fr: ["Turquie"], en: ["Turkey"] },
-  img: turquie
+  img: drap_turquie
 };
-tuvalu = {
+const tuvalu = {
   noms: { fr: ["Tuvalu"], en: ["Tuvalu"] },
-  img: tuvalu
+  img: drap_tuvalu
 };
-ukraine = {
+const ukraine = {
   noms: { fr: ["Ukraine"], en: ["Ukraine"] },
-  img: ukraine
+  img: drap_ukraine
 };
-uruguay = {
+const uruguay = {
   noms: { fr: ["Uruguay"], en: ["Uruguay"] },
-  img: uruguay
+  img: drap_uruguay
 };
-vanuatu = {
+const vanuatu = {
   noms: { fr: ["Vanuatu"], en: ["Vanuatu"] },
-  img: vanuatu
+  img: drap_vanuatu
 };
-vatican = {
+const vatican = {
   noms: { fr: ["Vatican"], en: ["Vatican City", "Vatican"] },
-  img: vatican
-}
-venezuela = {
+  img: drap_vatican
+};
+const venezuela = {
   noms: { fr: ["Venezuela"], en: ["Venezuela"] },
-  img: venezuela
+  img: drap_venezuela
 };
-vietnam = {
+const vietnam = {
   noms: { fr: ["Vietnam"], en: ["Vietnam"] },
-  img: vietnam
+  img: drap_vietnam
 };
-yemen = {
+const yemen = {
   noms: { fr: ["Yémen"], en: ["Yemen"] },
-  img: yemen
+  img: drap_yemen
 };
-zambie = {
+const zambie = {
   noms: { fr: ["Zambie"], en: ["Zambia"] },
-  img: zambie
+  img: drap_zambie
 };
-zimbabwe = {
+const zimbabwe = {
   noms: { fr: ["Zimbabwe"], en: ["Zimbabwe"] },
-  img: zimbabwe
+  img: drap_zimbabwe
 };
 
 
