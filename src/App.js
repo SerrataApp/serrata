@@ -53,7 +53,7 @@ export default function App() {
     }
   }, []);
 
-  if(!window.localStorage.getItem("lang") || (localStorage.getItem("lang")!=="fr" && localStorage.getItem("lang")!=="en")) {
+  if(!window.localStorage.getItem("lang") || (localStorage.getItem("lang")!=="fr" && localStorage.getItem("lang")!=="en" && localStorage.getItem("lang")!=="es")) {
     localStorage.setItem("lang", "fr");
     ctxLanguage.setLangue("fr");
     window.location.reload();

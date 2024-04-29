@@ -5,6 +5,7 @@ export default function SelectionLangue(props) {
     <div className="absolute mt-2 w-11 bg-white border-2 rounded shadow-sm flex flex-col">
       <Langue drapeau={props.drapeaux["fr"]} langue="fr" closeDiv={props.closeDiv}/>
       <Langue drapeau={props.drapeaux["en"]} langue="en" closeDiv={props.closeDiv}/>
+      <Langue drapeau={props.drapeaux["es"]} langue="es" closeDiv={props.closeDiv}/>
     </div>
   );
 }
