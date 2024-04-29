@@ -9,16 +9,19 @@ export default function SwitchLanguage() {
 
   const france = require("../../img/drapeaux/france.png");
   const royaumeuni = require("../../img/drapeaux/royaumeuni.png");
+  const espagne = require("../../img/drapeaux/espagne.png");
   const ctxLanguage = useContext(LanguageContext);
   const drapeaux = {
     fr: france,
-    en: royaumeuni
+    en: royaumeuni,
+    es: espagne,
   };
 
   let image;
   switch(ctxLanguage.lang) {
     case "fr": image = drapeaux["fr"]; break;
     case "en": image = drapeaux["en"]; break;
+    case "es": image = drapeaux["es"]; break;
   }
 
   function toggleListeLangues() {

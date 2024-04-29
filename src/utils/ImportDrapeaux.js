@@ -196,791 +196,791 @@ import drap_zambie from "../img/drapeaux/zambie.png";
 import drap_zimbabwe from "../img/drapeaux/zimbabwe.png";
 
 const afghanistan = {
-  noms: {fr: ["Afghanistan"], en: ["Afghanistan"]},
+  noms: {fr: ["Afghanistan"], en: ["Afghanistan"], es: ["Afganistán"]},
   img: drap_afghanistan
 };
 const afriquedusud = {
-  noms: {fr: ["Afrique du Sud"], en: ["South Africa"]},
+  noms: {fr: ["Afrique du Sud"], en: ["South Africa"], es: ["Sudáfrica"]},
   img: drap_afriquedusud
 };
 const albanie = {
-  noms: {fr: ["Albanie"], en: ["Albania"]},
+  noms: {fr: ["Albanie"], en: ["Albania"], es: ["Albania"]},
   img: drap_albanie
 };
 const algerie = {
-  noms: {fr: ["Algérie"], en: ["Algeria"]},
+  noms: {fr: ["Algérie"], en: ["Algeria"], es: ["Argelia"]},
   img: drap_algerie
 };
 const allemagne = {
-  noms: {fr: ["Allemagne"], en: ["Germany"] },
+  noms: {fr: ["Allemagne"], en: ["Germany"], es: ["Alemania"]},
   img: drap_allemagne
 };
 const andorre = {
-  noms: {fr: ["Andorre"], en: ["Andorra"]},
+  noms: {fr: ["Andorre"], en: ["Andorra"], es: ["Andorra"]},
   img: drap_andorre
 };
 const angola = {
-  noms: {fr: ["Angola"], en: ["Angola"]},
+  noms: {fr: ["Angola"], en: ["Angola"], es: ["Angola"]},
   img: drap_angola
 };
 const antiguaetbarbuda = {
-  noms: {fr: ["Antigua-et-Barbuda"], en: ["Antigua and Barbuda"] },
+  noms: {fr: ["Antigua-et-Barbuda"], en: ["Antigua and Barbuda"], es: ["Antigua y Barbuda"]},
   img: drap_antiguaetbarbuda
 };
 const arabiesaoudite = {
-  noms: { fr: ["Arabie saoudite"], en: ["Saudi Arabia"] },
+  noms: { fr: ["Arabie saoudite"], en: ["Saudi Arabia"], es: ["Arabia Saudita"]},
   img: drap_arabiesaoudite
 };
 const argentine = {
-  noms: { fr: ["Argentine"], en: ["Argentina"] },
+  noms: { fr: ["Argentine"], en: ["Argentina"], es: ["Argentina"]},
   img: drap_argentine
 };
 const armenie = {
-  noms: { fr: ["Arménie"], en: ["Armenia"] },
+  noms: { fr: ["Arménie"], en: ["Armenia"], es: ["Armenia"]},
   img: drap_armenie
 };
 const australie = {
-  noms: { fr: ["Australie"], en: ["Australia"] },
+  noms: { fr: ["Australie"], en: ["Australia"], es: ["Australia"]},
   img: drap_australie
 };
 const autriche = {
-  noms: { fr: ["Autriche"], en: ["Austria"] },
+  noms: { fr: ["Autriche"], en: ["Austria"], es: ["Austria"]},
   img: drap_autriche
 };
 const azerbaidjan = {
-  noms: { fr: ["Azerbaïdjan"], en: ["Azerbaijan"] },
+  noms: { fr: ["Azerbaïdjan"], en: ["Azerbaijan"], es: ["Azerbaiyán"]},
   img: drap_azerbaidjan
 };
 const bahamas = {
-  noms: { fr: ["Bahamas"], en: ["Bahamas"] },
+  noms: { fr: ["Bahamas"], en: ["Bahamas"], es: ["Bahamas"]},
   img: drap_bahamas
 };
 const bahrein = {
-  noms: { fr: ["Bahreïn"], en: ["Bahrain"] },
+  noms: { fr: ["Bahreïn"], en: ["Bahrain"], es: ["Baréin"]},
   img: drap_bahrein
 };
 const bangladesh = {
-  noms: { fr: ["Bangladesh"], en: ["Bangladesh"] },
+  noms: { fr: ["Bangladesh"], en: ["Bangladesh"], es: ["Bangladesh"]},
   img: drap_bangladesh
 };
 const barbade = {
-  noms: { fr: ["Barbade"], en: ["Barbados"] },
+  noms: { fr: ["Barbade"], en: ["Barbados"], es: ["Barbados"]},
   img: drap_barbade
 };
 const belgique = {
-  noms: { fr: ["Belgique"], en: ["Belgium"] },
+  noms: { fr: ["Belgique"], en: ["Belgium"], es: ["Bélgica"]},
   img: drap_belgique
 };
 const belize = {
-  noms: { fr: ["Belize"], en: ["Belize"] },
+  noms: { fr: ["Belize"], en: ["Belize"], es: ["Belice"]},
   img: drap_belize
 };
 const benin = {
-  noms: { fr: ["Bénin"], en: ["Benin"] },
+  noms: { fr: ["Bénin"], en: ["Benin"], es: ["Benín"]},
   img: drap_benin
 };
 const bhoutan = {
-  noms: { fr: ["Bhoutan"], en: ["Bhutan"] },
+  noms: { fr: ["Bhoutan"], en: ["Bhutan"], es: ["Bután"]},
   img: drap_bhoutan
 };
 const bielorussie = {
-  noms: { fr: ["Biélorussie", "Bélarus"], en: ["Belarus"] },
+  noms: { fr: ["Biélorussie", "Bélarus"], en: ["Belarus"], es: ["Bielorrusia"]},
   img: drap_bielorussie
 };
 const birmanie = {
-  noms: { fr: ["Birmanie", "Myanmar"], en: ["Myanmar"] },
+  noms: { fr: ["Birmanie", "Myanmar"], en: ["Myanmar"], es: ["Birmania", "Myanmar"]},
   img: drap_birmanie
 };
 const bolivie = {
-  noms: { fr: ["Bolivie"], en: ["Bolivia"] },
+  noms: { fr: ["Bolivie"], en: ["Bolivia"], es: ["Bolivia"]},
   img: drap_bolivie
 };
 const bosnieherzegovine = {
-  noms: { fr: ["Bosnie-Herzégovine"], en: ["Bosnia and Herzegovina"] },
+  noms: { fr: ["Bosnie-Herzégovine"], en: ["Bosnia and Herzegovina"], es: ["Bosnia y Herzegovina"]},
   img: drap_bosnieherzegovine
 };
 const botswana = {
-  noms: { fr: ["Botswana"], en: ["Botswana"] },
+  noms: { fr: ["Botswana"], en: ["Botswana"], es: ["Botsuana"]},
   img: drap_botswana
 };
 const bresil = {
-  noms: { fr: ["Brésil"], en: ["Brazil"] },
+  noms: { fr: ["Brésil"], en: ["Brazil"], es: ["Brasil"]},
   img: drap_bresil
 };
 const brunei = {
-  noms: { fr: ["Brunei"], en: ["Brunei"] },
+  noms: { fr: ["Brunei"], en: ["Brunei"], es: ["Brunéi"]},
   img: drap_brunei
 };
 const bulgarie = {
-  noms: { fr: ["Bulgarie"], en: ["Bulgaria"] },
+  noms: { fr: ["Bulgarie"], en: ["Bulgaria"], es: ["Bulgaria"]},
   img: drap_bulgarie
 };
 const burkinafaso = {
-  noms: { fr: ["Burkina Faso"], en: ["Burkina Faso"] },
+  noms: { fr: ["Burkina Faso"], en: ["Burkina Faso"], es: ["Burkina Faso"]},
   img: drap_burkinafaso
 };
 const burundi = {
-  noms: { fr: ["Burundi"], en: ["Burundi"] },
+  noms: { fr: ["Burundi"], en: ["Burundi"], es: ["Burundi"]},
   img: drap_burundi
 };
 const cambodge = {
-  noms: { fr: ["Cambodge"], en: ["Cambodia"] },
+  noms: { fr: ["Cambodge"], en: ["Cambodia"], es: ["Camboya"]},
   img: drap_cambodge
 };
 const cameroun = {
-  noms: { fr: ["Cameroun"], en: ["Cameroon"] },
+  noms: { fr: ["Cameroun"], en: ["Cameroon"], es: ["Camerún"]},
   img: drap_cameroun
 };
 const canada = {
-  noms: { fr: ["Canada"], en: ["Canada"] },
+  noms: { fr: ["Canada"], en: ["Canada"], es: ["Canadá"]},
   img: drap_canada
 };
 const capvert = {
-  noms: { fr: ["Cap-Vert"], en: ["Cape Verde"] },
+  noms: { fr: ["Cap-Vert"], en: ["Cape Verde"], es: ["Cabo Verde"]},
   img: drap_capvert
 };
 const chili = {
-  noms: { fr: ["Chili"], en: ["Chile"] },
+  noms: { fr: ["Chili"], en: ["Chile"], es: ["Chile"]},
   img: drap_chili
 };
 const chine = {
-  noms: { fr: ["Chine"], en: ["China"] },
+  noms: { fr: ["Chine"], en: ["China"], es: ["China"]},
   img: drap_chine
 };
 const chypre = {
-  noms: { fr: ["Chypre"], en: ["Cyprus"] },
+  noms: { fr: ["Chypre"], en: ["Cyprus"], es: ["Chipre"]},
   img: drap_chypre
 };
 const colombie = {
-  noms: { fr: ["Colombie"], en: ["Colombia"] },
+  noms: { fr: ["Colombie"], en: ["Colombia"], es: ["Colombia"]},
   img: drap_colombie
 };
 const comores = {
-  noms: { fr: ["Comores"], en: ["Comoros"] },
+  noms: { fr: ["Comores"], en: ["Comoros"], es: ["Comoras"]},
   img: drap_comores
 };
 const congo = {
-  noms: { fr: ["Congo"], en: ["Congo"] },
+  noms: { fr: ["Congo"], en: ["Congo"], es: ["Congo"]},
   img: drap_congo
 };
 const coreedunord = {
-  noms: { fr: ["Corée du Nord"], en: ["North Korea"] },
+  noms: { fr: ["Corée du Nord"], en: ["North Korea"], es: ["Corea del Norte"]},
   img: drap_coreedunord
 };
 const coreedusud = {
-  noms: { fr: ["Corée du Sud"], en: ["South Korea"] },
+  noms: { fr: ["Corée du Sud"], en: ["South Korea"], es: ["Corea del Sur"]},
   img: drap_coreedusud
 };
 const costarica = {
-  noms: { fr: ["Costa Rica"], en: ["Costa Rica"] },
+  noms: { fr: ["Costa Rica"], en: ["Costa Rica"], es: ["Costa Rica"]},
   img: drap_costarica
 };
 const cotedivoire = {
-  noms: { fr: ["Côte d'Ivoire"], en: ["Ivory Coast"] },
+  noms: { fr: ["Côte d'Ivoire"], en: ["Ivory Coast"], es: ["Costa de Marfil"]},
   img: drap_cotedivoire
 };
 const croatie = {
-  noms: { fr: ["Croatie"], en: ["Croatia"] },
+  noms: { fr: ["Croatie"], en: ["Croatia"], es: ["Croacia"]},
   img: drap_croatie
 };
 const cuba = {
-  noms: { fr: ["Cuba"], en: ["Cuba"] },
+  noms: { fr: ["Cuba"], en: ["Cuba"], es: ["Cuba"]},
   img: drap_cuba
 };
 const danemark = {
-  noms: { fr: ["Danemark"], en: ["Denmark"] },
+  noms: { fr: ["Danemark"], en: ["Denmark"], es: ["Dinamarca"]},
   img: drap_danemark
 };
 const djibouti = {
-  noms: { fr: ["Djibouti"], en: ["Djibouti"] },
+  noms: { fr: ["Djibouti"], en: ["Djibouti"], es: ["Yibuti"]},
   img: drap_djibouti
 };
 const dominique = {
-  noms: { fr: ["Dominique"], en: ["Dominica"] },
+  noms: { fr: ["Dominique"], en: ["Dominica"], es: ["Dominica"]},
   img: drap_dominique
 };
 const equateur = {
-  noms: { fr: ["Équateur"], en: ["Ecuador"] },
+  noms: { fr: ["Équateur"], en: ["Ecuador"], es: ["Ecuador"]},
   img: drap_equateur
 };
 const egypte = {
-  noms: { fr: ["Égypte"], en: ["Egypt"] },
+  noms: { fr: ["Égypte"], en: ["Egypt"], es: ["Egipto"]},
   img: drap_egypte
 };
 const emiratsarabesunis = {
-  noms: { fr: ["Émirats arabes unis", "eau"], en: ["United Arab Emirates", "uae"] },
+  noms: { fr: ["Émirats arabes unis", "eau"], en: ["United Arab Emirates", "uae"], es: ["Emiratos Árabes Unidos", "eau"]},
   img: drap_emiratsarabesunis
 };
 const erythree = {
-  noms: { fr: ["Érythrée"], en: ["Eritrea"] },
+  noms: { fr: ["Érythrée"], en: ["Eritrea"], es: ["Eritrea"]},
   img: drap_erythree
 };
 const espagne = {
-  noms: { fr: ["Espagne"], en: ["Spain"] },
+  noms: { fr: ["Espagne"], en: ["Spain"], es: ["España"]},
   img: drap_espagne
 };
 const estonie = {
-  noms: { fr: ["Estonie"], en: ["Estonia"] },
+  noms: { fr: ["Estonie"], en: ["Estonia"], es: ["Estonia"]},
   img: drap_estonie
 };
 const eswatini = {
-  noms: { fr: ["Eswatini", "Swaziland"], en: ["Eswatini", "Swaziland"] },
+  noms: { fr: ["Eswatini", "Swaziland"], en: ["Eswatini", "Swaziland"], es: ["Eswatini", "Suazilandia"]},
   img: drap_eswatini
 };
 const etatsunis = {
-  noms: { fr: ["États-Unis", "usa"], en: ["United States", "usa"] },
+  noms: { fr: ["États-Unis", "usa"], en: ["United States", "usa"], es: ["Estados Unidos", "eeuu", "usa"]},
   img: drap_etatsunis
 };
 const ethiopie = {
-  noms: { fr: ["Éthiopie"], en: ["Ethiopia"] },
+  noms: { fr: ["Éthiopie"], en: ["Ethiopia"], es: ["Etiopía"]},
   img: drap_ethiopie
 };
 const fidji = {
-  noms: { fr: ["Fidji"], en: ["Fiji"] },
+  noms: { fr: ["Fidji"], en: ["Fiji"], es: ["Fiyi"]},
   img: drap_fidji
 };
 const finlande = {
-  noms: { fr: ["Finlande"], en: ["Finland"] },
+  noms: { fr: ["Finlande"], en: ["Finland"], es: ["Finlandia"]},
   img: drap_finlande
 };
 const france = {
-  noms: { fr: ["France"], en: ["France"] },
+  noms: { fr: ["France"], en: ["France"], es: ["Francia"]},
   img: drap_france
 };
 const gabon = {
-  noms: { fr: ["Gabon"], en: ["Gabon"] },
+  noms: { fr: ["Gabon"], en: ["Gabon"], es: ["Gabón"]},
   img: drap_gabon
 };
 const gambie = {
-  noms: { fr: ["Gambie"], en: ["Gambia"] },
+  noms: { fr: ["Gambie"], en: ["Gambia"], es: ["Gambia"]},
   img: drap_gambie
 };
 const georgie = {
-  noms: { fr: ["Géorgie"], en: ["Georgia"] },
+  noms: { fr: ["Géorgie"], en: ["Georgia"], es: ["Georgia"]},
   img: drap_georgie
 };
 const ghana = {
-  noms: { fr: ["Ghana"], en: ["Ghana"] },
+  noms: { fr: ["Ghana"], en: ["Ghana"], es: ["Ghana"]},
   img: drap_ghana
 };
 const grece = {
-  noms: { fr: ["Grèce"], en: ["Greece"] },
+  noms: { fr: ["Grèce"], en: ["Greece"], es: ["Grecia"]},
   img: drap_grece
 };
 const grenade = {
-  noms: { fr: ["Grenade"], en: ["Grenada"] },
+  noms: { fr: ["Grenade"], en: ["Grenada"], es: ["Granada"]},
   img: drap_grenade
 };
 const guatemala = {
-  noms: { fr: ["Guatemala"], en: ["Guatemala"] },
+  noms: { fr: ["Guatemala"], en: ["Guatemala"], es: ["Guatemala"]},
   img: drap_guatemala
 };
 const guinee = {
-  noms: { fr: ["Guinée"], en: ["Guinea"] },
+  noms: { fr: ["Guinée"], en: ["Guinea"], es: ["Guinea"]},
   img: drap_guinee
 };
 const guineeequatoriale = {
-  noms: { fr: ["Guinée équatoriale"], en: ["Equatorial Guinea"] },
+  noms: { fr: ["Guinée équatoriale"], en: ["Equatorial Guinea"], es: ["Guinea Ecuatorial"]},
   img: drap_guineeequatoriale
 };
 const guineebissau = {
-  noms: { fr: ["Guinée-Bissau"], en: ["Guinea-Bissau"] },
+  noms: { fr: ["Guinée-Bissau"], en: ["Guinea-Bissau"], es: ["Guinea-Bisáu"]},
   img: drap_guineebissau
 };
 const guyana = {
-  noms: { fr: ["Guyana"], en: ["Guyana"] },
+  noms: { fr: ["Guyana"], en: ["Guyana"], es: ["Guyana"]},
   img: drap_guyana
 };
 const haiti = {
-  noms: { fr: ["Haïti"], en: ["Haiti"] },
+  noms: { fr: ["Haïti"], en: ["Haiti"], es: ["Haití"]},
   img: drap_haiti
 };
 const honduras = {
-  noms: { fr: ["Honduras"], en: ["Honduras"] },
+  noms: { fr: ["Honduras"], en: ["Honduras"], es: ["Honduras"]},
   img: drap_honduras
 };
 const hongrie = {
-  noms: { fr: ["Hongrie"], en: ["Hungary"] },
+  noms: { fr: ["Hongrie"], en: ["Hungary"], es: ["Hungría"]},
   img: drap_hongrie
 };
 const ilesmarshall = {
-  noms: { fr: ["Îles Marshall"], en: ["Marshall Islands"] },
+  noms: { fr: ["Îles Marshall"], en: ["Marshall Islands"], es: ["Islas Marshall"]},
   img: drap_ilesmarshall
 };
 const ilessalomon = {
-  noms: { fr: ["Îles Salomon"], en: ["Salomon Isles"] },
+  noms: { fr: ["Îles Salomon"], en: ["Salomon Isles"], es: ["Islas Salomón"]},
   img: drap_ilessalomon
 };
 const inde = {
-  noms: { fr: ["Inde"], en: ["India"] },
+  noms: { fr: ["Inde"], en: ["India"], es: ["India"]},
   img: drap_inde
 };
 const indonesie = {
-  noms: { fr: ["Indonésie"], en: ["Indonesia"] },
+  noms: { fr: ["Indonésie"], en: ["Indonesia"], es: ["Indonesia"]},
   img: drap_indonesie
 };
 const irak = {
-  noms: { fr: ["Irak"], en: ["Iraq"] },
+  noms: { fr: ["Irak"], en: ["Iraq"], es: ["Irak"]},
   img: drap_irak
 };
 const iran = {
-  noms: { fr: ["Iran"], en: ["Iran"] },
+  noms: { fr: ["Iran"], en: ["Iran"], es: ["Irán"]},
   img: drap_iran
 };
 const irlande = {
-  noms: { fr: ["Irlande"], en: ["Ireland"] },
+  noms: { fr: ["Irlande"], en: ["Ireland"], es: ["Irlanda"]},
   img: drap_irlande
 };
 const islande = {
-  noms: { fr: ["Islande"], en: ["Iceland"] },
+  noms: { fr: ["Islande"], en: ["Iceland"], es: ["Islandia"]},
   img: drap_islande
 };
 const israel = {
-  noms: { fr: ["Israël"], en: ["Israel"] },
+  noms: { fr: ["Israël"], en: ["Israel"], es: ["Israel"]},
   img: drap_israel
 };
 const italie = {
-  noms: { fr: ["Italie"], en: ["Italy"] },
+  noms: { fr: ["Italie"], en: ["Italy"], es: ["Italia"]},
   img: drap_italie
 };
 const jamaique = {
-  noms: { fr: ["Jamaïque"], en: ["Jamaica"] },
+  noms: { fr: ["Jamaïque"], en: ["Jamaica"], es: ["Jamaica"]},
   img: drap_jamaique
 };
 const japon = {
-  noms: { fr: ["Japon"], en: ["Japan"] },
+  noms: { fr: ["Japon"], en: ["Japan"], es: ["Japón"]},
   img: drap_japon
 };
 const jordanie = {
-  noms: { fr: ["Jordanie"], en: ["Jordan"] },
+  noms: { fr: ["Jordanie"], en: ["Jordan"], es: ["Jordania"]},
   img: drap_jordanie
 };
 const kazakhstan = {
-  noms: { fr: ["Kazakhstan"], en: ["Kazakhstan"] },
+  noms: { fr: ["Kazakhstan"], en: ["Kazakhstan"], es: ["Kazajistán"]},
   img: drap_kazakhstan
 };
 const kenya = {
-  noms: { fr: ["Kenya"], en: ["Kenya"] },
+  noms: { fr: ["Kenya"], en: ["Kenya"], es: ["Kenia"]},
   img: drap_kenya
 };
 const kirghizistan = {
-  noms: { fr: ["Kirghizistan"], en: ["Kyrgyzstan"] },
+  noms: { fr: ["Kirghizistan"], en: ["Kyrgyzstan"], es: ["Kirguistán"]},
   img: drap_kirghizistan
 };
 const kiribati = {
-  noms: { fr: ["Kiribati"], en: ["Kiribati"] },
+  noms: { fr: ["Kiribati"], en: ["Kiribati"], es: ["Kiribati"]},
   img: drap_kiribati
 };
 const kosovo = {
-  noms: { fr: ["Kosovo"], en: ["Kosovo"] },
+  noms: { fr: ["Kosovo"], en: ["Kosovo"], es: ["Kosovo"]},
   img: drap_kosovo
 };
 const koweit = {
-  noms: { fr: ["Koweït"], en: ["Kuwait"] },
+  noms: { fr: ["Koweït"], en: ["Kuwait"], es: ["Kuwait"]},
   img: drap_koweit
 };
 const laos = {
-  noms: { fr: ["Laos"], en: ["Laos"] },
+  noms: { fr: ["Laos"], en: ["Laos"], es: ["Laos"]},
   img: drap_laos
 };
 const lesotho = {
-  noms: { fr: ["Lesotho"], en: ["Lesotho"] },
+  noms: { fr: ["Lesotho"], en: ["Lesotho"], es: ["Lesoto"]},
   img: drap_lesotho
 };
 const lettonie = {
-  noms: { fr: ["Lettonie"], en: ["Latvia"] },
+  noms: { fr: ["Lettonie"], en: ["Latvia"], es: ["Letonia"]},
   img: drap_lettonie
 };
 const liban = {
-  noms: { fr: ["Liban"], en: ["Lebanon"] },
+  noms: { fr: ["Liban"], en: ["Lebanon"], es: ["Líbano"]},
   img: drap_liban
 };
 const liberia = {
-  noms: { fr: ["Libéria"], en: ["Liberia"] },
+  noms: { fr: ["Libéria"], en: ["Liberia"], es: ["Liberia"]},
   img: drap_liberia
 };
 const libye = {
-  noms: { fr: ["Libye"], en: ["Libya"] },
+  noms: { fr: ["Libye"], en: ["Libya"], es: ["Libia"]},
   img: drap_libye
 };
 const liechtenstein = {
-  noms: { fr: ["Liechtenstein"], en: ["Liechtenstein"] },
+  noms: { fr: ["Liechtenstein"], en: ["Liechtenstein"], es: ["Liechtenstein"]},
   img: drap_liechtenstein
 };
 const lituanie = {
-  noms: { fr: ["Lituanie"], en: ["Lithuania"] },
+  noms: { fr: ["Lituanie"], en: ["Lithuania"], es: ["Lituania"]},
   img: drap_lituanie
 };
 const luxembourg = {
-  noms: { fr: ["Luxembourg"], en: ["Luxembourg"] },
+  noms: { fr: ["Luxembourg"], en: ["Luxembourg"], es: ["Luxemburgo"]},
   img: drap_luxembourg
 };
 const macedoinedunord = {
-  noms: { fr: ["Macédoine du Nord"], en: ["North Macedonia"] },
+  noms: { fr: ["Macédoine du Nord"], en: ["North Macedonia"], es: ["Macedonia del Norte"]},
   img: drap_macedoinedunord
 };
 const madagascar = {
-  noms: { fr: ["Madagascar"], en: ["Madagascar"] },
+  noms: { fr: ["Madagascar"], en: ["Madagascar"], es: ["Madagascar"]},
   img: drap_madagascar
 };
 const malaisie = {
-  noms: { fr: ["Malaisie"], en: ["Malaysia"] },
+  noms: { fr: ["Malaisie"], en: ["Malaysia"], es: ["Malasia"]},
   img: drap_malaisie
 };
 const malawi = {
-  noms: { fr: ["Malawi"], en: ["Malawi"] },
+  noms: { fr: ["Malawi"], en: ["Malawi"], es: ["Malaui"]},
   img: drap_malawi
 };
 const maldives = {
-  noms: { fr: ["Maldives"], en: ["Maldives"] },
+  noms: { fr: ["Maldives"], en: ["Maldives"], es: ["Maldivas"]},
   img: drap_maldives
 };
 const mali = {
-  noms: { fr: ["Mali"], en: ["Mali"] },
+  noms: { fr: ["Mali"], en: ["Mali"], es: ["Malí"]},
   img: drap_mali
 };
 const malte = {
-  noms: { fr: ["Malte"], en: ["Malta"] },
+  noms: { fr: ["Malte"], en: ["Malta"], es: ["Malta"]},
   img: drap_malte
 };
 const maroc = {
-  noms: { fr: ["Maroc"], en: ["Morocco"] },
+  noms: { fr: ["Maroc"], en: ["Morocco"], es: ["Marruecos"]},
   img: drap_maroc
 };
 const maurice = {
-  noms: { fr: ["Maurice"], en: ["Mauritius"] },
+  noms: { fr: ["Maurice"], en: ["Mauritius"], es: ["Mauricio"]},
   img: drap_maurice
 };
 const mauritanie = {
-  noms: { fr: ["Mauritanie"], en: ["Mauritania"] },
+  noms: { fr: ["Mauritanie"], en: ["Mauritania"], es: ["Mauritania"]},
   img: drap_mauritanie
 };
 const mexique = {
-  noms: { fr: ["Mexique"], en: ["Mexico"] },
+  noms: { fr: ["Mexique"], en: ["Mexico"], es: ["México"]},
   img: drap_mexique
 };
 const micronesie = {
-  noms: { fr: ["Micronésie"], en: ["Micronesia"] },
+  noms: { fr: ["Micronésie"], en: ["Micronesia"], es: ["Micronesia"]},
   img: drap_micronesie
 };
 const moldavie = {
-  noms: { fr: ["Moldavie"], en: ["Moldova"] },
+  noms: { fr: ["Moldavie"], en: ["Moldova"], es: ["Moldavia"]},
   img: drap_moldavie
 };
 const monaco = {
-  noms: { fr: ["Monaco"], en: ["Monaco"] },
+  noms: { fr: ["Monaco"], en: ["Monaco"], es: ["Mónaco"]},
   img: drap_monaco
 };
 const mongolie = {
-  noms: { fr: ["Mongolie"], en: ["Mongolia"] },
+  noms: { fr: ["Mongolie"], en: ["Mongolia"], es: ["Mongolia"]},
   img: drap_mongolie
 };
 const montenegro = {
-  noms: { fr: ["Monténégro"], en: ["Montenegro"] },
+  noms: { fr: ["Monténégro", "Montécorentin Albert"], en: ["Montenegro"], es: ["Montenegro"]},
   img: drap_montenegro
 };
 const mozambique = {
-  noms: { fr: ["Mozambique"], en: ["Mozambique"] },
+  noms: { fr: ["Mozambique"], en: ["Mozambique"], es: ["Mozambique"]},
   img: drap_mozambique
 };
 const namibie = {
-  noms: { fr: ["Namibie"], en: ["Namibia"] },
+  noms: { fr: ["Namibie"], en: ["Namibia"], es: ["Namibia"]},
   img: drap_namibie
 };
 const nauru = {
-  noms: { fr: ["Nauru"], en: ["Nauru"] },
+  noms: { fr: ["Nauru"], en: ["Nauru"], es: ["Nauru"]},
   img: drap_nauru
 };
 const nepal = {
-  noms: { fr: ["Népal"], en: ["Nepal"] },
+  noms: { fr: ["Népal"], en: ["Nepal"], es: ["Nepal"]},
   img: drap_nepal
 };
 const nicaragua = {
-  noms: { fr: ["Nicaragua"], en: ["Nicaragua"] },
+  noms: { fr: ["Nicaragua"], en: ["Nicaragua"], es: ["Nicaragua"]},
   img: drap_nicaragua
 };
 const niger = {
-  noms: { fr: ["Niger"], en: ["Niger"] },
+  noms: { fr: ["Niger"], en: ["Niger"], es: ["Níger"]},
   img: drap_niger
 };
 const nigeria = {
-  noms: { fr: ["Nigéria"], en: ["Nigeria"] },
+  noms: { fr: ["Nigéria"], en: ["Nigeria"], es: ["Nigeria"]},
   img: drap_nigeria
 };
 const norvege = {
-  noms: { fr: ["Norvège"], en: ["Norway"] },
+  noms: { fr: ["Norvège"], en: ["Norway"], es: ["Noruega"]},
   img: drap_norvege
 };
 const nouvellezelande = {
-  noms: { fr: ["Nouvelle-Zélande"], en: ["New Zealand"] },
+  noms: { fr: ["Nouvelle-Zélande"], en: ["New Zealand"], es: ["Nueva Zelanda"]},
   img: drap_nouvellezelande
 };
 const oman = {
-  noms: { fr: ["Oman"], en: ["Oman"] },
+  noms: { fr: ["Oman"], en: ["Oman"], es: ["Omán"]},
   img: drap_oman
 };
 const ouganda = {
-  noms: { fr: ["Ouganda"], en: ["Uganda"] },
+  noms: { fr: ["Ouganda"], en: ["Uganda"], es: ["Uganda"]},
   img: drap_ouganda
 };
 const ouzbekistan = {
-  noms: { fr: ["Ouzbékistan"], en: ["Uzbekistan"] },
+  noms: { fr: ["Ouzbékistan"], en: ["Uzbekistan"], es: ["Uzbekistán"]},
   img: drap_ouzbekistan
 };
 const pakistan = {
-  noms: { fr: ["Pakistan"], en: ["Pakistan"] },
+  noms: { fr: ["Pakistan"], en: ["Pakistan"], es: ["Pakistán"]},
   img: drap_pakistan
 };
 const palaos = {
-  noms: { fr: ["Palaos"], en: ["Palau"] },
+  noms: { fr: ["Palaos"], en: ["Palau"], es: ["Palaos"]},
   img: drap_palaos
 };
 const palestine = {
-  noms: { fr: ["Palestine"], en: ["Palestine"] },
+  noms: { fr: ["Palestine"], en: ["Palestine"], es: ["Palestina"]},
   img: drap_palestine
 };
 const panama = {
-  noms: { fr: ["Panama"], en: ["Panama"] },
+  noms: { fr: ["Panama"], en: ["Panama"], es: ["Panamá"]},
   img: drap_panama
 };
 const papouasienouvelleguinee = {
-  noms: { fr: ["Papouasie-Nouvelle-Guinée"], en: ["Papua New Guinea"] },
+  noms: { fr: ["Papouasie-Nouvelle-Guinée"], en: ["Papua New Guinea"], es: ["Papúa Nueva Guinea"]},
   img: drap_papouasienouvelleguinee
 };
 const paraguay = {
-  noms: { fr: ["Paraguay"], en: ["Paraguay"] },
+  noms: { fr: ["Paraguay"], en: ["Paraguay"], es: ["Paraguay"]},
   img: drap_paraguay
 };
 const paysbas = {
-  noms: { fr: ["Pays-Bas"], en: ["Netherlands"] },
+  noms: { fr: ["Pays-Bas"], en: ["Netherlands"], es: ["Países Bajos"]},
   img: drap_paysbas
 };
 const perou = {
-  noms: { fr: ["Pérou"], en: ["Peru"] },
+  noms: { fr: ["Pérou"], en: ["Peru"], es: ["Perú"]},
   img: drap_perou
 };
 const philippines = {
-  noms: { fr: ["Philippines"], en: ["Philippines"] },
+  noms: { fr: ["Philippines"], en: ["Philippines"], es: ["Filipinas"] },
   img: drap_philippines
 };
 const pologne = {
-  noms: { fr: ["Pologne"], en: ["Poland"] },
+  noms: { fr: ["Pologne"], en: ["Poland"], es: ["Polonia"] },
   img: drap_pologne
 };
 const portugal = {
-  noms: { fr: ["Portugal"], en: ["Portugal"] },
+  noms: { fr: ["Portugal"], en: ["Portugal"], es: ["Portugal"] },
   img: drap_portugal
 };
 const qatar = {
-  noms: { fr: ["Qatar"], en: ["Qatar"] },
+  noms: { fr: ["Qatar"], en: ["Qatar"], es: ["Catar"] },
   img: drap_qatar
 };
 const republiquecentrafricaine = {
-  noms: { fr: ["République centrafricaine", "rca"], en: ["Central African Republic", "car"] },
+  noms: { fr: ["République centrafricaine", "rca"], en: ["Central African Republic", "car"], es: ["República Centroafricana", "rca"] },
   img: drap_republiquecentrafricaine
 };
 const republiquedemocratiqueducongo = {
-  noms: { fr: ["République démocratique du Congo", "rdc"], en: ["Democratic Republic of the Congo", "DRC"] },
+  noms: { fr: ["République démocratique du Congo", "rdc"], en: ["Democratic Republic of the Congo", "DRC"], es: ["República Democrática del Congo", "rdc"] },
   img: drap_republiquedemocratiqueducongo
 };
 const republiquedominicaine = {
-  noms: { fr: ["République dominicaine"], en: ["Dominican Republic"] },
+  noms: { fr: ["République dominicaine"], en: ["Dominican Republic"], es: ["República Dominicana"] },
   img: drap_republiquedominicaine
 };
 const roumanie = {
-  noms: { fr: ["Roumanie"], en: ["Romania"] },
+  noms: { fr: ["Roumanie"], en: ["Romania"], es: ["Rumania"] },
   img: drap_roumanie
 };
 const royaumeuni = {
-  noms: { fr: ["Royaume-Uni"], en: ["United Kingdom"] },
+  noms: { fr: ["Royaume-Uni"], en: ["United Kingdom"], es: ["Reino Unido"] },
   img: drap_royaumeuni
 };
 const russie = {
-  noms: { fr: ["Russie"], en: ["Russia"] },
+  noms: { fr: ["Russie"], en: ["Russia"], es: ["Rusia"]},
   img: drap_russie
 };
 const rwanda = {
-  noms: { fr: ["Rwanda"], en: ["Rwanda"] },
+  noms: { fr: ["Rwanda"], en: ["Rwanda"], es: ["Ruanda"]},
   img: drap_rwanda
 };
 const saintchristopheetnieves = {
-  noms: { fr: ["Saint-Christophe-et-Niévès"], en: ["Saint Kitts and Nevis"] },
+  noms: { fr: ["Saint-Christophe-et-Niévès"], en: ["Saint Kitts and Nevis"], es: ["San Cristóbal y Nieves"]},
   img: drap_saintchristopheetnieves
 };
 const saintmarin = {
-  noms: { fr: ["Saint-Marin"], en: ["San Marino"] },
+  noms: { fr: ["Saint-Marin"], en: ["San Marino"], es: ["San Marino"]},
   img: drap_saintmarin
 };
 const saintvincentetlesgrenadines = {
-  noms: { fr: ["Saint-Vincent-et-les Grenadines"], en: ["Saint Vincent and the Grenadines"] },
+  noms: { fr: ["Saint-Vincent-et-les Grenadines"], en: ["Saint Vincent and the Grenadines"], es: ["San Vicente y las Granadinas"]},
   img: drap_saintvincentetlesgrenadines
 };
 const saintelucie = {
-  noms: { fr: ["Sainte-Lucie"], en: ["Saint Lucia"] },
+  noms: { fr: ["Sainte-Lucie"], en: ["Saint Lucia"], es: ["Santa Lucía"]},
   img: drap_saintelucie
 };
 const salvador = {
-  noms: { fr: ["Salvador"], en: ["El Salvador"] },
+  noms: { fr: ["Salvador"], en: ["El Salvador"], es: ["El Salvador"]},
   img: drap_salvador
 };
 const samoa = {
-  noms: { fr: ["Samoa"], en: ["Samoa"] },
+  noms: { fr: ["Samoa"], en: ["Samoa"], es: ["Samoa"]},
   img: drap_samoa
 };
 const saotomeetprincipe = {
-  noms: { fr: ["São Tomé-et-Príncipe"], en: ["São Tomé and Príncipe"] },
+  noms: { fr: ["São Tomé-et-Príncipe"], en: ["São Tomé and Príncipe"], es: ["Santo Tomé y Príncipe"]},
   img: drap_saotomeetprincipe
 };
 const senegal = {
-  noms: { fr: ["Sénégal"], en: ["Senegal"] },
+  noms: { fr: ["Sénégal"], en: ["Senegal"], es: ["Senegal"]},
   img: drap_senegal
 };
 const serbie = {
-  noms: { fr: ["Serbie"], en: ["Serbia"] },
+  noms: { fr: ["Serbie"], en: ["Serbia"], es: ["Serbia"]},
   img: drap_serbie
 };
 const seychelles = {
-  noms: { fr: ["Seychelles"], en: ["Seychelles"] },
+  noms: { fr: ["Seychelles"], en: ["Seychelles"], es: ["Seychelles"]},
   img: drap_seychelles
 };
 const sierraleone = {
-  noms: { fr: ["Sierra Leone"], en: ["Sierra Leone"] },
+  noms: { fr: ["Sierra Leone"], en: ["Sierra Leone"], es: ["Sierra Leona"]},
   img: drap_sierraleone
 };
 const singapour = {
-  noms: { fr: ["Singapour"], en: ["Singapore"] },
+  noms: { fr: ["Singapour"], en: ["Singapore"], es: ["Singapur"]},
   img: drap_singapour
 };
 const slovaquie = {
-  noms: { fr: ["Slovaquie"], en: ["Slovakia"] },
+  noms: { fr: ["Slovaquie"], en: ["Slovakia"], es: ["Eslovaquia"]},
   img: drap_slovaquie
 };
 const slovenie = {
-  noms: { fr: ["Slovénie"], en: ["Slovenia"] },
+  noms: { fr: ["Slovénie"], en: ["Slovenia"], es: ["Eslovenia"]},
   img: drap_slovenie
 };
 const somalie = {
-  noms: { fr: ["Somalie"], en: ["Somalia"] },
+  noms: { fr: ["Somalie"], en: ["Somalia"], es: ["Somalia"]},
   img: drap_somalie
 };
 const soudan = {
-  noms: { fr: ["Soudan"], en: ["Sudan"] },
+  noms: { fr: ["Soudan"], en: ["Sudan"], es: ["Sudán"]},
   img: drap_soudan
 };
 const soudandusud = {
-  noms: { fr: ["Soudan du Sud"], en: ["South Sudan"] },
+  noms: { fr: ["Soudan du Sud"], en: ["South Sudan"], es: ["Sudán del Sur"]},
   img: drap_soudandusud
 };
 const srilanka = {
-  noms: { fr: ["Sri Lanka"], en: ["Sri Lanka"] },
+  noms: { fr: ["Sri Lanka"], en: ["Sri Lanka"], es: ["Sri Lanka"]},
   img: drap_srilanka
 };
 const suede = {
-  noms: { fr: ["Suède"], en: ["Sweden"] },
+  noms: { fr: ["Suède"], en: ["Sweden"], es: ["Suecia"]},
   img: drap_suede
 };
 const suisse = {
-  noms: { fr: ["Suisse"], en: ["Switzerland"] },
+  noms: { fr: ["Suisse"], en: ["Switzerland"], es: ["Suiza"]},
   img: drap_suisse
 };
 const suriname = {
-  noms: { fr: ["Suriname"], en: ["Suriname"] },
+  noms: { fr: ["Suriname"], en: ["Suriname"], es: ["Surinam"]},
   img: drap_suriname
 };
 const syrie = {
-  noms: { fr: ["Syrie"], en: ["Syria"] },
+  noms: { fr: ["Syrie"], en: ["Syria"], es: ["Siria"]},
   img: drap_syrie
 };
 const tadjikistan = {
-  noms: { fr: ["Tadjikistan"], en: ["Tajikistan"] },
+  noms: { fr: ["Tadjikistan"], en: ["Tajikistan"], es: ["Tayikistán"]},
   img: drap_tadjikistan
 };
 // taiwan = {
-//   noms: { fr: ["Taïwan"], en: ["Taiwan"] },
+//   noms: { fr: ["Taïwan"], en: ["Taiwan"], es: ["Taiwán"]},
 //   img: drap_taiwan
 // };
 const tanzanie = {
-  noms: { fr: ["Tanzanie"], en: ["Tanzania"] },
+  noms: { fr: ["Tanzanie"], en: ["Tanzania"], es: ["Tanzania"]},
   img: drap_tanzanie
 };
 const tchad = {
-  noms: { fr: ["Tchad"], en: ["Chad"] },
+  noms: { fr: ["Tchad"], en: ["Chad"], es: ["Chad"]},
   img: drap_tchad
 };
 const tchequie = {
-  noms: { fr: ["Tchéquie", "République tchèque"], en: ["Czechia", "Czech Republic"] },
+  noms: { fr: ["Tchéquie", "République tchèque"], en: ["Czechia", "Czech Republic"], es: ["Chequia", "República Checa"]},
   img: drap_tchequie
 };
 const thailande = {
-  noms: { fr: ["Thaïlande"], en: ["Thailand"] },
+  noms: { fr: ["Thaïlande"], en: ["Thailand"], es: ["Tailandia"]},
   img: drap_thailande
 };
 const timororiental = {
-  noms: { fr: ["Timor oriental"], en: ["Timor-Leste"] },
+  noms: { fr: ["Timor oriental"], en: ["Timor-Leste"], es: ["Timor Oriental"]},
   img: drap_timororiental
 };
 const togo = {
-  noms: { fr: ["Togo"], en: ["Togo"] },
+  noms: { fr: ["Togo"], en: ["Togo"], es: ["Togo"]},
   img: drap_togo
 };
 const tonga = {
-  noms: { fr: ["Tonga"], en: ["Tonga"] },
+  noms: { fr: ["Tonga"], en: ["Tonga"], es: ["Tonga"]},
   img: drap_tonga
 };
 const triniteettobago = {
-  noms: { fr: ["Trinité-et-Tobago"], en: ["Trinidad and Tobago"] },
+  noms: { fr: ["Trinité-et-Tobago"], en: ["Trinidad and Tobago"], es: ["Trinidad y Tobago"]},
   img: drap_triniteettobago
 };
 const tunisie = {
-  noms: { fr: ["Tunisie"], en: ["Tunisia"] },
+  noms: { fr: ["Tunisie"], en: ["Tunisia"], es: ["Túnez"]},
   img: drap_tunisie
 };
 const turkmenistan = {
-  noms: { fr: ["Turkménistan"], en: ["Turkmenistan"] },
+  noms: { fr: ["Turkménistan"], en: ["Turkmenistan"], es: ["Turkmenistán"]},
   img: drap_turkmenistan
 };
 const turquie = {
-  noms: { fr: ["Turquie"], en: ["Turkey"] },
+  noms: { fr: ["Turquie"], en: ["Turkey"], es: ["Turquía"]},
   img: drap_turquie
 };
 const tuvalu = {
-  noms: { fr: ["Tuvalu"], en: ["Tuvalu"] },
+  noms: { fr: ["Tuvalu"], en: ["Tuvalu"], es: ["Tuvalu"]},
   img: drap_tuvalu
 };
 const ukraine = {
-  noms: { fr: ["Ukraine"], en: ["Ukraine"] },
+  noms: { fr: ["Ukraine"], en: ["Ukraine"], es: ["Ucrania"]},
   img: drap_ukraine
 };
 const uruguay = {
-  noms: { fr: ["Uruguay"], en: ["Uruguay"] },
+  noms: { fr: ["Uruguay"], en: ["Uruguay"], es: ["Uruguay"]},
   img: drap_uruguay
 };
 const vanuatu = {
-  noms: { fr: ["Vanuatu"], en: ["Vanuatu"] },
+  noms: { fr: ["Vanuatu"], en: ["Vanuatu"], es: ["Vanuatu"]},
   img: drap_vanuatu
 };
 const vatican = {
-  noms: { fr: ["Vatican"], en: ["Vatican City", "Vatican"] },
+  noms: { fr: ["Vatican"], en: ["Vatican City", "Vatican"], es: ["Ciudad del Vaticano", "Vaticano"]},
   img: drap_vatican
 };
 const venezuela = {
-  noms: { fr: ["Venezuela"], en: ["Venezuela"] },
+  noms: { fr: ["Venezuela"], en: ["Venezuela"], es: ["Venezuela"]},
   img: drap_venezuela
 };
 const vietnam = {
-  noms: { fr: ["Vietnam"], en: ["Vietnam"] },
+  noms: { fr: ["Vietnam"], en: ["Vietnam"], es: ["Vietnam"]},
   img: drap_vietnam
 };
 const yemen = {
-  noms: { fr: ["Yémen"], en: ["Yemen"] },
+  noms: { fr: ["Yémen"], en: ["Yemen"], es: ["Yemen"]},
   img: drap_yemen
 };
 const zambie = {
-  noms: { fr: ["Zambie"], en: ["Zambia"] },
+  noms: { fr: ["Zambie"], en: ["Zambia"], es: ["Zambia"]},
   img: drap_zambie
 };
 const zimbabwe = {
-  noms: { fr: ["Zimbabwe"], en: ["Zimbabwe"] },
+  noms: { fr: ["Zimbabwe"], en: ["Zimbabwe"], es: ["Zimbabue"]},
   img: drap_zimbabwe
 };
 
